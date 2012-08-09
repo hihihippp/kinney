@@ -7,13 +7,13 @@ require "kinney/version"
 Gem::Specification.new do |s|
   s.name        = "kinney"
   s.version     = Kinney::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
+  s.authors     = ["Jason Ronallo"]
+  s.email       = ["jronallo@gmail.com"]
   s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Kinney."
-  s.description = "TODO: Description of Kinney."
+  s.summary     = "An oral history video clips site packaged as a Rails gem."
+  s.description = "An oral history video clips site packaged as a Rails gem."
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.markdown"]
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 3.2.8.rc2"
