@@ -1,0 +1,67 @@
+<%= render '/kinney/pages/home_header' %>
+
+<div class="row">
+  <div class="span9">
+    <div class="well" id="featured_clip"> 
+      <h2>Featured Story</h2>
+      <h3><%= @featured_clip.title %></h3>
+      <%#= render :partial => '/video', :locals => {:person => @person, :clip => @clip} %>
+      
+      <%= link_to(@featured_clip, :class => [:thumbnail_video], :id => :featured_video_link) do %>
+        <div id="home_video_image">
+          <div class="mejs-overlay-button"></div>
+          <%= image_tag @featured_clip.png, :alt => @featured_clip.title %>
+        </div>
+        
+      <% end -%>
+
+      <h3>Profile of <%= @person.full_name %></h3>
+      <%= raw @person.short_bio %>
+      <%= link_to(@person, :class=> "btn") do %>
+        <%= t :see_all_videos, :name => @person.last_name %> <i class='icon-arrow-right'></i>
+      <% end -%>
+  
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="span3">
+    <%= render '/kinney/search_form' %>
+    <div id="topics">
+      <%= render '/kinney/video_topics'%>
+    </div>
+  </div>
+  
+</div>
+
+
+<div class="row" id="action_buttons">
+  <div class="span6">
+    <%= link_to 'Add Your Story', add_your_story_path, :class => 'btn btn-large btn-danger', :id => :add_story_btn %>
+  </div>
+  <div class="span6">
+    <%= link_to 'http://www.lib.ncsu.edu/giving',  :class => 'btn btn-large btn-danger', :id => :giving_btn do %>
+      Giving <i class="icon-external-link"></i>
+    <% end -%>
+  </div>
+</div>
+<div class="row">
+  <div class="span3">&nbsp;</div>
+</div>
+
+<div class="row">
+  <div class="span12" id="more_clips">
+    <h2><%= link_to "More Video", clips_path %></h2>
+    <ul class="thumbnails">
+      <% @top_pick_clips.each do |clip| %>
+        <li class="span3">
+           <%= render :partial => '/kinney/clip_link', :locals => {:clip => clip} %>
+        </li>
+      <% end -%>
+    </ul>
+  </div>
+</div>
+      
+    

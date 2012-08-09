@@ -1,0 +1,24 @@
+<%= content_for :header do %>
+  <div class="row">
+    <div class="span12">
+      <h1><%= @topic.name %></h1>
+      <p><%= @topic.description %></p>  
+    </div>  
+  </div>
+<% end -%>
+
+<div class="row">
+  <div class="span12" id="clips">
+    <!-- <h3>Videos on This Topic</h3> -->
+    <ul class="thumbnails">
+      <% @topic.clips.each do |clip| %>
+      <li class="span4">
+        <%= render :partial => '/kinney/clip_link', :locals => {:clip => clip} %>        
+      </li>
+      <% end -%>
+    </ul>
+  </div>
+</div>
+
+
+  

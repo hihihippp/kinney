@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+# one:
+#   uuid: MyString
+#   seconds: MyText
+#   video: MyString
+#   site: MyString
+#   time: 2012-07-18
+#   session: MyString
+
+# two:
+#   uuid: MyString
+#   seconds: MyText
+#   video: MyString
+#   site: MyString
+#   time: 2012-07-18
+#   session: MyString

@@ -1,0 +1,7 @@
+<h3>Video Topics</h3>
+<ul class="nav nav-tabs nav-stacked">
+  <% Kinney::Topic.with_clips.each do |topic| %>
+    <li><%= link_to topic.name, topic %></li>
+  <% end -%>
+</ul>
+  

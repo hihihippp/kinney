@@ -1,0 +1,61 @@
+<%= content_for :header do %>
+  <div class="row">
+    <div class="span12">
+      <h1 itemprop="name"><%= @person.full_name %></h1>    
+    </div>
+  </div>
+<% end -%>
+
+<div class='row' itemscope itemtype="http://schema.org/Person" itemref="header currently">
+
+  <span itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
+    <meta itemprop="name" content="North Carolina State University">
+  </span>
+
+  <div itemprop="description">
+
+    <div class="span6">
+      <div id="bio" class="clearfix">
+        <% if !@top_image.blank? %>
+          <%= link_to(@top_image.sal_path, :class => :thumbnail, :'data-target'=>"#modal_image_top_pick", :'data-toggle'=>"modal", :id => "image_top_pick") do %>
+            <%= kinney_small_image %>
+          <% end -%>
+          <%= render :partial => '/kinney/images/image_modal', :locals => {:index => 'top_pick', :person => @person, :image => @top_image} %>
+        <% end -%>
+        <%= raw @person.biography %>
+      </div>
+      
+    </div>
+    <div class="span6">
+      <div id="person_clips">
+        <% if !@person.clips.first.blank? %>      
+          <h2><%= @person.last_name %> Videos</h2>
+          <div>
+            <%= link_to(@person.clips.first, :class => :thumbnail_video, :id => 'person_clips_image' ) do %>
+              <div class="thumbnail_image">
+                <div class="mejs-overlay-button"></div>
+                <%= image_tag @person.clips.first.png, :alt => @person.clips.first.title %>
+              </div>          
+            <% end -%>
+          </div>
+          <%= render :partial => '/kinney/people/person_clips', :locals => {:person => @person} %>
+        <% end -%>
+      </div>
+    </div>
+  </div><!-- description -->
+</div><!-- person -->
+
+<div class="row">
+  <div class="span6">  
+    <div class="clearfix">
+      <%= render 'profile' %>
+    </div>
+  </div> 
+  <div class="span6">
+    <%= render 'person_images' %>
+    <%= render 'map' %>
+  </div>
+</div>
+
+
+

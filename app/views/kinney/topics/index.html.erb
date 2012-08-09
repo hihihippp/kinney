@@ -1,0 +1,17 @@
+<%= content_for :header do %>
+  <div class="row">
+    <h1>Video Topics</h1>
+    <p>Description of this page?</p>
+  </div>
+<% end -%>
+
+<div class="row">
+  <div class="span4">
+    <ul class="nav nav-tabs nav-stacked" id="topics">
+      <% @topics.each do |topic| %>
+        <%# FIXME: make this code prettier %>
+        <li><%= link_to topic.name + ' (' + topic.clips.count.to_s + ')', topic %></li>
+      <% end -%>
+    </ul>
+  </div>
+</div>

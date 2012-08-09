@@ -1,0 +1,54 @@
+<%= content_for :header do %>
+  <div class="row">
+    <div class="span12">
+      <h1>Search</h1>
+    </div>
+  </div>
+<% end -%>
+
+<div class="row">
+  <div class="span8" id="clips">
+    <h2>Clips</h2>
+
+    <% if @fallback_clips %>
+      <div class="alert">
+        No clips matched your search. Below are some clips you might want to watch.
+      </div>
+    <% end -%>
+    <% if @query.blank? %>
+      <div class="alert alert-success">
+        There is no current search. Below are some clips you might want to watch.
+      </div>
+    <% end -%>
+    <ul class="thumbnails">
+      <% @clips.each do |clip| %>
+        <li class="span4">
+           <%= render :partial => '/kinney/clip_link', :locals => {:clip => clip} %>
+        </li>
+      <% end -%>
+    </ul>
+  </div>
+
+  <div class="span4" id="people">
+    <div class="well">
+      <h2>People</h2>
+      <% if @fallback_people %>
+        <div class="alert">
+          No people profiles matched your search. Below are all the people we know about.
+        </div>
+      <% end -%>
+      <% if @query.blank? %>
+        <div class="alert alert-success">
+          There is no current search. Below are all of the people with video interviews.
+        </div>
+      <% end -%>
+      <ul class="thumbnails">
+        <% @people.each do |person| %>
+          <li class="span4">
+             <%= link_to person.full_name, person %>
+          </li>
+        <% end -%>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<h3><%= link_to title, people_path %></h3>
+<ul class="thumbnails more_people">
+  <% @people.each do |person| %>
+    <li class="span3">
+    <%= link_to(person, :class => :thumbnail) do %>
+      <%= image_tag person.clips.first.png, :alt => person.clips.first.title %>
+        <div class="caption">
+          <h5><%= person.full_name %> <%= "(#{person.graduating_class})" if person.graduating_class %></h5>
+        </div>
+    <% end -%>
+    </li>
+  <% end -%>
+</ul>
+  

@@ -1,0 +1,9 @@
+<%# clip %>
+<%= render :partial => "/pull_quotes", :locals => {:clip => clip} %>
+<div id="short_profiles">
+  <% clip.people.each do |person| %>
+    <%= render 'people/short_profile',
+      :mustache => {:full_name => person.full_name, :short_bio => person.short_bio,
+        :person_href => person_path(person), :last_name => person.last_name} %>
+  <% end -%>
+</div>

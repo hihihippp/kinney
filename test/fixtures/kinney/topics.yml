@@ -1,0 +1,16 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+roots:
+  name: Roots
+  description: Roots description
+  slug: roots
+
+mentors:
+  name: Mentors
+  description: Mentors description
+
+# Academics should not show up on homepage and menu because no clips are associated with it
+academics:
+  name: Academics
+  description: Academics description
+

@@ -1,0 +1,22 @@
+<% if @webvtt %>
+  
+  <h2>Transcript</h2>
+  <%#= vtt_button(@clip) %>
+  <table class="table table-striped" id="transcript_table">
+    <thead>
+      <tr>
+        <th>Text</th>
+        <th>Timestamp</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @webvtt.cues.each do |cue| %>
+        <tr>
+          <td><%= cue.text %></td>
+          <td><%= link_to cue.start, '', :class => 'transcript_jump', :'data-video-jump-time' => jump_time(cue.start) %> - <%= cue.end %></td>
+        </tr>
+      <% end -%>
+    </tbody>
+  </table>
+    
+<% end -%>

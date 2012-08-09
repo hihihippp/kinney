@@ -1,0 +1,5 @@
+<div id="pull_quotes">
+  <% if !clip.quotes.blank? %>
+    <%= render 'clips/quotes', :mustache => {:quotes => clip.quotes}%>
+  <% end -%>
+</div>

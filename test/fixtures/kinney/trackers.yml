@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  uuid: 517049cb-b261-4821-b3d0-92bdfe8e7988
+  seconds: <%= [0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5].to_yaml.inspect %>
+  video: tolson-roots
+  site: MyString
+  time: 2012-07-18
+  session: MyString
+  sessioned: false
+
+two:
+  uuid: 517049cb-b261-4821-b3d0-92bdfe8e7988
+  seconds: <%= [6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 8, 9, 9, 9, 9, 10, 10, 10, 10, 11, 11, 11, 11].to_yaml.inspect %>
+  video: tolson-roots
+  site: MyString
+  time: 2012-07-18
+  session: MyString
+  sessioned: false
+
+three:
+  uuid: b6c6410b-d2e6-4317-90cb-599b71920030
+  seconds: <%= [0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5].to_yaml.inspect %>
+  video: tolson-roots
+  site: MyString
+  time: 2012-07-18
+  session: MyString
+  sessioned: false fb954870-fbb1-4222-9b60-50b529f41cda
+

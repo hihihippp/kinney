@@ -1,0 +1,33 @@
+<div id="vtt" style="float:right">
+  <h2>VTT</h2>
+  <div id="vtt_result"></div>
+  <textarea rows="10" cols="70"></textarea>
+</div>
+<div style="height:272px; width:480px">
+  <% if @kinney_clip and !@kinney_clip.filename.blank? %>
+      <%= render :partial => '/kinney/video', :locals => {:clip => @kinney_clip} %>
+  <% else -%>
+    <video width="480" height="272" style="width:100%;height:100%;" poster=""
+        controls="true" preload="true" id="video_preview">
+      <source src="" type="video/webm" />
+    </video>
+  <% end -%>
+</div>
+
+<div style="clear:both">
+<%= semantic_form_for [:admin, :kinney, @kinney_clip] do |f| %>
+  <%= f.inputs do %>
+      <%= f.input :filename %>
+      <%= f.input :duration, :label => 'Duration in seconds' %>
+      <%= f.input :title %>
+      <%= f.input :interview_date %>
+      <%= f.input :description, :input_html => {:rows => 4} %>
+      <%= f.input :top_pick %>
+      <%= f.input :featured %>
+      <%= f.input :topics, :input_html => {:class => 'chzn-select'} %>
+      <%= f.input :people, :input_html => {:class => 'chzn-select'} %>
+      <%= f.input :quotes, :as => :ckeditor %>
+  <% end -%>
+  <%= f.buttons :commit %>
+<% end %>
+</div>

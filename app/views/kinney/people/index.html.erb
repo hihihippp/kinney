@@ -1,0 +1,62 @@
+<%= content_for :header do %>
+  <div class="row">
+    <div class="span12">
+      <h1>Profiles with Video</h1>
+      <div id="insert_controls"></div>
+    </div>  
+  </div>
+<% end -%>
+
+
+
+<div class='row' id="people_with_clips">
+  <div class="span12">
+    <% no_clips = [] %>
+    <ul class="thumbnails sortable_thumbs">
+      <% @people.each do |person| %>
+        <% if person.clips.blank? %>
+          <% no_clips << person %>
+          <% next %>
+        <% end -%>
+        <li class="span3 sortable_thumb">
+        <%= link_to(person, :class => :thumbnail) do %>
+          <%= image_tag person.clips.first.png, :alt => person.clips.first.title %>
+            <div class="caption">
+              <h5><%= person.first_name %> <%= person.middle_name %> <span class="last_name"><%= person.last_name %></span><%= ', ' + person.name_suffix if !person.name_suffix.blank? %></h5>
+              <span class="grad_class"><%= person.graduating_class %></span>
+            </div>
+        <% end -%>
+        </li>
+      <% end -%>
+    </ul>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="span12">
+    <h2>Other Profiles in Student Leadership</h2>
+  </div>
+  <div class="span4" id="people_no_clips">
+    <table class="tablesorter">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Class of</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% no_clips.each do |person| %>
+        <tr>
+          <td>
+            <%= link_to person do %>
+            <%= person.first_name %> <%= person.middle_name %> <span><%= person.last_name %></span>
+            <% end -%>
+          </td>
+          <td><%= person.graduating_class %></td>
+        </tr>
+        <% end -%>
+      </tbody>
+    </table>
+  </div>
+</div>

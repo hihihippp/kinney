@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+tolson1:
+  filename: si-ag1962-p100-tolson
+  top_pick: false
+  created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+  updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+
+tolson2:
+  filename: si-ag1962-p408-tolson
+  top_pick: true
+  created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+  updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+
+tolson3:
+  filename: si-ag1962-p212-tolson
+  top_pick: false
+  created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+  updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+
+atkins1:
+  filename: si-ag1964-p123-atkins
+  top_pick: true
+  created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+  updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>

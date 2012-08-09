@@ -1,0 +1,27 @@
+<%= content_for :header do %>
+  <div class="row">
+    <h1>Add Your Story</h1>
+    <p>Please fill out this form to contact us if you would like to add your
+      story.
+    </p>
+  </div>
+<% end -%>
+
+<div class="row">
+  <%= semantic_form_for @message, :url => contact_path, :html => {:class => 'well'},
+    :builder => FormtasticBootstrap::FormBuilder do |f| %>
+    <%= f.inputs do %>
+      <%= f.input :name %>
+      <%= f.input :graduating_class, :as => :number %>
+      <%= f.input :email, :as => :email %>
+      <%= f.input :comment, :as => :text, :input_html => {:rows => 5} %>
+    <% end -%>
+    <%= f.buttons do %>
+      <%= f.commit_button :label => "Submit",  :button_html => {:class => 'btn'} %>
+    <% end -%>
+  <% end -%>
+</div>
+
+<%= render '/kinney/contact' %>
+
+

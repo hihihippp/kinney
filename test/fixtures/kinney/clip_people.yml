@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  person: tolson
+  clip: tolson_roots
+  created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+  updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+
+two:
+  person: tolson
+  clip: tolson_mentors_caldwell
+  created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+  updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+
+three:
+  person: atkins
+  clip: atkins_fire
+  created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+  updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+  
+four:
+  person: atkins
+  clip: atkins_roots
+  created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+  updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+
+five:
+  person: raiford
+  clip: raiford
+  created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+  updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>

@@ -1,0 +1,24 @@
+ul#clip_profiles {
+  .one {clear:both;}
+}
+
+#more_transcript {
+  text-align:right;
+  #more_transcript_button {top:-50px;position:relative;}
+}
+
+/* fade the last line showing */
+#transcript_table tr.last {
+    opacity: 0.5;
+}
+
+#topic_clips {
+    .clips { max-height: 490px; overflow:auto}
+}
+
+// scrollbar
+#topic_clips ::-webkit-scrollbar{width:9px;height:9px;}
+#topic_clips ::-webkit-scrollbar-button:start:decrement,#topic_clips ::-webkit-scrollbar-button:end:increment{display:block;height:0;background-color:transparent;}
+#topic_clips ::-webkit-scrollbar-track-piece{background-color:#FAFAFA;-webkit-border-radius:0;-webkit-border-bottom-right-radius:8px;-webkit-border-bottom-left-radius:8px;}
+#topic_clips ::-webkit-scrollbar-thumb:vertical{height:50px;background-color:#999;-webkit-border-radius:8px;}
+#topic_clips ::-webkit-scrollbar-thumb:horizontal{width:50px;background-color:#999;-webkit-border-radius:8px;}

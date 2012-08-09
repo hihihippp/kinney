@@ -1,0 +1,9 @@
+<%= link_to(clip, clip.video_switcher_params.merge(:class => [:thumbnail, :thumbnail_video])) do %>
+  <div class="thumbnail_image">
+    <div class="mejs-overlay-button"></div>
+    <%= image_tag clip.png, :alt => clip.title %>
+  </div>
+  <div class="caption">
+    <%= clip.full_people_names %><br><%= clip.title %> <%= duration_pretty(clip) %>
+  </div>
+<% end -%>

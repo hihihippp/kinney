@@ -1,0 +1,38 @@
+<% if !@person.term.blank? or !@person.graduating_class.blank? %>
+      
+      <h2>Years at State</h2>
+      <%= raw @person.term %>
+      <p>Class of <%= @person.graduating_class %></p>
+    
+<% end -%>
+<% if !@person.accomplishments.blank? %>
+  <div>
+    <h2>Accomplishments</h2>
+    <%= raw @person.accomplishments %>
+  </div>
+<% end -%>       
+
+<% if !@person.activities.blank? %>
+  <div>
+    <h2>Activities</h2>
+    <%= raw @person.activities %>
+  </div>
+<% end -%>
+<% if !@person.currently.blank? %>
+  <div itemprop="description" id="currently">
+    <h2>Currently</h2>
+    <%= raw @person.currently %>
+    <% if !@currently_clip.blank? %>
+      <%= render :partial => '/clip_link', :locals => {:clip => @currently_clip} %>
+    <% end -%>
+  </div>
+<% end -%>
+
+<% if !@person.citations.blank? %>
+  <div>
+    <h2>Citations</h2>
+    <%= raw @person.citations %>
+  </div>
+<% end -%>
+  
+  

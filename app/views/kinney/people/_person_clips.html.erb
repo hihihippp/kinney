@@ -1,0 +1,11 @@
+<ul class="nav nav-tabs nav-stacked" id="person_videos">
+  <% person.clips.each do |clip| %>
+    <% if !defined?(current_clip) or current_clip != clip %>
+      <li>
+        <%= link_to(clip, clip.video_switcher_params) do %>
+          <i class="icon-play"></i> <span class="title"><%= clip.title %></span> <%= duration_pretty(clip) %>
+        <% end -%>
+      </li>
+    <% end -%>
+  <% end -%>
+ </ul>

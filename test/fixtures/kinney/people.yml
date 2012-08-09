@@ -1,0 +1,55 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+tolson:
+  first_name: Edward
+  middle_name: Norris
+  last_name: Tolson
+  nickname:
+  biography: <p>Norris Tolson grew up in Edgecombe County.</p>
+  accomplishments: <p>These are Tolson's accomplishments.</p>
+  activities: <p>These are Tolson's activities.</p>
+  currently: <p>What Tolson is currently doing.</p>
+  citations: <p>This is a citation.</p>
+  graduating_class: 1963
+  term: <p>Student Body President 1962-1963</p>
+  term_date_ranges: 1962-1963
+  location: Edgecombe County, NC
+  created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+  updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+  slug: edward-norris-tolson
+
+williams:
+  first_name: William
+  last_name: Williams
+  created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+  updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+
+third_man:
+  first_name: Third
+  last_name: Man
+  graduating_class: 1973
+  created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+  updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+
+xavier:
+  first_name: Andrew
+  last_name: Xavier
+  graduating_class: 1956
+  created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+  updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+
+atkins:
+  first_name: John
+  middle_name: Leslie
+  last_name: Atkins
+  name_suffix: III
+  graduating_class: 1965
+  biography: <p>Atkin's biography.</p>
+  created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+  updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+
+raiford:
+  first_name: Brooks
+  last_name: Raiford
+  created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+  updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>

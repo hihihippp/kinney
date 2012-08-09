@@ -1,0 +1,18 @@
+<h1>Engagement for <%= @clip.filename %></h1>
+
+<p>x is the length of the video in seconds.</p>
+<p>y is the number of pageviews which watched that second of video.</p>
+
+<%= render :partial => 'video_engagement_chart' %>
+
+<div class="row">
+  <div class="span6">
+    <%= render :partial => '/kinney/video', :locals => {:clip => @clip} %>
+  </div>
+  <div class="span6" id="current_time"><p></p>
+  </div>
+</div>
+
+<%= @all_seconds.sort.inspect %><br>
+<%= @temp_seconds.inspect %><br>
+<%= @seconds.to_json %>

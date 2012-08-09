@@ -1,0 +1,54 @@
+// These are some extra responsive styles for the site
+
+#clip_profiles, #people_with_clips, #people {
+  .span4 {
+    &:nth-child(4), &:nth-child(7), &:nth-child(10), &:nth-child(13){
+      clear:both;
+    }
+  }
+  .span3 {
+    &:nth-child(5), &:nth-child(9), &:nth-child(13), &:nth-child(17){
+      clear:both;
+    }
+  }
+
+}
+
+@media (max-width: 768px) { 
+  #clip_profiles, #people_with_clips, #people {
+    .span4 {
+      &:nth-child(3), &:nth-child(6), &:nth-child(9), &:nth-child(12){
+        clear:both;
+      }
+      &:nth-child(4), &:nth-child(7), &:nth-child(10), &:nth-child(13){
+        clear:none;
+      }
+    }
+    .span3 {
+      &:nth-child(4), &:nth-child(7), &:nth-child(10), &:nth-child(13){
+        clear:both;
+      }
+      &:nth-child(5), &:nth-child(9), &:nth-child(13), &:nth-child(17){
+        clear:none;
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  #video_container, div#home_video_image {
+    .mejs-overlay-button {
+      background-image: image-url("kinney/smallplay.png");
+      width: 50px;
+      height: 50px;
+      top: 95%;
+      left: 95%; 
+    }
+    &:hover .mejs-overlay-button {
+      background-position: 0 -50px;
+    }
+  }
+}
+

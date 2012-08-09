@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <%= meta_description %>
+  <%= yield :facebook_ogp %>
+  <%= render '/layouts/kinney/google_analytics' %>
+</head>
+<body class="<%= params[:controller].gsub('/', '_') %>" id="<%= "#{params[:controller].gsub('/', '_')}_#{params[:action]}" %>">
+  <%= yield :social_setup %>
+  
+  <%= render '/layouts/kinney/brand' %>
+  <%= render '/layouts/kinney/navbar' %>
+     
+  <div id="page_container">
+    <header id="header">
+      <div class="container">
+        <%= yield :header %>
+      </div>
+    </header>
+    
+    <section id="page">
+      <div class="container">
+        <%= render '/kinney/search_form' if params[:action] != 'home' %>
+        <%= render '/layouts/kinney/messages' if !flash.blank? %>
+        <%= yield %>
+      </div>
+    </section>
+
+    <section id="catch">
+      <div class="container">
+        <%= yield :catch %>
+      </div>
+    </section>
+    
+    <footer>
+      <%= render '/layouts/kinney/footer' -%>
+    </footer>
+    
+  </div>
+</body>
+</html>
+
+

@@ -1,0 +1,23 @@
+<% if !@person.images.blank? and (@person.images.length > 1) and !@person.images.first.top_pick %>
+  <div id="other_images">
+    <h2>Images of <%= @person.full_name %></h2>
+    <ul class="thumbnails">
+      <% @person.images.each_with_index do |image,index| %>
+
+        <% next if image == @top_image %>
+        <%= content_for :image_modals do %>
+          <%= render :partial => '/kinney/images/image_modal', :locals => {:index => index, :person => @person, :image => image} %>
+        <% end -%>
+      
+        <li>
+          <%= link_to image.sal_path, :'data-target'=> "#modal_image_#{index}", :'data-toggle'=>"modal", :class=>"thumbnail" do %>
+            <%= djatoka_square_image_tag image.filename, :scale => 150, :alt => @person.full_name %>
+          <% end -%>
+        </li>
+        
+      <% end -%>
+    </ul>
+  </div>
+<% end -%>
+
+<%= yield :image_modals %>
