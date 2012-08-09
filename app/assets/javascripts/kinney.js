@@ -9,7 +9,7 @@
 //= require jquery.sortelements
 //= require kinney/kinney_object
 //= require kinney/people
-//= require kinney/sli_video
+//= require kinney/kinney_video
 //= require kinney/topics
 //= require kinney/clips
 //= require kinney/popovers

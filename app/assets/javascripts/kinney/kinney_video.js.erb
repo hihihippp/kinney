@@ -1,26 +1,26 @@
 $(document).ready(function() {
-  StudentLeaders = {};
+  Kinney = {};
   
-  StudentLeaders.load_tracks = function(){
-    StudentLeaders.player.findTracks();
-    StudentLeaders.player.loadTrack(0);
+  Kinney.load_tracks = function(){
+    Kinney.player.findTracks();
+    Kinney.player.loadTrack(0);
   }
   
-  StudentLeaders.players = $('video').mediaelementplayer({
+  Kinney.players = $('video').mediaelementplayer({
     features: ['playpause','progress','current','duration','tracks','volume','fullscreen','googleanalytics'],
     startLanguage: <%= Rails.env == 'production' ? false : "'en'" %>,
     enableAutosize: true,
     success: function(mediaElement, domObject) {  }
   });
 
-  if (StudentLeaders.players[0]) {
-    StudentLeaders.player = StudentLeaders.players[0].player;
+  if (Kinney.players[0]) {
+    Kinney.player = Kinney.players[0].player;
   }
 
   $('.transcript_jump').click(function(){
     $('html,body').animate({scrollTop:50}, 'slow');
-    StudentLeaders.player.media.currentTime = parseInt($(this).data('videoJumpTime'));
-    StudentLeaders.player.play();
+    Kinney.player.media.currentTime = parseInt($(this).data('videoJumpTime'));
+    Kinney.player.play();
     return false;
   });
   
@@ -32,7 +32,7 @@ $(document).ready(function() {
   //     {src: src_base + ".mp4", type: "video/mp4"}
   //   ];
     
-  //   StudentLeaders.player.pause();
+  //   Kinney.player.pause();
     
   //   // change video title
   //   $('#video_title').text($(this).find('.title').text());
@@ -59,22 +59,22 @@ $(document).ready(function() {
   //       $('#download_vtt').attr('href', src_base + '.vtt');
   //       $('#download_vtt').show();
   //       $('.mejs-captions-button').show();
-  //       StudentLeaders.load_tracks();
+  //       Kinney.load_tracks();
   //     },
   //     error: function(data){
   //       $('#subtitles').attr('src',  '');
   //       $('#download_vtt').hide();
   //       $('.mejs-captions-button').hide();
-  //       StudentLeaders.load_tracks();
+  //       Kinney.load_tracks();
   //     }
   //   });
   //   // http://stackoverflow.com/questions/6830662/mediaelment-js-how-to-change-the-source-files-of-subtitles-track-element-on
     
     
   //   // set new sources for video and play
-  //   StudentLeaders.player.setSrc(sources);
-  //   StudentLeaders.player.load();
-  //   StudentLeaders.player.play();
+  //   Kinney.player.setSrc(sources);
+  //   Kinney.player.load();
+  //   Kinney.player.play();
         
   //   // change topic links for the currently playing clip
   //   // remove current topics

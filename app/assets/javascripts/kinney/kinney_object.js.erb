@@ -14,7 +14,7 @@ Kinney.tracker_seconds = [];
 
 Kinney.track = function(){
   if (Kinney.current_video_id) {        
-    var data = {site: 'sli'};
+    var data = {site: '<%= Rails.application.class.parent_name %>'};
     data.video = Kinney.current_video_id;
     data.time = new Date();
     data.uuid = Kinney.current_uuid;
