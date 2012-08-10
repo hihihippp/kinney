@@ -1,12 +1,12 @@
 <% if @webvtt %>
   
-  <h2>Transcript</h2>
+  <h2><%= t 'kinney.transcript.title' %></h2>
   <%#= vtt_button(@clip) %>
   <table class="table table-striped" id="transcript_table">
     <thead>
       <tr>
-        <th>Text</th>
-        <th>Timestamp</th>
+        <th><%= t 'kinney.transcript.text' %></th>
+        <th><%= t 'kinney.transcript.timestamp' %></th>
       </tr>
     </thead>
     <tbody>

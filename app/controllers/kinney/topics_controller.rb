@@ -5,8 +5,6 @@ module Kinney
     
     def index
       @topics = Topic.with_clips
-      @title = 'Topics'
-      @meta_description = "Description of this page?"
     end
     
     def show

@@ -1,7 +1,7 @@
-<h1>Engagement for <%= @clip.filename %></h1>
+<h1><%= t '.title', :filename => @clip.filename %></h1>
 
-<p>x is the length of the video in seconds.</p>
-<p>y is the number of pageviews which watched that second of video.</p>
+<p><%= t '.x' %></p>
+<p><%= t '.y' %></p>
 
 <%= render :partial => 'video_engagement_chart' %>
 

@@ -5,8 +5,6 @@ module Kinney
     
     def index
       @people = Person.all
-      @title = "People"
-      @meta_description = "Past NC State student leaders."
     end
 
     def show

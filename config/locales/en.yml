@@ -12,6 +12,7 @@ en:
     clips:
       index:
         title: Videos
+        meta_description: Video clips associated with each person.
       show:
         interview_on: "Interview on %{date}."
         download_mp4: Download MP4
@@ -21,13 +22,17 @@ en:
     pages:
       about:
         title: About
+        meta_description: About this project.
       add_your_story:
         title: Add Your Story
         text: Please fill out this form to contact us if you would like to add your story.
+        meta_description: Add your story to this project.
       home:
         featured_story: Featured Story
         profile_of: "Profile of %{name}"
         see_all_videos_button: See All Videos
+        video_topics: Video Topics
+        meta_description: A video oral history project.
     people:
       images_of: "Images of %{name}"
       more_info_on_image: More information on this image
@@ -41,14 +46,47 @@ en:
         currently: Currently 
         citations: Citations 
       index:
+        title: People
         title_with_video: Profiles with Video
         title_other_profiles: Other Profiles
         table_name: Name
         table_class_of: Classs of
+        meta_description: People in this project.
+    search:
+      index:
+        title: Search
+        clips: Video
+        no_clips_match_message: No clips matched your search. Below are some clips you might want to watch.
+        no_current_search_clips_message: There is no current search. Below are some clips you might want to watch.
+        no_people_match_message: No people profiles matched your search. Below are all the people we know about.
+        no_current_search_people_message: There is no current search. Below are all of the people with video interviews.
+      label: Search
+      submit_text: Search
+      clear: clear search
+    topics:
+      index:
+        title: Video Topics
+        description: Description of this page?
+    tracker:
+      analyze:
+        title: "Engagement for Clip: %{filename}"
+        x: x is the length of the video in seconds.
+        y: y is the number of pageviews which watched that second of video.
     sort:
       by: Sort by
       last_name: Last Name 
       graduating_class: Graduating Class
     more:
       video: More Video
+    contact:
+      title: Contact
+      phone_number: Phone Number
+      email: Email
+    transcript:
+      title: Transcript
+      text: Text
+      timestamp: Timestamp
+      show_all: Show All of the Transcript
+      hide: Hide most of the transcript
+
 

@@ -5,8 +5,6 @@ module Kinney
        
     def index
       @people = Person.with_clips
-      @title = "Videos"
-      @meta_description = "Video Clips associated with each person"
     end
 
     def show
@@ -25,7 +23,6 @@ module Kinney
       @people = Person.with_clips.where(Arel::Table.new(:kinney_people)[:id].not_in clip_people_ids).shuffle[0..8]
 
       @topic_clips = @clip.related_topic_clips
-      @title = @clip.title
       @meta_description = @clip.description
     end
 

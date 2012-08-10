@@ -1,23 +1,25 @@
+<% @title = t('.title') %>
+
 <%= content_for :header do %>
   <div class="row">
     <div class="span12">
-      <h1>Search</h1>
+      <h1><%= t '.title' %></h1>
     </div>
   </div>
 <% end -%>
 
 <div class="row">
   <div class="span8" id="clips">
-    <h2>Clips</h2>
+    <h2><%= t '.clips' %></h2>
 
     <% if @fallback_clips %>
       <div class="alert">
-        No clips matched your search. Below are some clips you might want to watch.
+        <%= t '.no_clips_match_message' %>
       </div>
     <% end -%>
     <% if @query.blank? %>
       <div class="alert alert-success">
-        There is no current search. Below are some clips you might want to watch.
+        <%= t '.no_current_search_clips_message' %>
       </div>
     <% end -%>
     <ul class="thumbnails">
@@ -34,12 +36,12 @@
       <h2>People</h2>
       <% if @fallback_people %>
         <div class="alert">
-          No people profiles matched your search. Below are all the people we know about.
+          <%= t '.no_people_match_message' %>
         </div>
       <% end -%>
       <% if @query.blank? %>
         <div class="alert alert-success">
-          There is no current search. Below are all of the people with video interviews.
+          <%= t '.no_current_search_people_message' %>
         </div>
       <% end -%>
       <ul class="thumbnails">

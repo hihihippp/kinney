@@ -10,7 +10,6 @@
 //= require kinney/kinney_object
 //= require kinney/people
 //= require kinney/kinney_video
-//= require kinney/topics
 //= require kinney/clips
 //= require kinney/popovers
 //= require kinney/event_tracking

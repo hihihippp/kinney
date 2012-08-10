@@ -1,14 +1,14 @@
 <div class="row">
   <div class="span6">
-    <h3>Contact</h3>
+    <h3><%= t 'kinney.contact.title' %></h3>
     <table class="table table-striped">
       <tbody>
         <tr>
-          <td>Phone number</td>
-          <td>I'm not giving you my phone number.</td>
+          <td><%= t 'kinney.contact.phone_number' %></td>
+          <td>I'm not giving you my phone number. You'll probably want to replace this whole partial at app/views/kinney/contact.html.erb.</td>
         </tr>
         <tr>
-          <td>Email</td>
+          <td><%= t 'kinney.contact.email' %></td>
           <td><%= mail_to 'jronallo@gmail.com' %></td>
         </tr>
       </tbody>

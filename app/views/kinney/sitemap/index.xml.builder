@@ -26,10 +26,10 @@ xml.urlset "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9", "xmlns:vide
         xml.lastmod(clip.updated_at.strftime("%Y-%m-%d"))
       end
       xml.video :video do |video|
-        xml.video :thumbnail_loc, siskel_path(:filename => clip.filename, :extension => 'png')
+        xml.video :thumbnail_loc, clip.png
         xml.video :title, clip.title
         xml.video :description, clip.description
-        xml.video :content_loc, siskel_path(:filename => clip.filename, :extension => 'mp4')
+        xml.video :content_loc, clip.mp4
         xml.video :duration, clip.duration
         xml.video :publication_date, clip.created_at.to_date
         xml.video :category, "Oral History"

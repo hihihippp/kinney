@@ -1,7 +1,10 @@
+<% @title = t('.title') %>
+<% @meta_description = t('.description') %>
+
 <%= content_for :header do %>
   <div class="row">
-    <h1>Video Topics</h1>
-    <p>Description of this page?</p>
+    <h1><%= t '.title' %></h1>
+    <p><%= t '.description' %></p>
   </div>
 <% end -%>
 

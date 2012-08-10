@@ -13,23 +13,23 @@
       <!-- Everything you want hidden at 940px or less, place within here -->
       <div class="nav-collapse">
         <ul class="nav">
-          <li class="<%= 'active' if controller?('clips') %>">
+          <li class="<%= 'active' if controller?('kinney/clips') %>">
             <%= link_to 'Videos', kinney.clips_path %>
           </li>
-          <li class="dropdown <%= 'active' if controller?('topics') %>">
+          <li class="dropdown <%= 'active' if controller?('kinney/topics') %>">
             <%= link_to(kinney.topics_path, :class=> "dropdown-toggle", :'data-toggle' => :dropdown,
               :'data-target' => '#') do %>
               Topics <b class="caret"></b>
             <% end -%>
             <ul class="dropdown-menu" id="topics_nav">
-              <% Kinney::Topic.with_clips.each do |topic| %>
+              <% @navigation_topics.each do |topic| %>
                 <%= content_tag('li', :class => topic_li_class(topic)) do %>
                   <%= link_to topic.name, topic %>
                 <% end -%>
               <% end -%>
             </ul>
           </li>
-          <li class="<%= 'active' if controller?('people') %>">
+          <li class="<%= 'active' if controller?('kinney/people') %>">
             <%= link_to 'People', kinney.people_path %>
           </li>
           
