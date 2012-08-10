@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email       = ["jronallo@gmail.com"]
   s.homepage    = "TODO"
   s.summary     = "An oral history video clips site packaged as a Rails gem."
-  s.description = "An oral history video clips site packaged as a Rails gem."
+  s.description = "An oral history video clips site packaged as a Rails Engine gem."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.markdown"]
   s.test_files = Dir["test/**/*"]
