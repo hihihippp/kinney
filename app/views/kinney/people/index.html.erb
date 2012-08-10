@@ -1,7 +1,7 @@
 <%= content_for :header do %>
   <div class="row">
     <div class="span12">
-      <h1>Profiles with Video</h1>
+      <h1><%= t '.title_with_video' %></h1>
       <div id="insert_controls"></div>
     </div>  
   </div>
@@ -35,14 +35,14 @@
 
 <div class="row">
   <div class="span12">
-    <h2>Other Profiles in Student Leadership</h2>
+    <h2><%= t '.title_other_profiles' %></h2>
   </div>
   <div class="span4" id="people_no_clips">
     <table class="tablesorter">
       <thead>
         <tr>
-          <th>Name</th>
-          <th>Class of</th>
+          <th><%= t '.table_name' %></th>
+          <th><%= t '.table_class_of' %></th>
         </tr>
       </thead>
       <tbody>

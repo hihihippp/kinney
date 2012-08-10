@@ -14,23 +14,23 @@
 
 <% if !@person.activities.blank? %>
   <div>
-    <h2>Activities</h2>
+    <h2><%= t 'kinney.people.profile.activities' %></h2>
     <%= raw @person.activities %>
   </div>
 <% end -%>
 <% if !@person.currently.blank? %>
   <div itemprop="description" id="currently">
-    <h2>Currently</h2>
+    <h2><%= t 'kinney.people.profile.currently' %></h2>
     <%= raw @person.currently %>
     <% if !@currently_clip.blank? %>
-      <%= render :partial => '/clip_link', :locals => {:clip => @currently_clip} %>
+      <%= render :partial => '/kinney/clip_link', :locals => {:clip => @currently_clip} %>
     <% end -%>
   </div>
 <% end -%>
 
 <% if !@person.citations.blank? %>
   <div>
-    <h2>Citations</h2>
+    <h2><%= t 'kinney.people.profile.citations' %></h2>
     <%= raw @person.citations %>
   </div>
 <% end -%>

@@ -36,7 +36,15 @@ en:
       profile:
         years_at_state: Years at State
         class_of: "Class of %{year}"
-        accomplishments: Accomplishmentss
+        accomplishments: Accomplishments
+        activities: Activities
+        currently: Currently 
+        citations: Citations 
+      index:
+        title_with_video: Profiles with Video
+        title_other_profiles: Other Profiles
+        table_name: Name
+        table_class_of: Classs of
     sort:
       by: Sort by
       last_name: Last Name 
