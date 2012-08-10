@@ -1,8 +1,7 @@
 <%= content_for :header do %>
   <div class="row">
-    <h1>Add Your Story</h1>
-    <p>Please fill out this form to contact us if you would like to add your
-      story.
+    <h1><%= t 'kinney.pages.add_your_story.title' %></h1>
+    <p><%= t 'kinney.pages.add_your_story.text' %>
     </p>
   </div>
 <% end -%>
@@ -17,7 +16,7 @@
       <%= f.input :comment, :as => :text, :input_html => {:rows => 5} %>
     <% end -%>
     <%= f.buttons do %>
-      <%= f.commit_button :label => "Submit",  :button_html => {:class => 'btn'} %>
+      <%= f.commit_button :button_html => {:class => 'btn'} %>
     <% end -%>
   <% end -%>
 </div>

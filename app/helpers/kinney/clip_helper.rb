@@ -9,7 +9,7 @@ module Kinney
       
       def download_button(clip)
         link_to(clip.mp4, :class => 'btn', :id => 'download_mp4') do
-          "<i class='icon-arrow-down'></i> #{t :download_mp4}".html_safe
+          "<i class='icon-arrow-down'></i> #{t 'kinney.clips.show.download_mp4'}".html_safe
         end
       end
       

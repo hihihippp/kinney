@@ -1,6 +1,6 @@
 <% if !@person.images.blank? and (@person.images.length > 1) and !@person.images.first.top_pick %>
   <div id="other_images">
-    <h2>Images of <%= @person.full_name %></h2>
+    <h2><%= t 'kinney.people.images_of', :name => @person.full_name %></h2>
     <ul class="thumbnails">
       <% @person.images.each_with_index do |image,index| %>
 

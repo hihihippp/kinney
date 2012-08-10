@@ -24,7 +24,7 @@
     <%= render :partial => '/kinney/video', :locals => {:clip => @clip} %>
     <div class="row">
       <div class="span6"
-        <p itemprop="description"><%= @clip.description %> <%= "Interview on #{@clip.interview_date.to_formatted_s(:long) }." if !@clip.interview_date.blank? %> <%= duration_pretty(@clip) %></p>
+        <p itemprop="description"><%= @clip.description %> <%= t('.interview_on', :date => @clip.interview_date.to_formatted_s(:long)) if !@clip.interview_date.blank? %> <%= duration_pretty(@clip) %></p>
       </div>
       <div class="span2">
         <%= download_button(@clip) %>
@@ -44,7 +44,7 @@
   <div class="span4">        
     <% @clip.people.each do |person| %>
       <% if person.clips.length > 1 %>
-        <h2>More video with <%= person.full_name %></h2>
+        <h2><%= t '.more_video_with', :name => person.full_name %></h2>
         <%= render :partial => '/kinney/people/person_clips', :locals => {:person => person, :current_clip => @clip} %>
       <% end -%>
     <% end -%>
@@ -52,8 +52,8 @@
     <div id="related_people">
       <% @clip.people.each do |person| %>
         <%= link_to(person, :class => :thumbnail) do %>
-          <%= djatoka_square_image_tag person.image.filename, :scale => 150, :alt => person.full_name if person.image %>        
-          Read more about <%= person.full_name %>
+          <%= djatoka_square_image_tag person.image.filename, :scale => 150, :alt => person.full_name if person.image %> 
+          <%= t '.read_more_about', :name => person.full_name %>       
         <% end -%>
       <% end -%>
     </div>
@@ -61,7 +61,7 @@
     <% if !@topic_clips.blank? %>
       <div class="well">
         <div id="topic_clips">
-          <h3>Other Clips</h3>
+          <h3><%= t '.other_clips' %></h3>
           <div class="clips">
             <% @topic_clips.each do |clip| %>
               <%= render :partial => '/kinney/clip_link', :locals => {:clip => clip} %>

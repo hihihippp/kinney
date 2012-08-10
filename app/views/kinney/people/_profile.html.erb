@@ -1,13 +1,13 @@
 <% if !@person.term.blank? or !@person.graduating_class.blank? %>
       
-      <h2>Years at State</h2>
+      <h2><%= t 'kinney.people.profile.years_at_state' %></h2>
       <%= raw @person.term %>
-      <p>Class of <%= @person.graduating_class %></p>
+      <p><%= t 'kinney.people.profile.class_of', :year => @person.graduating_class %></p>
     
 <% end -%>
 <% if !@person.accomplishments.blank? %>
   <div>
-    <h2>Accomplishments</h2>
+    <h2><%= t 'kinney.people.profile.accomplishments' %></h2>
     <%= raw @person.accomplishments %>
   </div>
 <% end -%>       

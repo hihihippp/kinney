@@ -9,7 +9,7 @@ gemspec
 gem "jquery-rails"
 gem 'djatoka'
 gem 'pry-rails'
-gem 'capybara-webkit', '= 0.12.1'
+#gem 'capybara-webkit', :git => 'https://github.com/thoughtbot/capybara-webkit.git'
 
 # once these are published as gems we can use them from there, until then we need to have them in our Gemfile
 gem 'mediaelement_rails', :git => 'https://github.com/tobsch/mediaelement_rails.git'
@@ -29,7 +29,6 @@ gem 'therubyracer', :platforms => :ruby
 
 gem 'uglifier', '>= 1.0.3'
 
-gem 'thin'
 group :tools do
   gem 'guard-test'
 end
