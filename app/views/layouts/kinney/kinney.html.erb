@@ -19,13 +19,13 @@
   <div id="page_container">
     <header id="header">
       <div class="container">
+        <%= render '/kinney/search_form' if params[:action] != 'home' %>
         <%= yield :header %>
       </div>
     </header>
     
     <section id="page">
-      <div class="container">
-        <%= render '/kinney/search_form' if params[:action] != 'home' %>
+      <div class="container">        
         <%= render '/layouts/kinney/messages' if !flash.blank? %>
         <%= yield %>
       </div>

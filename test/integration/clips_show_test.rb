@@ -20,11 +20,6 @@ class ClipsShowTest < ActionDispatch::IntegrationTest
     assert page.has_selector?('#related_people a img')
   end
 
-  test "should have link to More People" do
-    visit(kinney.clip_path(kinney_clips(:tolson_roots)))
-    assert page.has_selector?('a', :text => "More People")
-  end
-
   test "should show the transcript" do
     visit(kinney.clip_path(kinney_clips(:atkins_fire)))
     assert page.has_selector?('h2', :text => 'Transcript')
@@ -58,11 +53,6 @@ class ClipsShowTest < ActionDispatch::IntegrationTest
   test "should not see More videos on topics with link under video" do
     visit(kinney.clip_path(kinney_clips(:tolson_roots)))
     assert page.has_no_content?('More videos on Roots')
-  end
-
-  test "more people links should include graduating class year" do
-    visit(kinney.clip_path(kinney_clips(:atkins_fire)))
-    assert page.find('.more_people').has_content?('Edward Norris Tolson (1963)')
   end
 
 end

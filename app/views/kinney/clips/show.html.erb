@@ -60,18 +60,7 @@
       <% end -%>
     </div>
 
-    <% if !@topic_clips.blank? %>
-      <div class="well">
-        <div id="topic_clips">
-          <h3><%= t '.other_clips' %></h3>
-          <div class="clips">
-            <% @topic_clips.each do |clip| %>
-              <%= render :partial => '/kinney/clip_link', :locals => {:clip => clip} %>
-            <% end -%>
-          </div>
-        </div>
-      </div>
-    <% end -%>
+    
 
   </div>
 </div>
@@ -79,10 +68,16 @@
 
 
 <%= content_for :catch do %>
-  <div class="row">
-    <div class="span12" id="people">
-      <%= render :partial => '/kinney/video_profiles_thumbs', :locals =>
-          {:current_clip => @clip, :title => t(:more_people)} %>
+  <% if !@topic_clips.blank? %>
+    <div class="row">
+      <div class="span12" id="topic_clips">
+        <h2>More Video</h2>
+        <ul class="thumbnails">
+          <% @topic_clips.each do |clip| %>
+            <li class="span3"><%= render :partial => '/kinney/clip_link', :locals => {:clip => clip} %></li>
+          <% end -%>
+        </ul>  
+      </div>
     </div>
-  </div>
+  <% end -%>
 <% end -%>
