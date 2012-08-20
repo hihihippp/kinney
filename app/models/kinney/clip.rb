@@ -16,7 +16,7 @@ module Kinney
     validate :valid_number_of_topics
     
     extend FriendlyId
-    friendly_id :title_and_last_names, :use => :history
+    friendly_id :title_and_last_names, :use => [:slugged, :history]
 
     default_scope order('top_pick desc, title asc')
 
@@ -74,10 +74,6 @@ module Kinney
     def topic_names
       topics.map{|topic| topic.name}
     end
-    
-    
-
-    
     
     def people_with_title
       "#{people_names}: #{title}"

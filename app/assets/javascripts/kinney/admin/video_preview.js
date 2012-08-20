@@ -8,7 +8,7 @@ $(document).ready(function() {
   }
 
   function checkForWebvtt(){
-    var path = siskelPath($('body.admin_kinney_clips input#clip_filename').val());
+    var path = siskelPath($('body.admin_kinney_clips input#kinney_clip_filename').val());
     if (path){
       $('video').attr('poster', path + '.png');
       $('video').attr('src', path + '.webm');
@@ -18,12 +18,12 @@ $(document).ready(function() {
         success: function(data) {
           $('#vtt textarea').val(data);
           $('#vtt_result').html('<div class="alert alert-success">WEBVTT Found. Fill out the other required fields and you can save.</div>');
-          $('body.admin_kinney_clips #clip_submit').removeAttr('disabled');
+          $('body.admin_kinney_clips #kinney_clip_submit').removeAttr('disabled');
         },
         error: function(data){
           $('#vtt textarea').val('NO WEBVTT FILE FOUND!!!');
           $('#vtt_result').html('<div class="alert alert-error">WEBVTT Not Found. You will not be able to save this clip without a WEBVTT file on the server.</div>');
-          $('body.admin_kinney_clips #clip_submit').attr('disabled', 'disabled');
+          $('body.admin_kinney_clips #kinney_clip_submit').attr('disabled', 'disabled');
         }
       });
       
@@ -32,10 +32,10 @@ $(document).ready(function() {
 
   if ($('.admin_kinney_clips').length > 0) {
     // WEBVTT must be present to submit form
-    $('body.admin_kinney_clips #clip_submit').attr('disabled', 'disabled');  
+    $('body.admin_kinney_clips #kinney_clip_submit').attr('disabled', 'disabled');  
     $('#vtt_result').html('<div class="alert">Give focus to the filename. You will not be able to save until there is a WEBVTT file.</div>');
     checkForWebvtt();
-    $('body.admin_kinney_clips input#clip_filename').bind('keyup change paste focus', function(){
+    $('body.admin_kinney_clips input#kinney_clip_filename').bind('keyup change paste focus', function(){
       checkForWebvtt();
     });
   }
@@ -45,7 +45,7 @@ $(document).ready(function() {
       mediaElement.addEventListener('loadedmetadata', function(){
         var duration = Math.round(mediaElement.duration);
         //console.log(duration);
-        $('#clip_duration').val(duration);
+        $('#kinney_clip_duration').val(duration);
       });
     }
   });

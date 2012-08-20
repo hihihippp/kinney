@@ -15,7 +15,7 @@
 </div>
 
 <div style="clear:both">
-<%= semantic_form_for [:admin, :kinney, @kinney_clip] do |f| %>
+<%= semantic_form_for [:admin, :kinney, @kinney_clip], :as => 'kinney_clip' do |f| %>
   <%= f.inputs do %>
       <%= f.input :filename %>
       <%= f.input :duration, :label => 'Duration in seconds' %>

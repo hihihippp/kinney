@@ -6,7 +6,7 @@ module Kinney
     has_many :clips, :through => :clip_topics
     
     extend FriendlyId
-    friendly_id :name, :use => :history
+    friendly_id :name, :use => [:slugged, :history]
     
     validates :name, :description, :presence => true
     validates_uniqueness_of :name

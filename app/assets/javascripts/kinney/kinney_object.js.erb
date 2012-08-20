@@ -21,7 +21,7 @@ Kinney.track = function(){
     data.seconds = Kinney.tracker_seconds;
     Kinney.tracker_seconds = [];
     <%= 'console.log(data);' if Rails.env == 'development' %>
-    $.post('<%= File.join(Rails.configuration.action_controller.relative_url_root, Kinney::Engine.routes.url_helpers.tracker_track_path) %>', data);
+    $.post('<%= File.join((Rails.configuration.action_controller.relative_url_root || ''), Kinney::Engine.routes.url_helpers.tracker_track_path) %>', data);
   }
 };
 

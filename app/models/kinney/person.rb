@@ -13,7 +13,7 @@ module Kinney
     has_many :images, :through => :person_images
     
     extend FriendlyId
-    friendly_id :full_name, :use => :history
+    friendly_id :full_name, :use => [:slugged, :history]
     
     default_scope order('last_name asc')
 

@@ -1,3 +1,4 @@
+//= require active_admin/base
 //= require kinney/admin/images
 //= require kinney/admin/video_preview
 //= require mediaelement_rails/mediaelement

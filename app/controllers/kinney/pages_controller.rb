@@ -18,7 +18,7 @@ module Kinney
       if @featured_clip.blank?
         @featured_clip = @top_pick_clips.pop
       end
-      @person = @featured_clip.people.first    
+      @person = @featured_clip.people.first if @featured_clip    
       # FIXME this could probably be optimized for finding just 8 random resources. But can it be done
       # in a non-database dependent way?
       # @people = Person.with_clips.where(Arel::Table.new(:people)[:id].not_in [@person.id]).shuffle[0..8]

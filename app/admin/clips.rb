@@ -27,7 +27,7 @@ ActiveAdmin.register Kinney::Clip do
       row :slug
       row :video do
         div(:style => 'width:480px;height:272px') do
-          render :partial => '/video', :locals => {:clip => clip}
+          render :partial => '/kinney/video', :locals => {:clip => clip}
         end
       end
     end
