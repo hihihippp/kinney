@@ -57,10 +57,11 @@
           <%= djatoka_square_image_tag person.image.filename, :scale => 150, :alt => person.full_name if person.image %> 
           <%= t '.read_more_about', :name => person.full_name %>       
         <% end -%>
+        <div class="person_video">
+          <%= render :partial => '/kinney/people/person_clips', :locals => {:person => person} %>
+        </div>
       <% end -%>
     </div>
-
-    
 
   </div>
 </div>
