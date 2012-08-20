@@ -1,6 +1,6 @@
 <%= content_for :header do %>
   <div class="row">
-    <div class="span12">
+    <div class="span8 offset2">
       <h1 itemprop="name"><%= @person.full_name %></h1>    
     </div>
   </div>
@@ -9,12 +9,13 @@
 <div class='row' itemscope itemtype="http://schema.org/Person" itemref="header currently">
 
   <span itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
+    <%# FIXME: make more abstract %>
     <meta itemprop="name" content="North Carolina State University">
   </span>
 
   <div itemprop="description">
 
-    <div class="span6">
+    <div class="span8 offset2">
       <div id="bio" class="clearfix">
         <% if !@top_image.blank? %>
           <%= link_to(@top_image.sal_path, :class => :thumbnail, :'data-target'=>"#modal_image_top_pick", :'data-toggle'=>"modal", :id => "image_top_pick") do %>
@@ -24,9 +25,7 @@
         <% end -%>
         <%= raw @person.biography %>
       </div>
-      
-    </div>
-    <div class="span6">
+
       <div id="person_clips">
         <% if !@person.clips.first.blank? %>      
           <h2><%= @person.last_name %> Videos</h2>
@@ -41,20 +40,18 @@
           <%= render :partial => '/kinney/people/person_clips', :locals => {:person => @person} %>
         <% end -%>
       </div>
-    </div>
+
+      <%= render 'person_images' %>
+      
+    </div>    
   </div><!-- description -->
 </div><!-- person -->
 
 <div class="row">
-  <div class="span6">  
-    <div class="clearfix">
-      <%= render 'profile' %>
-    </div>
-  </div> 
-  <div class="span6">
-    <%= render 'person_images' %>
+  <div class="span8 offset2">  
+    <%= render 'profile' %>
     <%= render 'map' %>
-  </div>
+  </div> 
 </div>
 
 
