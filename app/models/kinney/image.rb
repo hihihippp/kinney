@@ -8,9 +8,10 @@ module Kinney
     validates_uniqueness_of :filename
     validates :filename, :presence => true
 
-    def external_url
-      File.join('http://d.lib.ncsu.edu/collections/catalog/', filename)
-    end
+    # This method should now be defined in the image override which is installed as part of the kinney:install generator
+    # def external_url
+    #   false
+    # end
 
   end
 end

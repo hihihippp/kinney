@@ -39,6 +39,10 @@ DESC
         template 'kinney_clip_helper.rb', 'app/helpers/kinney_clip_helper.rb'
       end
 
+      def create_image_override
+        template 'image.rb', 'app/models/kinney/image.rb'
+      end
+
       def inject_routes
         routes = <<EOF
 
