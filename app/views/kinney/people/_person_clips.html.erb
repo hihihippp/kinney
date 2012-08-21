@@ -3,7 +3,9 @@
     <% if !defined?(current_clip) or current_clip != clip %>
       <li>
         <%= link_to(clip, clip.video_switcher_params) do %>
-          <i class="icon-play"></i> <span class="title"><%= clip.title %></span> <%= duration_pretty(clip) %>
+          <i class="icon-play"></i> <span class="title"><%= clip.title %></span> <br>
+          <%= clip.description %>
+          <%= duration_pretty(clip) %>
         <% end -%>
       </li>
     <% end -%>

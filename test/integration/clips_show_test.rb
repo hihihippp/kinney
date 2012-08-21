@@ -10,7 +10,6 @@ class ClipsShowTest < ActionDispatch::IntegrationTest
 
   test "should have link to other videos by the same person" do
     visit(kinney.clip_path(kinney_clips(:tolson_roots)))
-    assert page.has_content?('More video with Edward Norris Tolson')
     assert page.has_selector?('#person_videos a', :text => 'Mentors')
   end
 

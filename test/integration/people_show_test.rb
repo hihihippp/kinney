@@ -80,7 +80,8 @@ class PeopleShowTest < ActionDispatch::IntegrationTest
 
   test "should provide a link to other videos as text links" do 
     visit(kinney.person_path(kinney_people(:tolson)))
-    assert page.has_selector?('#person_videos a', :text => 'Growing Up in Edgecombe County (00:44)')
+    assert page.has_selector?('#person_videos a', :text => 'Growing Up in Edgecombe County')
+    assert page.has_selector?('#person_videos a', :text => '(00:44)')
     assert page.has_selector?('#person_videos a', :text => 'Mentors')
   end
 
