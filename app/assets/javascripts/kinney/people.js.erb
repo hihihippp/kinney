@@ -17,7 +17,7 @@ $(document).ready(function() {
   
   // sort the profiles that have video
   // first add the controls to the page
-  $('#insert_controls').append('<%= I18n.t('kinney.sort.by') %>: <a href="#" class="btn disabled" id="sort_last_name"><%= I18n.t('kinney.sort.last_name') %></a><a href="#" class="btn" id="sort_graduating_class"><%= I18n.t('kinney.sort.graduating_class') %></a>');
+  $('#insert_controls').append('<div class="span12"><%= I18n.t('kinney.sort.by') %>: <a href="#" class="btn disabled" id="sort_last_name"><%= I18n.t('kinney.sort.last_name') %></a><a href="#" class="btn" id="sort_graduating_class"><%= I18n.t('kinney.sort.graduating_class') %></a></div>');
   
   $('#sort_graduating_class').click(function(){
     $('.sortable_thumbs li.sortable_thumb').sortElements(function(a, b){
