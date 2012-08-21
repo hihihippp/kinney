@@ -8,7 +8,7 @@ module Kinney
     validates_uniqueness_of :filename
     validates :filename, :presence => true
 
-    def sal_path
+    def external_url
       File.join('http://d.lib.ncsu.edu/collections/catalog/', filename)
     end
 

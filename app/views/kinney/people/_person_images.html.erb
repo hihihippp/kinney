@@ -10,7 +10,7 @@
         <% end -%>
       
         <li>
-          <%= link_to image.sal_path, :'data-target'=> "#modal_image_#{index}", :'data-toggle'=>"modal", :class=>"thumbnail" do %>
+          <%= link_to image.external_url, :'data-target'=> "#modal_image_#{index}", :'data-toggle'=>"modal", :class=>"thumbnail" do %>
             <%= kinney_image_small(image) %>
           <% end -%>
         </li>

@@ -16,8 +16,8 @@ class ImageTest < ActiveSupport::TestCase
     assert_false Kinney::Image.new(:filename => kinney_images(:tolson1).filename).valid?
   end
 
-  test "give a URL as the sal_path" do
-    assert_equal "http://d.lib.ncsu.edu/collections/catalog/si-ag1962-p100-tolson", kinney_images(:tolson1).sal_path
+  test "give a URL as the external_url" do
+    assert_equal "http://d.lib.ncsu.edu/collections/catalog/si-ag1962-p100-tolson", kinney_images(:tolson1).external_url
   end
   
 end

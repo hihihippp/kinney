@@ -5,7 +5,7 @@
   </div>
   <div class="modal-body">
     <%#= image.description %>
-    <%= link_to image.sal_path, :target => '_blank' do %>
+    <%= link_to image.external_url, :target => '_blank' do %>
       <%= kinney_image_modal(image, person) %><br>    
       <%= t 'kinney.people.more_info_on_image' %> <i class="icon-external-link"></i>
     <% end -%>
