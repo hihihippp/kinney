@@ -5,15 +5,16 @@
   <div class="row">
     <div class="span12">
       <h1><%= t '.title_with_video' %></h1>
-      <div id="insert_controls"></div>
+      
     </div>  
   </div>
 <% end -%>
 
 
-
+<div id="insert_controls" class="row"></div>
 <div class='row' id="people_with_clips">
   <div class="span12">
+    
     <% no_clips = [] %>
     <ul class="thumbnails sortable_thumbs">
       <% @people.each do |person| %>
