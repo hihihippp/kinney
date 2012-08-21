@@ -16,7 +16,7 @@ module KinneyHelper
     end
   end
 
-  def kinney_admin_image_show(image)
+  def kinney_image_admin_show(image)
     if defined?(Djatoka)
       djatoka_image_tag image.filename, :scale => 250
     else
