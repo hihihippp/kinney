@@ -6,8 +6,7 @@
   <div class="modal-body">
     <%#= image.description %>
     <%= link_to image.sal_path, :target => '_blank' do %>
-    <%# FIXME: do not use djatoka here but a helper method hook %>
-      <%= djatoka_image_tag image.filename, :scale => 360, :height => 360, :alt => person.full_name %><br>    
+      <%= kinney_image_modal(image, person) %><br>    
       <%= t 'kinney.people.more_info_on_image' %> <i class="icon-external-link"></i>
     <% end -%>
   </div>

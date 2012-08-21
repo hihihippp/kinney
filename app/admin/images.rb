@@ -30,7 +30,7 @@ ActiveAdmin.register Kinney::Image do
       row :created_at
       row :updated_at
       div do
-        djatoka_image_tag kinney_image.filename, :scale => 250
+        kinney_image_admin_show(kinney_image)
       end
     end
     active_admin_comments
@@ -38,6 +38,7 @@ ActiveAdmin.register Kinney::Image do
   
   controller do
     cache_sweeper Kinney::MetaSweeper
+    helper ::KinneyHelper
   end
   
 end

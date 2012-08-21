@@ -1,39 +1,28 @@
-module KinneyHelper
+module KinneyHelper  
   
-  
-  def kinney_small_image
-    djatoka_square_image_tag @top_image.filename, :scale => 150, :itemprop => :image, :alt => @person.full_name
-  end
-
-  def siskel_path(opts={})
-    path_filename = opts[:filename] || filename
-    url = 'http://siskel.lib.ncsu.edu/SLI'
-    name = path_filename.split('-').first
-    url = File.join(url, name, path_filename, path_filename)
-    if !opts[:extension].blank?
-      extension = '.' + opts[:extension] if !opts[:extension].include?('.')
-      url + extension
+  def kinney_image_small(image, person=@person)
+    if defined?(Djatoka)
+      djatoka_square_image_tag image.filename, :scale => 150, :itemprop => :image, :alt => person.full_name
     else
-      url
+      image_tag "http://placehold.it/150x150"
     end
   end
 
-  # def png
-  #   siskel_path({:extension => 'png'})
-  # end
-  
-  # def mp4
-  #   siskel_path({:extension => 'mp4'})
-  # end
-  
-  # def webm
-  #   siskel_path({:extension => 'webm'})
-  # end
-  
-  # URL to webvtt file
-  # def vtt #closed_captioning vtt file
-  #   siskel_path({:extension => 'vtt'})
-  # end
+  def kinney_image_modal(image, person)
+    if defined?(Djatoka)
+      djatoka_image_tag image.filename, :scale => 360, :height => 360, :alt => person.full_name
+    else
+      image_tag "http://placehold.it/360x360"
+    end
+  end
+
+  def kinney_admin_image_show(image)
+    if defined?(Djatoka)
+      djatoka_image_tag image.filename, :scale => 250
+    else
+      image_tag "http://placehold.it/360x360"
+    end
+  end
 
   def kinney_image_title(image, person)
     person.full_name

@@ -12,6 +12,7 @@ gem 'pry-rails'
 #gem 'capybara-webkit', :git => 'https://github.com/thoughtbot/capybara-webkit.git'
 group :development do 
   gem 'guard-livereload'
+  gem 'rb-readline', :platforms => :ruby_19
 end
 
 # once these are published as gems we can use them from there, until then we need to have them in our Gemfile

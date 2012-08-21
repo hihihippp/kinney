@@ -1,5 +1,5 @@
 <%= link_to(person, :class => [:thumbnail, :person_read_more, :clearfix]) do %>
-  <%= djatoka_square_image_tag person.image.filename, :scale => 150, :alt => person.full_name if person.image %> 
+  <%= kinney_image_small(person.image, person) if person.image %>
   <div class="bio">
     <%= person.short_bio %>
   </div>

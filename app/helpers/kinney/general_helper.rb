@@ -1,5 +1,6 @@
 module Kinney
   module GeneralHelper
+
     def controller?(*controller)
       controller.include?(params[:controller])
     end

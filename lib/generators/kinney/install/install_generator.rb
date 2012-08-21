@@ -34,8 +34,9 @@ DESC
       end
 
       # create KinneyHelper
-      def create_kinney_helper
+      def create_kinney_helpers
         template 'kinney_helper.rb', 'app/helpers/kinney_helper.rb'
+        template 'kinney_clip_helper.rb', 'app/helpers/kinney_clip_helper.rb'
       end
 
       def inject_routes

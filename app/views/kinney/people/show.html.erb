@@ -19,7 +19,7 @@
       <div id="bio" class="clearfix">
         <% if !@top_image.blank? %>
           <%= link_to(@top_image.sal_path, :class => :thumbnail, :'data-target'=>"#modal_image_top_pick", :'data-toggle'=>"modal", :id => "image_top_pick") do %>
-            <%= kinney_small_image %>
+            <%= kinney_image_small(@top_image) %>
           <% end -%>
           <%= render :partial => '/kinney/images/image_modal', :locals => {:index => 'top_pick', :person => @person, :image => @top_image} %>
         <% end -%>

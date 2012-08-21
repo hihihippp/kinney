@@ -1,6 +1,6 @@
 module Kinney
   module ClipHelper
-    include ::KinneyHelper
+    include ::KinneyClipHelper
     
     def duration_pretty(clip)
       "(#{clip.duration_pretty})" if !clip.duration.blank?

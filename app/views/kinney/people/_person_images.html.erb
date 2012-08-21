@@ -11,7 +11,7 @@
       
         <li>
           <%= link_to image.sal_path, :'data-target'=> "#modal_image_#{index}", :'data-toggle'=>"modal", :class=>"thumbnail" do %>
-            <%= djatoka_square_image_tag image.filename, :scale => 150, :alt => @person.full_name %>
+            <%= kinney_image_small(image) %>
           <% end -%>
         </li>
         

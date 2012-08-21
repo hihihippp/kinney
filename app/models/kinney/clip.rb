@@ -126,7 +126,7 @@ module Kinney
       siskel_path({:extension => 'vtt'})
     end
 
-    include ::KinneyHelper
+    include ::KinneyClipHelper
 
     # parsed WEBVTT file
     def webvtt
