@@ -13,14 +13,28 @@ Abstracting the code out into this Rails Engine is currently incomplete and poss
 1. Create a fresh Rails application
 2. Add the following to your Gemfile: 
 `gem 'kinney', :git => 'git://github.com/jronallo/kinney.git'`
-3. `bundle`
+3. `bundle install`
 4. `rake kinney:install:migrations` and `rake db:migrate`
-5. `rails g kinney:install`
+5. `rails g kinney:install` and `bundle install`
 6. `rails c` and then Kinney::AdminUser.create!(:email => 'admin@example.com', :password => 'password', :password_confirmation => 'password')
 7. Start the Rails server and go to localhost:3000/admin
 8. Add a topic
 9. Add a person
 10. Add a clip (make at least one clip a "top pick")
+
+# Configuration
+
+When running the Kinney installation generator several files were created and some of those need to be configured.
+
+## app/helpers/kinney_helper.rb
+
+## app/helpers/kinney_clip_helper.rb
+
+## app/models/kinney/image.rb
+
+## config/routes.rb
+
+## config/environments/development.rb
 
 # Author
 

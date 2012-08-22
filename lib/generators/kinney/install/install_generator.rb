@@ -40,6 +40,7 @@ DESC
       end
 
       def create_image_override
+        empty_directory 'app/models/kinney'
         template 'image.rb', 'app/models/kinney/image.rb'
       end
 
