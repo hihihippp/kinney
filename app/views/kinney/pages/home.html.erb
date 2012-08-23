@@ -5,9 +5,8 @@
 <div class="row">
   <div class="span9">
     <div class="well" id="featured_clip"> 
-      <h2><%= t 'kinney.pages.home.featured_story' %></h2>
+      <h2><%= t 'kinney.pages.home.featured_story' %>: <span class="subtitle"><%= @featured_clip.title if @featured_clip %></span></h2>
       <% if @featured_clip %>
-        <h3><%= @featured_clip.title %></h3>
         <%#= render :partial => '/video', :locals => {:person => @person, :clip => @clip} %>
         
         <%= link_to(@featured_clip, :class => [:thumbnail_video], :id => :featured_video_link) do %>
