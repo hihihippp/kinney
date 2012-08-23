@@ -1,9 +1,9 @@
 <div id="search_form">
-  <%= form_tag search_path, :method => :get do %> 
+  <%= form_tag search_path, :method => :get, :class => 'form-search' do %> 
     <p>
       <%= label_tag :q, t('kinney.search.label') %>
-      <%= text_field_tag :q, params[:q] %>
-      <%= submit_tag t('kinney.search.submit_text'), :name => nil %>
+      <%= text_field_tag :q, params[:q], :class => 'search-query' %>
+      <%= submit_tag t('kinney.search.submit_text'), :name => nil, :class => 'btn' %>
       <%= link_to t('kinney.search.clear'), search_path if defined?(@clips) %>
     </p>
   <% end %>
