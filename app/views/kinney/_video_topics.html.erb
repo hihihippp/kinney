@@ -1,7 +1,11 @@
 <h3><%= t 'kinney.pages.home.video_topics' %></h3>
-<ul class="nav nav-tabs nav-stacked">
+<ul class="nav nav-tabs nav-stacked topics">
   <% @topics_with_clips.each do |topic| %>
-    <li><%= link_to topic.name, topic %></li>
+    <li class="<%= topic.friendly_id %>">
+      <%= link_to topic do %>
+        <i></i> <%= topic.name %>
+      <% end -%>
+    </li>
   <% end -%>
 </ul>
   
