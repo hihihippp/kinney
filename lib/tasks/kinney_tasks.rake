@@ -9,7 +9,8 @@ namespace :kinney do
 
   desc 'create friendly_ids for models'
   task :friendly_id => :environment do
-    [Kinney::Clip, Kinney::Person].each do |klass|
+    [Kinney::Clip, Kinney::Person, Kinney::Topic].each do |klass|
+      puts klass.to_s
       klass.find_each(&:save)
     end
   end
