@@ -3,11 +3,7 @@
 <%= render :partial => '/layouts/kinney/social_setup' %>
 
 <%= content_for :header do %>
-  <div class="row">
-    <div class="span12">
-      <h1><%= @clip.people_names %><br><span itemprop="name"><%= @clip.title %></span></h1>      
-    </div>
-  </div>
+  <h1><%= @clip.people_names %><br><span itemprop="name"><%= @clip.title %></span></h1>
 <% end -%>
 
 <div class="row" itemscope itemtype="http://schema.org/VideoObject" itemref="header">
