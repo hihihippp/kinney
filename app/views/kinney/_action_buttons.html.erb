@@ -1,8 +1,10 @@
 <div id="action_buttons">
-    <%= link_to t('kinney.pages.add_your_story.title'), add_your_story_path, :class => 'btn btn-large btn-danger', :id => :add_story_btn %>
+    <%= link_to add_your_story_path, :id => :add_story_btn do %>
+      <span><%= t('kinney.pages.add_your_story.title') %></span>
+    <% end -%>
   
-    <%= link_to 'http://www.lib.ncsu.edu/giving',  :class => 'btn btn-large btn-danger', :id => :giving_btn do %>
-      Giving <i class="icon-external-link"></i>
+    <%= link_to 'http://www.lib.ncsu.edu/giving',  :id => :giving_btn do %>
+      <span>Giving <i class="icon-external-link"></i></span>
     <% end -%>
 </div>  
 <div class="row">
