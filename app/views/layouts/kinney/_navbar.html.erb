@@ -39,10 +39,9 @@
           <li class="<%= 'active' if action?('about') %>">
             <%= link_to 'About', kinney.about_path %>
           </li>
-
         </ul>
+        <%= render '/kinney/search_form' %>
       </div>
- 
     </div>
   </div>
 </div>
