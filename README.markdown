@@ -36,6 +36,22 @@ When running the Kinney installation generator several files were created and so
 
 ## config/environments/development.rb
 
+## app/views/kinney/pages/_about_text.html.erb
+
+## app/views/kinney/_contact.html.erb
+
+## app/views/layouts/kinney/_footer.html.erb
+
+## app/views/layouts/kinney/_brand.html.erb
+
+## app/views/kinney/pages/_home_header.html.erb
+
+# TODO
+
+- more documentation
+- sort out compiling ckeditor in production
+- work around for this issue with ckeditor for deployment: https://github.com/galetahub/ckeditor/pull/156
+
 # Author
 
 Jason Ronallo
