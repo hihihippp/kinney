@@ -146,7 +146,8 @@ module Kinney
     end
     
     def video_switcher_params
-      {:rel=> :tooltip, :'data-content' => description, :'data-original-title' => description, :'data-placement' => :bottom}
+      {:rel=> :tooltip, :'data-content' => description, :'data-original-title' => description, 
+        :'data-placement' => :bottom, :class => :clearfix}
     end
     
     def duration_iso8601
