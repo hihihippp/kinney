@@ -6,6 +6,17 @@
 
 .thumbnail.person_read_more {
   img {float:left; margin-right: 10px}
-  .bio {color:black;}
-  margin-bottom: 20px
+  .bio {
+    color:black;
+    .name {
+      font-size: 1.2em;
+      color: grey;
+      font-weight: bold;
+    }
+  }
+  margin-bottom: 20px;
+  &:hover {
+    text-decoration:none;
+    background-color: #F5F5F5;
+  }
 }

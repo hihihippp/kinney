@@ -1,0 +1,12 @@
+.thumbnail {
+  &:hover {
+    text-decoration:none;
+    background-color: #F5F5F5;
+  }
+}
+
+#kinney_clips_index {
+  .thumbnail {
+    &:hover { background-color: transparent;}
+  }
+}
