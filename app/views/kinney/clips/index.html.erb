@@ -22,9 +22,12 @@
             <% end -%>
 
             <h5><%= person.first_name %> <%= person.middle_name %> <span class="last_name"><%= person.last_name %></span><%= ', ' + person.name_suffix if !person.name_suffix.blank? %> <span class="grad_class"><%= "(#{person.graduating_class})" if !person.graduating_class.blank? %></span></h5>
-            <ul>
+            <ul class="nav nav-pills nav-stacked">
               <% person.clips.each do |clip| %>
-                <li><%= link_to clip.title, clip, :rel => :tooltip, :'data-original-title' => clip.description %> <%= "(#{clip.duration_pretty})" if !clip.duration.blank? %></li>
+                <li><%= link_to clip, :rel => :tooltip, :'data-original-title' => clip.description do %>
+                  <%= clip.title %> <%= "(#{clip.duration_pretty})" if !clip.duration.blank? %>
+                <% end -%>                  
+                </li>
               <% end -%>
             </ul>
           </div>
