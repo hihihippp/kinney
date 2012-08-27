@@ -7,7 +7,11 @@
 .thumbnail.person_read_more {
   img {float:left; margin-right: 10px}
   .bio {color:black;}
-  
+  .name {
+    font-size: 1.2em;
+    color: grey;
+    font-weight: bold;
+  }
 }
 
 #kinney_clips_show {

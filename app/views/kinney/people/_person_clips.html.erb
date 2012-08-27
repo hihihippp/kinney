@@ -4,8 +4,8 @@
       <li>
         <%= link_to(clip, clip.video_switcher_params) do %>
           <i class="icon-play"></i> <span class="title"><%= clip.title %></span> <br>
-          <%= clip.description %>
-          <%= duration_pretty(clip) %>
+          <span class="description"><%= clip.description %>
+          <%= duration_pretty(clip) %></span>
         <% end -%>
       </li>
     <% end -%>

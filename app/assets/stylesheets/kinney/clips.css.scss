@@ -26,4 +26,20 @@ ul#clip_profiles {
 i.icon-play { 
   font-size: 2em;
   float: left;
+  padding: 5px 10px 10px 0;
+  display:block;
+}
+
+#clip_profiles {
+  .nav {margin-bottom: 0;}
+}
+
+#person_videos {
+  .description {color: black;}
+  .title {
+    font-size: 1.2em;
+    color: grey;
+    font-weight: bold;
+  }
+
 }

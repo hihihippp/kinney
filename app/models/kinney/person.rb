@@ -65,7 +65,7 @@ module Kinney
     end
       
     def short_bio
-      HTML_Truncator.truncate(biography, 40).html_safe
+      HTML_Truncator.truncate(biography, 20).html_safe
     end
 
     def image
