@@ -4,6 +4,7 @@
     <%= image_tag clip.png, :alt => clip.title %>
   </div>
   <div class="caption">
-    <%= clip.full_people_names %><br><%= clip.title %> <%= duration_pretty(clip) %>
+    <div class="name"><%= clip.full_people_names %></div>
+    <span class="title"><%= clip.title %></span> <%= duration_pretty(clip) %>
   </div>
 <% end -%>
