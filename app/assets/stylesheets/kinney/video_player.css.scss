@@ -1,21 +1,30 @@
 /* These are overrides for the mediaelementsjs player and conflicts with other included CSS */
 .mejs-captions-selector label {color: white}
 .mejs-overlay-button{ top:80%; left:90%;}
-.thumbnail_video .thumbnail_image {
-  position:relative; 
-  .mejs-overlay-button {
-    background: image-url("kinney/smallplay.png") no-repeat;
-    width: 50px;
-    height: 50px;
-    top: 95%;
-    left: 95%;
-  }
-  &:hover .mejs-overlay-button {
-    background-position: 0 -50px;
+.thumbnail_video {
+  .thumbnail_image {
+    position:relative;
+    box-shadow: 0 4px 2px -2px gray;
+    .mejs-overlay-button {
+      background: image-url("kinney/smallplay.png") no-repeat;
+      width: 50px;
+      height: 50px;
+      top: 95%;
+      left: 95%;
+    }
+    &:hover .mejs-overlay-button {
+      background-position: 0 -50px;
+    }
   }
 }
 
-#video_container {
+
+h4 {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+#video_container, #home_video_image {
   box-shadow: 0 0 15px #000000;
   margin-bottom: 10px;
 }
