@@ -41,7 +41,7 @@
     <h2><%= link_to t('kinney.more.video'), clips_path %></h2>
     <ul class="thumbnails">
       <% @top_pick_clips.each do |clip| %>
-        <li class="span3">
+        <li class="span3 <%= cycle("odd", "even") -%>">
            <%= render :partial => '/kinney/clip_link', :locals => {:clip => clip} %>
         </li>
       <% end -%>
