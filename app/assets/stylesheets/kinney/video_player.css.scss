@@ -11,10 +11,7 @@
       height: 50px;
       top: 95%;
       left: 95%;
-    }
-    &:hover .mejs-overlay-button {
-      background-position: 0 -50px;
-    }
+    }    
   }
   .name {
     font-size: 1.2em;
@@ -22,7 +19,12 @@
     font-weight: bold;
     margin-bottom: 10px;
   }
+  &:hover .mejs-overlay-button {
+    background-position: 0 -50px;
+  }
 }
+
+
 
 
 h4 {
