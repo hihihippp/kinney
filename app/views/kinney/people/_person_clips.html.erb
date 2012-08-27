@@ -4,7 +4,7 @@
       <li>
         <%= link_to(clip, clip.video_switcher_params) do %>
           <i class="icon-play"></i> <span class="title"><%= clip.title %></span> <br>
-          <span class="description"><%= clip.description %>
+          <span class="description"><%= HTML_Truncator.truncate(clip.description, 15).html_safe  %>
           <%= duration_pretty(clip) %></span>
         <% end -%>
       </li>

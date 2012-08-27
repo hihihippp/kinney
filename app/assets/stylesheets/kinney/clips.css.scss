@@ -35,11 +35,14 @@ i.icon-play {
 }
 
 #person_videos {
-  .description {color: black;}
+  .description {
+    color: black;
+    display: inline-block;
+    margin-top: 10px;
+  }
   .title {
     font-size: 1.2em;
     color: grey;
-    font-weight: bold;
+    font-weight: bold;    
   }
-
 }
