@@ -12,6 +12,7 @@ module Kinney
     end
 
     def home
+      @people = Person.with_images
       @featured_clip   = Clip.where(:featured => true).limit(1).first
       @top_pick_clips = Clip.top_picks
       @topics_with_clips = Topic.with_clips

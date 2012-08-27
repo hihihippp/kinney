@@ -46,6 +46,10 @@ module Kinney
     def self.with_clips
       joins(:clips).group("kinney_people.id HAVING count(kinney_clips.id) > 0")
     end
+
+    def self.with_images
+      joins(:images).group("kinney_people.id HAVING count(kinney_images.id) > 0")
+    end
     
     def to_label
       "#{last_name}, #{first_name}"
