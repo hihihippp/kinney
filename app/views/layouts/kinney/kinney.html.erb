@@ -34,11 +34,13 @@
       </div>
     </section>
 
-    <section id="catch">
-      <div class="container">
-        <%= yield :catch %>
-      </div>
-    </section>
+    <% if content_for?(:catch) %>
+      <section id="catch">
+        <div class="container">
+          <%= yield :catch  %>
+        </div>
+      </section>
+    <% end -%>
     
     <footer>
       <%= render '/layouts/kinney/footer' -%>
