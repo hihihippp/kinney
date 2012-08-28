@@ -4,10 +4,10 @@
 //= require mediaelement_rails/mediaelement
 //= require mediaelement_rails/mediaelementplayer
 //= require mediaelement_rails/rails
+//= require kinney/kinney_object
 //= require mep-feature-googleanalytics
 //= require jquery-tablesorter
 //= require jquery.sortelements
-//= require kinney/kinney_object
 //= require kinney/people
 //= require kinney/kinney_video
 //= require kinney/clips

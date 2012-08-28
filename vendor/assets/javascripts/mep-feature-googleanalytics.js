@@ -39,7 +39,7 @@ $.extend(MediaElementPlayer.prototype, {
 					player.media.currentTime
 				]);
 			}
-			Sleader.track();
+			Kinney.track();
 		}, false);	
 		
 		media.addEventListener('ended', function() {
@@ -51,17 +51,17 @@ $.extend(MediaElementPlayer.prototype, {
 					player.media.currentTime
 				]);
 			}
-			Sleader.track();			
+			Kinney.track();			
 		}, false);
 		
 		
 		media.addEventListener('timeupdate', function() {
-			if ($('#clips_show video').length > 0) {
-				//console.log(parseInt(player.media.currentTime));
+			if ($('#kinney_clips_show video').length > 0) {
+				console.log(parseInt(player.media.currentTime));
 				var second = parseInt(player.media.currentTime);
-				Sleader.tracker_seconds.push(second);
-				if (Sleader.tracker_seconds.length >= 20) {
-					Sleader.track();
+				Kinney.tracker_seconds.push(second);
+				if (Kinney.tracker_seconds.length >= 20) {
+					Kinney.track();
 				}
 			}
 
