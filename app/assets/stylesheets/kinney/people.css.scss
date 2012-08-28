@@ -5,14 +5,20 @@
 #person_clips #person_clips_image img {width: 100%}
 
 .thumbnail.person_read_more {
-  img {float:left; margin-right: 10px}
-  .bio {color:black;}
-  .name {
-    font-size: 1.2em;
-    color: grey;
-    font-weight: bold;
-    margin-bottom: 10px;
+  .image {
+    float:left; 
+    margin-right: 10px;
   }
+  .text {
+    overflow:hidden;
+    .bio {color:black;}
+    .name {
+      font-size: 1.2em;
+      color: grey;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  }  
 }
 
 #kinney_clips_show {

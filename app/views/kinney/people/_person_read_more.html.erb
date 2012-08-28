@@ -1,8 +1,14 @@
 <%= link_to(person, :class => [:thumbnail, :person_read_more, :clearfix]) do %>
-  <%= kinney_image_small(person.image, person) if person.image %>
-  <div class="bio">
-    <div class="name"><%= person.full_name %></div>
-    <%= person.short_bio %>
+  <div class="row-fluid">
+    <div class="image">
+      <%= kinney_image_small(person.image, person) if person.image %>
+    </div>
+    <div class="text">
+      <div class="bio">
+        <div class="name"><%= person.full_name %></div>
+        <%= person.short_bio %>
+      </div>
+      <%= t 'kinney.clips.show.read_more_about', :name => person.full_name %>     
+    </div>
   </div>
-  <%= t 'kinney.clips.show.read_more_about', :name => person.full_name %>     
 <% end -%>
