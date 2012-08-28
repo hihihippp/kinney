@@ -4,7 +4,7 @@
 .thumbnail_video {
   .thumbnail_image {
     position:relative;
-    box-shadow: 0 4px 2px -2px gray;
+    box-shadow: 0 4px 2px -2px grey;
     .mejs-overlay-button {
       background: image-url("kinney/smallplay.png") no-repeat;
       width: 50px;
@@ -19,8 +19,13 @@
     font-weight: bold;
     margin-bottom: 10px;
   }
-  &:hover .mejs-overlay-button {
-    background-position: 0 -50px;
+  &:hover {
+    .mejs-overlay-button {
+      background-position: 0 -50px;
+    }
+    .thumbnail_image {
+      box-shadow-color: #005580;
+    }  
   }
 }
 
@@ -35,4 +40,7 @@ h4 {
 #video_container, #home_video_image {
   box-shadow: 0 0 15px #000000;
   margin-bottom: 10px;
+  &:hover {
+    box-shadow: 0 0 15px #005580;
+  }
 }

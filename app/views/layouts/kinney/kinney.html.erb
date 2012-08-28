@@ -17,7 +17,12 @@
   <%= render '/layouts/kinney/navbar' %>
     
   <div id="page_container">
-    <header id="header">
+    
+    
+    <section id="page">
+      <div class="container">   
+
+        <header id="header">
       <div class="container">        
         <div class="row">
           <div class="span12">            
@@ -26,9 +31,8 @@
         </div>
       </div>
     </header>
-    
-    <section id="page">
-      <div class="container">        
+
+
         <%= render '/layouts/kinney/messages' if !flash.blank? %>
         <%= yield %>
       </div>
@@ -36,9 +40,7 @@
 
     <% if content_for?(:catch) %>
       <section id="catch">
-        <div class="container">
-          <%= yield :catch  %>
-        </div>
+        <%= yield :catch  %>        
       </section>
     <% end -%>
     

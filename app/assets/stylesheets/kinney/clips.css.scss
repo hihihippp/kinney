@@ -1,5 +1,6 @@
 ul#clip_profiles {
   .one {clear:both;}
+  .nav {margin-bottom: 0;}
 }
 
 #more_transcript {
@@ -16,22 +17,11 @@ ul#clip_profiles {
     .clips { max-height: 490px; overflow:auto}
 }
 
-// scrollbar
-#topic_clips ::-webkit-scrollbar{width:9px;height:9px;}
-#topic_clips ::-webkit-scrollbar-button:start:decrement,#topic_clips ::-webkit-scrollbar-button:end:increment{display:block;height:0;background-color:transparent;}
-#topic_clips ::-webkit-scrollbar-track-piece{background-color:#FAFAFA;-webkit-border-radius:0;-webkit-border-bottom-right-radius:8px;-webkit-border-bottom-left-radius:8px;}
-#topic_clips ::-webkit-scrollbar-thumb:vertical{height:50px;background-color:#999;-webkit-border-radius:8px;}
-#topic_clips ::-webkit-scrollbar-thumb:horizontal{width:50px;background-color:#999;-webkit-border-radius:8px;}
-
 i.icon-play { 
   font-size: 2em;
   float: left;
   padding: 5px 10px 10px 0;
   display:block;
-}
-
-#clip_profiles {
-  .nav {margin-bottom: 0;}
 }
 
 #person_videos {

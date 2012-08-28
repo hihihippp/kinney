@@ -46,6 +46,11 @@ When running the Kinney installation generator several files were created and so
 
 ## app/views/kinney/pages/_home_header.html.erb
 
+
+# Development
+
+`bundle exec rake test`
+
 # TODO
 
 - more documentation
