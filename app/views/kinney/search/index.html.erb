@@ -5,6 +5,17 @@
 <% end -%>
 
 <div class="row">
+  <div class="span12">
+    <%- if params[:q].blank? -%>
+
+    <%- else -%>
+      You searched for <b><%= params[:q] %></b>.
+      <%= link_to t('kinney.search.clear'), search_path , :class => :btn if defined?(@clips) %> 
+    <% end -%>
+  </div>  
+</div>
+
+<div class="row">
   <div class="span8" id="clips">
     <h2><%= t '.clips' %></h2>
 
