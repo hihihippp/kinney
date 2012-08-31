@@ -22,7 +22,7 @@ class ClipsIndexTest < ActionDispatch::IntegrationTest
 
   test "clicking on a video thumbnail should go to a video clip" do 
     visit(kinney.clips_path)
-    page.find('.thumbnail_video:first').click
+    page.find('.thumbnail_video').click
     assert page.has_selector?('body.kinney_clips video')
   end
 
