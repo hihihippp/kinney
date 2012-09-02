@@ -89,7 +89,7 @@ EOF
 
 
 # added by Kinney
-gem 'bootstrap-sass', '~> 2.0.3'
+gem 'bootstrap-sass'
 # once these are published as gems we can use them from there, until then we need to have them in our Gemfile
 gem 'mediaelement_rails', :git => 'https://github.com/tobsch/mediaelement_rails.git'
 gem 'webvtt', :git => 'https://github.com/jronallo/webvtt.git'
