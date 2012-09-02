@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
   s.add_dependency "friendly_id", "~> 4.0.1"
   s.add_dependency 'activeadmin'
   s.add_dependency 'meta_search'
+  s.add_dependency 'formtastic', "~> 2.1.1"
   s.add_dependency 'formtastic-bootstrap'
   s.add_dependency 'chosen-rails'
   s.add_dependency 'tire' 
