@@ -13,7 +13,7 @@ class AdminImagesTest < ActionDispatch::IntegrationTest
   
   test "user should not be able to create slug" do
     visit(admin_kinney_images_path)
-    click_link('New Image')
+    click_link('New Kinney Image')
     fill_in 'Filename', :with => '000001'
     check 'Top Pick?'
   end

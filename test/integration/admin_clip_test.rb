@@ -13,7 +13,7 @@ class AdminClipTest < ActionDispatch::IntegrationTest
   
   test "admin user can create new clip" do
     visit('/admin/kinney_clips')
-    click_link('New Clip')
+    click_link('New Kinney Clip')
   end
   
   test "adding duration to the form when filename entered" do

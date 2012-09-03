@@ -8,7 +8,7 @@ class AdminTopicsTest < ActionDispatch::IntegrationTest
   
   test "user should not be able to create slug" do
     visit(admin_kinney_topics_path)
-    click_link('New Topic')
+    click_link('New Kinney Topic')
     assert page.has_no_content?('Slug')
   end
   
