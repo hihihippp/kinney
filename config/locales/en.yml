@@ -63,6 +63,7 @@ en:
         no_current_search_people_message: There is no current search. Below are all of the people with video interviews.
       label: Search
       submit_text: Search
+      placeholder: Search people and stories
       clear: clear search
     topics:
       index:
