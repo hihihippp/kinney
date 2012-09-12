@@ -68,8 +68,22 @@ module Kinney
       HTML_Truncator.truncate(biography, 20).html_safe
     end
 
+    def short_bio_text
+      Nokogiri::HTML(short_bio).text
+    end
+
     def image
       images.where(:top_pick => true).limit(1).first
+    end
+
+    def read_more_link_params
+      read_more_link_params_hash = {:class => [:thumbnail, :person_read_more, :clearfix]}
+      if !biography.blank?
+        read_more_link_params_hash.merge!({:rel=> :popover, :'data-content' => short_bio_text, :'data-original-title' => full_name, 
+          :'data-placement' => :left, :'data-trigger' => :hover})
+      end
+      read_more_link_params_hash
+
     end
     
   end

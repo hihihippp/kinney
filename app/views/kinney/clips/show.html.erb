@@ -41,7 +41,9 @@
 
   <div class="span4" id="related_people">    
     <% @clip.people.each do |person| %>
-      <%= render :partial => '/kinney/people/person_read_more', :locals => {:person => person} %>        
+      <div class="person">
+        <%= render :partial => '/kinney/people/person_read_more', :locals => {:person => person} %>        
+      </div>
       <div class="person_video">
         <%= render :partial => '/kinney/people/person_clips', :locals => {:person => person, :current_clip => @clip} %>
       </div>

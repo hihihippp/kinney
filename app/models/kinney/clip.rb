@@ -146,8 +146,12 @@ module Kinney
     end
     
     def video_switcher_params
-      {:rel=> :tooltip, :'data-content' => description, :'data-original-title' => description, 
-        :'data-placement' => :bottom, :class => :clearfix}
+      video_switcher_params_hash = {:class => :clearfix}
+      if !description.blank?
+        video_switcher_params_hash.merge!({:rel=> :popover, :'data-content' => description, :'data-original-title' => title, 
+          :'data-placement' => :left, :'data-trigger' => :hover})
+      end
+      video_switcher_params_hash
     end
     
     def duration_iso8601
