@@ -148,8 +148,7 @@ module Kinney
     def video_switcher_params
       video_switcher_params_hash = {:class => :clearfix}
       if !description.blank?
-        video_switcher_params_hash.merge!({:rel=> :popover, :'data-content' => description, :'data-original-title' => title, 
-          :'data-placement' => :left, :'data-trigger' => :hover})
+        video_switcher_params_hash.merge!({:rel=> :popover, :'data-content' => description, :'data-original-title' => title})
       end
       video_switcher_params_hash
     end

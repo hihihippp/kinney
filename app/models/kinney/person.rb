@@ -79,8 +79,7 @@ module Kinney
     def read_more_link_params
       read_more_link_params_hash = {:class => [:thumbnail, :person_read_more, :clearfix]}
       if !biography.blank?
-        read_more_link_params_hash.merge!({:rel=> :popover, :'data-content' => short_bio_text, :'data-original-title' => full_name, 
-          :'data-placement' => :left, :'data-trigger' => :hover})
+        read_more_link_params_hash.merge!({:rel=> :popover, :'data-content' => short_bio_text, :'data-original-title' => full_name})
       end
       read_more_link_params_hash
 

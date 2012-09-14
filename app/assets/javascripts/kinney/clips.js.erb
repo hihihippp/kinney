@@ -24,7 +24,31 @@ $(function() {
     toggles();
   });
 
-  // on clip show view show a popover over other video with the same person
-  $('#related_people .person a, #related_people .person_video a').popover();
+
+  Kinney.twitter_bootstrap_popover_placement = function(){
+    var width = window.innerWidth;
+    if ($('#kinney_people_show').length > 0){
+      return 'bottom';
+    }
+    if (width<900) return 'bottom';
+    return 'left';
+  }
+
+  // We only want popovers to show up on the desktop. These are currently just
+  // informational, so we do not need to show them on touch devices.
+  $('[rel="popover"]').popover({
+    trigger: 'manual',
+    placement: Kinney.twitter_bootstrap_popover_placement
+  }).mouseover(function(evt) {
+    if (evt.originalEvent.type == 'click') {
+      alert(evt.originalEvent.type);
+      $(this).popover('hide');
+      window.location.replace($(this).attr('href'))
+    } else {
+      $(this).popover('show');
+    }    
+  }).mouseleave(function(evt){
+    $(this).popover('hide');
+  });
 
 });
