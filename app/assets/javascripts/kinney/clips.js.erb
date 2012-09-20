@@ -40,8 +40,7 @@ $(function() {
     trigger: 'manual',
     placement: Kinney.twitter_bootstrap_popover_placement
   }).mouseover(function(evt) {
-    if (evt.originalEvent.type == 'click') {
-      alert(evt.originalEvent.type);
+    if ("ontouchstart" in document.documentElement) {
       $(this).popover('hide');
       window.location.replace($(this).attr('href'))
     } else {
