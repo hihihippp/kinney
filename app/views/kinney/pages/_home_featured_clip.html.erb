@@ -1,0 +1,21 @@
+<h2><%= t 'kinney.pages.home.featured_story' %>: <span class="subtitle"><%= @featured_clip.title if @featured_clip %></span></h2>
+<% if @featured_clip %>
+  
+  <%= link_to(@featured_clip, :class => [:thumbnail_video], :id => :featured_video_link) do %>
+    <div id="home_video_image">
+      <div class="mejs-overlay-button"></div>
+      <%= image_tag @featured_clip.png, :alt => @featured_clip.title %>
+    </div>
+    
+  <% end -%>
+
+  <h3><%= t 'kinney.pages.home.profile_of', :name => @person.full_name %></h3>
+  <%= raw @person.short_bio %>
+  <%= link_to(@person, :class=> "btn") do %>
+    <%= t 'kinney.pages.home.see_all_videos_button', :name => @person.last_name %> <i class='icon-arrow-right'></i>
+  <% end -%>
+<% else -%>
+  <p>You currently have no featured clip. Go to the admin interface and create or select a featured clip.</p>
+<% end -%>
+
+<div class="clearfix"></div>
