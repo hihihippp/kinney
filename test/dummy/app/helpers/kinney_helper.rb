@@ -2,7 +2,7 @@ module KinneyHelper
   
   def kinney_image_small(image, person=@person)
     if defined?(Djatoka)
-      djatoka_square_image_tag image.filename, :scale => 150, :itemprop => :image, :alt => person.full_name
+      djatoka_square_image_tag image.filename, :scale => 170, :itemprop => :image, :alt => person.full_name
     else
       image_tag "http://placehold.it/150x150"
     end

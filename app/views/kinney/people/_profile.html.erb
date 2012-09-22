@@ -1,38 +1,40 @@
 <% if !@person.term.blank? or !@person.graduating_class.blank? %>
-      
-      <h2><%= t 'kinney.people.profile.years_at_state' %></h2>
-      <%= raw @person.term %>
-      <p><%= t 'kinney.people.profile.class_of', :year => @person.graduating_class %></p>
-    
+  <section>
+    <h2><%= t 'kinney.people.profile.years_at_state' %></h2>
+    <%= raw @person.term %>
+    <p><%= t 'kinney.people.profile.class_of', :year => @person.graduating_class %></p>
+  </section>    
 <% end -%>
+
 <% if !@person.accomplishments.blank? %>
-  <div>
+  <section>
     <h2><%= t 'kinney.people.profile.accomplishments' %></h2>
     <%= raw @person.accomplishments %>
-  </div>
+  </section>
 <% end -%>       
 
 <% if !@person.activities.blank? %>
-  <div>
+  <section>
     <h2><%= t 'kinney.people.profile.activities' %></h2>
     <%= raw @person.activities %>
-  </div>
+  </section>
 <% end -%>
+
 <% if !@person.currently.blank? %>
-  <div itemprop="description" id="currently">
+  <section itemprop="description" id="currently">
     <h2><%= t 'kinney.people.profile.currently' %></h2>
     <%= raw @person.currently %>
     <% if !@currently_clip.blank? %>
       <%= render :partial => '/kinney/clip_link', :locals => {:clip => @currently_clip} %>
     <% end -%>
-  </div>
+  </section>
 <% end -%>
 
 <% if !@person.citations.blank? %>
-  <div>
+  <section>
     <h2><%= t 'kinney.people.profile.citations' %></h2>
     <%= raw @person.citations %>
-  </div>
+  </section>
 <% end -%>
   
   

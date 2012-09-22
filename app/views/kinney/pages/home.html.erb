@@ -16,30 +16,7 @@
 </div>
 
 <% content_for :catch do -%>
-<div class="container">
-  <div class="row">
-    <div class="span6" id="more_clips">
-      <h2><%= link_to t('kinney.more.video'), clips_path %></h2>
-      <ul class="thumbnails">
-        <% @top_pick_clips.each do |clip| %>
-          <li class="span3 <%= cycle("odd", "even") -%>">
-             <%= render :partial => '/kinney/clip_link', :locals => {:clip => clip} %>
-          </li>
-        <% end -%>
-      </ul>
-    </div>
-    <div class="span5 offset1" id="more_people">
-      <h2><%= link_to t('kinney.more.people'), people_path %></h2>
-      <ul class="thumbnails">
-        <% @people.each do |person| %>
-          <li class="span5">
-             <%= render :partial => '/kinney/people/person_read_more', :locals => {:person => person} %>
-          </li>
-        <% end -%>
-      </ul>
-    </div>
-  </div>
-</div>
+  <%= render "home_catch" %>
 <% end -%>
       
     

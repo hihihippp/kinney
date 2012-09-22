@@ -79,8 +79,8 @@ en:
       last_name: Last Name 
       graduating_class: Graduating Class
     more:
-      video: More Video
-      people: More People
+      video: Video
+      people: People
     contact:
       title: Contact
       phone_number: Phone Number
