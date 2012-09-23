@@ -1,0 +1,11 @@
+table.tablesorter th {
+  background-color: $grayLighter;
+}
+
+table.tablesorter th.headerSortUp, table.tablesorter th.tablesorter-headerSortUp {
+  background-color: $grayLight;
+}
+
+table.tablesorter th.headerSortDown, table.tablesorter th.tablesorter-headerSortDown {
+  background-color: $grayLight;
+}
