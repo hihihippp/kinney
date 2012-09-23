@@ -10,7 +10,7 @@ class PagesHomeTest < ActionDispatch::IntegrationTest
 
   test "home page should have link to More Video" do
     visit(kinney.root_path)
-    assert page.has_selector?('a', :text => "More Video")
+    assert page.has_selector?('a', :text => "Video")
     assert page.has_selector?('#more_clips')
   end
 
