@@ -47,5 +47,16 @@ class PersonTest < ActiveSupport::TestCase
   test "should provide the top pick image" do
     assert_equal kinney_images(:tolson2), kinney_people(:tolson).image
   end
+
+  test "should return only people with a top pick video" do
+    people = Kinney::Person.with_top_pick_clip
+    assert_equal 2, people.length
+  end
+
+  test "should return a top_pick clip for a person" do
+    atkins = kinney_people(:atkins)
+    clip = atkins.top_pick_clip 
+    assert_equal kinney_clips(:atkins_fire), clip
+  end
   
 end

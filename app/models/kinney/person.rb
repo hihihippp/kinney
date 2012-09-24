@@ -47,9 +47,18 @@ module Kinney
       joins(:clips).group("kinney_people.id HAVING count(kinney_clips.id) > 0")
     end
 
+    def self.with_top_pick_clip
+      joins(:clips).where('kinney_clips.top_pick' => true)
+    end
+
+    def top_pick_clip
+      clips.where(:top_pick => true).limit(1).first
+    end
+
     def self.with_images
       joins(:images).group("kinney_people.id HAVING count(kinney_images.id) > 0")
     end
+
     
     def to_label
       "#{last_name}, #{first_name}"
