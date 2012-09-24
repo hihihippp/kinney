@@ -13,5 +13,6 @@
 //= require kinney/clips
 //= require kinney/popovers
 //= require kinney/event_tracking
+//= require kinney/twitter_bootstrap_fixes
 // require mustache
 // require_tree ../../templates
