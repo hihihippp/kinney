@@ -38,10 +38,6 @@ h4 {
     margin: 5px 0 5px 5px;
   }
 
-#video_container, #home_video_image {
-  @include box-shadow(0 0 15px #000000);
+#video_container, #home_video_image {  
   margin-bottom: 10px;
-  &:hover {
-    box-shadow: 0 0 15px #005580;
-  }
 }
