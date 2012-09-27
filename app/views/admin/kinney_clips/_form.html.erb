@@ -28,6 +28,6 @@
       <%= f.input :people, :input_html => {:class => 'chzn-select'} %>
       <%= f.input :quotes, :as => :ckeditor %>
   <% end -%>
-  <%= f.buttons :commit %>
+  <%= f.action(:submit) %>
 <% end %>
 </div>

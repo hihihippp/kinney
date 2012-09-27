@@ -15,8 +15,8 @@
       <%= f.input :email, :as => :email %>
       <%= f.input :comment, :as => :text, :input_html => {:rows => 5} %>
     <% end -%>
-    <%= f.buttons do %>
-      <%= f.commit_button :button_html => {:class => 'btn'} %>
+    <%= f.actions do %>
+      <%= f.action(:submit, :button_html => {:class => 'btn'}) %>
     <% end -%>
   <% end -%>
 </div>

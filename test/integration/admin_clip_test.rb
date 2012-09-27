@@ -45,12 +45,12 @@ class AdminClipTest < ActionDispatch::IntegrationTest
 
   test "do not allow submission of clip if there is no webvtt file" do
     visit(new_admin_kinney_clip_path)
-    assert page.has_selector?("#kinney_clip_submit[@disabled='disabled']")
+    assert page.has_selector?("#kinney_clip_submit_action input[@disabled='disabled']")
     fill_in 'Filename', :with => 'atkins-campuslife_fire'
     page.execute_script("$('#kinney_clip_filename').trigger('focus')") # to make sure focus is triggered
     assert page.has_no_selector?("#kinney_clip_submit[@disabled='disabled']")
     fill_in 'Filename', :with => 'atkins-campuslife'
-    assert page.has_selector?("#kinney_clip_submit[@disabled='disabled']")
+    assert page.has_selector?("#kinney_clip_submit_action input[@disabled='disabled']")
   end
   
 end

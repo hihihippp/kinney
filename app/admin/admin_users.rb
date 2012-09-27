@@ -11,7 +11,7 @@ ActiveAdmin.register Kinney::AdminUser do
     f.inputs "Admin Details" do
       f.input :email
     end
-    f.buttons
+    f.actions
   end
   
 end

@@ -1,4 +1,6 @@
 $(function() {
+
+  // Transcripts
   var num_of_rows_to_show = '3';
 
   $('#transcript_table')
@@ -16,7 +18,6 @@ $(function() {
     return false;
   }
 
-
   $("#more_transcript_button").click(function() {
     toggles();
   });
@@ -24,7 +25,7 @@ $(function() {
     toggles();
   });
 
-
+  //Popovers
   Kinney.twitter_bootstrap_popover_placement = function(){
     var width = window.innerWidth;
     if ($('#kinney_people_show').length > 0){

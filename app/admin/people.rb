@@ -17,7 +17,7 @@ ActiveAdmin.register Kinney::Person do
       f.input :term_date_ranges, :as => :ckeditor
     end
     
-    f.buttons
+    f.actions
   end
   
   controller do

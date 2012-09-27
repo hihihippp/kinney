@@ -18,12 +18,12 @@ $(document).ready(function() {
         success: function(data) {
           $('#vtt textarea').val(data);
           $('#vtt_result').html('<div class="alert alert-success">WEBVTT Found. Fill out the other required fields and you can save.</div>');
-          $('body.admin_kinney_clips #kinney_clip_submit').removeAttr('disabled');
+          $('body.admin_kinney_clips #kinney_clip_submit_action').removeAttr('disabled');
         },
         error: function(data){
           $('#vtt textarea').val('NO WEBVTT FILE FOUND!!!');
           $('#vtt_result').html('<div class="alert alert-error">WEBVTT Not Found. You will not be able to save this clip without a WEBVTT file on the server.</div>');
-          $('body.admin_kinney_clips #kinney_clip_submit').attr('disabled', 'disabled');
+          $('body.admin_kinney_clips #kinney_clip_submit_action').attr('disabled', 'disabled');
         }
       });
       
@@ -32,7 +32,7 @@ $(document).ready(function() {
 
   if ($('.admin_kinney_clips').length > 0) {
     // WEBVTT must be present to submit form
-    $('body.admin_kinney_clips #kinney_clip_submit').attr('disabled', 'disabled');  
+    $('body.admin_kinney_clips #kinney_clip_submit_action input').attr('disabled', 'disabled');  
     $('#vtt_result').html('<div class="alert">Give focus to the filename. You will not be able to save until there is a WEBVTT file.</div>');
     checkForWebvtt();
     $('body.admin_kinney_clips input#kinney_clip_filename').bind('keyup change paste focus', function(){
