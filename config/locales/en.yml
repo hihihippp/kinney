@@ -24,6 +24,9 @@ en:
       about:
         title: About
         meta_description: About this project.
+      giving:
+        title: Giving 
+        meta_description: Please give to help support this project.
       add_your_story:
         title: Add Your Story
         text: Please fill out this form to contact us if you would like to add your story.

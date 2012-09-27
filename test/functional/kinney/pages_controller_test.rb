@@ -11,6 +11,11 @@ class Kinney::PagesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should get giving" do
+    get :giving, :use_route => :kinney
+    assert_response :success
+  end
+
   test "should get home" do
     get :home, :use_route => :kinney
     assert_response :success
