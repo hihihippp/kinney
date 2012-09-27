@@ -6,11 +6,13 @@
   <div class="modal-body">
     <%#= image.description %>
     <%= link_to image.external_url, :target => '_blank' do %>
-      <%= kinney_image_modal(image, person) %><br>    
-      <%= t 'kinney.people.more_info_on_image' %> <i class="icon-external-link"></i>
+      <%= kinney_image_modal(image, person) %>
     <% end -%>
   </div>
   <div class="modal-footer">
+    <%= link_to image.external_url, :target => '_blank', :class => :'pull-left' do %>
+      <%= t 'kinney.people.more_info_on_image' %> <i class="icon-external-link"></i>
+    <% end -%>
     <a href="#" class="btn" data-dismiss="modal">Close</a>
   </div>
 </div>
