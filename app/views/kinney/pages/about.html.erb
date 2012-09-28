@@ -1,16 +1,10 @@
 <% @title = t('kinney.pages.about.title') %>
 <% @meta_description = t('kinney.pages.about.meta_description') %>
 
-<%= content_for :header do %>
-  <h1><%= t 'kinney.pages.about.title' %></h1>
-<% end -%>
-
 <div class="row">
-  <div class="span12">
-    <p>
-      <%= render '/kinney/pages/about_text' %>
-    </p>
+  <div class="span12">    
+    <%= render '/kinney/pages/about_text' %>
   </div>
 </div>
 
-<%= render '/kinney/contact' %>
+
