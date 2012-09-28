@@ -21,7 +21,7 @@
         <%= link_to(person, :class => :thumbnail) do %>
           <%= image_tag person.clips.first.png, :alt => person.clips.first.title %>
             <div class="caption">
-              <h5><%= person.first_name %> <%= person.middle_name %> <span class="last_name"><%= person.last_name %></span><%= ', ' + person.name_suffix if !person.name_suffix.blank? %></h5>
+              <div><%= person.first_name %> <%= person.middle_name %> <span class="last_name"><%= person.last_name %></span><%= ', ' + person.name_suffix if !person.name_suffix.blank? %></div>
               <span class="grad_class"><%= person.graduating_class %></span>
             </div>
         <% end -%>
