@@ -38,16 +38,6 @@ module Kinney
         total_seconds += minutes.to_i.minutes.seconds
         total_seconds += seconds.split('.').first.to_i
       end
-
-      def scholarship_links
-        [
-          ['Guide to the Student Leaders Oral Histories', 'http://www.lib.ncsu.edu/findingaids/mc00401'],
-          ["NCSU Libraries' Digital Collections", 'http://d.lib.ncsu.edu/collections/'],
-          ['Historical State', 'http://historicalstate.lib.ncsu.edu/'],
-          ["Oral history collections", 'http://www.lib.ncsu.edu/findingaids/search?keyword=oral+history'],
-          ["Special Collections Research Center", 'http://www.lib.ncsu.edu/specialcollections/']
-        ]
-      end
       
       def topic_li_class(topic)
         current_page?(topic_path(topic)) ? 'active' : ''
