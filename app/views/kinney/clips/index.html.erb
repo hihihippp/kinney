@@ -27,7 +27,7 @@
             <ul class="nav nav-pills nav-stacked">
               <% person.clips.each do |clip| %>
                 <li><%= link_to clip, :rel => :tooltip, :'data-original-title' => clip.description do %>
-                  <%= clip.title %> <%= "(#{clip.duration_pretty})" if !clip.duration.blank? %>
+                  <i class="icon-play"></i><%= clip.title %> <%= "(#{clip.duration_pretty})" if !clip.duration.blank? %>
                 <% end -%>                  
                 </li>
               <% end -%>
