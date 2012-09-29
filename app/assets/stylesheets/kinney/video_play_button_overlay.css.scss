@@ -1,0 +1,34 @@
+div#home_video_image {
+  &:hover .mejs-overlay-button {
+    background-position: 0 -100px;
+  }
+}
+
+.mejs-overlay-button{ top:80%; left:90%;}
+
+.thumbnail_video {
+  .thumbnail_image {    
+    .mejs-overlay-button {
+      background: image-url("kinney/smallplay.png") no-repeat;
+      width: 50px;
+      height: 50px;
+      top: 95%;
+      left: 95%;
+    }    
+  }
+  &:hover {
+    .mejs-overlay-button {
+      background-position: 0 -50px;
+    }    
+  }
+}
+
+
+@media (max-width: 767px) {
+  #video_container {
+    .mejs-overlay-button {
+      top: 50%;
+      left: 50%;
+    } 
+  }
+}
