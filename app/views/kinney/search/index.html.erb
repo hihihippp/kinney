@@ -51,9 +51,9 @@
           <%= t '.no_current_search_people_message' %>
         </div>
       <% end -%>
-      <ul class="thumbnails">
+      <ul class="nav nav-tabs nav-stacked">
         <% @people.each do |person| %>
-          <li class="span4">
+          <li>
              <%= link_to person.full_name, person %>
           </li>
         <% end -%>
