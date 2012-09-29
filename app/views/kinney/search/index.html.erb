@@ -31,7 +31,7 @@
     <% end -%>
     <ul class="thumbnails">
       <% @clips.each do |clip| %>
-        <li class="span4">
+        <li class="span4 <%= cycle('odd', 'even') %>">
            <%= render :partial => '/kinney/clip_link', :locals => {:clip => clip} %>
         </li>
       <% end -%>
