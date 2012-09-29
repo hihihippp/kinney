@@ -70,7 +70,7 @@
           <h2>More Video</h2>
           <ul class="thumbnails">
             <% @topic_clips.each do |clip| %>
-              <li class="span3"><%= render :partial => '/kinney/clip_link', :locals => {:clip => clip} %></li>
+              <li class="span3 <%= cycle('odd', 'even') %>"><%= render :partial => '/kinney/clip_link', :locals => {:clip => clip} %></li>
             <% end -%>
           </ul>  
         </div>
