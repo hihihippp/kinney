@@ -1,6 +1,7 @@
 /* These are overrides for the mediaelementsjs player and conflicts with other included CSS */
 .mejs-captions-selector label {color: white}
 .mejs-overlay-button{ top:80%; left:90%;}
+
 .thumbnail_video {
   .thumbnail_image {
     position:relative;
@@ -30,7 +31,16 @@
 }
 
 
-
+@media (max-width: 767px) {
+  .thumbnail_video {
+    .thumbnail_image {
+      .mejs-overlay-button {
+        top: 50%;
+        left: 50%;
+      } 
+    }
+  }
+}
 
 h4 {
     font-size: 18px;
