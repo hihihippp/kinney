@@ -57,7 +57,7 @@ $.extend(MediaElementPlayer.prototype, {
 		
 		media.addEventListener('timeupdate', function() {
 			if ($('#kinney_clips_show video').length > 0) {
-				console.log(parseInt(player.media.currentTime));
+				// console.log(parseInt(player.media.currentTime));
 				var second = parseInt(player.media.currentTime);
 				Kinney.tracker_seconds.push(second);
 				if (Kinney.tracker_seconds.length >= 20) {

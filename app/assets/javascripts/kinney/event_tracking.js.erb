@@ -44,7 +44,9 @@ $(document).ready(function() {
       _gaq.push(['_trackEvent', body_identifier, identifier, label.replace(/\s+/g, " ")]);
       Kinney.track();
     } catch (err) {
+      <% if Rails.env == 'development' %>
       Kinney.console_log_error(err, [body_identifier, identifier, label]);
+      <% end %>
     }
     Kinney.pause();   
   }); 

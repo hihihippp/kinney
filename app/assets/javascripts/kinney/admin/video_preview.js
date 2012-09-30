@@ -44,7 +44,6 @@ $(document).ready(function() {
     success: function(mediaElement, domObject){
       mediaElement.addEventListener('loadedmetadata', function(){
         var duration = Math.round(mediaElement.duration);
-        //console.log(duration);
         $('#kinney_clip_duration').val(duration);
       });
     }
