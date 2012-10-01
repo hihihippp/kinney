@@ -45,11 +45,21 @@
 
 
   <div class="span4" id="related_people">    
-    <% @clip.people.each do |person| %>
-      <div class="person_video">
-        <%= render :partial => '/kinney/people/person_clips', :locals => {:person => person, :current_clip => @clip} %>
-      </div>
+    
+    <% if !@people_clips.blank? %>
+      <ul class="nav nav-tabs nav-stacked" id="person_videos">
+        <% @people_clips.each do |clip| %>
+          <% if @clip != clip %>
+            <li>
+              <%= link_to(clip, clip.video_switcher_params) do %>
+                <i class="icon-play"></i> <span class="title"><%= clip.title %> <%= duration_pretty(clip) %></span>
+              <% end -%>
+            </li>
+          <% end -%>
+        <% end -%>
+      </ul>
     <% end -%>
+
     <ul class="thumbnails">
       <% @clip.people.each do |person| %>
         <li class="span2 person">

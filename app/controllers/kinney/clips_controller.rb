@@ -21,6 +21,7 @@ module Kinney
       # FIXME this could probably be optimized for finding just 8 random resources. But can it be done
       # in a non-database dependent way?
       @people = Person.with_clips.where(Arel::Table.new(:kinney_people)[:id].not_in clip_people_ids).shuffle[0..8]
+      @people_clips = @clip.people.map{|person| person.clips}.flatten.uniq
 
       @topic_clips = @clip.related_topic_clips
       @meta_description = @clip.description
