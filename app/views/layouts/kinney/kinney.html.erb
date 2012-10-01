@@ -13,24 +13,27 @@
 <body class="<%= params[:controller].gsub('/', '_') %>" id="<%= "#{params[:controller].gsub('/', '_')}_#{params[:action]}" %>">
   <%= yield :social_setup %>
   
-  <%= render '/layouts/kinney/brand' %>
+  <%= render '/layouts/kinney/brand_above_navbar' %>
   <%= render '/layouts/kinney/navbar' %>
-    
+  <%= render '/layouts/kinney/brand_below_navbar' %>  
+
   <div id="page_container">
     
     
     <section id="page">
       <div class="container">   
 
-        <header id="header">
-      <div class="container">        
-        <div class="row">
-          <div class="span12">            
-            <%= yield :header %>
-          </div>
-        </div>
-      </div>
-    </header>
+        <% if content_for?(:header) %>
+          <header id="header">
+            <div class="container">        
+              <div class="row">
+                <div class="span12">            
+                  <%= yield :header %>
+                </div>
+              </div>
+            </div>
+          </header>
+        <% end -%>
 
 
         <%= render '/layouts/kinney/messages' if !flash.blank? %>
