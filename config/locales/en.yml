@@ -54,7 +54,7 @@ en:
         title_with_video: Profiles with Video
         title_other_profiles: Other Profiles
         table_name: Name
-        table_class_of: Classs of
+        table_class_of: Class of
         meta_description: People in this project.
     search:
       index:
