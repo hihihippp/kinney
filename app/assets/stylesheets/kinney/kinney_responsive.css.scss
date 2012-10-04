@@ -38,8 +38,16 @@
   }
 }
 
-@media (max-width: 768px) and (orientation: portrait) {
+@media (max-width: 768px) and (orientation: portrait) {  
   #clip_profiles, #people_with_clips, #people {
+    .span4 {
+      &:nth-child(4), &:nth-child(7), &:nth-child(10), &:nth-child(13){
+        clear:both;
+      }
+      &:nth-child(3), &:nth-child(6), &:nth-child(9), &:nth-child(12){
+        clear:none;
+      }
+    }
     .span3 {
       &:nth-child(5), &:nth-child(9), &:nth-child(13), &:nth-child(17){
         clear:both;
