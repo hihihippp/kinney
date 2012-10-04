@@ -7,18 +7,20 @@
 <% end -%>
 
 <div class="row">
-  <%= semantic_form_for @message, :url => contact_path, :html => {:class => 'well'},
-    :builder => FormtasticBootstrap::FormBuilder do |f| %>
-    <%= f.inputs do %>
-      <%= f.input :name %>
-      <%= f.input :graduating_class, :as => :number %>
-      <%= f.input :email, :as => :email %>
-      <%= f.input :comment, :as => :text, :input_html => {:rows => 5} %>
+  <div class="span10">
+    <%= semantic_form_for @message, :url => contact_path, 
+      :builder => FormtasticBootstrap::FormBuilder do |f| %>
+      <%= f.inputs do %>
+        <%= f.input :name %>
+        <%= f.input :graduating_class, :as => :number %>
+        <%= f.input :email, :as => :email %>
+        <%= f.input :comment, :as => :text, :input_html => {:rows => 5} %>
+      <% end -%>
+      <%= f.actions do %>
+        <%= f.action(:submit, :button_html => {:class => 'btn'}) %>
+      <% end -%>
     <% end -%>
-    <%= f.actions do %>
-      <%= f.action(:submit, :button_html => {:class => 'btn'}) %>
-    <% end -%>
-  <% end -%>
+  </div>
 </div>
 
 <%= render '/kinney/contact' %>
