@@ -6,7 +6,7 @@
     <%= link_to(person, :class => :thumbnail) do %>
       <%= image_tag person.clips.first.png, :alt => person.clips.first.title %>
         <div class="caption">
-          <h4><%= person.full_name %> <%= "(#{person.graduating_class})" if person.graduating_class %></h4>
+          <%= person.full_name %> <%= "(#{person.graduating_class})" if person.graduating_class %>
         </div>
     <% end -%>
     </li>
