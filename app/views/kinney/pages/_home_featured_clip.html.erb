@@ -1,6 +1,7 @@
 <% if @featured_clip %>
-  <h2><%= @featured_clip.title if @featured_clip %></h2>
-  <h3><%= link_to @person.full_name, @person %></h3>
+  <h2><%= @featured_clip.title if @featured_clip %><br>
+    <%= link_to @person.full_name, @person %>
+  </h2>
   <%= link_to(@featured_clip, :class => [:thumbnail_video], :id => :featured_video_link) do %>
     <div id="home_video_image">
       <div class="mejs-overlay-button"></div>

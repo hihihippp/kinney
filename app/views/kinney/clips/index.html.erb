@@ -14,7 +14,7 @@
         <li class="span4 sortable_thumb">
           <div class="thumbnail">     
 
-           <h4><%= person.first_name %> <%= person.middle_name %> <span class="last_name"><%= person.last_name %></span><%= ', ' + person.name_suffix if !person.name_suffix.blank? %> <span class="grad_class"><%= "(#{person.graduating_class})" if !person.graduating_class.blank? %></span></h4>
+           <h2><%= person.first_name %> <%= person.middle_name %> <span class="last_name"><%= person.last_name %></span><%= ', ' + person.name_suffix if !person.name_suffix.blank? %> <span class="grad_class"><%= "(#{person.graduating_class})" if !person.graduating_class.blank? %></span></h2>
 
             <%= link_to person.clips.first, :class => :thumbnail_video do %>    
               <div class="thumbnail_image">            

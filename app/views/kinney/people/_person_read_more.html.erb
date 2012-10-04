@@ -1,6 +1,6 @@
 <%= link_to(person, person.read_more_link_params) do %>
   <%= kinney_image_small(person.image, person) if person.image %>
   <div class="caption">
-    <div class="name"><%= person.full_name %></div>
-  </div> 
+    <div class="name"><%= defined?(display_name) ? display_name : person.full_name %></div>
+  </div>
 <% end -%>
