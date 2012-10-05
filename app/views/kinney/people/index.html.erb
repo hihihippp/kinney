@@ -21,7 +21,7 @@
               </div>
               <span class="grad_class"><%= person.graduating_class %></span>
               <% if person.clips.length > 0 %>
-                  <i class="icon-play" ></i>
+                  <i class="icon-play" rel="tooltip" title="<%= t 'kinney.videos_available' %>" data-placement="bottom"></i>
                 <% end -%>
             </div>
         <% end -%>

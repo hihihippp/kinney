@@ -25,6 +25,8 @@ $(document).ready(function() {
       trigger: 'hover',
       placement: Kinney.twitter_bootstrap_popover_placement
     });
+
+    $('[rel="tooltip"]').tooltip();
   } 
 
 
