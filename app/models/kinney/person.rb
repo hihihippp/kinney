@@ -58,6 +58,9 @@ module Kinney
     def self.with_images
       joins(:images).group("kinney_people.id HAVING count(kinney_images.id) > 0")
     end
+    def self.without_images
+      includes(:person_images).where(:kinney_person_images => {:person_id => nil})
+    end
 
     
     def to_label

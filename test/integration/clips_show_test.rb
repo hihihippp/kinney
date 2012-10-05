@@ -3,7 +3,7 @@ require 'test_helper'
 class ClipsShowTest < ActionDispatch::IntegrationTest
   test "should show basic information about a clip" do
     visit(kinney.clip_path(kinney_clips(:tolson_roots)))
-    assert page.has_selector?('h2', :text => 'Tolson')
+    assert page.has_selector?('h1', :text => 'Tolson')
     assert page.has_selector?('h1', :text => 'Growing Up in Edgecombe County')
     assert page.has_selector?('video')
   end

@@ -58,5 +58,15 @@ class PersonTest < ActiveSupport::TestCase
     clip = atkins.top_pick_clip 
     assert_equal kinney_clips(:atkins_fire), clip
   end
+
+  test "should return people with images" do
+    people = Kinney::Person.with_images
+    assert_equal 2, people.length
+  end
+
+  test "should return people without images" do
+    people = Kinney::Person.without_images
+    assert_equal 4, people.length
+  end
   
 end

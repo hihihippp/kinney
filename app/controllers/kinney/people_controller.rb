@@ -4,7 +4,8 @@ module Kinney
     caches_action :index, :show
     
     def index
-      @people = Person.all
+      @people_with_images = Person.with_images 
+      @people_without_images = Person.without_images
     end
 
     def show

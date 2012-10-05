@@ -8,20 +8,17 @@
 
 <div id="insert_controls" class="row"></div>
 <div class='row' id="people_with_clips">
-  <div class="span12">
+  <div class="span12">    
     
-    <% no_clips = [] %>
     <ul class="thumbnails sortable_thumbs">
-      <% @people.each do |person| %>
-        <% if person.clips.blank? %>
-          <% no_clips << person %>
-          <% next %>
-        <% end -%>
-        <li class="span3 sortable_thumb">
+      <% @people_with_images.each do |person| %>        
+        <li class="span2 sortable_thumb">
         <%= link_to(person, :class => :thumbnail) do %>
-          <%= image_tag person.clips.first.png, :alt => person.clips.first.title %>
+          <%= kinney_image_small(person.image, person) %>
             <div class="caption">
-              <div><%= person.first_name %> <%= person.middle_name %> <span class="last_name"><%= person.last_name %></span><%= ', ' + person.name_suffix if !person.name_suffix.blank? %></div>
+              <div>
+                <%= person.first_name %> <%= person.middle_name %> <span class="last_name"><%= person.last_name %></span><%= ', ' + person.name_suffix if !person.name_suffix.blank? %>
+              </div>
               <span class="grad_class"><%= person.graduating_class %></span>
             </div>
         <% end -%>
@@ -45,11 +42,14 @@
         </tr>
       </thead>
       <tbody>
-        <% no_clips.each do |person| %>
+        <% @people_without_images.each do |person| %>
         <tr>
           <td>
             <%= link_to person do %>
-            <%= person.first_name %> <%= person.middle_name %> <span><%= person.last_name %></span>
+              <%= person.first_name %> <%= person.middle_name %> <span><%= person.last_name %></span>
+              <% if person.clips.length > 0 %>
+                <i class="icon-play"></i>
+              <% end -%>
             <% end -%>
           </td>
           <td><%= person.graduating_class %></td>
