@@ -76,8 +76,7 @@
     <div class="container">
       <div class="row">
         <div class="span12" id="topic_clips">
-          <h2>More Video</h2>
-          
+          <h2>More Video</h2>          
           <% @topic_clips.each_slice(4) do |topic_clips| %>    
             <ul class="thumbnails">          
               <% topic_clips.each do |topic_clip| %>
@@ -89,8 +88,6 @@
               <% end -%>         
             </ul>      
           <% end -%>
-          
-
         </div>
       </div>
     </div>
