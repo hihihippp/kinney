@@ -28,7 +28,7 @@
 
       <div id="person_clips">
         <% if !@person.clips.first.blank? %>      
-          <h2><%= @person.last_name %> Videos</h2>
+          <h2><%= @person.last_name %> <%= t 'kinney.clips.plural' %></h2>
           <div>
             <%= link_to(@person.clips.first, :class => :thumbnail_video, :id => 'person_clips_image' ) do %>
               <div class="thumbnail_image">
@@ -51,6 +51,16 @@
   <div class="span8 offset2" id="profile_info">  
     <%= render 'profile' %>
     <%= render 'map' %>
+    <br>
+    <p id="bottom_actions">
+      <%= link_to "#person_clips", class: [:btn] do %>
+        <%= @person.last_name %> <%= t 'kinney.clips.plural' %>
+      <% end -%>
+      <%= link_to clips_path, class: [:btn] do %>
+        <%= t 'kinney.people.plural' %>
+      <% end -%>
+    </p>   
+
   </div> 
 </div>
 

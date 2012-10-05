@@ -11,6 +11,7 @@ en:
   kinney:
     title: KINNEY
     clips:
+      plural: Videos
       index:
         title: Videos
         meta_description: Video clips associated with each person.
@@ -38,6 +39,7 @@ en:
         video_topics: Video Topics
         meta_description: A video oral history project.
     people:
+      plural: People
       images_of: "Images of %{name}"
       more_info_on_image: More information on this image
       map:
