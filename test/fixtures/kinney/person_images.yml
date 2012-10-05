@@ -13,3 +13,7 @@ three:
 four:
   person: atkins
   image: atkins1
+
+five:
+  person: friday
+  image: friday
