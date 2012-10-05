@@ -1,6 +1,6 @@
 // These are some extra responsive styles for the site
 
-#clip_profiles, #people_with_clips, #people {
+#clip_profiles, #people {
   .span4 {
     &:nth-child(4), &:nth-child(7), &:nth-child(10), &:nth-child(13){
       clear:both;
@@ -11,14 +11,11 @@
       clear:both;
     }
   }
-
 }
 
 
-
-
 @media (max-width: 768px) { 
-  #clip_profiles, #people_with_clips, #people {
+  #clip_profiles, #people {
     .span4 {
       &:nth-child(3), &:nth-child(6), &:nth-child(9), &:nth-child(12){
         clear:both;
@@ -39,7 +36,7 @@
 }
 
 @media (max-width: 768px) and (orientation: portrait) {  
-  #clip_profiles, #people_with_clips, #people {
+  #clip_profiles, #people {
     .span4 {
       &:nth-child(4), &:nth-child(7), &:nth-child(10), &:nth-child(13){
         clear:both;

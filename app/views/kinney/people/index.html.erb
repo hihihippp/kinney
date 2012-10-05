@@ -17,12 +17,12 @@
           <%= kinney_image_small(person.image, person) %>
             <div class="caption">
               <div>
-                <%= person.first_name %> <%= person.middle_name %> <span class="last_name"><%= person.last_name %></span><%= ', ' + person.name_suffix if !person.name_suffix.blank? %>
-                <% if person.clips.length > 0 %>
-                  <i class="icon-play" ></i>
-                <% end -%>
+                <%= person.first_name %> <%= person.middle_name %> <span class="last_name"><%= person.last_name %></span><%= ', ' + person.name_suffix if !person.name_suffix.blank? %>                
               </div>
               <span class="grad_class"><%= person.graduating_class %></span>
+              <% if person.clips.length > 0 %>
+                  <i class="icon-play" ></i>
+                <% end -%>
             </div>
         <% end -%>
         </li>
