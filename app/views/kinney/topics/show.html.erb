@@ -7,9 +7,9 @@
   <div class="span12" id="clips">
     <ul class="thumbnails">
       <% @topic.clips.each do |clip| %>
-      <li class="span4">
-        <%= render :partial => '/kinney/clip_link', :locals => {:clip => clip} %>        
-      </li>
+        <li class="span4 <%= cycle('left', 'middle', 'right') %>">
+          <%= render :partial => '/kinney/clip_link', :locals => {:clip => clip} %>        
+        </li>
       <% end -%>
     </ul>
   </div>

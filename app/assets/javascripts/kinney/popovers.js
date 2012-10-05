@@ -7,7 +7,7 @@ $(document).ready(function() {
     }
     if (width<900) return 'bottom';
     // FIXME: is there a better way to get the parent of the element which triggered the popover?
-    if ($($(this)[0].$element[0]).parent().hasClass('odd')) {
+    if ($($(this)[0].$element[0]).parent().hasClass('odd') || $($(this)[0].$element[0]).parent().hasClass('left')) {
       return 'right';
     }
     return 'left';
