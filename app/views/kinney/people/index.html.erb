@@ -2,7 +2,7 @@
 <% @meta_description = t('.meta_description') %>
 
 <%= content_for :header do %>
-  <h1><%= t '.title_with_video' %></h1>
+  <h1><%= t '.title' %></h1>
 <% end -%>
 
 
@@ -18,6 +18,9 @@
             <div class="caption">
               <div>
                 <%= person.first_name %> <%= person.middle_name %> <span class="last_name"><%= person.last_name %></span><%= ', ' + person.name_suffix if !person.name_suffix.blank? %>
+                <% if person.clips.length > 0 %>
+                  <i class="icon-play" ></i>
+                <% end -%>
               </div>
               <span class="grad_class"><%= person.graduating_class %></span>
             </div>
@@ -48,7 +51,7 @@
             <%= link_to person do %>
               <%= person.first_name %> <%= person.middle_name %> <span><%= person.last_name %></span>
               <% if person.clips.length > 0 %>
-                <i class="icon-play"></i>
+                <i class="icon-play" ></i>
               <% end -%>
             <% end -%>
           </td>

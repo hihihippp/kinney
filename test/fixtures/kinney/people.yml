@@ -57,5 +57,6 @@ raiford:
 friday:
   first_name: William
   last_name: Friday 
+  graduating_class: 1941
   created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
   updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>

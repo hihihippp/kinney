@@ -51,7 +51,7 @@ en:
         citations: Citations 
       index:
         title: People
-        title_with_video: Profiles with Video
+        profiles_title: Profiles
         title_other_profiles: Other Profiles
         table_name: Name
         table_class_of: Class of
