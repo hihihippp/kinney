@@ -16,7 +16,7 @@
         <%= link_to(person, :class => :thumbnail) do %>
           <%= kinney_image_small(person.image, person) %>
             <div class="caption">
-              <div>
+              <div class="clearfix">
                 <%= person.nickname %> <span class="last_name"><%= person.last_name %></span><%= ', ' + person.name_suffix if !person.name_suffix.blank? %><%= ',' if !person.graduating_class.blank? %> <span class="grad_class"><%= person.graduating_class %></span>    
                 <% if person.clips.length > 0 %>
                   <i class="icon-play" rel="tooltip" title="<%= t 'kinney.videos_available' %>" data-placement="bottom"></i>
@@ -47,17 +47,17 @@
       </thead>
       <tbody>
         <% @people_without_images.each do |person| %>
-        <tr>
-          <td>
-            <%= link_to person do %>
-              <%= person.first_name %> <%= person.middle_name %> <span><%= person.last_name %></span>
-              <% if person.clips.length > 0 %>
-                <i class="icon-play" rel="tooltip" title="<%= t 'kinney.videos_available' %>" data-placement="bottom"></i>
+          <tr>
+            <td>
+              <%= link_to person do %>
+                <%= person.first_name %> <%= person.middle_name %> <span class="last_name"><%= person.last_name %></span>
+                <% if person.clips.length > 0 %>
+                  <i class="icon-play" rel="tooltip" title="<%= t 'kinney.videos_available' %>" data-placement="bottom"></i>
+                <% end -%>
               <% end -%>
-            <% end -%>
-          </td>
-          <td><%= person.graduating_class %></td>
-        </tr>
+            </td>
+            <td><%= person.graduating_class %></td>
+          </tr>
         <% end -%>
       </tbody>
     </table>

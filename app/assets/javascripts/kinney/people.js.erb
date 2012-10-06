@@ -1,23 +1,31 @@
-var myTextExtraction = function(node)
-{
-  if ($(node).find('span').length > 0 ) {
-    return $(node).find('span')[0].innerHTML;
-  } else {
-    return $(node).text();
-    
-  }
-}
-
 $(document).ready(function() {
+
+  var myTextExtraction = function(node){
+    if ($(node).find('span.last_name').length > 0 ) {
+      return $(node).find('span.last_name')[0].innerHTML;
+    } else {
+      return $(node).text();    
+    }
+  }
+
   // sort the table of profiles with no video
-  $('table.tablesorter').tablesorter({
-    textExtraction: myTextExtraction,
-    sortList: [[0,0]]
-  });
+  // There is some strange error thrown with jQuery 1.8.2 (currently latest jQuery) that may be fixed in 1.8.3. This 
+  // causes some Webkit browsers to not load the table sorting correctly. This has only been identified on the iPad in our
+  // testing. So we try to add tablesorter and if it fails we fallback to removing some of the content that tablesorter may have
+  // added to the page, namely the up/down arrows. https://github.com/Mottie/tablesorter/issues/132
+  try {
+    $('table.tablesorter').tablesorter({
+      textExtraction: myTextExtraction,
+      sortList: [[0,0]]
+    });
+  } catch(error){
+    $('.tablesorter-header').removeClass('tablesorter-header');
+  }
+  
   
   // sort the profiles that have video
   // first add the controls to the page
-  $('#insert_controls').append('<div class="span12"><%= I18n.t('kinney.sort.by') %>: <a href="#" class="btn disabled" id="sort_last_name"><%= I18n.t('kinney.sort.last_name') %></a><a href="#" class="btn" id="sort_graduating_class"><%= I18n.t('kinney.sort.graduating_class') %></a></div>');
+  $('#insert_controls').append('<div class="span12"><%= I18n.t('kinney.sort.by') %>: <a href="#insert_controls" class="btn disabled" id="sort_last_name"><%= I18n.t('kinney.sort.last_name') %></a><a href="#insert_controls" class="btn" id="sort_graduating_class"><%= I18n.t('kinney.sort.graduating_class') %></a></div>');
   
   $('#sort_graduating_class').click(function(){
     $('.sortable_thumbs li.sortable_thumb').sortElements(function(a, b){
