@@ -5,13 +5,16 @@
 
 <div class="row">
   <div class="span12" id="clips">
-    <ul class="thumbnails">
-      <% @topic.clips.each do |clip| %>
-        <li class="span4 <%= cycle('left', 'middle', 'right') %>">
-          <%= render :partial => '/kinney/clip_link', :locals => {:clip => clip} %>        
-        </li>
-      <% end -%>
-    </ul>
+    <% @topic.clips.each_slice(3) do |topic_clips| %>
+      <ul class="thumbnails">
+        <% topic_clips.each do |clip| %>
+          <li class="span4 <%= cycle('left', 'middle', 'right') %>">
+            <%= render :partial => '/kinney/clip_link', :locals => {:clip => clip} %>        
+          </li>
+          <% end -%>
+        
+      </ul>
+    <% end -%>
   </div>
 </div>
 
