@@ -7,9 +7,9 @@ class PeopleIndexTest < ActionDispatch::IntegrationTest
 
   test 'shows people' do
     visit(kinney.people_path)
-    assert page.has_content?('Profiles with Video')
-    assert page.has_content?('Edward Norris Tolson 1963')
-    assert page.has_content?('John Leslie Atkins, III')
+    assert page.has_content?('People')
+    assert page.has_content?('Tolson, 1963')
+    assert page.has_content?('Atkins, III, 1965')
   end
   
   test 'links to show view for person with video' do
@@ -24,13 +24,13 @@ class PeopleIndexTest < ActionDispatch::IntegrationTest
     assert current_path == kinney.person_path(kinney_people(:williams))
   end
   
-  test 'sort video profiles' do
+  test 'sort profile images' do
     browser_start
     visit(kinney.people_path)
     assert page.find('.thumbnails li:first').has_content?('Atkins')
     click_link('sort_graduating_class')
-    assert page.find('.thumbnails li:first').has_content?('Tolson')
-    assert page.find('.thumbnails li:last').has_content?('Raiford')
+    assert page.find('.thumbnails li:first').has_content?('Friday')
+    assert page.find('.thumbnails li:last').has_content?('Atkins')
     click_link('sort_last_name')
     assert page.find('.thumbnails li:first').has_content?('Atkins')
     browser_end
