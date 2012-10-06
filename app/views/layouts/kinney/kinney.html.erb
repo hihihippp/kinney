@@ -9,6 +9,7 @@
   <%= meta_description %>
   <%= yield :facebook_ogp %>
   <%= render '/layouts/kinney/google_analytics' %>
+  <%= render_extra_head_content %>
 </head>
 <body class="<%= params[:controller].gsub('/', '_') %>" id="<%= "#{params[:controller].gsub('/', '_')}_#{params[:action]}" %>">
   <%= yield :social_setup %>

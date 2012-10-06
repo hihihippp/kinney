@@ -20,5 +20,12 @@ module Kinney
         %Q{<meta name="description" content="#{@meta_description}">}.html_safe
       end
     end
+
+    def render_extra_head_content
+    respond_to?(:extra_head_content) ?
+      extra_head_content.join("\n").html_safe :
+      ""
+  end
+
   end  
 end
