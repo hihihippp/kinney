@@ -53,9 +53,12 @@
     <%= render 'map' %>
     <br>
     <p id="bottom_actions">
-      <%= link_to "#person_clips", class: [:btn] do %>
-        <%= @person.last_name %> <%= t 'kinney.clips.plural' %>
+      <% if @person.clips.count > 0 %>
+        <%= link_to "#person_clips", class: [:btn] do %>
+          <%= @person.last_name %> <%= t 'kinney.clips.plural' %>
+        <% end -%>
       <% end -%>
+
       <%= link_to clips_path, class: [:btn] do %>
         <%= t 'kinney.people.plural' %>
       <% end -%>
