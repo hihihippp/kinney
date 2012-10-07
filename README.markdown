@@ -56,6 +56,7 @@ When running the Kinney installation generator several files were created and so
 - more documentation
 - sort out compiling ckeditor in production
 - work around for this issue with ckeditor for deployment: https://github.com/galetahub/ckeditor/pull/156
+- add generator for adding MailerLogger to main app
 
 # Author
 

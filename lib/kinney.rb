@@ -9,6 +9,7 @@ require 'tire'
 require 'jquery-tablesorter'
 require 'html_truncator'
 require 'httpclient'
+require 'kinney/mailer_logger'
 
 module Kinney
 end
