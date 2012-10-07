@@ -1,3 +1,14 @@
+// overlay the duration of the video over the video thumb
+.clip_thumbnail {
+  position: relative;
+  .duration {
+    right: 2px;
+    bottom: 2px;
+    position: absolute;
+  }
+}
+
+// overlaying the play button over the video. FIXME: some of this we don't use anymore
 div#home_video_image {
   &:hover .mejs-overlay-button {
     background-position: 0 -100px;
