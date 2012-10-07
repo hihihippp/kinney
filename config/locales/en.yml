@@ -54,7 +54,7 @@ en:
       index:
         title: People
         profiles_title: Profiles
-        title_other_profiles: Other Profiles
+        title_other_profiles: People without Pictures
         table_name: Name
         table_class_of: Class of
         meta_description: People in this project.
