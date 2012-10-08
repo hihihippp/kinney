@@ -1,12 +1,14 @@
 <%= link_to(clip, clip.video_switcher_params.merge(:class => [:thumbnail, :thumbnail_video])) do %>
-  <div class="thumbnail_image clip_thumbnail">
-    <%= image_tag clip.png, :alt => clip.title %>
-    <% if !clip.duration.blank? %>
-      <span class="duration label"><%= clip.duration_pretty %></span>
-    <% end -%>
-  </div>
-  <div class="caption">
-    <div class="name"><%= clip.full_people_names %></div>
-    <span class="title"><%= clip.title %></span> 
+  <div class="block">
+    <div class="thumbnail_image clip_thumbnail">
+      <%= image_tag clip.png, :alt => clip.title %>
+      <% if !clip.duration.blank? %>
+        <span class="duration label"><%= clip.duration_pretty %></span>
+      <% end -%>
+    </div>
+    <div class="caption">
+      <div class="name"><%= clip.full_people_names %></div>
+      <span class="title"><%= clip.title %></span> 
+    </div>
   </div>
 <% end -%>
