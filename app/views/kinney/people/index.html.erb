@@ -54,7 +54,7 @@
               <%= link_to person do %>
                 <%= person.first_name %> <%= person.middle_name %> <span class="last_name"><%= person.last_name %></span>
                 <% if person.clips.length > 0 %>
-                  <span class="label"><%= pluralize(person.clips.size, 'Video') %></span>
+                  <span>(<%= pluralize(person.clips.size, 'Video') %>)</span>
                 <% end -%>
               <% end -%>
             </td>
