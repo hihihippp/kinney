@@ -32,7 +32,6 @@
           <div>
             <%= link_to(@person.clips.first, :class => :thumbnail_video, :id => 'person_clips_image' ) do %>
               <div class="thumbnail_image">
-                <div class="mejs-overlay-button"></div>
                 <%= image_tag @person.clips.first.png, :alt => @person.clips.first.title %>
               </div>          
             <% end -%>
