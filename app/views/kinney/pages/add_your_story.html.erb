@@ -12,7 +12,7 @@
       :builder => FormtasticBootstrap::FormBuilder do |f| %>
       <%= f.inputs do %>
         <%= f.input :name %>
-        <%= f.input :graduating_class, :as => :number %>
+        <%= f.input :graduating_class, :as => :number, :min => 1893, :max => Time.now.year, :step => 1 %>
         <%= f.input :email, :as => :email %>
         <%= f.input :comment, :as => :text, :input_html => {:rows => 5} %>
       <% end -%>
