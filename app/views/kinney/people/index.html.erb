@@ -37,35 +37,36 @@
   </div>
 </div>
 
-
-<div class="row">
-  <div class="span12">
-    <h2><%= t '.title_other_profiles' %></h2>
-  </div>
-  <div class="span5" id="people_no_clips">
-    <p>Do you have a picture of someone listed below that you could donate to the Libraries? <%= link_to "Contact Us!", about_path(:anchor => 'contact') %></p>
-    <table class="tablesorter table">
-      <thead>
-        <tr>
-          <th><%= t '.table_name' %></th>
-          <th><%= t '.table_class_of' %></th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @people_without_images.each do |person| %>
+<% if !@people_without_images.blank? %>
+  <div class="row">
+    <div class="span12">
+      <h2><%= t '.title_other_profiles' %></h2>
+    </div>
+    <div class="span5" id="people_no_clips">
+      <%= render "image_solicitation_text" %>
+      <table class="tablesorter table">
+        <thead>
           <tr>
-            <td>
-              <%= link_to person do %>
-                <%= person.first_name %> <%= person.middle_name %> <span class="last_name"><%= person.last_name %></span>
-                <% if person.clips.length > 0 %>
-                  <span>(<%= pluralize(person.clips.size, 'Video') %>)</span>
-                <% end -%>
-              <% end -%>
-            </td>
-            <td><%= person.graduating_class %></td>
+            <th><%= t '.table_name' %></th>
+            <th><%= t '.table_class_of' %></th>
           </tr>
-        <% end -%>
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          <% @people_without_images.each do |person| %>
+            <tr>
+              <td>
+                <%= link_to person do %>
+                  <%= person.first_name %> <%= person.middle_name %> <span class="last_name"><%= person.last_name %></span>
+                  <% if person.clips.length > 0 %>
+                    <span>(<%= pluralize(person.clips.size, 'Video') %>)</span>
+                  <% end -%>
+                <% end -%>
+              </td>
+              <td><%= person.graduating_class %></td>
+            </tr>
+          <% end -%>
+        </tbody>
+      </table>
+    </div>
   </div>
-</div>
+<% end -%>
