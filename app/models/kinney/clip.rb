@@ -168,7 +168,7 @@ module Kinney
       if !duration.blank?
         total_minutes = duration / 1.minutes
         seconds_in_last_minute = duration - total_minutes.minutes.seconds
-        %Q|#{"%02d" % total_minutes}:#{"%02d" % seconds_in_last_minute}|
+        %Q|#{total_minutes}:#{"%02d" % seconds_in_last_minute}|
       end
     end
 
