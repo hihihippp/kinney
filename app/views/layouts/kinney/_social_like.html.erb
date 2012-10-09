@@ -1,3 +1,9 @@
-<a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-via="ncsulibraries" data-count="none" data-size="small">Tweet</a>
-<div class="g-plusone" data-size="small" data-annotation="none"></div>
-<iframe src="//www.facebook.com/plugins/like.php?href=<%= CGI.escape("http://" + request.host + request.fullpath) %>&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+<div class="social twitter">
+  <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-via="ncsulibraries" data-count="none" data-size="small">Tweet</a>
+</div>
+<div class="social gplus">
+  <div class="g-plusone" data-size="small" data-annotation="none"></div>
+</div>
+<div class="social">
+  <iframe src="//www.facebook.com/plugins/like.php?href=<%= CGI.escape("http://" + request.host + request.fullpath) %>&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+</div>
