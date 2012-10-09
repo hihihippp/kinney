@@ -13,12 +13,14 @@ ActiveAdmin.register Kinney::Image do
     column "Thumbnail" do |image|
       link_to(djatoka_square_image_tag(image.filename, :scale => 100), admin_kinney_image_path(image))
     end
-    column "Filename" do |image|
+    column "Filename", :sortable => :filename do |image|
       link_to image.filename, admin_kinney_image_path(image)
     end
     column :top_pick
     column "People" do |image|
-      image.people.map{|person| person.full_name}.join(' and ') 
+      if !image.people.blank?
+        image.people.map{|person| person.full_name}.join(' and ') 
+      end
     end
     default_actions
   end
