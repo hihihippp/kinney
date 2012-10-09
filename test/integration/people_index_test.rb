@@ -8,8 +8,9 @@ class PeopleIndexTest < ActionDispatch::IntegrationTest
   test 'shows people' do
     visit(kinney.people_path)
     assert page.has_content?('People')
-    assert page.has_content?('Tolson, 1963')
-    assert page.has_content?('Atkins, III, 1965')
+    assert page.has_content?('Tolson')
+    assert page.has_content?('1963')
+    assert page.has_content?('Atkins, III')
   end
   
   test 'links to show view for person with video' do

@@ -103,9 +103,9 @@ class ClipTest < ActiveSupport::TestCase
 
   test "should return a pretty formatted clip duration" do
     clip = kinney_clips(:tolson_roots)
-    assert_equal '00:44', clip.duration_pretty
+    assert_equal '0:44', clip.duration_pretty
     clip.duration = 62
-    assert_equal "01:02", clip.duration_pretty
+    assert_equal "1:02", clip.duration_pretty
     # clip.duration = 3600
     # assert_equal '01:00:00', clip.duration_pretty
     # clip.duration = 3662
