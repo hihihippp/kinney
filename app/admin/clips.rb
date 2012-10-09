@@ -2,7 +2,7 @@ ActiveAdmin.register Kinney::Clip do
   form :partial => "form"
     
   index do
-    column :filename do |clip|
+    column :filename, :sortable => :filename do |clip|
       link_to clip.filename, admin_kinney_clip_path(clip)
     end
     column :title
