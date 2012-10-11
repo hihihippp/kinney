@@ -13,17 +13,19 @@
     <meta itemprop="name" content="North Carolina State University">
   </span>
 
-  <div itemprop="description">
+  <div>
 
     <div class="span8 offset2">
-      <div id="bio" class="clearfix">
+      <div class="clearfix">
         <% if !@top_image.blank? %>
           <%= link_to(@top_image.external_url, :class => [:thumbnail, :image_modal_trigger], :'data-target'=>"#modal_image_top_pick", :id => "image_top_pick") do %>
             <%= kinney_image_small(@top_image) %>
           <% end -%>
           <%= render :partial => '/kinney/images/image_modal', :locals => {:index => 'top_pick', :person => @person, :image => @top_image} %>
         <% end -%>
-        <%= raw @person.biography %>
+        <div id="bio" itemprop="description">
+          <%= raw @person.biography %>
+        </div>
       </div>
 
       <div id="person_clips">
