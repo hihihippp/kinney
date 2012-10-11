@@ -12,7 +12,7 @@ module Kinney
     def title
       title_s = ''
       title_s << "#{@title} - " if @title
-      title_s << "Student Leadership Initiative"
+      title_s << application_name
     end
 
     def meta_description

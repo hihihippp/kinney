@@ -9,5 +9,8 @@ module Kinney
     initializer "kinney.asset_pipeline" do |app|
       app.config.assets.precompile << 'kinney.js'
     end
+    config.to_prepare do
+      ApplicationController.helper(GeneralHelper)
+    end
   end
 end
