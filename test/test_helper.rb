@@ -6,7 +6,6 @@ require "rails/test_help"
 require 'capybara/rails'
 require 'mocha'
 require 'pry'
-# require 'capybara/poltergeist'
 
 Rails.backtrace_cleaner.remove_silencers!
 
@@ -17,6 +16,16 @@ Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
 if ActiveSupport::TestCase.method_defined?(:fixture_path=)
   ActiveSupport::TestCase.fixture_path = File.expand_path("../fixtures", __FILE__)
 end
+
+# https://gist.github.com/922296
+# if there are timeout errors in CI use the following:
+# require "selenium-webdriver"
+# Capybara.register_driver :selenium_with_long_timeout do |app|
+#   client = Selenium::WebDriver::Remote::Http::Default.new
+#   client.timeout = 120
+#   Capybara::Selenium::Driver.new(app, :browser => :firefox, :http_client => client)
+# end
+# Capybara.javascript_driver = :selenium_with_long_timeout
 
 class ActiveSupport::TestCase
   fixtures :all
@@ -31,7 +40,7 @@ class ActiveSupport::TestCase
   end
 
   def browser_start
-    Capybara.current_driver = :selenium
+    Capybara.current_driver = :selenium #_with_long_timeout
   end
   
   def browser_end
