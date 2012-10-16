@@ -9,7 +9,7 @@ gemspec
 gem "jquery-rails"
 gem 'djatoka'
 gem 'pry-rails'
-#gem 'capybara-webkit', :git => 'https://github.com/thoughtbot/capybara-webkit.git'
+
 group :development do 
   gem 'guard-livereload'
   gem 'rb-readline', :platforms => :ruby_19
@@ -35,6 +35,11 @@ gem 'uglifier', '>= 1.0.3'
 
 group :tools do
   gem 'guard-test'
+end
+
+group :test do
+  # gem 'capybara-webkit', :git => 'https://github.com/thoughtbot/capybara-webkit.git'
+  # gem 'poltergeist'
 end
 
 # Declare any dependencies that are still in development here instead of in
