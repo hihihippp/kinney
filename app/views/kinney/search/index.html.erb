@@ -29,13 +29,17 @@
         <%= t '.no_current_search_clips_message' %>
       </div>
     <% end -%>
-    <ul class="thumbnails">
-      <% @clips.each do |clip| %>
-        <li class="span4 <%= cycle('odd', 'even') %>">
-           <%= render :partial => '/kinney/clip_link', :locals => {:clip => clip} %>
-        </li>
-      <% end -%>
-    </ul>
+    
+    <% @clips.each_slice(2) do |sliced_clips| %>
+      <ul class="thumbnails">
+        <% sliced_clips.each do |clip| %>
+          <li class="span4 <%= cycle('odd', 'even') %>">
+             <%= render :partial => '/kinney/clip_link', :locals => {:clip => clip} %>
+          </li>
+        <% end -%>
+      </ul>
+    <% end -%>
+    
   </div>
 
   <div class="span4" id="people">
