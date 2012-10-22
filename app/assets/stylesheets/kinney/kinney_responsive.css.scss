@@ -2,12 +2,12 @@
 
 #clip_profiles, #people {
   .span4 {
-    &:nth-child(4), &:nth-child(7), &:nth-child(10), &:nth-child(13){
+    &:nth-child(3n+4){
       clear:both;
     }
   }
   .span3 {
-    &:nth-child(5), &:nth-child(9), &:nth-child(13), &:nth-child(17){
+    &:nth-child(4n+5){
       clear:both;
     }
   }
