@@ -85,7 +85,11 @@ module Kinney
     end
 
     def image
-      images.where(:top_pick => true).limit(1).first
+      image = images.where(:top_pick => true).limit(1).first
+      if image.blank?
+        image = images.first
+      end
+      image
     end
 
     def read_more_link_params

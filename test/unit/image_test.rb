@@ -19,5 +19,16 @@ class ImageTest < ActiveSupport::TestCase
   test "give a URL as the external_url" do
     assert_equal "http://d.lib.ncsu.edu/collections/catalog/si-ag1962-p100-tolson", kinney_images(:tolson1).external_url
   end
+
+  test "should return a top pick image if a person has a top pick image" do    
+    assert kinney_people(:tolson).image
+  end
+
+  test "should return an image of the person has at least one image even if it is not selected as a top_pick image" do
+    person = kinney_people(:third_man)
+    person.images = [kinney_images(:tolson1)]
+    person.save
+    assert person.image
+  end
   
 end
