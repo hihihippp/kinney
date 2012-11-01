@@ -44,7 +44,12 @@ ActiveAdmin.register Kinney::Image do
   controller do
     cache_sweeper Kinney::MetaSweeper
     helper ::KinneyHelper
+  end
 
+  csv do
+    column :filename
+    column :top_pick
+    column("People"){|image| image.people.map{|person| person.full_name}.join(' and ') }
   end
   
 end
