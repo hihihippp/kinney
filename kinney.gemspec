@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.markdown"]
   s.test_files = Dir["test/**/*"]
 
-  s.add_dependency "rails", "~> 3.2.8.rc2"
+  s.add_dependency "rails", "~> 3.2.11"
   s.add_dependency 'ckeditor', '3.7.1'
   s.add_dependency "friendly_id", "~> 4.0.1"
   s.add_dependency 'activeadmin'
@@ -25,7 +25,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'formtastic-bootstrap'
   s.add_dependency 'chosen-rails'
   s.add_dependency 'tire' 
-  s.add_dependency 'jquery-tablesorter' 
+  s.add_dependency 'jquery-tablesorter', '~> 1.3.0' 
   s.add_dependency "html_truncator", "~>0.2"
   s.add_dependency 'httpclient'
   #s.add_dependency "bootstrap-sass", '~> 2.0.3'
