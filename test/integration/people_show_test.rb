@@ -14,8 +14,8 @@ class PeopleShowTest < ActionDispatch::IntegrationTest
     assert page.has_content?('Student Body President 1962-1963')
     
     # video titles
-    assert page.find_link('Growing Up in Edgecombe County')
-    assert page.find_link('Mentors')
+    assert page.has_selector?('a', :text => 'Growing Up in Edgecombe County')
+    assert page.has_selector?('a', :text => 'Mentors')
     
     assert page.has_content?('Tolson grew up in Edgecombe County.')
     

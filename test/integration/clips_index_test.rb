@@ -22,13 +22,13 @@ class ClipsIndexTest < ActionDispatch::IntegrationTest
 
   test "clicking on a video thumbnail should go to a video clip" do 
     visit(kinney.clips_path)
-    page.find('.thumbnail_video').click
+    page.first('.thumbnail_video').click
     assert page.has_selector?('body.kinney_clips video')
   end
 
   test "the first text link should be the same as the video thumbnail link" do
     visit(kinney.clips_path)
-    atkins_section = page.find('#clip_profiles li:first')
+    atkins_section = page.first('#clip_profiles li')
     image_link = atkins_section.find('.thumbnail_video')[:href]
     assert_equal kinney.clip_path(kinney_clips(:atkins_fire)), image_link
     first_list_link = atkins_section.find('li:first a')[:href]

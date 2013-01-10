@@ -27,6 +27,8 @@ class ClipsShowTest < ActionDispatch::IntegrationTest
 
   test "should expand/collapse the transcript" do
     browser_start
+    # stubs out saving the tracker to work around a sqlite database locking issue
+    Kinney::Tracker.any_instance.stubs(:save).returns(true)
     visit(kinney.clip_path(kinney_clips(:atkins_fire)))
     assert_false page.find('#transcript_table tbody tr:nth-child(4)').visible?
 

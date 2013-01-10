@@ -18,12 +18,6 @@ class AdminImagesTest < ActionDispatch::IntegrationTest
     check 'Top Pick?'
   end
   
-  # test "user should see image for valid image on index page" do
-  #   visit admin_images_path
-  #   assert page.has_selector?("img")
-  #   assert page.find("img")[:src].include?(images(:tolson1).filename)
-  # end
-  
   test "user should see image for valid image on show page" do
     visit admin_kinney_image_path(kinney_images(:tolson1))
     assert page.has_selector?("div img")

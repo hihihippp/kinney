@@ -38,7 +38,7 @@ group :tools do
 end
 
 group :test do
-  # gem 'capybara-webkit', :git => 'https://github.com/thoughtbot/capybara-webkit.git'
+  gem 'capybara-webkit'
   # gem 'poltergeist'
 end
 

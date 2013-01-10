@@ -34,7 +34,8 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency 'test-unit'
-  s.add_development_dependency 'capybara'
+  s.add_development_dependency 'capybara', "~> 2.0.2"
+  s.add_development_dependency 'capybara-webkit', "~> 0.14.0"
   s.add_development_dependency 'database_cleaner'
   s.add_development_dependency 'sextant'
   s.add_development_dependency 'launchy'
