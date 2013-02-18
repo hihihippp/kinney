@@ -38,7 +38,7 @@ group :tools do
 end
 
 group :test do
-  gem 'capybara-webkit'
+  # gem 'capybara-webkit'
   # gem 'poltergeist'
 end
 

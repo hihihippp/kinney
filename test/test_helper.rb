@@ -4,7 +4,7 @@ ENV["RAILS_ENV"] = "test"
 require File.expand_path("../dummy/config/environment.rb",  __FILE__)
 require "rails/test_help"
 require 'capybara/rails'
-require 'capybara/webkit'
+#require 'capybara/webkit'
 require 'mocha'
 require 'pry'
 
@@ -33,7 +33,7 @@ class ActiveSupport::TestCase
   end
 
   def browser_start
-    Capybara.current_driver = :webkit #:selenium #_with_long_timeout
+    Capybara.current_driver = :selenium #_with_long_timeout
   end
   
   def browser_end
