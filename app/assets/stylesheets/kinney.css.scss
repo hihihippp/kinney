@@ -16,13 +16,12 @@ $iconWhiteSpritePath: '';
 
 @import 'jquery-tablesorter/theme.blue';
 @import 'kinney/jquery-tablesorter_overrides';
-@import 'font-awesome';
 
 @import "mediaelement_rails";
 @import "mediaelement_rails/mejs-skins";
 
 @import "formtastic-bootstrap";
-
+@import "font-awesome";
 @import "kinney/general";
 @import "kinney/brand";
 @import "kinney/footer";

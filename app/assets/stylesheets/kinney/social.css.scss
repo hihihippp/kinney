@@ -1,8 +1,14 @@
-#social {
-  .social {
-    display:inline-block;    
-  }
-  .twitter, .gplus {
-    margin-right: 15px;
-  }
+.social_buttons {
+  a {
+    float: left;
+    font-size: 34px;
+    display:inline-block;
+    margin-left: 10px;
+    color: $grayLight;
+    &:hover {
+      text-decoration: none;
+      color: $grayDark;
+    }
+  }  
+  
 }

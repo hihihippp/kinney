@@ -28,6 +28,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'jquery-tablesorter', '~> 1.3.0' 
   s.add_dependency "html_truncator", "~>0.2"
   s.add_dependency 'httpclient'
+  s.add_dependency 'font-awesome-sass-rails'
   #s.add_dependency "bootstrap-sass", '~> 2.0.3'
 
   # s.add_dependency "jquery-rails"

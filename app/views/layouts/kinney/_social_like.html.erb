@@ -1,9 +1,27 @@
-<div class="social twitter">
-  <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-via="ncsulibraries" data-count="none" data-size="small">Tweet</a>
-</div>
-<div class="social gplus">
-  <div class="g-plusone" data-size="small" data-annotation="none"></div>
-</div>
-<div class="social">
-  <iframe src="//www.facebook.com/plugins/like.php?href=<%= CGI.escape("http://" + request.host + request.fullpath) %>&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+<div class="social_buttons group">
+  
+  <span class="email">
+    <%= link_to email_to_resource, target: '_blank', :class => :social, :title => 'Share via email' do %>
+      <i class="icon-envelope-alt"></i>
+    <% end %>
+  </span>
+
+  <span class="googleplus">  
+    <%= link_to googleplus_url_for_resource, target: '_blank', :class => :social, :title => 'Share on Google+' do %>
+      <i class="icon-google-plus-sign"></i>
+    <% end %>
+  </span>   
+  
+  <span class="facebook">
+    <%= link_to facebook_url_for_resource, target: '_blank', :class => :social, :title => 'Share on Facebook' do %>
+      <i class="icon-facebook-sign"></i>
+    <% end %>
+  </span>  
+  
+  <span class="twitter">          
+    <%= link_to twitter_url_for_resource, target: '_blank', :class => :social, :title => 'Share on Twitter' do %>
+      <i class="icon-twitter-sign"></i>
+    <% end %>
+  </span>
+
 </div>

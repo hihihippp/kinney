@@ -28,7 +28,7 @@ DESC
         css_file = File.exist?(application_css_scss) ? application_css_scss : application_css
         
         inject_into_file css_file, :before => " *= require_self" do
-          " *= require kinney\n"
+          " *= require kinney\n*= require font-awesome"
         end
         gsub_file css_file, "*= require_tree .\n", ''
       end

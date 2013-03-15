@@ -8,11 +8,12 @@ gemspec
 # jquery-rails is used by the dummy application
 gem "jquery-rails"
 gem 'djatoka'
-gem 'pry-rails'
+gem 'font-awesome-sass-rails'
 
 group :development do 
   gem 'guard-livereload'
   gem 'rb-readline', :platforms => :ruby_19
+  gem 'pry-rails'
 end
 
 # once these are published as gems we can use them from there, until then we need to have them in our Gemfile
