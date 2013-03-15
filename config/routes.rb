@@ -6,7 +6,6 @@ Kinney::Engine.routes.draw do
   match "search", :as => :search, :to => 'search#index' 
   match "about", :as => :about, :to => 'pages#about'
 
-  match 'add_your_story', :as => :add_your_story, :to => 'pages#add_your_story'
   match 'giving', :as => :giving, :to => 'pages#giving'
   match 'contact' => 'contact#new', :as => 'contact', :via => :get
   match 'contact' => 'contact#create', :as => 'contact', :via => :post

@@ -28,10 +28,6 @@ en:
       giving:
         title: Giving 
         meta_description: Please give to help support this project.
-      add_your_story:
-        title: Add Your Story
-        text: Please fill out this form to contact us if you would like to add your story.
-        meta_description: Add your story to this project.
       home:
         featured_story: Featured Story
         profile_of: "Profile of %{name}"

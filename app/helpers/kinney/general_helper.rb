@@ -22,10 +22,10 @@ module Kinney
     end
 
     def render_extra_head_content
-    respond_to?(:extra_head_content) ?
-      extra_head_content.join("\n").html_safe :
-      ""
-  end
+      respond_to?(:extra_head_content) ?
+        extra_head_content.join("\n").html_safe :
+        ""
+    end
 
   end  
 end

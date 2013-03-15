@@ -6,11 +6,6 @@ class Kinney::PagesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get add_your_story" do
-    get :add_your_story, :use_route => :kinney
-    assert_response :success
-  end
-
   test "should get giving" do
     get :giving, :use_route => :kinney
     assert_response :success

@@ -1,14 +1,10 @@
 module Kinney
   class PagesController < KinneyController
 
-    caches_action :about, :add_your_story, :home
+    caches_action :about, :home
 
     def about
       
-    end
-
-    def add_your_story
-      @message = ContactMessage.new
     end
 
     def home

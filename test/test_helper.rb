@@ -6,6 +6,7 @@ require "rails/test_help"
 require 'capybara/rails'
 #require 'capybara/webkit'
 require 'mocha'
+require 'selenium-webdriver'
 require 'pry'
 
 
@@ -62,7 +63,7 @@ DatabaseCleaner.strategy = :truncation
 class ActionDispatch::IntegrationTest
   # Make the Capybara DSL available in all integration tests
   include Capybara::DSL
-
+  Selenium::WebDriver::Firefox.path= "/opt/firefox17/firefox"
   # Stop ActiveRecord from wrapping tests in transactions
   #self.use_transactional_fixtures = false
 
