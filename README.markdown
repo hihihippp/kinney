@@ -12,7 +12,10 @@ Abstracting the code out into this Rails Engine is currently incomplete and poss
 
 1. Create a fresh Rails application
 2. Add the following to your Gemfile: 
-`gem 'kinney', :git => 'git://github.com/jronallo/kinney.git'`
+```
+gem 'kinney', :git => 'git://github.com/jronallo/kinney.git'
+gem 'font-awesome-sass-rails'
+```
 3. `bundle install`
 4. `rake kinney:install:migrations` and `rake db:migrate`
 5. `rails g kinney:install` and `bundle install`
