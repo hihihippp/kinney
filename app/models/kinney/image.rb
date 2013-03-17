@@ -13,5 +13,9 @@ module Kinney
     #   false
     # end
 
+    def self.top_picks
+      where(:top_pick => true)
+    end
+
   end
 end
