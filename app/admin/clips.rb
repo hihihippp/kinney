@@ -38,4 +38,8 @@ ActiveAdmin.register Kinney::Clip do
     cache_sweeper Kinney::MetaSweeper
   end
   
+  collection_action :quotes do
+    @clips = Kinney::Clip.where('quotes IS NOT NULL')
+  end
+
 end
