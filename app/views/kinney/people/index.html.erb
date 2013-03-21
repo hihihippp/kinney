@@ -12,13 +12,14 @@
     
     <ul class="thumbnails sortable_thumbs">
       <% @people_with_images.each do |person| %>        
-        <li class="span2 sortable_thumb">
-        <%= link_to(person, :class => :thumbnail) do %>
+        <li class="span2 sortable_thumb" itemscope itemtype="http://schema.org/Person">
+        <%= link_to(person, :class => :thumbnail, :itemprop => :url) do %>
           <div class="block">
             <%= kinney_image_small(person.image, person) %>
             <div class="caption">
               <div class="clearfix">
-                <%= person.nickname %> <span class="last_name"><%= person.last_name %></span><%= ', ' + person.name_suffix if !person.name_suffix.blank? %>
+                <span itemprop="name"><%= person.nickname %> <span class="last_name"><%= person.last_name %></span><%= ', ' + person.name_suffix if !person.name_suffix.blank? %>
+                </span>
                 <div>
                   <span class="grad_class"><%= person.graduating_class %></span>    
                 </div>

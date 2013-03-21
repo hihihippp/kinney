@@ -17,7 +17,7 @@ module Kinney
 
     def meta_description
       if @meta_description
-        %Q{<meta name="description" content="#{@meta_description}">}.html_safe
+        %Q{<meta name="description" content="#{h @meta_description}">}.html_safe
       end
     end
 
