@@ -10,6 +10,7 @@ require 'jquery-tablesorter'
 require 'html_truncator'
 require 'httpclient'
 require 'kinney/mailer_logger'
+require 'strip_attributes'
 
 module Kinney
 end

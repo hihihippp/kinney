@@ -27,7 +27,7 @@ xml.urlset "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9", "xmlns:vide
       end
       xml.video :video do |video|
         xml.video :thumbnail_loc, clip.png
-        xml.video :title, clip.title
+        xml.video :title, clip.people_with_title
         xml.video :description, clip.description
         xml.video :content_loc, clip.mp4
         xml.video :duration, clip.duration

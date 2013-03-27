@@ -1,0 +1,13 @@
+panel :quotes do
+  table_for assigns[:clips], sortable: true do
+    column :quotes do |clip|
+      clip.quotes.html_safe
+    end
+    column :clip do |clip|
+      link_to clip.title, admin_kinney_clip_path(clip)
+    end
+    column "people in clip" do |clip|
+      clip.people_names
+    end 
+  end
+end

@@ -1,5 +1,8 @@
 module Kinney
   class Clip < ActiveRecord::Base
+
+    strip_attributes
+
     attr_accessible :filename, :quotes, :title, :top_pick, :topic_ids, :person_ids,
       :duration, :interview_date, :description, :featured
     

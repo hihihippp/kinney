@@ -12,11 +12,12 @@ Gem::Specification.new do |s|
   s.homepage    = "https://github.com/jronallo/kinney"
   s.summary     = "An oral history video clips site packaged as a Rails gem."
   s.description = "An oral history video clips site packaged as a Rails Engine gem."
+  s.license     = "MIT-LICENSE"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.markdown"]
   s.test_files = Dir["test/**/*"]
 
-  s.add_dependency "rails", "~> 3.2.12"
+  s.add_dependency "rails", "~> 3.2.13"
   s.add_dependency 'ckeditor', '3.7.1'
   s.add_dependency "friendly_id", "~> 4.0.1"
   s.add_dependency 'activeadmin'
@@ -29,6 +30,7 @@ Gem::Specification.new do |s|
   s.add_dependency "html_truncator", "~>0.2"
   s.add_dependency 'httpclient'
   s.add_dependency 'font-awesome-sass-rails'
+  s.add_dependency 'strip_attributes', '~> 1.4'
   #s.add_dependency "bootstrap-sass", '~> 2.0.3'
 
   # s.add_dependency "jquery-rails"

@@ -1,4 +1,4 @@
-<% if @person.location %>
+<% if !@person.location.blank? %>
   <div id="static_map">
     <h2><%= t 'kinney.people.map.grew_up_in', :location => @person.location %></h2>
     <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@person.location}&zoom=8&size=570x570&scale=1&sensor=false&markers=size:small%7Ccolor:red%7C#{@person.location}" %>
