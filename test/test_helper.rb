@@ -63,7 +63,10 @@ DatabaseCleaner.strategy = :truncation
 class ActionDispatch::IntegrationTest
   # Make the Capybara DSL available in all integration tests
   include Capybara::DSL
-  Selenium::WebDriver::Firefox.path= "/opt/firefox17/firefox"
+  
+  if File.exist? "/opt/firefox17/firefox"
+    Selenium::WebDriver::Firefox.path= "/opt/firefox17/firefox"
+  end
   # Stop ActiveRecord from wrapping tests in transactions
   #self.use_transactional_fixtures = false
 

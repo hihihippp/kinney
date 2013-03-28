@@ -2,6 +2,8 @@
 
 An oral history video clips site packaged as a Rails gem.
 
+[![Build Status](https://travis-ci.org/jronallo/kinney.png)](https://travis-ci.org/jronallo/kinney)
+
 # Story
 
 This code was originally part of a site (currently unreleased) created for the [Student Leadership Initiative](http://news.lib.ncsu.edu/scrc/category/student-leaders/). The codename for the internal project is Sleader, so this project was named Kinney. 
