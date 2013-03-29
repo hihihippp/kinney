@@ -1,0 +1,154 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://siskel.lib.ncsu.edu/SLI/atkins/atkins-campuslife_fire/atkins-campuslife_fire.vtt
+    body:
+      encoding: UTF-8
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '2096'
+      Content-Type:
+      - text/vtt;charset=utf-8
+      Last-Modified:
+      - Mon, 25 Jun 2012 17:56:55 GMT
+      Accept-Ranges:
+      - bytes
+      Etag:
+      - '"938d6de8fb52cd1:aa39"'
+      Server:
+      - Microsoft-IIS/6.0
+      Access-Control-Allow-Origin:
+      - '*'
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Fri, 29 Mar 2013 16:55:14 GMT
+    body:
+      encoding: UTF-8
+      string: "\uFEFFWEBVTT FILE\r\n\r\n1\r\n00:00:00 --> 00:00:05\r\nIt was a frightening
+        time but it also was a time of great student intrigue \r\n\r\n2\r\n00:00:06
+        --> 00:00:10\r\nand the kind of who-dun-it syndrome set in. \r\n\r\n3\r\n00:00:11
+        --> 00:00:15\r\nBeing where Pullen Hall was and where the school of design
+        was-\r\n\r\n4\r\n00:00:16 --> 00:00:19\r\nand the fact we never left the school
+        of design until 3:00 or 4:00 in the morning\r\n\r\n5\r\n00:00:20 --> 00:00:23\r\n-when
+        that fire broke out, which was give or take about midnight,\r\n\r\n6\r\n00:00:24
+        --> 00:00:32\r\nI mean we could see the blaze, and of course we all moved-I
+        say we all; maybe there were, I don't know, twenty-five of us or whatever\r\n\r\n7\r\n00:00:33
+        --> 00:00:37\r\n-but we all moved over, and I mean it was just absolutely
+        incredible, \r\n\r\n8\r\n00:00:38 --> 00:00:42\r\nand of course it was a wood
+        frame building. \r\n\r\n9\r\n00:00:43 --> 00:00:48\r\nI've never seen a fire
+        like that since then, \r\n\r\n10\r\n00:00:49 --> 00:00:55\r\nI mean just an
+        incredible fire, and then of course these fires would start showing up in
+        other places. \r\n\r\n11\r\n00:00:56 --> 00:01:01\r\nAt that time at the university
+        you could almost go in any academic building any time of the day. \r\n\r\n12\r\n00:01:02
+        --> 00:01:05\r\nI mean there just wasn't the security that you have on campus
+        today, \r\n\r\n13\r\n00:01:06 --> 00:01:12\r\nThey did not catch-. The academic
+        year finished up and they had not caught the culprit. \r\n\r\n14\r\n00:01:13
+        --> 00:01:17\r\nIt was well into the summer before they caught the individual
+        who did it, \r\n\r\n15\r\n00:01:18 --> 00:01:22\r\nI wouldn't sit here and
+        tell you we all went around in great fear, \r\n\r\n16\r\n00:01:23 --> 00:01:29\r\nbut
+        it was frightening in a sense of a disturbing way, that this would be going
+        on at campus. \r\n\r\n17\r\n00:01:30 --> 00:01:34\r\nIt's certainly not the
+        frightening kind of sense of what we live with in today's world, \r\n\r\n18\r\n00:01:35
+        --> 00:01:40\r\nthough I'm not saying we go around every day thinking about
+        it, of a terrorist kind of thing, \r\n\r\n19\r\n00:01:41 --> 00:01:49\r\nand
+        as I say all the who-dun-it stuff probably played out more than anything that
+        dealt with fright or fear."
+    http_version: 
+  recorded_at: Fri, 29 Mar 2013 16:55:14 GMT
+- request:
+    method: get
+    uri: http://scrc.lib.ncsu.edu/adore-djatoka/resolver?rft_id=si-ag1964-p123-atkins&svc_id=info:lanl-repo/svc/getMetadata&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Host:
+      - scrc.lib.ncsu.edu
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 29 Mar 2013 16:55:13 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '194'
+      Set-Cookie:
+      - JSESSIONID=043556C2700B75193A9B2AC366B8F964; Path=/adore-djatoka/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+        "identifier": "si-ag1964-p123-atkins",
+        "imagefile": "/storage/si-ag/si-ag1964-p123-atkins.jp2",
+        "width": "331",
+        "height": "327",
+        "dwtLevels": "7",
+        "levels": "2",
+        "compositingLayerCount": "1"
+        }
+    http_version: 
+  recorded_at: Fri, 29 Mar 2013 16:55:14 GMT
+- request:
+    method: get
+    uri: http://scrc.lib.ncsu.edu/adore-djatoka/resolver?rft_id=si-ag1964-p123-atkins&svc_id=info:lanl-repo/svc/getMetadata&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Host:
+      - scrc.lib.ncsu.edu
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 29 Mar 2013 16:55:14 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '194'
+      Set-Cookie:
+      - JSESSIONID=1F9E8F75D33509A7DCE54358C5E54F59; Path=/adore-djatoka/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+        "identifier": "si-ag1964-p123-atkins",
+        "imagefile": "/storage/si-ag/si-ag1964-p123-atkins.jp2",
+        "width": "331",
+        "height": "327",
+        "dwtLevels": "7",
+        "levels": "2",
+        "compositingLayerCount": "1"
+        }
+    http_version: 
+  recorded_at: Fri, 29 Mar 2013 16:55:14 GMT
+recorded_with: VCR 2.4.0

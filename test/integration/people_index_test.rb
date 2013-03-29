@@ -1,11 +1,14 @@
 require 'test_helper'
 
 class PeopleIndexTest < ActionDispatch::IntegrationTest
+
+  extend TestWithCassette
+
   setup do
     
   end
 
-  test 'shows people' do
+  test 'shows people', :people_index do
     visit(kinney.people_path)
     assert page.has_content?('People')
     assert page.has_content?('Tolson')
@@ -13,19 +16,19 @@ class PeopleIndexTest < ActionDispatch::IntegrationTest
     assert page.has_content?('Atkins, III')
   end
   
-  test 'links to show view for person with video' do
+  test 'links to show view for person with video', :people_index do
     visit(kinney.people_path)
     click_link('Edward Norris Tolson')
     assert current_path == kinney.person_path(kinney_people(:tolson))
   end
   
-  test 'links to show view for person without video' do
+  test 'links to show view for person without video', :people_index do
     visit(kinney.people_path)
     page.find('#people_no_clips').click_link('William Williams')
     assert current_path == kinney.person_path(kinney_people(:williams))
   end
   
-  test 'sort profile images' do
+  test 'sort profile images', :people_index do
     browser_start
     visit(kinney.people_path)
     assert page.find('.thumbnails li:first').has_content?('Atkins')

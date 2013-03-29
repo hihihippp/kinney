@@ -1,0 +1,186 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://127.0.0.1:7055/hub/session/5d9963fe-c796-46dd-82b9-86625109bd63/url
+    body:
+      encoding: UTF-8
+      string: '{"url":"http://127.0.0.1:60316/admin/kinney_images/814402043/edit"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '67'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Connection:
+      - close
+      Content-Length:
+      - '87'
+      Server:
+      - httpd.js
+      Date:
+      - Fri, 29 Mar 2013 16:33:53 GMT
+    body:
+      encoding: UTF-8
+      string: '{"name":"get","sessionId":"5d9963fe-c796-46dd-82b9-86625109bd63","status":0,"value":""}'
+    http_version: 
+  recorded_at: Fri, 29 Mar 2013 16:33:53 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:7055/hub/session/5d9963fe-c796-46dd-82b9-86625109bd63/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//*[@id = ''preview_image'']"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '55'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Connection:
+      - close
+      Content-Length:
+      - '148'
+      Server:
+      - httpd.js
+      Date:
+      - Fri, 29 Mar 2013 16:33:53 GMT
+    body:
+      encoding: UTF-8
+      string: '{"name":"findElements","sessionId":"5d9963fe-c796-46dd-82b9-86625109bd63","status":0,"value":[{"ELEMENT":"{f9356863-325e-4616-9bba-7959239ef407}"}]}'
+    http_version: 
+  recorded_at: Fri, 29 Mar 2013 16:33:53 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:7055/hub/session/5d9963fe-c796-46dd-82b9-86625109bd63/element/%7Bf9356863-325e-4616-9bba-7959239ef407%7D/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//img"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '34'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Connection:
+      - close
+      Content-Length:
+      - '153'
+      Server:
+      - httpd.js
+      Date:
+      - Fri, 29 Mar 2013 16:33:53 GMT
+    body:
+      encoding: UTF-8
+      string: '{"name":"findChildElements","sessionId":"5d9963fe-c796-46dd-82b9-86625109bd63","status":0,"value":[{"ELEMENT":"{bffb9b50-21b9-4111-a334-3f86e08d45f3}"}]}'
+    http_version: 
+  recorded_at: Fri, 29 Mar 2013 16:33:53 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:7055/hub/session/5d9963fe-c796-46dd-82b9-86625109bd63/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//*[@id = ''preview_image'']//img"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '60'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Connection:
+      - close
+      Content-Length:
+      - '148'
+      Server:
+      - httpd.js
+      Date:
+      - Fri, 29 Mar 2013 16:33:53 GMT
+    body:
+      encoding: UTF-8
+      string: '{"name":"findElements","sessionId":"5d9963fe-c796-46dd-82b9-86625109bd63","status":0,"value":[{"ELEMENT":"{bffb9b50-21b9-4111-a334-3f86e08d45f3}"}]}'
+    http_version: 
+  recorded_at: Fri, 29 Mar 2013 16:33:53 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:7055/hub/session/5d9963fe-c796-46dd-82b9-86625109bd63/element/%7Bbffb9b50-21b9-4111-a334-3f86e08d45f3%7D/attribute/src
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Connection:
+      - close
+      Content-Length:
+      - '305'
+      Server:
+      - httpd.js
+      Date:
+      - Fri, 29 Mar 2013 16:33:53 GMT
+    body:
+      encoding: UTF-8
+      string: '{"name":"getElementAttribute","sessionId":"5d9963fe-c796-46dd-82b9-86625109bd63","status":0,"value":"http://scrc.lib.ncsu.edu/adore-djatoka/resolver?rft_id=si-ag1962-p100-tolson&svc.level=2&svc_id=info%3Alanl-repo%2Fsvc%2FgetRegion&svc_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajpeg2000&url_ver=Z39.88-2004"}'
+    http_version: 
+  recorded_at: Fri, 29 Mar 2013 16:33:53 GMT
+recorded_with: VCR 2.4.0

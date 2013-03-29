@@ -1,0 +1,663 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://scrc.lib.ncsu.edu/adore-djatoka/resolver?rft_id=si-ag1964-p123-atkins&svc_id=info:lanl-repo/svc/getMetadata&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Host:
+      - scrc.lib.ncsu.edu
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 29 Mar 2013 21:31:11 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '194'
+      Set-Cookie:
+      - JSESSIONID=7811C10A0DCF409B1D1E7F7C6ED3BD92; Path=/adore-djatoka/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+        "identifier": "si-ag1964-p123-atkins",
+        "imagefile": "/storage/si-ag/si-ag1964-p123-atkins.jp2",
+        "width": "331",
+        "height": "327",
+        "dwtLevels": "7",
+        "levels": "2",
+        "compositingLayerCount": "1"
+        }
+    http_version: 
+  recorded_at: Fri, 29 Mar 2013 21:31:11 GMT
+- request:
+    method: get
+    uri: http://scrc.lib.ncsu.edu/adore-djatoka/resolver?rft_id=si-ag1964-p123-atkins&svc_id=info:lanl-repo/svc/getMetadata&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Host:
+      - scrc.lib.ncsu.edu
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 29 Mar 2013 21:31:11 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '194'
+      Set-Cookie:
+      - JSESSIONID=4D8D653C95AE0192E7321EE2C37DAEC1; Path=/adore-djatoka/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+        "identifier": "si-ag1964-p123-atkins",
+        "imagefile": "/storage/si-ag/si-ag1964-p123-atkins.jp2",
+        "width": "331",
+        "height": "327",
+        "dwtLevels": "7",
+        "levels": "2",
+        "compositingLayerCount": "1"
+        }
+    http_version: 
+  recorded_at: Fri, 29 Mar 2013 21:31:11 GMT
+- request:
+    method: get
+    uri: http://scrc.lib.ncsu.edu/adore-djatoka/resolver?rft_id=0004685&svc_id=info:lanl-repo/svc/getMetadata&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Host:
+      - scrc.lib.ncsu.edu
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 29 Mar 2013 21:31:11 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '169'
+      Set-Cookie:
+      - JSESSIONID=0B85CEF1387C3BC85DBA14515F58E2B6; Path=/adore-djatoka/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+        "identifier": "0004685",
+        "imagefile": "/storage/00046/0004685.jp2",
+        "width": "8925",
+        "height": "11344",
+        "dwtLevels": "7",
+        "levels": "7",
+        "compositingLayerCount": "1"
+        }
+    http_version: 
+  recorded_at: Fri, 29 Mar 2013 21:31:11 GMT
+- request:
+    method: get
+    uri: http://scrc.lib.ncsu.edu/adore-djatoka/resolver?rft_id=0004685&svc_id=info:lanl-repo/svc/getMetadata&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Host:
+      - scrc.lib.ncsu.edu
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 29 Mar 2013 21:31:11 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '169'
+      Set-Cookie:
+      - JSESSIONID=F18C48BD7BF3C1AA8AED0C9E99708D82; Path=/adore-djatoka/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+        "identifier": "0004685",
+        "imagefile": "/storage/00046/0004685.jp2",
+        "width": "8925",
+        "height": "11344",
+        "dwtLevels": "7",
+        "levels": "7",
+        "compositingLayerCount": "1"
+        }
+    http_version: 
+  recorded_at: Fri, 29 Mar 2013 21:31:12 GMT
+- request:
+    method: get
+    uri: http://scrc.lib.ncsu.edu/adore-djatoka/resolver?rft_id=si-ag1962-p408-tolson&svc_id=info:lanl-repo/svc/getMetadata&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Host:
+      - scrc.lib.ncsu.edu
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 29 Mar 2013 21:31:11 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '194'
+      Set-Cookie:
+      - JSESSIONID=27BDCBFCBA62DB708A65797D7FDD83AB; Path=/adore-djatoka/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+        "identifier": "si-ag1962-p408-tolson",
+        "imagefile": "/storage/si-ag/si-ag1962-p408-tolson.jp2",
+        "width": "360",
+        "height": "464",
+        "dwtLevels": "7",
+        "levels": "3",
+        "compositingLayerCount": "1"
+        }
+    http_version: 
+  recorded_at: Fri, 29 Mar 2013 21:31:12 GMT
+- request:
+    method: get
+    uri: http://scrc.lib.ncsu.edu/adore-djatoka/resolver?rft_id=si-ag1962-p408-tolson&svc_id=info:lanl-repo/svc/getMetadata&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Host:
+      - scrc.lib.ncsu.edu
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 29 Mar 2013 21:31:11 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '194'
+      Set-Cookie:
+      - JSESSIONID=ADE4C0920BB34843B311530F1E514F3D; Path=/adore-djatoka/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+        "identifier": "si-ag1962-p408-tolson",
+        "imagefile": "/storage/si-ag/si-ag1962-p408-tolson.jp2",
+        "width": "360",
+        "height": "464",
+        "dwtLevels": "7",
+        "levels": "3",
+        "compositingLayerCount": "1"
+        }
+    http_version: 
+  recorded_at: Fri, 29 Mar 2013 21:31:12 GMT
+- request:
+    method: get
+    uri: http://scrc.lib.ncsu.edu/adore-djatoka/resolver?rft_id=si-ag1962-p408-tolson&svc_id=info:lanl-repo/svc/getMetadata&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Host:
+      - scrc.lib.ncsu.edu
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 29 Mar 2013 21:31:12 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '194'
+      Set-Cookie:
+      - JSESSIONID=73505F03C49877A460CA4E047AFC7F04; Path=/adore-djatoka/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+        "identifier": "si-ag1962-p408-tolson",
+        "imagefile": "/storage/si-ag/si-ag1962-p408-tolson.jp2",
+        "width": "360",
+        "height": "464",
+        "dwtLevels": "7",
+        "levels": "3",
+        "compositingLayerCount": "1"
+        }
+    http_version: 
+  recorded_at: Fri, 29 Mar 2013 21:31:12 GMT
+- request:
+    method: get
+    uri: http://scrc.lib.ncsu.edu/adore-djatoka/resolver?rft_id=si-ag1962-p408-tolson&svc_id=info:lanl-repo/svc/getMetadata&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Host:
+      - scrc.lib.ncsu.edu
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 29 Mar 2013 21:31:12 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '194'
+      Set-Cookie:
+      - JSESSIONID=5C26ECB55A7AA09EE7D0BCC3C921130C; Path=/adore-djatoka/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+        "identifier": "si-ag1962-p408-tolson",
+        "imagefile": "/storage/si-ag/si-ag1962-p408-tolson.jp2",
+        "width": "360",
+        "height": "464",
+        "dwtLevels": "7",
+        "levels": "3",
+        "compositingLayerCount": "1"
+        }
+    http_version: 
+  recorded_at: Fri, 29 Mar 2013 21:31:12 GMT
+- request:
+    method: get
+    uri: http://scrc.lib.ncsu.edu/adore-djatoka/resolver?rft_id=si-ag1962-p408-tolson&svc_id=info:lanl-repo/svc/getMetadata&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Host:
+      - scrc.lib.ncsu.edu
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 29 Mar 2013 21:31:12 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '194'
+      Set-Cookie:
+      - JSESSIONID=60C5CCD9F7E78FF89FA7FD1CD07160EC; Path=/adore-djatoka/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+        "identifier": "si-ag1962-p408-tolson",
+        "imagefile": "/storage/si-ag/si-ag1962-p408-tolson.jp2",
+        "width": "360",
+        "height": "464",
+        "dwtLevels": "7",
+        "levels": "3",
+        "compositingLayerCount": "1"
+        }
+    http_version: 
+  recorded_at: Fri, 29 Mar 2013 21:31:13 GMT
+- request:
+    method: get
+    uri: http://scrc.lib.ncsu.edu/adore-djatoka/resolver?rft_id=si-ag1962-p212-tolson&svc_id=info:lanl-repo/svc/getMetadata&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Host:
+      - scrc.lib.ncsu.edu
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 29 Mar 2013 21:31:12 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '195'
+      Set-Cookie:
+      - JSESSIONID=5EBA4822F3A4EA6955F86A8A00261A7C; Path=/adore-djatoka/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+        "identifier": "si-ag1962-p212-tolson",
+        "imagefile": "/storage/si-ag/si-ag1962-p212-tolson.jp2",
+        "width": "760",
+        "height": "1168",
+        "dwtLevels": "7",
+        "levels": "4",
+        "compositingLayerCount": "1"
+        }
+    http_version: 
+  recorded_at: Fri, 29 Mar 2013 21:31:13 GMT
+- request:
+    method: get
+    uri: http://scrc.lib.ncsu.edu/adore-djatoka/resolver?rft_id=si-ag1962-p212-tolson&svc_id=info:lanl-repo/svc/getMetadata&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Host:
+      - scrc.lib.ncsu.edu
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 29 Mar 2013 21:31:12 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '195'
+      Set-Cookie:
+      - JSESSIONID=FCEDA18E5B285487E0C42B2E4F3854DB; Path=/adore-djatoka/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+        "identifier": "si-ag1962-p212-tolson",
+        "imagefile": "/storage/si-ag/si-ag1962-p212-tolson.jp2",
+        "width": "760",
+        "height": "1168",
+        "dwtLevels": "7",
+        "levels": "4",
+        "compositingLayerCount": "1"
+        }
+    http_version: 
+  recorded_at: Fri, 29 Mar 2013 21:31:13 GMT
+- request:
+    method: get
+    uri: http://scrc.lib.ncsu.edu/adore-djatoka/resolver?rft_id=si-ag1962-p212-tolson&svc_id=info:lanl-repo/svc/getMetadata&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Host:
+      - scrc.lib.ncsu.edu
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 29 Mar 2013 21:31:12 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '195'
+      Set-Cookie:
+      - JSESSIONID=8C1531CB4D1A8CAC62558C9446F6F86B; Path=/adore-djatoka/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+        "identifier": "si-ag1962-p212-tolson",
+        "imagefile": "/storage/si-ag/si-ag1962-p212-tolson.jp2",
+        "width": "760",
+        "height": "1168",
+        "dwtLevels": "7",
+        "levels": "4",
+        "compositingLayerCount": "1"
+        }
+    http_version: 
+  recorded_at: Fri, 29 Mar 2013 21:31:13 GMT
+- request:
+    method: get
+    uri: http://scrc.lib.ncsu.edu/adore-djatoka/resolver?rft_id=si-ag1962-p100-tolson&svc_id=info:lanl-repo/svc/getMetadata&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Host:
+      - scrc.lib.ncsu.edu
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 29 Mar 2013 21:31:12 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '196'
+      Set-Cookie:
+      - JSESSIONID=9D39319FF0D86BE0E6F1915E6861C9AC; Path=/adore-djatoka/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+        "identifier": "si-ag1962-p100-tolson",
+        "imagefile": "/storage/si-ag/si-ag1962-p100-tolson.jp2",
+        "width": "1276",
+        "height": "1420",
+        "dwtLevels": "7",
+        "levels": "4",
+        "compositingLayerCount": "1"
+        }
+    http_version: 
+  recorded_at: Fri, 29 Mar 2013 21:31:13 GMT
+- request:
+    method: get
+    uri: http://scrc.lib.ncsu.edu/adore-djatoka/resolver?rft_id=si-ag1962-p100-tolson&svc_id=info:lanl-repo/svc/getMetadata&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Host:
+      - scrc.lib.ncsu.edu
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 29 Mar 2013 21:31:12 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '196'
+      Set-Cookie:
+      - JSESSIONID=A97A263BB450E623F037A6A1CDB0FC88; Path=/adore-djatoka/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+        "identifier": "si-ag1962-p100-tolson",
+        "imagefile": "/storage/si-ag/si-ag1962-p100-tolson.jp2",
+        "width": "1276",
+        "height": "1420",
+        "dwtLevels": "7",
+        "levels": "4",
+        "compositingLayerCount": "1"
+        }
+    http_version: 
+  recorded_at: Fri, 29 Mar 2013 21:31:13 GMT
+- request:
+    method: get
+    uri: http://scrc.lib.ncsu.edu/adore-djatoka/resolver?rft_id=si-ag1962-p100-tolson&svc_id=info:lanl-repo/svc/getMetadata&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Host:
+      - scrc.lib.ncsu.edu
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 29 Mar 2013 21:31:13 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '196'
+      Set-Cookie:
+      - JSESSIONID=463C323B172E4290B8C7E89ECB26FB8A; Path=/adore-djatoka/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+        "identifier": "si-ag1962-p100-tolson",
+        "imagefile": "/storage/si-ag/si-ag1962-p100-tolson.jp2",
+        "width": "1276",
+        "height": "1420",
+        "dwtLevels": "7",
+        "levels": "4",
+        "compositingLayerCount": "1"
+        }
+    http_version: 
+  recorded_at: Fri, 29 Mar 2013 21:31:13 GMT
+recorded_with: VCR 2.4.0

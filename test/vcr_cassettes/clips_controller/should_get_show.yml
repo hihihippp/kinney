@@ -1,0 +1,136 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://siskel.lib.ncsu.edu/SLI/tolson/tolson-roots/tolson-roots.vtt
+    body:
+      encoding: UTF-8
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '776'
+      Content-Type:
+      - text/vtt;charset=utf-8
+      Last-Modified:
+      - Thu, 23 Aug 2012 18:27:53 GMT
+      Accept-Ranges:
+      - bytes
+      Etag:
+      - '"bf96a425d81cd1:aa39"'
+      Server:
+      - Microsoft-IIS/6.0
+      Access-Control-Allow-Origin:
+      - '*'
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Fri, 29 Mar 2013 16:25:36 GMT
+    body:
+      encoding: UTF-8
+      string: "\uFEFFWEBVTT\r\n\r\n1\r\n00:00:00.000 --> 00:00:03.682\r\nI grew up
+        in eastern North Carolina, Edgecombe County,\r\n\r\n2\r\n00:00:03.682 -->
+        00:00:07.398\r\non a tobacco and dairy farm outside of Tarboro.\r\n\r\n3\r\n00:00:07.398
+        --> 00:00:12.456\r\nI'm the next to youngest of a family of eight children--\r\n\r\n4\r\n00:00:12.456
+        --> 00:00:19.328\r\n--and I am the first member of my family that went to
+        NC State.\r\n\r\n5\r\n00:00:19.328 --> 00:00:26.593\r\nEdgecombe County is
+        a very rural county,\r\n\r\n6\r\n00:00:26.593 --> 00:00:31.021\r\nmostly farming,
+        and that's what we did for a living as a family.\r\n\r\n7\r\n00:00:31.021
+        --> 00:00:36.396\r\nIt's about sixty-five miles east of Raleigh\r\n\r\n8\r\n00:00:36.396
+        --> 00:00:41.441\r\nso when I came to NC State, coming to NC State and coming
+        to Raleigh was coming to the big city."
+    http_version: 
+  recorded_at: Fri, 29 Mar 2013 16:25:37 GMT
+- request:
+    method: get
+    uri: http://scrc.lib.ncsu.edu/adore-djatoka/resolver?rft_id=si-ag1962-p408-tolson&svc_id=info:lanl-repo/svc/getMetadata&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Host:
+      - scrc.lib.ncsu.edu
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 29 Mar 2013 16:25:36 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '194'
+      Set-Cookie:
+      - JSESSIONID=A5DE3121C42280B40702B12F27F58D82; Path=/adore-djatoka/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+        "identifier": "si-ag1962-p408-tolson",
+        "imagefile": "/storage/si-ag/si-ag1962-p408-tolson.jp2",
+        "width": "360",
+        "height": "464",
+        "dwtLevels": "7",
+        "levels": "3",
+        "compositingLayerCount": "1"
+        }
+    http_version: 
+  recorded_at: Fri, 29 Mar 2013 16:25:37 GMT
+- request:
+    method: get
+    uri: http://scrc.lib.ncsu.edu/adore-djatoka/resolver?rft_id=si-ag1962-p408-tolson&svc_id=info:lanl-repo/svc/getMetadata&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Host:
+      - scrc.lib.ncsu.edu
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 29 Mar 2013 16:25:36 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '194'
+      Set-Cookie:
+      - JSESSIONID=C926F10BFA709EA2FA194FA042ADBDDA; Path=/adore-djatoka/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+        "identifier": "si-ag1962-p408-tolson",
+        "imagefile": "/storage/si-ag/si-ag1962-p408-tolson.jp2",
+        "width": "360",
+        "height": "464",
+        "dwtLevels": "7",
+        "levels": "3",
+        "compositingLayerCount": "1"
+        }
+    http_version: 
+  recorded_at: Fri, 29 Mar 2013 16:25:37 GMT
+recorded_with: VCR 2.4.0

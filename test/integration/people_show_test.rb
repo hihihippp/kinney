@@ -1,11 +1,13 @@
 require 'test_helper'
 
 class PeopleShowTest < ActionDispatch::IntegrationTest
+  extend TestWithCassette
+
   setup do
     #Capybara.current_driver = Capybara.javascript_driver # :selenium by default
   end
 
-  test 'shows person content' do
+  test_with_cassette 'shows person content', :people_show do
     visit(kinney.person_path(kinney_people(:tolson)))
     assert page.has_content?('Edward Norris Tolson')
     
@@ -32,7 +34,7 @@ class PeopleShowTest < ActionDispatch::IntegrationTest
     assert page.has_content?("This is a citation.")
   end
   
-  test 'does not show headings for content fields when content is not present' do
+  test_with_cassette 'does not show headings for content fields when content is not present', :people_show do
     visit(kinney.person_path(kinney_people(:williams)))
     assert page.has_content?('William Williams')
     assert page.has_no_selector?('h2', :text => 'Years at State')
@@ -43,61 +45,61 @@ class PeopleShowTest < ActionDispatch::IntegrationTest
     assert page.has_no_selector?('h2', :text => 'Citations')
   end
 
-  test 'if there is only one image and it is a top pick then do not show the image section of the page' do
+  test_with_cassette 'if there is only one image and it is a top pick then do not show the image section of the page', :people_show do
     visit(kinney.person_path(kinney_people(:atkins)))
     assert page.has_no_selector?('h2', :text => 'Images of Jonh Leslie Atkins')
   end
   
-  test 'should give a link to other videos with the same person' do
+  test_with_cassette 'should give a link to other videos with the same person', :people_show do
     visit(kinney.person_path(kinney_people(:tolson)))
     assert page.has_selector?('#person_videos a', :text => 'Growing Up in Edgecombe County')
     page.find('#person_videos a', :text => 'Mentors').click
     assert page.has_selector?('h1', :text => 'Mentors')
   end
   
-  test "should show a top pick image near the biography" do
+  test_with_cassette "should show a top pick image near the biography", :people_show do
     visit(kinney.person_path(kinney_people(:tolson)))
     assert page.find('#image_top_pick img')[:src].include?('si-ag1962-p408-tolson')
   end
   
-  test "should not see the top pick image with the other images" do
+  test_with_cassette "should not see the top pick image with the other images", :people_show do
     visit(kinney.person_path(kinney_people(:tolson)))
     page.all('#other_images img').each do |image|
       assert_false image[:src].include?('si-ag1962-p408-tolson')
     end
   end
 
-  test "should show name_suffix if present" do
+  test_with_cassette "should show name_suffix if present", :people_show do
     visit(kinney.person_path(kinney_people(:atkins)))
     assert page.has_selector?('h1', :text => 'John Leslie Atkins, III')
   end
   
-  test "should provide a link to a video as an image and make it a top pick" do
+  test_with_cassette "should provide a link to a video as an image and make it a top pick", :people_show do
     visit(kinney.person_path(kinney_people(:tolson)))
     image_link = page.find('.thumbnail_video:first')[:href]
     assert_equal kinney.clip_path(kinney_clips(:tolson_roots)), image_link
   end
 
-  test "should provide a link to other videos as text links" do 
+  test_with_cassette "should provide a link to other videos as text links", :people_show do 
     visit(kinney.person_path(kinney_people(:tolson)))
     assert page.has_selector?('#person_videos a', :text => 'Growing Up in Edgecombe County')
     assert page.has_selector?('#person_videos a', :text => '0:44')
     assert page.has_selector?('#person_videos a', :text => 'Mentors')
   end
 
-  test "should display the information like description, interview date and time below video clip" do
+  test_with_cassette "should display the information like description, interview date and time below video clip", :people_show do
     visit(kinney.clip_path(kinney_clips(:tolson_roots)))
     assert page.has_content?('This is a description of the Roots clip. Interview on June 4, 2011. (0:44)')
   end
 
-  test "should display a map if the location the person grew up is known" do
+  test_with_cassette "should display a map if the location the person grew up is known", :people_show do
     visit(kinney.person_path(kinney_people(:tolson)))
     assert page.has_selector?('#static_map')
     assert page.has_content?('Grew up in')
     assert page.has_content?('Edgecombe County, NC')    
   end
 
-  test "should not display a map if the location the person grew up is not known" do
+  test_with_cassette "should not display a map if the location the person grew up is not known", :people_show do
     visit(kinney.person_path(kinney_people(:atkins)))
     assert page.has_no_content?('Grew up in')
     assert page.has_no_selector?('#static_map')

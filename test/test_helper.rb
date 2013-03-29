@@ -5,9 +5,21 @@ require File.expand_path("../dummy/config/environment.rb",  __FILE__)
 require "rails/test_help"
 require 'capybara/rails'
 #require 'capybara/webkit'
-require 'mocha'
+require 'mocha/setup'
 require 'selenium-webdriver'
 require 'pry'
+
+require 'vcr'
+VCR.configure do |c|
+  c.hook_into :webmock
+  c.cassette_library_dir = 'test/vcr_cassettes'
+  c.ignore_request do |request|
+    URI(request.uri).path.include?('__identify__') or 
+    URI(request.uri).path.include?('hub/session')
+  end
+  c.allow_http_connections_when_no_cassette = true
+  c.ignore_localhost = false
+end
 
 
 Rails.backtrace_cleaner.remove_silencers!
