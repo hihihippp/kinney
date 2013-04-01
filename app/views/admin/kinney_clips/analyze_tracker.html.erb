@@ -5,14 +5,16 @@
 
 <%= render :partial => 'video_engagement_chart' %>
 
-<div class="row">
-  <div class="span6">
+<div id="video_and_time">
+  <div class="video">
     <%= render :partial => '/kinney/video', :locals => {:clip => @clip} %>
   </div>
-  <div class="span6" id="current_time"><p></p>
+  <div id="current_time"><p></p>
   </div>
 </div>
 
+<div id="debugging">
 <%= @all_seconds.sort.inspect %><br>
 <%= @temp_seconds.inspect %><br>
 <%= @seconds.to_json %>
+</div>

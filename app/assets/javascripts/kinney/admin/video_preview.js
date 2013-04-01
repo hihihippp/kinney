@@ -30,7 +30,7 @@ $(document).ready(function() {
     }
   }
 
-  if ($('.admin_kinney_clips').length > 0) {
+  if ($('body.admin_kinney_clips.edit,body.admin_kinney_clips.new').length > 0) {
     // WEBVTT must be present to submit form
     $('body.admin_kinney_clips #kinney_clip_submit_action input').attr('disabled', 'disabled');  
     $('#vtt_result').html('<div class="alert">Give focus to the filename. You will not be able to save until there is a WEBVTT file.</div>');
