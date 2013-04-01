@@ -4,6 +4,7 @@ pkg/
 test/dummy/db/*.sqlite3
 test/dummy/log/*.log
 test/dummy/tmp/cache/*
+test/dummy/tmp/pids/
 test/dummy/.sass-cache
 tests_for_app
 elasticsearch*

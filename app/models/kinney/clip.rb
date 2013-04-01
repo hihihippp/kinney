@@ -59,8 +59,7 @@ module Kinney
       hash.to_json
     end
     # end elasticsearch end
-    
-    
+     
     
     def self.top_picks
       where(:top_pick => true)
@@ -72,6 +71,10 @@ module Kinney
 
     def title_and_last_names
       "#{title} #{people_names}"
+    end
+
+    def title_and_full_people_names
+      "#{title} with #{full_people_names}"
     end
     
     def topic_names
