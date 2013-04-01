@@ -42,6 +42,7 @@ end
 group :test do
   gem 'vcr'
   gem 'webmock', ['>= 1.8.0','< 1.9.0']
+  gem 'microdata'
   # gem 'capybara-webkit'
   # gem 'poltergeist'
 end

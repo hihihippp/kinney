@@ -8,6 +8,7 @@ require 'capybara/rails'
 require 'mocha/setup'
 require 'selenium-webdriver'
 require 'pry'
+require 'microdata'
 
 require 'vcr'
 VCR.configure do |c|
