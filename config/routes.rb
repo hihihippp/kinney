@@ -1,7 +1,7 @@
 Kinney::Engine.routes.draw do
 
   post "tracker/track", :to => 'tracker#track'
-  get "tracker/analyze/:video", :to => 'tracker#analyze', :as => 'tracker_analyze'
+  match "tracker/analyze/:video", :to => 'tracker#analyze', :via => :get, :as => 'tracker_analyze'
 
   match "search", :as => :search, :to => 'search#index' 
   match "about", :as => :about, :to => 'pages#about'

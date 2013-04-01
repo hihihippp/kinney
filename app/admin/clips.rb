@@ -31,10 +31,8 @@ ActiveAdmin.register Kinney::Clip do
         end
       end
       row :analytics do
-        # FIXME: I don't know why doing it this way is necessary
-        link_to 'Video Analytics', Kinney::Engine.routes.url_helpers.tracker_analyze_path(clip.filename)
-      end
-      
+        link_to 'Video Analytics', kinney.tracker_analyze_path(clip.filename)
+      end      
     end
     active_admin_comments
   end
