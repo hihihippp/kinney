@@ -30,6 +30,11 @@ ActiveAdmin.register Kinney::Clip do
           render :partial => '/kinney/video', :locals => {:clip => clip}
         end
       end
+      row :analytics do
+        # FIXME: I don't know why doing it this way is necessary
+        link_to 'Video Analytics', Kinney::Engine.routes.url_helpers.tracker_analyze_path(clip.filename)
+      end
+      
     end
     active_admin_comments
   end
@@ -41,5 +46,7 @@ ActiveAdmin.register Kinney::Clip do
   collection_action :quotes do
     @clips = Kinney::Clip.where('quotes IS NOT NULL')
   end
+
+
 
 end
