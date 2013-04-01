@@ -4,6 +4,10 @@ begin
 rescue LoadError
   puts 'You must `gem install bundler` and `bundle install` to run rake tasks'
 end
+
+require 'single_test'
+SingleTest.load_tasks
+
 begin
   require 'rdoc/task'
 rescue LoadError

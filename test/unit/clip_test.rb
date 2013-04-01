@@ -56,6 +56,11 @@ class ClipTest < ActiveSupport::TestCase
     clip.reload
     assert_equal "Third Man, Edward Norris Tolson, and William Williams", clip.full_people_names
   end
+
+  test "clip should return title with full people names" do 
+    clip = kinney_clips(:tolson_roots)
+    assert_equal "Growing Up in Edgecombe County with Edward Norris Tolson", clip.title_with_full_people_names
+  end
   
   test "clip should return the full URL for the poster image" do
     assert_equal "http://siskel.lib.ncsu.edu/SLI/tolson/tolson-roots/tolson-roots.png",

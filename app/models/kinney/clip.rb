@@ -73,7 +73,7 @@ module Kinney
       "#{title} #{people_names}"
     end
 
-    def title_and_full_people_names
+    def title_with_full_people_names
       "#{title} with #{full_people_names}"
     end
     
