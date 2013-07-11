@@ -20,13 +20,13 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 3.2.13"
   s.add_dependency 'ckeditor', '3.7.1'
   s.add_dependency "friendly_id", "~> 4.0.1"
-  s.add_dependency 'activeadmin'
+  s.add_dependency 'activeadmin', "0.5.1"
   s.add_dependency 'meta_search'
   s.add_dependency 'formtastic', "~> 2.2.1"
   s.add_dependency 'formtastic-bootstrap'
   s.add_dependency 'chosen-rails'
-  s.add_dependency 'tire' 
-  s.add_dependency 'jquery-tablesorter', '~> 1.3.0' 
+  s.add_dependency 'tire'
+  s.add_dependency 'jquery-tablesorter', '~> 1.3.0'
   s.add_dependency "html_truncator", "~>0.2"
   s.add_dependency 'httpclient'
   s.add_dependency 'font-awesome-sass-rails'
