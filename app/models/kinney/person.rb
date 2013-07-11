@@ -3,18 +3,18 @@ module Kinney
     attr_accessible :accomplishments, :activities, :biography, :citations,
       :currently, :first_name, :graduating_class, :last_name, :middle_name,
       :nickname, :term, :term_date_ranges, :name_suffix, :location
-    
+
     validates :last_name, :presence => true
     validates_uniqueness_of :last_name, :scope => :first_name
-    
+
     has_many :clip_people
     has_many :clips, :through => :clip_people
     has_many :person_images
     has_many :images, :through => :person_images
-    
+
     extend FriendlyId
     friendly_id :full_name, :use => [:slugged, :history]
-    
+
     default_scope order('last_name asc')
 
     # tire for elasticsearch
@@ -22,10 +22,10 @@ module Kinney
     include Tire::Model::Callbacks
     index_name "kinney_#{Rails.env}"
     mapping do
-      indexes :id,           :index    => :not_analyzed    
+      indexes :id,           :index    => :not_analyzed
       indexes :filename,     :index => :not_analyzed
       indexes :accomplishments,       :analyzer => 'snowball'
-      indexes :activities,       :analyzer => 'snowbalwilliaml'
+      indexes :activities,       :analyzer => 'snowball'
       indexes :biography,       :analyzer => 'snowball'
       indexes :citations,       :analyzer => 'snowball'
       indexes :graduating_class,      :analyzer => 'date'
@@ -42,7 +42,7 @@ module Kinney
             }
           }
         }
-    
+
     def self.with_clips
       joins(:clips).group("kinney_people.id HAVING count(kinney_clips.id) > 0")
     end
@@ -62,11 +62,11 @@ module Kinney
       includes(:person_images).where(:kinney_person_images => {:person_id => nil})
     end
 
-    
+
     def to_label
       "#{last_name}, #{first_name}"
     end
-    
+
     def full_name
       fn = ''
       fn << first_name if !first_name.blank?
@@ -75,7 +75,7 @@ module Kinney
       fn << ', ' + name_suffix if !name_suffix.blank?
       fn
     end
-      
+
     def short_bio
       HTML_Truncator.truncate(biography, 20).html_safe
     end
@@ -100,6 +100,6 @@ module Kinney
       read_more_link_params_hash
 
     end
-    
+
   end
 end
