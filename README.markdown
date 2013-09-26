@@ -6,11 +6,12 @@ An oral history video clips site packaged as a Rails gem.
 
 # Story
 
-This code was originally part of a site (currently unreleased) created for the [Student Leadership Initiative](http://news.lib.ncsu.edu/scrc/category/student-leaders/). The codename for the internal project is Sleader, so this project was named Kinney.
+This code was originally part of the [Student Leadership Initiative](http://d.lib.ncsu.edu/student-leaders/). The codename for the internal project is Sleader, so this project was named Kinney.
 
-# Current Development
+# Requirements
 
-Master is Rails 4 only.
+- Rails 4
+- ElasticSearch
 
 # Install
 
@@ -35,30 +36,60 @@ gem 'font-awesome-sass-rails'
 
 When running the Kinney installation generator several files were created and some of those need to be configured.
 
-## app/helpers/kinney_helper.rb
+## Generated
 
-## app/helpers/kinney_clip_helper.rb
+### app/helpers/kinney_helper.rb
+Defines how to get different sizes of images. You'll likely want to change these for how you need to get images. By default if the djatoka gem is installed it uses Djatoka, otherwise it falls back on a placeholder image.
 
-## app/models/kinney/image.rb
+### app/helpers/kinney_clip_helper.rb
+Defines #siskel_path which is used in several places to calculate the URL to your HTML5 Video, poster images, and webvtt files. You will definitely want to update this method to reflect where your HTML5 Video is stored. Note that this current works by storing all access derivatives for a single video within one directory.
 
-## config/routes.rb
+### app/models/kinney/image.rb
+This file is generated so that the image model can have an #external_url method. This allows you to link out from an image modal to the original image where you might have more information about the resource.
 
-## config/environments/development.rb
+### config/routes.rb
 
-## app/views/kinney/pages/_about_text.html.erb
+Routes are generated for admin interface, login, mounting the kinney engine, and ckeditor.
 
-## app/views/kinney/_contact.html.erb
+## Views to Override
 
-## app/views/layouts/kinney/_footer.html.erb
+### app/views/kinney/pages/_about_text.html.erb
 
-## app/views/layouts/kinney/_brand.html.erb
 
-## app/views/kinney/pages/_home_header.html.erb
+### app/views/kinney/_contact.html.erb
 
+### app/views/layouts/kinney/_footer.html.erb
+
+### app/views/layouts/kinney/_brand.html.erb
+
+### app/views/kinney/pages/_home_header.html.erb
+
+### config/environments/development.rb
+
+FIXME: I can't remember what you might want to change in your development environment. Sorry!
+
+# Rake tasks
+
+`rake kinney:reindex` will reindex in elasticsearch.
 
 # Development
 
 `bundle exec rake test`
+
+# Running the Dummy App
+
+To index into ElasticSearch:
+
+```
+bundle exec rake environment app:tire:import CLASS='Kinney::Person'
+bundle exec rake environment app:tire:import CLASS='Kinney::Clip'
+```
+
+You may need to drop the ElasticSearch index at time:
+
+```
+bundle exec rake environment app:tire:index:drop INDEX=kinney_development
+```
 
 # TODO
 

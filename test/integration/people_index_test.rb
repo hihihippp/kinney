@@ -28,16 +28,4 @@ class PeopleIndexTest < ActionDispatch::IntegrationTest
     assert current_path == kinney.person_path(kinney_people(:williams))
   end
 
-  test 'sort profile images', :people_index do
-    browser_start
-    visit(kinney.people_path)
-    assert page.all('.thumbnails li').first.has_content?('Atkins')
-    click_link('sort_graduating_class')
-    assert page.all('.thumbnails li').first.has_content?('Friday')
-    assert page.all('.thumbnails li').last.has_content?('Atkins')
-    click_link('sort_last_name')
-    assert page.all('.thumbnails li').first.has_content?('Atkins')
-    browser_end
-  end
-
 end

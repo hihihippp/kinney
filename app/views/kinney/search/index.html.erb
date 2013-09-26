@@ -10,7 +10,7 @@
 
     <%- else -%>
       You searched for <b><%= params[:q] %></b>.
-      <%= link_to t('kinney.search.clear'), search_path , :class => :btn if defined?(@clips) %>
+      <%= link_to t('kinney.search.clear'), search_path , :class => [:btn, 'btn-default' ] if defined?(@clips) %>
     <% end -%>
   </div>
 </div>
@@ -31,13 +31,13 @@
     <% end -%>
 
     <% @clips.each_slice(2) do |sliced_clips| %>
-      <ul class="thumbnails">
+      <div class="thumbnails">
         <% sliced_clips.each do |clip| %>
-          <li class="col-md-4 <%= cycle('odd', 'even') %>">
+          <div class="col-md-6 <%= cycle('odd', 'even') %>">
              <%= render :partial => '/kinney/clip_link', :locals => {:clip => clip} %>
-          </li>
+          </div>
         <% end -%>
-      </ul>
+      </div>
     <% end -%>
 
   </div>
@@ -55,13 +55,11 @@
           <%= t '.no_current_search_people_message' %>
         </div>
       <% end -%>
-      <ul class="list-group">
+      <div class="list-group">
         <% @people.each do |person| %>
-          <li>
-             <%= link_to person.full_name, person %>
-          </li>
+          <%= link_to person.full_name, person, class: 'list-group-item' %>
         <% end -%>
-      </ul>
+      </div>
     </div>
   </div>
 </div>
