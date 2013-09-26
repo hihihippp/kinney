@@ -7,8 +7,8 @@
 <% end -%>
 
 <div class="row">
-  <div class="span4">
-    <ul class="nav nav-tabs nav-stacked" id="topics">
+  <div class="col-md-4">
+    <ul class="list-group" id="topics">
       <% @topics.each do |topic| %>
         <%# FIXME: make this code prettier %>
         <li><%= link_to topic.name + ' (' + topic.clips.count.to_s + ')', topic %></li>

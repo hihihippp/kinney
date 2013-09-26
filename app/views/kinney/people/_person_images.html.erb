@@ -1,22 +1,19 @@
 <% if !@person.images.blank? and (@person.images.length > 1) and !@person.images.first.top_pick %>
   <div id="other_images">
     <h2><%= t 'kinney.people.images_of', :name => @person.full_name %></h2>
-    <ul class="thumbnails">
-      <% @person.images.each_with_index do |image,index| %>
 
-        <% next if image == @top_image %>
-        <%= content_for :image_modals do %>
-          <%= render :partial => '/kinney/images/image_modal', :locals => {:index => index, :person => @person, :image => image} %>
-        <% end -%>
-      
-        <li>
+      <% @person.images.each_with_index do |image,index| %>
+          <% next if image == @top_image %>
+          <%= content_for :image_modals do %>
+            <%= render :partial => '/kinney/images/image_modal', :locals => {:index => index, :person => @person, :image => image} %>
+          <% end -%>
+        <div class="col-md-3">
           <%= link_to image.external_url, :'data-target'=> "#modal_image_#{index}", :class=>"thumbnail image_modal_trigger" do %>
             <%= kinney_image_small(image) %>
           <% end -%>
-        </li>
-        
+        </div>
       <% end -%>
-    </ul>
+
   </div>
 <% end -%>
 

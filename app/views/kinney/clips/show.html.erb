@@ -22,18 +22,18 @@
   <meta itemprop="width"        content="480" />
 
 
-  <div class="span8">
+  <div class="col-md-8">
     <%= render :partial => '/kinney/video', :locals => {:clip => @clip} %>
     <div class="row">
-      <div class="span6"
+      <div class="col-md-6"
         <p itemprop="description"><%= @clip.description %> <%= t('.interview_on', :date => @clip.interview_date.to_formatted_s(:long)) if !@clip.interview_date.blank? %> <%= duration_pretty(@clip) %></p>
       </div>
-      <div class="span2">
+      <div class="col-md-6">
         <%= download_button(@clip) %>
       </div>
     </div>
     <div class="row" id="social">
-      <div class="span8">
+      <div class="col-md-12">
         <%= render '/layouts/kinney/social_like' %>
       </div>
     </div>
@@ -43,29 +43,27 @@
   </div>
 
 
-  <div class="span4" id="related_people">    
-    
+  <div class="col-md-4" id="related_people">
+
     <% if !@people_clips.blank? %>
-      <ul class="nav nav-tabs nav-stacked" id="person_videos">
+      <div class="list-group" id="person_videos">
         <% @people_clips.each do |clip| %>
           <% if @clip != clip %>
-            <li>
-              <%= link_to(clip, clip.video_switcher_params) do %>
-                <i class="icon-play"></i> <span class="title"><%= clip.title %> <%= duration_pretty(clip) %></span>
-              <% end -%>
-            </li>
+            <%= link_to(clip, clip.video_switcher_params.merge(class: 'list-group-item')) do %>
+              <i class="icon-play"></i> <span class="title"><%= clip.title %> <%= duration_pretty(clip) %></span>
+            <% end -%>
           <% end -%>
         <% end -%>
-      </ul>
+      </div>
     <% end -%>
 
-    <ul class="thumbnails">
+    <div class="thumbnails">
       <% @clip.people.each do |person| %>
-        <li class="span2 person">
-          <%= render :partial => '/kinney/people/person_read_more', :locals => {:person => person} %> 
-        </li>        
-      <% end -%>      
-    </ul>   
+        <div class="col-md-6 person">
+          <%= render :partial => '/kinney/people/person_read_more', :locals => {:person => person} %>
+        </div>
+      <% end -%>
+    </div>
   </div>
 </div>
 
@@ -75,18 +73,18 @@
   <% if !@topic_clips.blank? %>
     <div class="container">
       <div class="row">
-        <div class="span12" id="topic_clips">
-          <h2>More Video</h2>          
-          <% @topic_clips.each_slice(4) do |topic_clips| %>    
-            <ul class="thumbnails">          
+        <div class="col-md-12" id="topic_clips">
+          <h2>More Video</h2>
+          <% @topic_clips.each_slice(4) do |topic_clips| %>
+            <ul class="thumbnails">
               <% topic_clips.each do |topic_clip| %>
                 <% if topic_clip %>
-                  <li class="span3 <%= cycle('odd', 'even') %>">
+                  <li class="col-md-3 <%= cycle('odd', 'even') %>">
                     <%= render :partial => '/kinney/clip_link', :locals => {:clip => topic_clip} %>
                   </li>
                 <% end -%>
-              <% end -%>         
-            </ul>      
+              <% end -%>
+            </ul>
           <% end -%>
         </div>
       </div>

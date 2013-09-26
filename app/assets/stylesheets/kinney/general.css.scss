@@ -1,5 +1,5 @@
 h1 {
-  margin-bottom: 15px; 
+  margin-bottom: 15px;
 }
 
 #page {
@@ -11,4 +11,11 @@ h1 {
   display: block;
   margin:0;
   padding:0;
+}
+
+.thumbnail_image {
+  img {
+    width: 100%;
+    height: auto;
+  }
 }

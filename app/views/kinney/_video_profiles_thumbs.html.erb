@@ -2,7 +2,7 @@
 <h2><%= link_to title, people_path %></h2>
 <ul class="thumbnails more_people">
   <% @people.each do |person| %>
-    <li class="span3">
+    <li class="col-md-3">
     <%= link_to(person, :class => :thumbnail) do %>
       <%= image_tag person.clips.first.png, :alt => person.clips.first.title %>
         <div class="caption">
@@ -12,4 +12,3 @@
     </li>
   <% end -%>
 </ul>
-  

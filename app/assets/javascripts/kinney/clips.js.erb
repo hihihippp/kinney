@@ -5,7 +5,7 @@ $(function() {
 
   $('#transcript_table')
   .find('tr:gt(' + num_of_rows_to_show + ')').hide().end()
-  .after('<div id="more_transcript"><a id="more_transcript_button" class="btn"><i class="icon-arrow-down"></i> <%= I18n.t('kinney.transcript.show_all') %></a><a id="hide_transcript_button" class="btn" style="display:none;"><i class="icon-arrow-up"></i> <%= I18n.t('kinney.transcript.hide') %></a></div>');
+  .after('<div id="more_transcript"><a id="more_transcript_button" class="btn btn-lg btn-default"><i class="icon-arrow-down"></i> <%= I18n.t('kinney.transcript.show_all') %></a><a id="hide_transcript_button" class="btn btn-lg btn-default" style="display:none;"><i class="icon-arrow-up"></i> <%= I18n.t('kinney.transcript.hide') %></a></div>');
 
   $('#transcript_table')
   .find('tr:nth-child(' + num_of_rows_to_show + ')').addClass('last');

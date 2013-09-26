@@ -8,11 +8,9 @@
 
 <div id="insert_controls" class="row"></div>
 <div class='row' id="people_with_images">
-  <div class="span12">    
-    
-    <ul class="thumbnails sortable_thumbs">
-      <% @people_with_images.each do |person| %>        
-        <li class="span2 sortable_thumb" itemscope itemtype="http://schema.org/Person">
+
+      <% @people_with_images.each do |person| %>
+        <div class="col-sm-4 col-md-2 sortable_thumb thumbnail_image" itemscope itemtype="http://schema.org/Person">
         <%= link_to(person, :class => :thumbnail, :itemprop => :url) do %>
           <div class="block">
             <%= kinney_image_small(person.image, person) %>
@@ -21,29 +19,28 @@
                 <span itemprop="name"><%= person.nickname %> <span class="last_name"><%= person.last_name %></span><%= ', ' + person.name_suffix if !person.name_suffix.blank? %>
                 </span>
                 <div>
-                  <span class="grad_class"><%= person.graduating_class %></span>    
+                  <span class="grad_class"><%= person.graduating_class %></span>
                 </div>
                 <% if person.clips.size > 0 %>
                   <div class="available_video">
-                    <span class="label"><%= pluralize(person.clips.size, 'Video') %></span>                    
+                    <span class="label"><%= pluralize(person.clips.size, 'Video') %></span>
                   </div>
-                <% end -%>            
+                <% end -%>
               </div>
-            </div>            
+            </div>
           </div>
         <% end -%>
-        </li>
+        </div>
       <% end -%>
-    </ul>
-  </div>
+
 </div>
 
 <% if !@people_without_images.blank? %>
   <div class="row">
-    <div class="span12">
+    <div class="col-md-12">
       <h2><%= t '.title_other_profiles' %></h2>
     </div>
-    <div class="span5" id="people_no_clips">
+    <div class="col-md-5" id="people_no_clips">
       <%= render "image_solicitation_text" %>
       <table class="tablesorter tablesorter-blue table">
         <thead>

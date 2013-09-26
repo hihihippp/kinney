@@ -4,12 +4,12 @@ $(document).ready(function() {
     if ($(node).find('span.last_name').length > 0 ) {
       return $(node).find('span.last_name')[0].innerHTML;
     } else {
-      return $(node).text();    
+      return $(node).text();
     }
   }
 
   // sort the table of profiles with no video
-  // There is some strange error thrown with jQuery 1.8.2 (currently latest jQuery) that may be fixed in 1.8.3. This 
+  // There is some strange error thrown with jQuery 1.8.2 (currently latest jQuery) that may be fixed in 1.8.3. This
   // causes some Webkit browsers to not load the table sorting correctly. This has only been identified on the iPad in our
   // testing. So we try to add tablesorter and if it fails we fallback to removing some of the content that tablesorter may have
   // added to the page, namely the up/down arrows. https://github.com/Mottie/tablesorter/issues/132
@@ -21,26 +21,5 @@ $(document).ready(function() {
   } catch(error){
     $('.tablesorter-header').removeClass('tablesorter-header');
   }
-  
-  
-  // sort the profiles that have video
-  // first add the controls to the page
-  $('#insert_controls').append('<div class="span12"><%= I18n.t('kinney.sort.by') %>: <a href="#insert_controls" class="btn disabled" id="sort_last_name"><%= I18n.t('kinney.sort.last_name') %></a><a href="#insert_controls" class="btn" id="sort_graduating_class"><%= I18n.t('kinney.sort.graduating_class') %></a></div>');
-  
-  $('#sort_graduating_class').click(function(){
-    $('.sortable_thumbs li.sortable_thumb').sortElements(function(a, b){
-      // FIXME: certainly there is a better way to sort empty values
-      return ($(a).find('.grad_class').text() || "zzz") > ($(b).find('.grad_class').text() || "zzz") ? 1 : -1;
-    });
-    $('#sort_graduating_class').addClass('disabled');
-    $('#sort_last_name').removeClass('disabled');
-  });
-  $('#sort_last_name').click(function(){
-    $('.sortable_thumbs li.sortable_thumb').sortElements(function(a, b){
-      return $(a).find('.last_name').text() > $(b).find('.last_name').text() ? 1 : -1;
-    });
-    $('#sort_graduating_class').removeClass('disabled');
-    $('#sort_last_name').addClass('disabled');
-  });
-  
+
 });

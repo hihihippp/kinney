@@ -5,18 +5,18 @@
 <% end -%>
 
 <div class="row">
-  <div class="span12">
+  <div class="col-md-12">
     <%- if params[:q].blank? -%>
 
     <%- else -%>
       You searched for <b><%= params[:q] %></b>.
-      <%= link_to t('kinney.search.clear'), search_path , :class => :btn if defined?(@clips) %> 
+      <%= link_to t('kinney.search.clear'), search_path , :class => :btn if defined?(@clips) %>
     <% end -%>
-  </div>  
+  </div>
 </div>
 
 <div class="row">
-  <div class="span8" id="clips">
+  <div class="col-md-8" id="clips">
     <h2><%= t '.clips' %></h2>
 
     <% if @fallback_clips %>
@@ -29,20 +29,20 @@
         <%= t '.no_current_search_clips_message' %>
       </div>
     <% end -%>
-    
+
     <% @clips.each_slice(2) do |sliced_clips| %>
       <ul class="thumbnails">
         <% sliced_clips.each do |clip| %>
-          <li class="span4 <%= cycle('odd', 'even') %>">
+          <li class="col-md-4 <%= cycle('odd', 'even') %>">
              <%= render :partial => '/kinney/clip_link', :locals => {:clip => clip} %>
           </li>
         <% end -%>
       </ul>
     <% end -%>
-    
+
   </div>
 
-  <div class="span4" id="people">
+  <div class="col-md-4" id="people">
     <div class="well">
       <h2>People</h2>
       <% if @fallback_people %>
@@ -55,7 +55,7 @@
           <%= t '.no_current_search_people_message' %>
         </div>
       <% end -%>
-      <ul class="nav nav-tabs nav-stacked">
+      <ul class="list-group">
         <% @people.each do |person| %>
           <li>
              <%= link_to person.full_name, person %>

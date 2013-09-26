@@ -18,18 +18,6 @@ $(document).ready(function() {
     return !!('ontouchstart' in window);
   }
 
-  // We only want popovers to show up on the desktop. These are currently just
-  // informational, so we do not need to show them on touch devices.
-  if ( !Kinney.is_touch_device() ){
-    $('[rel="popover"]').popover({
-      trigger: 'hover',
-      placement: Kinney.twitter_bootstrap_popover_placement
-    });
-
-    $('[rel="tooltip"]').tooltip();
-  } 
-
-
   // Modals
   $('.image_modal_trigger').click(function(e){
     var data_target = $(this).data('target');

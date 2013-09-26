@@ -1,5 +1,5 @@
 module KinneyClipHelper
-  
+
   # FIXME: better comment this!
   def siskel_path(opts={})
     path_filename = opts[:filename] || filename
@@ -13,22 +13,5 @@ module KinneyClipHelper
       url
     end
   end
-
-  # def png
-  #   siskel_path({:extension => 'png'})
-  # end
-  
-  # def mp4
-  #   siskel_path({:extension => 'mp4'})
-  # end
-  
-  # def webm
-  #   siskel_path({:extension => 'webm'})
-  # end
-  
-  # URL to webvtt file
-  # def vtt #closed_captioning vtt file
-  #   siskel_path({:extension => 'vtt'})
-  # end
 
 end

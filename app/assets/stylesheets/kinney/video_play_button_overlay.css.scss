@@ -6,6 +6,9 @@
     bottom: 2px;
     position: absolute;
   }
+  img {
+    width: 100%
+  }
 }
 
 // overlaying the play button over the video. FIXME: some of this we don't use anymore
@@ -18,7 +21,7 @@ div#home_video_image {
 .mejs-overlay-button{ top:80%; left:90%;}
 
 .thumbnail_video {
-  .thumbnail_image {    
+  .thumbnail_image {
     .mejs-overlay-button {
       background: image-url("kinney/smallplay.png") no-repeat;
       width: 50px;
@@ -27,12 +30,12 @@ div#home_video_image {
       right: 10px;
       top: inherit;
       left: inherit;
-    }    
+    }
   }
   &:hover {
     .mejs-overlay-button {
       background-position: 0 -50px;
-    }    
+    }
   }
 }
 
@@ -42,7 +45,7 @@ div#home_video_image {
     .mejs-overlay-button {
       top: 50%;
       left: 50%;
-    } 
+    }
   }
   div#home_video_image {
     .mejs-overlay-button {
@@ -50,6 +53,6 @@ div#home_video_image {
       right: 10px;
       top: inherit;
       left: inherit;
-    }  
+    }
   }
 }
