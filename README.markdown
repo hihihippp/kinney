@@ -51,18 +51,34 @@ This file is generated so that the image model can have an #external_url method.
 
 Routes are generated for admin interface, login, mounting the kinney engine, and ckeditor.
 
+### app/helpers/application_helper.rb
+
+This file is not generated, but you will want to add your application name:
+
+```
+def application_name
+  'Kinney'
+end
+```
+
 ## Views to Override
 
 ### app/views/kinney/pages/_about_text.html.erb
-
-
 ### app/views/kinney/_contact.html.erb
+
+Both the _about_text and _contact partials show up on the about page and will need to be overridden in your own application.
 
 ### app/views/layouts/kinney/_footer.html.erb
 
+You probably want more in your footer than just about and contact links.
+
 ### app/views/layouts/kinney/_brand.html.erb
 
+This will need to be overridden to change the Sleater-Kinney orange that shows up above the main navbar.
+
 ### app/views/kinney/pages/_home_header.html.erb
+
+If you need to have some kind of jumbotron on your home page, this is the file to update.
 
 ### config/environments/development.rb
 
@@ -91,12 +107,18 @@ You may need to drop the ElasticSearch index at time:
 bundle exec rake environment app:tire:index:drop INDEX=kinney_development
 ```
 
+Then you need to go into the dummy directory to start the app:
+
+```
+cd test/dummy
+bundle exec rails s
+```
+
 # TODO
 
 - more documentation
 - sort out compiling ckeditor in production
 - work around for this issue with ckeditor for deployment: https://github.com/galetahub/ckeditor/pull/156
-- add generator for adding MailerLogger to main app
 - generate application_name helper
 
 # Author
