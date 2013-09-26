@@ -25,4 +25,7 @@ $(function() {
     toggles();
   });
 
+  $('video').on("pause ended", function(){document.title = document.title.replace("\u25B6","")});
+  $('video').on("play", function(){document.title = "\u25B6" + document.title.replace("\u25B6","")});
+
 });
