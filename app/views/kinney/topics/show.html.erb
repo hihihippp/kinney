@@ -4,16 +4,13 @@
 <% end -%>
 
 <div class="row">
-  <div class="col-md-12" id="clips">
+  <div id="clips">
     <% @topic.clips.each_slice(3) do |topic_clips| %>
-      <ul class="thumbnails">
-        <% topic_clips.each do |clip| %>
-          <li class="col-md-4 <%= cycle('left', 'middle', 'right') %>">
-            <%= render :partial => '/kinney/clip_link', :locals => {:clip => clip} %>
-          </li>
-          <% end -%>
-
-      </ul>
+      <% topic_clips.each do |clip| %>
+        <div class="col-md-4 <%= cycle('left', 'middle', 'right') %>">
+          <%= render :partial => '/kinney/clip_link', :locals => {:clip => clip} %>
+        </div>
+      <% end -%>
     <% end -%>
   </div>
 </div>
