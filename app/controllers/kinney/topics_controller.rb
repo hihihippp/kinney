@@ -1,14 +1,14 @@
 module Kinney
   class TopicsController < KinneyController
-    
+
     caches_action :index, :show
-    
+
     def index
       @topics = Topic.with_clips
     end
-    
+
     def show
-      @topic = Topic.find(params[:id])
+      @topic = Topic.friendly.find(params[:id])
       @title = @topic.name
       @meta_description = @topic.description
       # If an old id or a numeric id was used to find the record, then

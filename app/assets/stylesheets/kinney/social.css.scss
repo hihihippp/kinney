@@ -4,11 +4,11 @@
     font-size: 34px;
     display:inline-block;
     margin-left: 10px;
-    color: $grayLight;
+    color: gray; //$grayLight;
     &:hover {
       text-decoration: none;
-      color: $grayDark;
+      color: gray //$grayDark;
     }
-  }  
-  
+  }
+
 }

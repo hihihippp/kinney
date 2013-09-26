@@ -1,8 +1,8 @@
-module ActiveAdmin
-  class Comment < ActiveRecord::Base
-    attr_accessible :body, :namespace, :resource_id, :resource_type
-  end
-end
+# module ActiveAdmin
+#   class Comment < ActiveRecord::Base
+#     attr_accessible :body, :namespace, :resource_id, :resource_type
+#   end
+# end
 
 ActiveAdmin.setup do |config|
   config.load_paths.delete_at(0)
@@ -110,6 +110,12 @@ ActiveAdmin.setup do |config|
   #     without_comments.allow_comments = false
   #   end
 
+  # == Batch Actions
+  #
+  # Enable and disable Batch Actions
+  #
+  config.batch_actions = true
+
 
   # == Controller Filters
   #
@@ -133,7 +139,7 @@ ActiveAdmin.setup do |config|
   #
   # To load a javascript file:
   #   config.register_javascript 'my_javascript.js'
-  
+
   config.register_javascript 'ckeditor/init'
   config.register_javascript 'ckeditor/ckeditor'
   #config.register_javascript 'kinney/ckeditor/config'

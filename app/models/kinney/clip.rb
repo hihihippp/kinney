@@ -3,23 +3,24 @@ module Kinney
 
     strip_attributes
 
-    attr_accessible :filename, :quotes, :title, :top_pick, :topic_ids, :person_ids,
-      :duration, :interview_date, :description, :featured
-    
+    # attr_accessible :filename, :quotes, :title, :top_pick, :topic_ids, :person_ids,
+    #   :duration, :interview_date, :description, :featured
+
     has_many :clip_people
     has_many :people, :through => :clip_people
-    
+
     has_many :clip_topics
     has_many :topics, :through => :clip_topics
-    
+
     validates :filename, :duration, :title, :description, :interview_date, :presence => true
     validates_uniqueness_of :filename
 
     validate :valid_number_of_people
     validate :valid_number_of_topics
-    
+
     extend FriendlyId
-    friendly_id :title_and_last_names, :use => [:slugged, :history]
+    # FIXME: add back in use :history
+    friendly_id :title_and_last_names, :use => [:slugged]
 
     default_scope order('top_pick desc, title asc')
 
@@ -28,7 +29,7 @@ module Kinney
     include Tire::Model::Callbacks
     index_name "kinney_#{Rails.env}"
     mapping do
-      indexes :id,           :index    => :not_analyzed    
+      indexes :id,           :index    => :not_analyzed
       indexes :filename,     :index => :not_analyzed
       indexes :quotes,       :analyzer => 'snowball'
       indexes :title,        :analyzer => 'snowball', :boost => 100
@@ -59,8 +60,8 @@ module Kinney
       hash.to_json
     end
     # end elasticsearch end
-     
-    
+
+
     def self.top_picks
       where(:top_pick => true)
     end
@@ -76,15 +77,15 @@ module Kinney
     def title_with_full_people_names
       "#{title} with #{full_people_names}"
     end
-    
+
     def topic_names
       topics.map{|topic| topic.name}
     end
-    
+
     def people_with_title
       "#{people_names}: #{title}"
     end
-    
+
     def people_names
       names = people.map{|person| person.last_name}
       if names.length > 2
@@ -110,23 +111,23 @@ module Kinney
         names.first
       end
     end
-      
+
     # def siskel_path(opts={})
     #   "http://example.com"
     # end
-    
+
     def png
       siskel_path({:extension => 'png'})
     end
-    
+
     def mp4
       siskel_path({:extension => 'mp4'})
     end
-    
+
     def webm
       siskel_path({:extension => 'webm'})
     end
-    
+
     # URL to webvtt file
     def vtt #closed_captioning vtt file
       siskel_path({:extension => 'vtt'})
@@ -142,15 +143,15 @@ module Kinney
         if response.status == 200
           Webvtt::File.new(response.body)
         else
-          false        
+          false
         end
       rescue
-      end 
+      end
     end
 
     def chapters #vtt file
     end
-    
+
     def video_switcher_params
       video_switcher_params_hash = {:class => :clearfix}
       if !description.blank?
@@ -158,7 +159,7 @@ module Kinney
       end
       video_switcher_params_hash
     end
-    
+
     def duration_iso8601
       hours  =  duration / 1.hour
       minutes = (duration - hours.hours) / 1.minute

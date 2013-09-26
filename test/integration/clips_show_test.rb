@@ -33,14 +33,15 @@ class ClipsShowTest < ActionDispatch::IntegrationTest
     # stubs out saving the tracker to work around a sqlite database locking issue
     Kinney::Tracker.any_instance.stubs(:save).returns(true)
     visit(kinney.clip_path(kinney_clips(:atkins_fire)))
-    assert_false page.find('#transcript_table tbody tr:nth-child(4)').visible?
+
+    assert !page.all('#transcript_table tbody tr:nth-child(4)', visible: false).first.visible?
 
     page.find('#more_transcript_button').click
-    assert page.find('#transcript_table tbody tr:nth-child(4)').visible?
+    assert page.all('#transcript_table tbody tr:nth-child(4)', visible: false).first.visible?
     assert page.has_content?('Hide most of the transcript')
 
     page.find('#hide_transcript_button').click
-    assert_false page.find('#transcript_table tbody tr:nth-child(4)').visible?
+    assert !page.all('#transcript_table tbody tr:nth-child(4)', visible: false).first.visible?
     browser_end
   end
 

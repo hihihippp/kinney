@@ -8,7 +8,5 @@ module Kinney
       @navigation_topics = Topic.with_clips
     end
 
-    
-
   end
 end

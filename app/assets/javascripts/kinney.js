@@ -1,9 +1,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
-//= require mediaelement_rails/mediaelement
-//= require mediaelement_rails/mediaelementplayer
-//= require mediaelement_rails/rails
+//#= require mediaelement_rails
 //= require kinney/kinney_object
 //= require mep-feature-googleanalytics
 //= require jquery-tablesorter

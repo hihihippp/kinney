@@ -1,14 +1,14 @@
 module Kinney
   class ClipsController < KinneyController
-    
+
     caches_action :show
-       
+
     def index
       @people = Person.with_clips
     end
 
     def show
-      @clip = Clip.includes(:people).find(params[:id])
+      @clip = Clip.friendly.includes(:people).find(params[:id])
       # If an old id or a numeric id was used to find the record, then
       # the request path will not match the clip_path, and we should do
       # a 301 redirect that uses the current friendly id.
@@ -30,7 +30,7 @@ module Kinney
     private
 
     def assign_webvtt
-      @webvtt = @clip.webvtt   
+      @webvtt = @clip.webvtt
     end
 
   end

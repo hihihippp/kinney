@@ -2,16 +2,16 @@
   <video width="480" height="272" style="width:100%;height:100%;" poster="<%= clip.png %>"
     controls="true" preload="true" id="<%= clip.filename %>"
     data-video-clip-url="<%= kinney.clip_url(clip) %>">
-    
+
     <source src="<%= clip.mp4 %>" type="video/mp4" />
     <source src="<%= clip.webm %>" type="video/webm" />
-         
+
     <track label="English subtitles" kind="subtitles" srclang="en" src="<%= clip.vtt %>"
       id="subtitles">
     <!--<track srclang="en" kind="chapters" src="<%= clip.chapters %>" />-->
-    
-    <object type="application/x-shockwave-flash" data="<%= asset_path 'mediaelement_rails/flashmediaelement.swf' %>">
-        <param name="movie" value="<%= asset_path 'mediaelement_rails/flashmediaelement.swf' %>" />
+
+    <object type="application/x-shockwave-flash" data="<%#= asset_path 'mediaelement_rails/flashmediaelement.swf' %>">
+        <param name="movie" value="<%#= asset_path 'mediaelement_rails/flashmediaelement.swf' %>" />
         <param name="flashvars"
           value="controls=true&amp;preload=true&amp;poster=<%= clip.png %>&amp;file=<%= clip.mp4 %>" />
         <img src="<%= clip.png %>"  title="No video playback capabilities. Use the download link below." />

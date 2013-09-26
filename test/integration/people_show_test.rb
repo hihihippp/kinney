@@ -10,30 +10,30 @@ class PeopleShowTest < ActionDispatch::IntegrationTest
   test_with_cassette 'shows person content', :people_show do
     visit(kinney.person_path(kinney_people(:tolson)))
     assert page.has_content?('Edward Norris Tolson')
-    
+
     assert page.has_selector?('h2', :text => 'Years at State')
     assert page.has_content?('Class of 1963')
     assert page.has_content?('Student Body President 1962-1963')
-    
+
     # video titles
     assert page.has_selector?('a', :text => 'Growing Up in Edgecombe County')
     assert page.has_selector?('a', :text => 'Mentors')
-    
+
     assert page.has_content?('Tolson grew up in Edgecombe County.')
-    
+
     assert page.has_selector?('h2', :text => 'Accomplishments')
     assert page.has_content?("Tolson's accomplishments.")
-    
+
     assert page.has_selector?('h2', :text => 'Activities')
     assert page.has_content?("Tolson's activities.")
-    
+
     assert page.has_selector?('h2', :text => 'Currently')
     assert page.has_content?("What Tolson is currently doing.")
-    
+
     assert page.has_selector?('h2', :text => 'Citations')
     assert page.has_content?("This is a citation.")
   end
-  
+
   test_with_cassette 'does not show headings for content fields when content is not present', :people_show do
     visit(kinney.person_path(kinney_people(:williams)))
     assert page.has_content?('William Williams')
@@ -49,23 +49,23 @@ class PeopleShowTest < ActionDispatch::IntegrationTest
     visit(kinney.person_path(kinney_people(:atkins)))
     assert page.has_no_selector?('h2', :text => 'Images of Jonh Leslie Atkins')
   end
-  
+
   test_with_cassette 'should give a link to other videos with the same person', :people_show do
     visit(kinney.person_path(kinney_people(:tolson)))
     assert page.has_selector?('#person_videos a', :text => 'Growing Up in Edgecombe County')
     page.find('#person_videos a', :text => 'Mentors').click
     assert page.has_selector?('h1', :text => 'Mentors')
   end
-  
+
   test_with_cassette "should show a top pick image near the biography", :people_show do
     visit(kinney.person_path(kinney_people(:tolson)))
     assert page.find('#image_top_pick img')[:src].include?('si-ag1962-p408-tolson')
   end
-  
+
   test_with_cassette "should not see the top pick image with the other images", :people_show do
     visit(kinney.person_path(kinney_people(:tolson)))
     page.all('#other_images img').each do |image|
-      assert_false image[:src].include?('si-ag1962-p408-tolson')
+      assert !image[:src].include?('si-ag1962-p408-tolson')
     end
   end
 
@@ -73,14 +73,14 @@ class PeopleShowTest < ActionDispatch::IntegrationTest
     visit(kinney.person_path(kinney_people(:atkins)))
     assert page.has_selector?('h1', :text => 'John Leslie Atkins, III')
   end
-  
+
   test_with_cassette "should provide a link to a video as an image and make it a top pick", :people_show do
     visit(kinney.person_path(kinney_people(:tolson)))
     image_link = page.find('.thumbnail_video:first')[:href]
     assert_equal kinney.clip_path(kinney_clips(:tolson_roots)), image_link
   end
 
-  test_with_cassette "should provide a link to other videos as text links", :people_show do 
+  test_with_cassette "should provide a link to other videos as text links", :people_show do
     visit(kinney.person_path(kinney_people(:tolson)))
     assert page.has_selector?('#person_videos a', :text => 'Growing Up in Edgecombe County')
     assert page.has_selector?('#person_videos a', :text => '0:44')
@@ -96,7 +96,7 @@ class PeopleShowTest < ActionDispatch::IntegrationTest
     visit(kinney.person_path(kinney_people(:tolson)))
     assert page.has_selector?('#static_map')
     assert page.has_content?('Grew up in')
-    assert page.has_content?('Edgecombe County, NC')    
+    assert page.has_content?('Edgecombe County, NC')
   end
 
   test_with_cassette "should not display a map if the location the person grew up is not known", :people_show do

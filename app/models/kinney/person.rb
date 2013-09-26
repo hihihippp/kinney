@@ -1,8 +1,8 @@
 module Kinney
   class Person < ActiveRecord::Base
-    attr_accessible :accomplishments, :activities, :biography, :citations,
-      :currently, :first_name, :graduating_class, :last_name, :middle_name,
-      :nickname, :term, :term_date_ranges, :name_suffix, :location
+    # attr_accessible :accomplishments, :activities, :biography, :citations,
+    #   :currently, :first_name, :graduating_class, :last_name, :middle_name,
+    #   :nickname, :term, :term_date_ranges, :name_suffix, :location
 
     validates :last_name, :presence => true
     validates_uniqueness_of :last_name, :scope => :first_name
@@ -13,7 +13,8 @@ module Kinney
     has_many :images, :through => :person_images
 
     extend FriendlyId
-    friendly_id :full_name, :use => [:slugged, :history]
+    # FIXME: add back in use :history
+    friendly_id :full_name, :use => [:slugged]
 
     default_scope order('last_name asc')
 

@@ -29,7 +29,7 @@ atkins_fire:
   featured: false
   created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
   updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
-  slug: pullen-fire
+  slug: pullen-fire-atkins
 
 atkins_roots:
   filename: atkins-roots_applying

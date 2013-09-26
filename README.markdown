@@ -6,16 +6,22 @@ An oral history video clips site packaged as a Rails gem.
 
 # Story
 
-This code was originally part of a site (currently unreleased) created for the [Student Leadership Initiative](http://news.lib.ncsu.edu/scrc/category/student-leaders/). The codename for the internal project is Sleader, so this project was named Kinney. 
+This code was originally part of a site (currently unreleased) created for the [Student Leadership Initiative](http://news.lib.ncsu.edu/scrc/category/student-leaders/). The codename for the internal project is Sleader, so this project was named Kinney.
+
+# Current Development
+
+Master is Rails 4 only.
 
 # Install
 
 1. Create a fresh Rails application
-2. Add the following to your Gemfile: 
+2. Add the following to your Gemfile:
+
 ```
 gem 'kinney', :git => 'git://github.com/jronallo/kinney.git'
 gem 'font-awesome-sass-rails'
 ```
+
 3. `bundle install`
 4. `rake kinney:install:migrations` and `rake db:migrate`
 5. `rails g kinney:install` and `bundle install`
