@@ -4,9 +4,6 @@ $iconSpritePath: '';
 $iconWhiteSpritePath: '';
 
 @import "bootstrap";
-@import "bootstrap/variables"; // Modify this for custom colors, font-sizes, etc
-@import "bootstrap/mixins";
-@import "bootstrap/responsive-utilities";
 
 @import 'jquery-tablesorter/theme.blue';
 @import 'kinney/jquery-tablesorter_overrides';
