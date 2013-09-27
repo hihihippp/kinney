@@ -19,15 +19,15 @@ This code was originally part of the [Student Leadership Initiative](http://d.li
 2. Add the following to your Gemfile:
 
 ```
-gem 'kinney', :git => 'git://github.com/jronallo/kinney.git'
+gem 'kinney', :git => 'https://github.com/jronallo/kinney.git'
 gem 'font-awesome-sass-rails'
 ```
 
 These also need be added until the working versions are released as gems:
 ```
-gem 'activeadmin', git: 'git@github.com:gregbell/active_admin.git', branch: 'master'
+gem 'activeadmin', git: 'https://github.com/gregbell/active_admin.git', branch: 'master'
 gem 'compass-rails', github: 'milgner/compass-rails', branch: 'rails4'
-gem 'bootstrap-sass', git: 'git@github.com:thomas-mcdonald/bootstrap-sass.git', branch: 'master'
+gem 'bootstrap-sass', git: 'https://github.com/thomas-mcdonald/bootstrap-sass.git', branch: 'master'
 ```
 
 3. `bundle install`

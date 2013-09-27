@@ -6,7 +6,7 @@ source "http://rubygems.org"
 gemspec
 
 # needs to be added manually since rails 4 activeadmin is not released yet so can't go into gemspec
-gem 'activeadmin', git: 'git@github.com:gregbell/active_admin.git', branch: 'master'
+gem 'activeadmin', git: 'https://github.com/gregbell/active_admin.git', branch: 'master'
 
 # jquery-rails is used by the dummy application
 gem "jquery-rails"
@@ -30,7 +30,7 @@ gem 'webvtt', :git => 'https://github.com/jronallo/webvtt.git'
 
 gem 'sass-rails', '~> 4.0.0'
 
-gem 'bootstrap-sass', git: 'git@github.com:thomas-mcdonald/bootstrap-sass.git', branch: 'master'
+gem 'bootstrap-sass', git: 'https://github.com/thomas-mcdonald/bootstrap-sass.git', branch: 'master'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer', :platforms => :ruby
