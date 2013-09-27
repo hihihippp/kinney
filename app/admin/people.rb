@@ -6,7 +6,7 @@ ActiveAdmin.register Kinney::Person do
   end
 
   form do |f|
-    f.inputs :first_name, :middle_name, :last_name, :name_suffix, :nickname, :graduating_class, :location
+    f.inputs :first_name, :middle_name, :last_name, :name_suffix, :honorary, :nickname, :graduating_class, :location
     f.inputs do
       f.input :biography, :as => :ckeditor
       f.input :accomplishments, :as => :ckeditor
@@ -24,7 +24,7 @@ ActiveAdmin.register Kinney::Person do
     def permitted_params
       params.permit kinney_person: [:accomplishments, :activities, :biography, :citations,
       :currently, :first_name, :graduating_class, :last_name, :middle_name,
-      :nickname, :term, :term_date_ranges, :name_suffix, :location]
+      :nickname, :term, :term_date_ranges, :name_suffix, :honorary, :location]
     end
     # to make this work with friendly_id
     def resource
