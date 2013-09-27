@@ -39,7 +39,7 @@ gem 'bootstrap-sass', git: 'git@github.com:thomas-mcdonald/bootstrap-sass.git', 
 config.secret_key = 'a better secret key than this'
 ```
 
-7. `rails c` and then Kinney::AdminUser.create!(:email => 'admin@example.com', :password => 'password', :password_confirmation => 'password')
+7. `rails c` and then `Kinney::AdminUser.create!(:email => 'admin@example.com', :password => 'password', :password_confirmation => 'password')`
 8. Start the Rails server and go to localhost:3000/admin
 9. Add a topic
 10. Add a person
@@ -64,6 +64,13 @@ This file is generated so that the image model can have an #external_url method.
 
 Routes are generated for admin interface, login, mounting the kinney engine, and ckeditor.
 
+You may want to change where kinney is mounted to be at the root of your application:
+```
+mount Kinney::Engine => "/", :as => 'kinney'
+```
+You may have to restart your server for this change to show up.
+
+
 ### app/helpers/application_helper.rb
 
 This file is not generated, but you will want to add your application name:
@@ -74,7 +81,13 @@ def application_name
 end
 ```
 
+### config/initializers/active_admin.rb
+
+You may want to `config.site_title`.
+
 ## Views to Override
+
+You'll want to override all of these views. In some cases you may just want to include a blank template.
 
 ### app/views/kinney/pages/_about_text.html.erb
 ### app/views/kinney/_contact.html.erb
@@ -85,9 +98,10 @@ Both the _about_text and _contact partials show up on the about page and will ne
 
 You probably want more in your footer than just about and contact links.
 
-### app/views/layouts/kinney/_brand.html.erb
+### app/views/layouts/kinney/_brand_above_navbar.html.erb
+### app/views/layouts/kinney/_brand_below_navbar.html.erb
 
-This will need to be overridden to change the Sleater-Kinney orange that shows up above the main navbar.
+These will need to be overridden to change the Sleater-Kinney orange that shows up above the main navbar.
 
 ### app/views/kinney/pages/_home_header.html.erb
 

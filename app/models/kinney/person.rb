@@ -21,7 +21,9 @@ module Kinney
     # tire for elasticsearch
     include Tire::Model::Search
     include Tire::Model::Callbacks
-    index_name "kinney_#{Rails.env}"
+
+    index_name "kinney_#{Rails.application.class.parent_name.parameterize}_#{Rails.env}"
+
     mapping do
       indexes :id,           :index    => :not_analyzed
       indexes :filename,     :index => :not_analyzed

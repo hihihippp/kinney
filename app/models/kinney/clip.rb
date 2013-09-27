@@ -27,7 +27,8 @@ module Kinney
     # tire for elasticsearh
     include Tire::Model::Search
     include Tire::Model::Callbacks
-    index_name "kinney_#{Rails.env}"
+    index_name "kinney_#{Rails.application.class.parent_name.parameterize}_#{Rails.env}"
+
     mapping do
       indexes :id,           :index    => :not_analyzed
       indexes :filename,     :index => :not_analyzed
@@ -187,7 +188,7 @@ module Kinney
   private
 
     def valid_number_of(association)
-      errors.add(association, "Must select at least one person.") if send(association).size == 0
+      errors.add(association, "Must select at least one.") if send(association).size == 0
     end
     def valid_number_of_people
       valid_number_of(:people)
