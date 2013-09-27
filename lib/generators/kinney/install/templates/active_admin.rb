@@ -1,6 +1,6 @@
 module ActiveAdmin
   class Comment < ActiveRecord::Base
-    attr_accessible :body, :namespace, :resource_id, :resource_type
+    # attr_accessible :body, :namespace, :resource_id, :resource_type
   end
 end
 
@@ -133,7 +133,7 @@ ActiveAdmin.setup do |config|
   #
   # To load a javascript file:
   #   config.register_javascript 'my_javascript.js'
-  
+
   config.register_javascript 'ckeditor/init'
   config.register_javascript 'ckeditor/ckeditor'
   #config.register_javascript 'kinney/ckeditor/config'
