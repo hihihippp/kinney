@@ -10,8 +10,8 @@
       id="subtitles">
     <!--<track srclang="en" kind="chapters" src="<%= clip.chapters %>" />-->
 
-    <object type="application/x-shockwave-flash" data="<%#= asset_path 'mediaelement_rails/flashmediaelement.swf' %>">
-        <param name="movie" value="<%#= asset_path 'mediaelement_rails/flashmediaelement.swf' %>" />
+    <object type="application/x-shockwave-flash" data="<%= asset_path 'mediaelement_rails/flashmediaelement.swf' %>">
+        <param name="movie" value="<%= asset_path 'mediaelement_rails/flashmediaelement.swf' %>" />
         <param name="flashvars"
           value="controls=true&amp;preload=true&amp;poster=<%= clip.png %>&amp;file=<%= clip.mp4 %>" />
         <img src="<%= clip.png %>"  title="No video playback capabilities. Use the download link below." />
