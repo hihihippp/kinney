@@ -1,14 +1,12 @@
-<ul class="list-group topics">
-  <li class="people_path">
-    <%= link_to people_path do %>
-      <i></i> People
-    <% end -%>
-  </li>
-  <% @topics_with_clips.each do |topic| %>
-    <li class="<%= topic.friendly_id %>">
-      <%= link_to topic do %>
-        <i></i> <%= topic.name %>
-      <% end -%>
-    </li>
+<div class="list-group topics">
+
+  <%= link_to people_path, class: [:people_path, :'list-group-item'] do %>
+    <i></i> People
   <% end -%>
-</ul>
+
+  <% @topics_with_clips.each do |topic| %>
+    <%= link_to topic, class: [topic.friendly_id, :'list-group-item'] do %>
+      <i></i> <%= topic.name %>
+    <% end -%>
+  <% end -%>
+</div>
