@@ -13,5 +13,3 @@ before_script:
   - "mkdir -p test/dummy/tmp/cache/"
 services:
   - elasticsearch
-# since we have a Gemfile.lock we need the following
-bundler_args:''
