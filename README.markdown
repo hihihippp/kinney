@@ -23,9 +23,21 @@ gem 'kinney', :git => 'git://github.com/jronallo/kinney.git'
 gem 'font-awesome-sass-rails'
 ```
 
+These also need be added until the working versions are released as gems:
+```
+gem 'activeadmin', git: 'git@github.com:gregbell/active_admin.git', branch: 'master'
+gem 'compass-rails', github: 'milgner/compass-rails', branch: 'rails4'
+```
+
 3. `bundle install`
 4. `rake kinney:install:migrations` and `rake db:migrate`
 5. `rails g kinney:install` and `bundle install`
+6. Add a devise secret key to :
+
+```
+config.secret_key = 'a better secret key than this'
+```
+
 6. `rails c` and then Kinney::AdminUser.create!(:email => 'admin@example.com', :password => 'password', :password_confirmation => 'password')
 7. Start the Rails server and go to localhost:3000/admin
 8. Add a topic
@@ -116,6 +128,7 @@ bundle exec rails s
 
 # TODO
 
+- added gems should be generated in
 - more documentation
 - sort out compiling ckeditor in production
 - work around for this issue with ckeditor for deployment: https://github.com/galetahub/ckeditor/pull/156
