@@ -19,6 +19,7 @@ ActiveAdmin.register Kinney::Clip do
       row :title
       row :description
       row :interview_date
+      row :interview_place
       row :quotes
       row :top_pick
       row :featured
@@ -48,7 +49,7 @@ ActiveAdmin.register Kinney::Clip do
     end
     def permitted_params
       params.permit kinney_clip: [:filename, :quotes, :title, :top_pick, {:topic_ids => []}, {:person_ids => []},
-        :duration, :interview_date, :description, :featured]
+        :duration, :interview_date, :description, :featured, :interview_place, :slug]
     end
   end
 

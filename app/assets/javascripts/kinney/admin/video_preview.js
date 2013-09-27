@@ -4,7 +4,7 @@ $(document).ready(function() {
       var url = 'http://siskel.lib.ncsu.edu/SLI';
       var name = filename.split('-')[0];
       return url + '/' + name + '/' + filename + '/' + filename;
-    }    
+    }
   }
 
   function checkForWebvtt(){
@@ -12,7 +12,7 @@ $(document).ready(function() {
     if (path){
       $('video').attr('poster', path + '.png');
       $('video').attr('src', path + '.webm');
-      
+
       $.ajax({
         url: path + '.vtt',
         success: function(data) {
@@ -26,27 +26,25 @@ $(document).ready(function() {
           $('body.admin_kinney_clips #kinney_clip_submit_action input').attr('disabled', 'disabled');
         }
       });
-      
+
     }
   }
 
   if ($('body.admin_kinney_clips.edit,body.admin_kinney_clips.new').length > 0) {
     // WEBVTT must be present to submit form
-    $('body.admin_kinney_clips #kinney_clip_submit_action input').attr('disabled', 'disabled');  
+    $('body.admin_kinney_clips #kinney_clip_submit_action input').attr('disabled', 'disabled');
     $('#vtt_result').html('<div class="alert">Give focus to the filename. You will not be able to save until there is a WEBVTT file.</div>');
     checkForWebvtt();
     $('body.admin_kinney_clips input#kinney_clip_filename').bind('keyup change paste focus', function(){
       checkForWebvtt();
     });
   }
-  
-  $('.admin_kinney_clips video').mediaelementplayer({
-    success: function(mediaElement, domObject){
-      mediaElement.addEventListener('loadedmetadata', function(){
-        var duration = Math.round(mediaElement.duration);
-        $('#kinney_clip_duration').val(duration);
-      });
-    }
+
+
+  $('video').on('loadedmetadata', function(){
+    var duration = Math.round($('video').get(0).duration);
+    $('#kinney_clip_duration').val(duration);
   });
-  
+
+
 });
