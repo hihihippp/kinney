@@ -1,11 +1,11 @@
 require 'test_helper'
 
 class PagesHomeTest < ActionDispatch::IntegrationTest
-  
+
   test "topics navigation on home page should only include topics with clips" do
     visit(kinney.root_path)
-    assert page.has_selector?('#topics li', :text => 'Mentors')
-    assert page.has_no_selector?('#topics li', :text => 'Academics')
+    assert page.has_selector?('#topics a', :text => 'Mentors')
+    assert page.has_no_selector?('#topics a', :text => 'Academics')
   end
 
   test "home page should have link to More Video" do
@@ -18,5 +18,5 @@ class PagesHomeTest < ActionDispatch::IntegrationTest
     visit(kinney.root_path)
     assert page.has_selector?('#featured_clip', :text => 'Applying to NC State')
   end
-  
+
 end
