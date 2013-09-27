@@ -11,7 +11,12 @@ ActiveAdmin.register Kinney::Image do
 
   index do
     column "Thumbnail" do |image|
-      link_to(djatoka_square_image_tag(image.filename, :scale => 100), admin_kinney_image_path(image))
+      # FIXME: Have a better fallback than a placeholder image.
+      if defined?(Djatoka)
+        link_to(djatoka_square_image_tag(image.filename, :scale => 100), admin_kinney_image_path(image))
+      else
+        image_tag "http://placehold.it/100x100"
+      end
     end
     column "Filename", :sortable => :filename do |image|
       link_to image.filename, admin_kinney_image_path(image)
@@ -45,7 +50,7 @@ ActiveAdmin.register Kinney::Image do
     helper ::KinneyHelper
 
     def permitted_params
-      params.permit image: [:filename, :top_pick, :person_ids]
+      params.permit kinney_image: [:filename, :top_pick, {:person_ids => []}]
     end
   end
 

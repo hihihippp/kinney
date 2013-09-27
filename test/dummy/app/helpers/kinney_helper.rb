@@ -1,6 +1,7 @@
-module KinneyHelper  
-  
+module KinneyHelper
+
   def kinney_image_small(image, person=@person)
+    # FIXME: Have a better fallback than a placeholder image.
     if defined?(Djatoka)
       djatoka_square_image_tag image.filename, :scale => 170, :itemprop => :image, :alt => person.full_name
     else
@@ -9,6 +10,7 @@ module KinneyHelper
   end
 
   def kinney_image_modal(image, person)
+    # FIXME: Have a better fallback than a placeholder image.
     if defined?(Djatoka)
       djatoka_image_tag image.filename, :scale => 360, :height => 360, :alt => person.full_name
     else
@@ -17,6 +19,7 @@ module KinneyHelper
   end
 
   def kinney_image_admin_show(image)
+    # FIXME: Have a better fallback than a placeholder image.
     if defined?(Djatoka)
       djatoka_image_tag image.filename, :scale => 250
     else

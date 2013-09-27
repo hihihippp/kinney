@@ -1,18 +1,22 @@
-<div class="modal" id="modal_image_<%= index %>" style="display:none">
-  <div class="modal-header">
-    <button class="close" data-dismiss="modal">×</button>
-    <h3><%= kinney_image_title(image, person) %><%#= image.title %></h3>
-  </div>
-  <div class="modal-body">
-    <%#= image.description %>
-    <%= link_to image.external_url, :target => '_blank' do %>
-      <%= kinney_image_modal(image, person) %>
-    <% end -%>
-  </div>
-  <div class="modal-footer">
-    <%= link_to image.external_url, :target => '_blank', :class => :'pull-left' do %>
-      <%= t 'kinney.people.more_info_on_image' %> <i class="icon-external-link"></i>
-    <% end -%>
-    <a href="#" class="btn" data-dismiss="modal">Close</a>
+<div class="modal fade" id="modal_image_<%= index %>" style="display:none" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal">×</button>
+        <h3><%= kinney_image_title(image, person) %><%#= image.title %></h3>
+      </div>
+      <div class="modal-body">
+        <%#= image.description %>
+        <%= link_to image.external_url, :target => '_blank' do %>
+          <%= kinney_image_modal(image, person) %>
+        <% end -%>
+      </div>
+      <div class="modal-footer">
+        <%= link_to image.external_url, :target => '_blank', :class => :'pull-left' do %>
+          <%= t 'kinney.people.more_info_on_image' %> <i class="icon-external-link"></i>
+        <% end -%>
+        <a href="#" class="btn btn-lg btn-default" data-dismiss="modal">Close</a>
+      </div>
+    </div>
   </div>
 </div>
