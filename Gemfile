@@ -18,6 +18,7 @@ group :development do
   gem 'guard-livereload'
   gem 'pry-rails'
   gem 'single_test'
+  gem 'deadweight'
 end
 
 # once these are published as gems we can use them from there, until then we need to have them in our Gemfile

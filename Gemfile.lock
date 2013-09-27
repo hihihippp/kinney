@@ -124,7 +124,13 @@ GEM
       sass (~> 3.1)
     crack (0.4.1)
       safe_yaml (~> 0.9.0)
+    css_parser (1.2.6)
+      addressable
+      rdoc
     database_cleaner (1.0.1)
+    deadweight (0.2.2)
+      css_parser (~> 1.2.6)
+      nokogiri
     devise (3.1.0)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -253,6 +259,8 @@ GEM
       ffi (>= 0.5.0)
     rb-kqueue (0.2.0)
       ffi (>= 0.5.0)
+    rdoc (4.0.1)
+      json (~> 1.4)
     ref (1.0.5)
     responders (1.0.0)
       railties (>= 3.2, < 5)
@@ -330,6 +338,7 @@ DEPENDENCIES
   capybara (~> 2.1.0)
   compass-rails!
   database_cleaner (< 1.1.0)
+  deadweight
   djatoka
   font-awesome-sass-rails
   guard-livereload

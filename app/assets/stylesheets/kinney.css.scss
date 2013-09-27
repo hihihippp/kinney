@@ -5,8 +5,8 @@ $iconWhiteSpritePath: '';
 
 @import "bootstrap";
 
-@import 'jquery-tablesorter/theme.blue';
-@import 'kinney/jquery-tablesorter_overrides';
+@import "jquery-tablesorter/theme.blue";
+@import "kinney/jquery-tablesorter_overrides";
 
 @import "mediaelement_rails/mediaelementplayer";
 @import "mediaelement_rails/mejs-skins";
@@ -19,7 +19,6 @@ $iconWhiteSpritePath: '';
 @import "kinney/navbar";
 
 @import "kinney/people";
-@import "kinney/tablesorter_overrides";
 @import "kinney/clips";
 @import "kinney/home";
 @import "kinney/quotes";

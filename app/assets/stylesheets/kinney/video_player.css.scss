@@ -5,7 +5,7 @@
 .thumbnail_video {
   .thumbnail_image {
     position:relative;
-    @include box-shadow(0 4px 2px -2px grey); 
+    // @include box-shadow(0 4px 2px -2px grey);
   }
   .name {
     font-size: 1.2em;
@@ -16,10 +16,10 @@
   &:hover {
     .thumbnail_image {
       box-shadow-color: #005580;
-    }  
+    }
   }
 }
 
-#video_container, #home_video_image {  
+#video_container, #home_video_image {
   margin-bottom: 10px;
 }

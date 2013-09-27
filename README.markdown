@@ -131,7 +131,7 @@ bundle exec rake environment app:tire:import CLASS='Kinney::Clip'
 You may need to drop the ElasticSearch index at time:
 
 ```
-bundle exec rake environment app:tire:index:drop INDEX=kinney_development
+bundle exec rake environment app:tire:index:drop INDEX=kinney_dummy_development
 ```
 
 Then you need to go into the dummy directory to start the app:
