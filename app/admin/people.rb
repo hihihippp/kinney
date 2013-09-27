@@ -22,7 +22,7 @@ ActiveAdmin.register Kinney::Person do
 
   controller do
     def permitted_params
-      params.permit person: [:accomplishments, :activities, :biography, :citations,
+      params.permit kinney_person: [:accomplishments, :activities, :biography, :citations,
       :currently, :first_name, :graduating_class, :last_name, :middle_name,
       :nickname, :term, :term_date_ranges, :name_suffix, :location]
     end
