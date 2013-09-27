@@ -1,8 +1,6 @@
 module Kinney
   class TopicsController < KinneyController
 
-    caches_action :index, :show
-
     def index
       @topics = Topic.with_clips
     end

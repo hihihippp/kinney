@@ -39,8 +39,6 @@ ActiveAdmin.register Kinney::Clip do
   end
 
   controller do
-    cache_sweeper Kinney::MetaSweeper
-    # to make this work with friendly_id
     def resource
       if FriendlyId === self.class.resource_class
         get_resource_ivar || set_resource_ivar(end_of_association_chain.friendly.find(params[:id]))

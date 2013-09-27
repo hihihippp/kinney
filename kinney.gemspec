@@ -30,8 +30,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'httpclient'
   s.add_dependency 'font-awesome-sass-rails'
   s.add_dependency 'strip_attributes'
-  s.add_dependency 'actionpack-action_caching'
-  s.add_dependency 'rails-observers'
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency 'test-unit'

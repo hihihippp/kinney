@@ -1,8 +1,6 @@
 module Kinney
   class ClipsController < KinneyController
 
-    caches_action :show
-
     def index
       @people = Person.with_clips
     end

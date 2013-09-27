@@ -1,6 +1,3 @@
-require 'actionpack/action_caching'
-require 'rails-observers'
-
 require "kinney/engine"
 require 'activeadmin'
 require 'friendly_id'

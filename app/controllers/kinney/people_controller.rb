@@ -1,8 +1,6 @@
 module Kinney
   class PeopleController < KinneyController
 
-    caches_action :index, :show
-
     def index
       @people_with_images = Person.with_images
       @people_without_images = Person.without_images

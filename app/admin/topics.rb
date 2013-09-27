@@ -6,7 +6,7 @@ ActiveAdmin.register Kinney::Topic do
   end
 
   controller do
-    cache_sweeper Kinney::MetaSweeper
+
     def permitted_params
       params.permit topic: [:name, :description]
     end

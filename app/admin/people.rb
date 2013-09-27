@@ -21,7 +21,6 @@ ActiveAdmin.register Kinney::Person do
   end
 
   controller do
-    cache_sweeper Kinney::MetaSweeper
     def permitted_params
       params.permit person: [:accomplishments, :activities, :biography, :citations,
       :currently, :first_name, :graduating_class, :last_name, :middle_name,

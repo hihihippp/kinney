@@ -42,7 +42,6 @@ ActiveAdmin.register Kinney::Image do
   end
 
   controller do
-    cache_sweeper Kinney::MetaSweeper
     helper ::KinneyHelper
 
     def permitted_params

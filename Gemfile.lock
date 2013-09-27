@@ -43,7 +43,6 @@ PATH
   remote: .
   specs:
     kinney (0.1.0)
-      actionpack-action_caching
       chosen-rails
       ckeditor (= 4.0.6)
       font-awesome-sass-rails
@@ -53,7 +52,6 @@ PATH
       httpclient
       jquery-tablesorter
       rails (~> 4.0.0)
-      rails-observers
       strip_attributes
       tire
 
@@ -69,8 +67,6 @@ GEM
       erubis (~> 2.7.0)
       rack (~> 1.5.2)
       rack-test (~> 0.6.2)
-    actionpack-action_caching (1.0.0)
-      actionpack (>= 4.0.0.beta, < 5.0)
     activemodel (4.0.0)
       activesupport (= 4.0.0)
       builder (~> 3.1.0)
@@ -242,8 +238,6 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.0.0)
       sprockets-rails (~> 2.0.0)
-    rails-observers (0.1.2)
-      activemodel (~> 4.0)
     railties (4.0.0)
       actionpack (= 4.0.0)
       activesupport (= 4.0.0)

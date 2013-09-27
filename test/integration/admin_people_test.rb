@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class AdminPeopleTest < ActionDispatch::IntegrationTest
-  
+
   setup do
     admin_login
   end
