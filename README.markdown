@@ -27,6 +27,7 @@ These also need be added until the working versions are released as gems:
 ```
 gem 'activeadmin', git: 'git@github.com:gregbell/active_admin.git', branch: 'master'
 gem 'compass-rails', github: 'milgner/compass-rails', branch: 'rails4'
+gem 'bootstrap-sass', git: 'git@github.com:thomas-mcdonald/bootstrap-sass.git', branch: 'master'
 ```
 
 3. `bundle install`
@@ -38,11 +39,11 @@ gem 'compass-rails', github: 'milgner/compass-rails', branch: 'rails4'
 config.secret_key = 'a better secret key than this'
 ```
 
-6. `rails c` and then Kinney::AdminUser.create!(:email => 'admin@example.com', :password => 'password', :password_confirmation => 'password')
-7. Start the Rails server and go to localhost:3000/admin
-8. Add a topic
-9. Add a person
-10. Add a clip (make at least one clip a "top pick")
+7. `rails c` and then Kinney::AdminUser.create!(:email => 'admin@example.com', :password => 'password', :password_confirmation => 'password')
+8. Start the Rails server and go to localhost:3000/admin
+9. Add a topic
+10. Add a person
+11. Add a clip (make at least one clip a "top pick")
 
 # Configuration
 
