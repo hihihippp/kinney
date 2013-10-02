@@ -12,7 +12,7 @@ gem 'activeadmin', git: 'https://github.com/gregbell/active_admin.git', branch: 
 gem "jquery-rails"
 gem 'djatoka'
 gem 'font-awesome-sass-rails'
-gem 'compass-rails', github: 'milgner/compass-rails', branch: 'rails4'
+gem 'compass-rails', '>= 2.0.alpha.0'  #github: 'milgner/compass-rails', branch: 'rails4'
 
 group :development do
   gem 'guard-livereload'

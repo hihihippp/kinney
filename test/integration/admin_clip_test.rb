@@ -36,7 +36,7 @@ class AdminClipTest < ActionDispatch::IntegrationTest
   end
 
   test "display whether there is a VTT file for a clip", :admin_clip do
-    pending
+    skip
     # How to use something like VCR for ajax requests?
     # visit(new_admin_kinney_clip_path)
     # fill_in 'Filename', :with => 'atkins-campuslife_fire'
@@ -47,6 +47,7 @@ class AdminClipTest < ActionDispatch::IntegrationTest
   end
 
   test "do not allow submission of clip if there is no webvtt file", :admin_clip do
+    skip # Need to make this configurable
     visit(new_admin_kinney_clip_path)
     assert page.has_selector?('#kinney_clip_submit_action input[disabled="disabled"]')
     fill_in 'Filename', :with => 'atkins-campuslife_fire'
