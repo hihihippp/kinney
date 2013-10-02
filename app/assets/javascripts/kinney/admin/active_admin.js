@@ -1,5 +1,6 @@
 //= require active_admin/base
 //= require kinney/admin/images
+//= require kinney/admin/siskel_path
 //= require kinney/admin/video_preview
 //= require chosen-jquery
 

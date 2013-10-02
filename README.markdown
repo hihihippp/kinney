@@ -26,7 +26,7 @@ gem 'font-awesome-sass-rails'
 These also need be added until the working versions are released as gems:
 ```
 gem 'activeadmin', git: 'https://github.com/gregbell/active_admin.git', branch: 'master'
-gem 'compass-rails', github: 'milgner/compass-rails', branch: 'rails4'
+gem 'compass-rails', '>= 2.0.alpha.0'
 gem 'bootstrap-sass', git: 'https://github.com/thomas-mcdonald/bootstrap-sass.git', branch: 'master'
 ```
 
@@ -143,6 +143,7 @@ bundle exec rails s
 
 # TODO
 
+- Note that app/assets/javascripts/kinney/admin/siskel_path.js should be overridden
 - added gems should be generated in
 - more documentation
 - sort out compiling ckeditor in production
