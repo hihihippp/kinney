@@ -1,4 +1,7 @@
 ActiveAdmin.register_page "Dashboard" do
+  # to work around issue with urls in menu add menu items to
+  # config/initializers/active_admin.rb
+  menu false
 
   menu :priority => 1, :label => proc{ I18n.t("active_admin.dashboard") }
 

@@ -1,4 +1,8 @@
 ActiveAdmin.register Kinney::Topic do
+  # to work around issue with urls in menu add menu items to
+  # config/initializers/active_admin.rb
+  menu false
+
   form do |f|
     f.inputs :name, :description
 

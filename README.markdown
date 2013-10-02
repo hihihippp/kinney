@@ -144,6 +144,7 @@ bundle exec rails s
 # TODO
 
 - Note that for production and staging environments the mailer must be set up
+- config/initializers/devise.rb updated to include config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
 - Note that app/assets/javascripts/kinney/admin/siskel_path.js should be overridden
 - added gems should be generated in
 - more documentation

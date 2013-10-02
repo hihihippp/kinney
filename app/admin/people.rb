@@ -1,4 +1,8 @@
 ActiveAdmin.register Kinney::Person do
+  # to work around issue with urls in menu add menu items to
+  # config/initializers/active_admin.rb
+  menu false
+
   index do
     column :first_name
     column :last_name

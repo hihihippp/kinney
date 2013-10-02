@@ -14,6 +14,20 @@ ActiveAdmin.setup do |config|
   #
   config.site_title = "Kinney"
 
+  ActiveAdmin.setup do |config|
+    config.namespace :admin do |admin|
+
+      # This block will edit the default menu
+      admin.build_menu do |menu|
+        menu.add :label => "People", :priority => 1, url: proc {admin_kinney_people_path}
+        menu.add :label => "Clips", :priority => 1, url: proc {admin_kinney_clips_path}
+        menu.add :label => "Topics", :priority => 1, url: proc {admin_kinney_topics_path}
+        menu.add :label => "Images", :priority => 1, url: proc {admin_kinney_images_path}
+      end
+
+    end
+  end
+
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
   #

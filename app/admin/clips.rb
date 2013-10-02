@@ -1,4 +1,8 @@
 ActiveAdmin.register Kinney::Clip do
+  # to work around issue with urls in menu add menu items to
+  # config/initializers/active_admin.rb
+  menu false
+
   form :partial => "form"
 
   index do
