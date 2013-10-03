@@ -24,7 +24,7 @@ ActiveAdmin.register Kinney::AdminUser do
 
   controller do
     def permitted_params
-      params.permit admin_user: [:email, :password, :password_confirmation]
+      params.permit kinney_admin_user: [:email, :password, :password_confirmation]
     end
   end
 
