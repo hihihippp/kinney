@@ -1,12 +1,12 @@
 <div class="container">
   <div class="row">
-    <div  id="more_clips">
+    <div id="more_clips">
       <h2><%= link_to t('kinney.more.video'), clips_path %></h2>
-      <ul class="thumbnails">
+      <div class="row">
         <% @top_pick_clips.each do |clip| %>
-          <li class="col-md-3 <%= cycle("odd", "even") -%>">
+          <div class="col-md-3 col-sm-3 col-xs-6 <%= cycle("odd", "even") -%>">
              <%= render :partial => '/kinney/clip_link', :locals => {:clip => clip} %>
-          </li>
+          </div>
         <% end -%>
       </ul>
     </div>
