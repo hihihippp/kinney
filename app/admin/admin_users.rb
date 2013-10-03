@@ -1,4 +1,8 @@
 ActiveAdmin.register Kinney::AdminUser do
+  # to work around issue with urls in menu add menu items to
+  # config/initializers/active_admin.rb
+  menu false
+
   index do
     column :email
     column :current_sign_in_at
