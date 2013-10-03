@@ -12,13 +12,13 @@ ActiveAdmin.register Kinney::Person do
   form do |f|
     f.inputs :first_name, :middle_name, :last_name, :name_suffix, :honorary, :nickname, :graduating_class, :location
     f.inputs do
-      f.input :biography, :as => :ckeditor
-      f.input :accomplishments, :as => :ckeditor
-      f.input :activities, :as => :ckeditor
-      f.input :currently, :as => :ckeditor
-      f.input :citations, :as => :ckeditor
-      f.input :term, :as => :ckeditor
-      f.input :term_date_ranges, :as => :ckeditor
+      f.input :biography, :as => :html_editor
+      f.input :accomplishments, :as => :html_editor
+      f.input :activities, :as => :html_editor
+      f.input :currently, :as => :html_editor
+      f.input :citations, :as => :html_editor
+      f.input :term, :as => :html_editor
+      f.input :term_date_ranges, :as => :html_editor
     end
 
     f.actions

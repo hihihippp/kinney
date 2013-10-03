@@ -26,7 +26,7 @@ DESC
         application_css_scss = "app/assets/stylesheets/application.css.scss"
         application_css = "app/assets/stylesheets/application.css"
         css_file = File.exist?(application_css_scss) ? application_css_scss : application_css
-        
+
         inject_into_file css_file, :before => " *= require_self" do
           " *= require kinney\n*= require font-awesome"
         end
@@ -48,13 +48,12 @@ DESC
         routes = <<EOF
 
   ActiveAdmin.routes(self)
-  devise_for :admin_users, :class_name => 'Kinney::AdminUser' #ActiveAdmin::Devise.config.merge(:class_name => Kinney::AdminUser)  
-  mount Ckeditor::Engine => "/ckeditor"
+  devise_for :admin_users, :class_name => 'Kinney::AdminUser' #ActiveAdmin::Devise.config.merge(:class_name => Kinney::AdminUser)
   mount Kinney::Engine => "/kinney", :as => 'kinney'
   root :to => 'kinney/pages#home'
 
 EOF
-        inject_into_file 'config/routes.rb', :after => 'routes.draw do' do 
+        inject_into_file 'config/routes.rb', :after => 'routes.draw do' do
           routes
         end
       end
@@ -95,7 +94,7 @@ gem 'mediaelement_rails', :git => 'https://github.com/tobsch/mediaelement_rails.
 gem 'webvtt', :git => 'https://github.com/jronallo/webvtt.git'
 
 EOF
-        inject_into_file 'Gemfile', :after => "source 'https://rubygems.org'" do 
+        inject_into_file 'Gemfile', :after => "source 'https://rubygems.org'" do
           gems
         end
       end
@@ -111,7 +110,7 @@ EOF
   }
 
 EOF
-        inject_into_file 'config/environments/development.rb', :after => 'Application.configure do' do 
+        inject_into_file 'config/environments/development.rb', :after => 'Application.configure do' do
           mailer_config
         end
       end

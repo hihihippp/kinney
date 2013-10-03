@@ -16,7 +16,7 @@ Kinney::Engine.routes.draw do
   resources :topics, :only => [:index, :show]
   resources :clips,  :only => [:index, :show], :path => '/videos'
 
-  mount Ckeditor::Engine => "/ckeditor"
+  # mount Ckeditor::Engine => "/ckeditor"
 
   get "/sitemap" => "sitemap#index", :as => :sitemap,
     :defaults => {:format => :xml}

@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 4.0.0"
-  s.add_dependency 'ckeditor', '4.0.6'
+  s.add_dependency 'active_admin_editor'
   s.add_dependency "friendly_id", "~> 5.0.0.rc1"
   # s.add_dependency 'activeadmin', "0.6.1"
   s.add_dependency 'formtastic', "~> 2.3.0.rc2"

@@ -148,8 +148,6 @@ bundle exec rails s
 - Note that app/assets/javascripts/kinney/admin/siskel_path.js should be overridden
 - added gems should be generated in
 - more documentation
-- sort out compiling ckeditor in production
-- work around for this issue with ckeditor for deployment: https://github.com/galetahub/ckeditor/pull/156
 - generate application_name helper
 
 # Author

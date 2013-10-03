@@ -1,9 +1,7 @@
 require "kinney/engine"
 require 'activeadmin'
 require 'friendly_id'
-require 'ckeditor'
-#require 'meta_search'
-# require 'formtastic-bootstrap'
+require 'active_admin_editor'
 require 'chosen-rails'
 require 'tire'
 require 'jquery-tablesorter'
