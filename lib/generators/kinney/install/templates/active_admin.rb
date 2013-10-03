@@ -20,9 +20,10 @@ ActiveAdmin.setup do |config|
       # This block will edit the default menu
       admin.build_menu do |menu|
         menu.add :label => "People", :priority => 1, url: proc {admin_kinney_people_path}
-        menu.add :label => "Clips", :priority => 1, url: proc {admin_kinney_clips_path}
-        menu.add :label => "Topics", :priority => 1, url: proc {admin_kinney_topics_path}
-        menu.add :label => "Images", :priority => 1, url: proc {admin_kinney_images_path}
+        menu.add :label => "Clips", :priority => 2, url: proc {admin_kinney_clips_path}
+        menu.add :label => "Topics", :priority => 3, url: proc {admin_kinney_topics_path}
+        menu.add :label => "Images", :priority => 4, url: proc {admin_kinney_images_path}
+        menu.add :label => "Admin Users", :priority => 5, url: proc {admin_kinney_admin_users_path}
       end
 
     end
