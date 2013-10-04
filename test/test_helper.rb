@@ -4,9 +4,9 @@ ENV["RAILS_ENV"] = "test"
 require File.expand_path("../dummy/config/environment.rb",  __FILE__)
 require "rails/test_help"
 require 'capybara/rails'
-#require 'capybara/webkit'
+require 'capybara/webkit'
 require 'mocha/setup'
-require 'selenium-webdriver'
+# require 'selenium-webdriver'
 require 'pry'
 require 'microdata'
 
@@ -47,7 +47,7 @@ class ActiveSupport::TestCase
   end
 
   def browser_start
-    Capybara.current_driver = :selenium
+    Capybara.current_driver = :webkit
   end
 
   def browser_end
@@ -77,11 +77,9 @@ class ActionDispatch::IntegrationTest
   # Make the Capybara DSL available in all integration tests
   include Capybara::DSL
 
-  if File.exist? "/opt/firefox17/firefox"
-    Selenium::WebDriver::Firefox.path= "/opt/firefox17/firefox"
-  end
-  # Stop ActiveRecord from wrapping tests in transactions
-  #self.use_transactional_fixtures = false
+  # if File.exist? "/opt/firefox17/firefox"
+  #   Selenium::WebDriver::Firefox.path= "/opt/firefox17/firefox"
+  # end
 
   teardown do
     DatabaseCleaner.clean       # Truncate the database

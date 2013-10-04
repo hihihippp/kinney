@@ -37,5 +37,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'launchy'
   s.add_development_dependency 'djatoka'
   s.add_development_dependency 'mocha'
-  s.add_development_dependency 'selenium-webdriver'
+  # s.add_development_dependency 'selenium-webdriver'
+  s.add_development_dependency 'capybara-webkit'
 end
