@@ -47,7 +47,7 @@ class ActiveSupport::TestCase
   end
 
   def browser_start
-    Capybara.current_driver = :selenium #_with_long_timeout
+    Capybara.current_driver = :selenium
   end
 
   def browser_end

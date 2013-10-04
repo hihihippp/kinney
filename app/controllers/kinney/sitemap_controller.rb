@@ -1,9 +1,9 @@
 module Kinney
   class SitemapController < KinneyController
     layout nil
-    
+
     def index
-      @people = Person.select([:id, :slug, :created_at, :updated_at]).all
+      @people = Person.select([:id, :slug, :created_at, :updated_at])
       @clips  = Clip.all
       headers["Content-Type"] = "text/xml"
       respond_to do |format|

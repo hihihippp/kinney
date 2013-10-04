@@ -1,0 +1,13 @@
+<li class="<%= 'active' if controller?('kinney/clips') %>">
+  <%= link_to 'Videos', kinney.clips_path %>
+</li>
+<%= render partial: '/layouts/kinney/navbar_topics_dropdown' %>
+<li class="<%= 'active' if controller?('kinney/people') %>">
+  <%= link_to 'People', kinney.people_path %>
+</li>
+<li class="<%= 'active' if action?('giving') %>">
+  <%= link_to 'Giving', kinney.giving_path %>
+</li>
+<li class="<%= 'active' if action?('about') %>">
+  <%= link_to 'About', kinney.about_path %>
+</li>

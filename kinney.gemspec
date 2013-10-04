@@ -20,9 +20,7 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 4.0.0"
   s.add_dependency 'active_admin_editor'
   s.add_dependency "friendly_id", "~> 5.0.0.rc1"
-  # s.add_dependency 'activeadmin', "0.6.1"
   s.add_dependency 'formtastic', "~> 2.3.0.rc2"
-  # s.add_dependency 'formtastic-bootstrap'
   s.add_dependency 'chosen-rails'
   s.add_dependency 'tire'
   s.add_dependency 'jquery-tablesorter'

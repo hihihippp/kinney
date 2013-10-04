@@ -18,7 +18,6 @@
         </div>
       <% end -%>
 
-
       <ul class="nav nav-pills nav-stacked">
         <% person.clips.each do |clip| %>
           <li><%= link_to clip, :rel => :tooltip, :'data-original-title' => clip.description do %>

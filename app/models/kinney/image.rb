@@ -1,6 +1,5 @@
 module Kinney
   class Image < ActiveRecord::Base
-    # attr_accessible :filename, :top_pick, :person_ids
 
     has_many :person_images
     has_many :people, :through => :person_images

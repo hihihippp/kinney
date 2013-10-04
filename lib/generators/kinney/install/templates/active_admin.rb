@@ -1,6 +1,6 @@
 module ActiveAdmin
   class Comment < ActiveRecord::Base
-    # attr_accessible :body, :namespace, :resource_id, :resource_type
+
   end
 end
 

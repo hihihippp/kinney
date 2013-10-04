@@ -3,9 +3,6 @@ module Kinney
 
     strip_attributes
 
-    # attr_accessible :filename, :quotes, :title, :top_pick, :topic_ids, :person_ids,
-    #   :duration, :interview_date, :description, :featured
-
     has_many :clip_people
     has_many :people, :through => :clip_people
 
@@ -22,7 +19,7 @@ module Kinney
     # FIXME: add back in use :history
     friendly_id :title_and_last_names, :use => [:slugged]
 
-    default_scope order('top_pick desc, title asc')
+    default_scope {order('top_pick desc, title asc')}
 
     # tire for elasticsearh
     include Tire::Model::Search

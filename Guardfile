@@ -22,11 +22,9 @@ group :livereload do
     watch(%r{app/admin/.+\.rb})
     watch(%r{app/helpers/.+\.rb})
     watch(%r{public/.+\.(css|js|html)})
-    watch(%r{config/locales/.+\.yml})
+    watch(%r{app/controllers/.+\.rb})
     # Rails Assets Pipeline
     watch(%r{(app|vendor)/assets/\w+/(.+\.(css|js|html|erb|scss)).*})  #{ |m| "/assets/#{m[2]}" }
-
-    watch(%r{app/controllers/.+\.rb})
   end
 end
 

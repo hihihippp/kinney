@@ -1,8 +1,5 @@
 module Kinney
   class Person < ActiveRecord::Base
-    # attr_accessible :accomplishments, :activities, :biography, :citations,
-    #   :currently, :first_name, :graduating_class, :last_name, :middle_name,
-    #   :nickname, :term, :term_date_ranges, :name_suffix, :location
 
     validates :last_name, :presence => true
     validates_uniqueness_of :last_name, :scope => :first_name
@@ -16,7 +13,7 @@ module Kinney
     # FIXME: add back in use :history
     friendly_id :full_name, :use => [:slugged]
 
-    default_scope order('last_name asc')
+    default_scope {order('last_name asc')}
 
     # tire for elasticsearch
     include Tire::Model::Search
