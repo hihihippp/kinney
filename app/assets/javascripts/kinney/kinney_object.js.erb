@@ -1,34 +1,5 @@
 Kinney = {};
+Kinney.engagement = {};
 
 Kinney.current_video_id = null;
 Kinney.current_uuid = null;
-
-Kinney.uuid = function(){
-  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-    var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
-    return v.toString(16);
-  });
-};
-
-Kinney.tracker_seconds = [];
-
-Kinney.track = function(){
-  if (Kinney.current_video_id) {        
-    var data = {site: '<%= Rails.application.class.parent_name %>'};
-    data.video = Kinney.current_video_id;
-    data.time = new Date();
-    data.uuid = Kinney.current_uuid;
-    data.seconds = Kinney.tracker_seconds;
-    Kinney.tracker_seconds = [];
-    <%= 'console.log(data);' if Rails.env == 'development' %>
-    $.post('<%= File.join((Rails.configuration.action_controller.relative_url_root || ''), Kinney::Engine.routes.url_helpers.tracker_track_path) %>', data);
-  }
-};
-
-$(document).ready(function() {
-  // setup for video engagement tracking
-  if ($('#kinney_clips_show video').length > 0) {
-    Kinney.current_video_id = $('video').get(0).id;  
-    Kinney.current_uuid = Kinney.uuid();
-  }
-});

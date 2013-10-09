@@ -1,13 +1,12 @@
 $(document).ready(function() {
-  // Kinney = {};
-  
+
   Kinney.load_tracks = function(){
     Kinney.player.findTracks();
     Kinney.player.loadTrack(0);
   }
-  
+
   Kinney.players = $('video').mediaelementplayer({
-    features: ['playpause','progress','current','duration','tracks','volume','fullscreen','googleanalytics'],
+    features: ['playpause','progress','current','duration','tracks','volume','fullscreen'],
     startLanguage: <%= Rails.env == 'production' ? false : "'en'" %>,
     enableAutosize: true,
     success: function(mediaElement, domObject) {  }
@@ -23,107 +22,5 @@ $(document).ready(function() {
     Kinney.player.play();
     return false;
   });
-  
-  
-  // $('.video_play_button').click(function(){
-  //   var src_base = $(this).data('videoUrl');
-  //   var sources = [
-  //     {src: src_base + ".webm", type: "video/webm"},
-  //     {src: src_base + ".mp4", type: "video/mp4"}
-  //   ];
-    
-  //   Kinney.player.pause();
-    
-  //   // change video title
-  //   $('#video_title').text($(this).find('.title').text());
-    
-  //   // show play icon next to title currently playing
-  //   $('i.play-font').removeClass('icon-play icon-large');
-  //   $('.video_play_button').removeClass('highlight');
-  //   $(this).find('i.play-font').addClass('icon-play icon-large');
-  //   $(this).addClass('highlight');
-    
-  //   // change to using the right download button href
-  //   $('#download_mp4').attr('href', src_base + '.mp4');
-    
-  //   //change the poster image just in case, but since we're playing the video we may not really need this
-  //   $('video:first').attr('poster', src_base + '.png');
-    
-  //   // change the tracks
-  //   // check if the track exists
-  //   // TODO: once we have VTT for everything change this and make VTT's manditory
-  //   $.ajax({
-  //     url: src_base + '.vtt',
-  //     success: function(data) {
-  //       $('#subtitles').attr('src', src_base + '.vtt');
-  //       $('#download_vtt').attr('href', src_base + '.vtt');
-  //       $('#download_vtt').show();
-  //       $('.mejs-captions-button').show();
-  //       Kinney.load_tracks();
-  //     },
-  //     error: function(data){
-  //       $('#subtitles').attr('src',  '');
-  //       $('#download_vtt').hide();
-  //       $('.mejs-captions-button').hide();
-  //       Kinney.load_tracks();
-  //     }
-  //   });
-  //   // http://stackoverflow.com/questions/6830662/mediaelment-js-how-to-change-the-source-files-of-subtitles-track-element-on
-    
-    
-  //   // set new sources for video and play
-  //   Kinney.player.setSrc(sources);
-  //   Kinney.player.load();
-  //   Kinney.player.play();
-        
-  //   // change topic links for the currently playing clip
-  //   // remove current topics
-  //   $('#topic_links').empty();
-  //   var video_topics = $(this).data('videoTopics');
-  //   if (video_topics.length > 0) {
-  //     $('#more_videos_on_topic').show();
-  //     $('#more_videos_on_topic').html('More videos on <span id="topic_links"></span>')
-  //     jQuery.each(video_topics, function(index, topic){
-  //       if (index != 0){
-  //         $('#topic_links').append(', ')
-  //       }
-  //       $('#topic_links').append('<a href="'+ topic.href  +'" class="video_topics">' + topic.name + '</a>');
-  //     });
-  //   } else {
-  //     $('#more_videos_on_topic').empty();
-  //   }
-    
-  //   // add permanent link under video
-  //   $('#permanent_link').attr('href', $(this).attr('href'));
-    
-  //   // change the profiles
-  //   var profiles = $(this).data('videoProfiles');
-  //   $('#short_profiles').empty();
-  //   jQuery.each(profiles, function(index, profile){
-  //     var content = SMT['people/short_profile'](profile);
-  //     $('#short_profiles').append(content);
-  //   });
-    
-  //   // TODO: change the selected quotes
-  //   var quotes = $(this).data('videoQuotes');
-  //   $('#pull_quotes').empty();
-  //   var content = SMT['clips/quotes']({"quotes":quotes});
-  //   $('#pull_quotes').append(content);
-    
-  //   // change interview date
-  //   var interview_date = $(this).data('videoInterviewDate');
-  //   if (interview_date) {
-  //     $('#interview_date').html('Interview on ' + interview_date);
-  //   } else {
-  //     $('#interview_date').empty();
-  //   }
-        
-  //   // change data-video-clip-url
-  //   $('video').data('videoClipUrl', $(this).attr('href'));
-    
-  //   return false;
-  // });
 
-  
-  
 });

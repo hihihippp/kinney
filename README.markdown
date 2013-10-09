@@ -85,6 +85,10 @@ end
 
 You may want to `config.site_title`.
 
+### Google Analytics in config/application.rb
+
+Update the generated google analytics id.
+
 ## Views to Override
 
 You'll want to override all of these views. In some cases you may just want to include a blank template.

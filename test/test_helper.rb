@@ -86,6 +86,20 @@ class ActionDispatch::IntegrationTest
     Capybara.reset_sessions!    # Forget the (simulated) browser state
     Capybara.use_default_driver # Revert Capybara.current_driver to Capybara.default_driver
   end
+
+  def console_message
+    page.driver.console_messages.last[:message]
+  end
+
+  def console_messages
+    page.driver.console_messages
+  end
+
+  def wait_for_console_message(seconds=10)
+    Timeout.timeout(seconds) do
+      sleep(0.1) until !page.driver.console_messages.blank?
+    end
+  end
 end
 
 # On failure/error, print stack trace and exit.

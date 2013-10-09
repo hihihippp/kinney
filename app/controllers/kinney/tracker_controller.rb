@@ -2,11 +2,10 @@ module Kinney
   class TrackerController < KinneyController
 
     def track
+      require 'pry-rails'
       if request.xhr?
-        data = params.dup
+        data = params["tracker"].dup
         data["session"] = session[:session_id]
-        data.delete(:action)
-        data.delete(:controller)
         tracker = Tracker.new data.permit(params_permitted)
         tracker.save
         head :ok
@@ -15,12 +14,12 @@ module Kinney
 
     private
 
-    def permitted_params
-      params.permit tracker: params_permitted
-    end
+    # def permitted_params
+    #   params.permit tracker: params_permitted
+    # end
 
     def params_permitted
-      [:seconds, :session, :sessioned, :site, :time, :uuid, :video]
+      [{:seconds => [:start, :end]}, :session, :sessioned, :site, :time, :uuid, :video]
     end
 
   end

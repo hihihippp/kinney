@@ -2,7 +2,7 @@
 # More info at https://github.com/guard/guard#readme
 
 group :tests do
-  guard :test, :all_on_start => false, :all_after_pass => false do
+  guard :minitest, :all_on_start => false, :all_after_pass => false do
     watch(%r{^lib/(.+)\.rb$})     { |m| "test/#{m[1]}_test.rb" }
     watch(%r{^test/.+_test\.rb$})
     watch('test/test_helper.rb')  { "test" }
@@ -12,6 +12,8 @@ group :tests do
     watch(%r{^app/controllers/(.+)\.rb$})              { |m| "test/functional/#{m[1]}_test.rb" }
     watch(%r{^app/views/.+\.rb$})                      { "test/integration" }
     watch('app/controllers/application_controller.rb') { ["test/functional", "test/integration"] }
+
+    callback(:run_on_change_begin) {puts "\n\n=============================================================\n\n"}
 
   end
 end

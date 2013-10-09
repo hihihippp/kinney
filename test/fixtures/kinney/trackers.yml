@@ -1,4 +1,6 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+# FIXME: seconds are no longer in this format! They are now a list of time ranges.
+#  seconds: [{"start"=>0, "end"=>8}, {"start"=>28, "end"=>32}, {"start"=>38, "end"=>40}, {"start"=>43, "end"=>48}]
 
 one:
   uuid: 517049cb-b261-4821-b3d0-92bdfe8e7988

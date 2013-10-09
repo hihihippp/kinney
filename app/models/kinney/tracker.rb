@@ -1,5 +1,5 @@
 module Kinney
   class Tracker < ActiveRecord::Base
-    serialize :seconds
+    serialize :seconds, Array
   end
 end
