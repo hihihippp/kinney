@@ -44,6 +44,7 @@ PATH
       httpclient
       jquery-tablesorter
       rails (~> 4.0.0)
+      replicate
       strip_attributes
       tire
 
@@ -153,7 +154,7 @@ GEM
     formatador (0.2.4)
     formtastic (2.3.0.rc2)
       actionpack (>= 3.0)
-    friendly_id (5.0.0.rc2)
+    friendly_id (5.0.0.rc3)
       activerecord (~> 4.0.0)
     fssm (0.2.10)
     guard (1.8.3)
@@ -261,6 +262,7 @@ GEM
     rdoc (4.0.1)
       json (~> 1.4)
     ref (1.0.5)
+    replicate (1.5.1)
     responders (1.0.0)
       railties (>= 3.2, < 5)
     rest-client (1.6.7)
