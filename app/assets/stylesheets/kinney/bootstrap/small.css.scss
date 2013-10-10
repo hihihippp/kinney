@@ -1,0 +1,17 @@
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm) {
+  // body{background-color: red !important;}
+
+  #clip_profiles {
+    .sortable_thumb.one {
+      clear:both;
+    }
+  }
+
+  #topic_clips {
+    li.first {
+      clear: both;
+    }
+  }
+
+}

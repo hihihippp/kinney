@@ -79,7 +79,7 @@
             <ul class="thumbnails">
               <% topic_clips.each do |topic_clip| %>
                 <% if topic_clip %>
-                  <li class="col-md-3 <%= cycle('odd', 'even') %>">
+                  <li class="col-md-3 col-sm-3 col-xs-6 <%= cycle('odd', 'even', name: :odd_even) %> <%= cycle('first', 'second', 'third', 'fourth', name: :ordinal) %>">
                     <%= render :partial => '/kinney/clip_link', :locals => {:clip => topic_clip} %>
                   </li>
                 <% end -%>

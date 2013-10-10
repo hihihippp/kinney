@@ -1,0 +1,16 @@
+@media (max-width: $screen-sm) {
+  // body{background-color: red !important;}
+
+  #clip_profiles {
+    .sortable_thumb.first {
+      clear:both;
+    }
+  }
+
+  #topic_clips {
+    li.odd {
+      clear: both;
+    }
+  }
+
+}
