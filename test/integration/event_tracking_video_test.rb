@@ -13,6 +13,7 @@ class EventTrackingVideoTest < ActionDispatch::IntegrationTest
   # Then after we run the javascript we wait until there is something in the console.
   # Other interactions also require a sleep to wait for native video events to trigger.
   test "should trigger an event for a video playing" do
+    skip unless ENV['VIDEO_JAVASCRIPT']
     visit kinney.clip_path(kinney_clips(:tolson_roots))
     sleep 1
     page.execute_script("$('video')[0].play();") # This initial play will trigger both a play and volumechange event
@@ -23,6 +24,7 @@ class EventTrackingVideoTest < ActionDispatch::IntegrationTest
   end
 
   test "should trigger an event for a video that was paused" do
+    skip unless ENV['VIDEO_JAVASCRIPT']
     visit kinney.clip_path(kinney_clips(:tolson_roots))
     sleep 1
     page.execute_script("$('video')[0].play();")
@@ -32,6 +34,7 @@ class EventTrackingVideoTest < ActionDispatch::IntegrationTest
   end
 
   test "should trigger an event for a video that was seeked" do
+    skip unless ENV['VIDEO_JAVASCRIPT']
     visit kinney.clip_path(kinney_clips(:tolson_roots))
     sleep 1
     page.execute_script("$('video')[0].play();")
@@ -42,6 +45,7 @@ class EventTrackingVideoTest < ActionDispatch::IntegrationTest
   end
 
   test "should trigger an event for a video that was ended" do
+    skip unless ENV['VIDEO_JAVASCRIPT']
     visit kinney.clip_path(kinney_clips(:tolson_roots))
     sleep 1
     page.execute_script("$('video')[0].play();")
@@ -52,6 +56,7 @@ class EventTrackingVideoTest < ActionDispatch::IntegrationTest
   end
 
   test "should trigger an event on volume change" do
+    skip unless ENV['VIDEO_JAVASCRIPT']
     visit kinney.clip_path(kinney_clips(:tolson_roots))
     sleep 1
     page.execute_script("$('video')[0].volume = 0.3;")

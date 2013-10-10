@@ -1,7 +1,7 @@
 module Kinney
   module ClipHelper
     # FIXME: there has to be a better way to do this so that reloading works!
-    include ::KinneyClipHelper
+    # include ::KinneyClipHelper
 
     def duration_pretty(clip)
       "(#{clip.duration_pretty})" if !clip.duration.blank?

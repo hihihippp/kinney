@@ -70,7 +70,7 @@ $(document).ready(function(){
   // that the latest time ranges are sent to the server before visiting a new page.
   $('a').click(function(){
     Kinney.engagement.track();
-    Kinney.engagement.pause(); // add a pause so we are sure the POST event can finish
+    Kinney.pause(); // add a pause so we are sure the POST event can finish
   });
 
   // Wait until the video metadata has been loaded before we try to determine the current video source.

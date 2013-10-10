@@ -54,7 +54,7 @@ When running the Kinney installation generator several files were created and so
 ### app/helpers/kinney_helper.rb
 Defines how to get different sizes of images. You'll likely want to change these for how you need to get images. By default if the djatoka gem is installed it uses Djatoka, otherwise it falls back on a placeholder image.
 
-### app/helpers/kinney_clip_helper.rb
+### app/models/kinney/clip.rb
 Defines #siskel_path which is used in several places to calculate the URL to your HTML5 Video, poster images, and webvtt files. You will definitely want to update this method to reflect where your HTML5 Video is stored. Note that this current works by storing all access derivatives for a single video within one directory.
 
 ### app/models/kinney/image.rb
@@ -87,7 +87,7 @@ You may want to `config.site_title`.
 
 ### Google Analytics in config/application.rb
 
-Update the generated google analytics id.
+Update the generated google analytics id to turn on page and event tracking.
 
 ## Views to Override
 

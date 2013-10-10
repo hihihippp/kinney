@@ -14,10 +14,6 @@ module Kinney
 
     private
 
-    # def permitted_params
-    #   params.permit tracker: params_permitted
-    # end
-
     def params_permitted
       [{:seconds => [:start, :end]}, :session, :sessioned, :site, :time, :uuid, :video]
     end

@@ -3,7 +3,7 @@ module Kinney
     class InstallGenerator < Rails::Generators::Base
       desc <<DESC
 Description:
-    Copy timeline_keeper files to your application.
+    Copy kinney files to your application. See README for changes that need to be made.
 DESC
 
       def self.source_root
@@ -36,12 +36,12 @@ DESC
       # create KinneyHelper
       def create_kinney_helpers
         template 'kinney_helper.rb', 'app/helpers/kinney_helper.rb'
-        template 'kinney_clip_helper.rb', 'app/helpers/kinney_clip_helper.rb'
       end
 
-      def create_image_override
+      def create_model_overrides
         empty_directory 'app/models/kinney'
         template 'image.rb', 'app/models/kinney/image.rb'
+        template 'clip.rb', 'app/models/kinney/clip.rb'
       end
 
       def inject_routes
