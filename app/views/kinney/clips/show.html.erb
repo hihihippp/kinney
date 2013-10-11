@@ -12,11 +12,11 @@
 
 <div class="row" itemscope itemtype="http://schema.org/VideoObject" itemref="header">
 
-  <meta itemprop="contentUrl"   content="<%= @clip.mp4 %>"/>
+  <meta itemprop="contentUrl"   content="<%= request.base_url + @clip.mp4 %>"/>
   <% if !@clip.duration.blank? %>
     <meta itemprop="duration"     content="<%= @clip.duration_iso8601 %>" />
   <% end -%>
-  <meta itemprop="thumbnailUrl" content="<%= @clip.png %>" />
+  <meta itemprop="thumbnailUrl" content="<%= request.base_url + @clip.png %>" />
   <meta itemprop="uploadDate"   content="<%= @clip.created_at %>" />
   <meta itemprop="height"       content="272" />
   <meta itemprop="width"        content="480" />

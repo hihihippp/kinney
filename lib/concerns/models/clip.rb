@@ -128,25 +128,8 @@ module Kinney::Concerns::Models::Clip
     siskel_path({:extension => 'webm'})
   end
 
-  # URL to webvtt file
   def vtt #closed_captioning vtt file
     siskel_path({:extension => 'vtt'})
-  end
-
-  # FIXME: include ::KinneyClipHelper
-
-  # parsed WEBVTT file
-  def webvtt
-    begin
-      client = HTTPClient.new
-      response = client.get(vtt)
-      if response.status == 200
-        Webvtt::File.new(response.body)
-      else
-        false
-      end
-    rescue
-    end
   end
 
   def chapters #vtt file

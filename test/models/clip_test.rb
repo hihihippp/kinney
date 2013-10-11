@@ -62,18 +62,18 @@ class ClipTest < ActiveSupport::TestCase
     assert_equal "Growing Up in Edgecombe County with Edward Norris Tolson", clip.title_with_full_people_names
   end
 
-  test "clip should return the full URL for the poster image" do
-    assert_equal "http://siskel.lib.ncsu.edu/SLI/tolson/tolson-roots/tolson-roots.png",
+  test "clip should return the URL or path for the poster image" do
+    assert_equal "/media/tolson-roots/tolson-roots.png",
       kinney_clips(:tolson_roots).png
   end
 
   test "clip should return the full URL for an MP4" do
-    assert_equal "http://siskel.lib.ncsu.edu/SLI/tolson/tolson-roots/tolson-roots.mp4",
+    assert_equal "/media/tolson-roots/tolson-roots.mp4",
       kinney_clips(:tolson_roots).mp4
   end
 
   test "clip should return the full URL for an WebM" do
-    assert_equal "http://siskel.lib.ncsu.edu/SLI/tolson/tolson-roots/tolson-roots.webm",
+    assert_equal "/media/tolson-roots/tolson-roots.webm",
       kinney_clips(:tolson_roots).webm
   end
 
@@ -97,7 +97,7 @@ class ClipTest < ActiveSupport::TestCase
 
   test "should return a duration in ISO8601 format" do
     clip = kinney_clips(:tolson_roots)
-    assert_equal "T44S",    clip.duration_iso8601
+    assert_equal "T13S",    clip.duration_iso8601
     clip.duration = 62
     assert_equal "T1M2S",   clip.duration_iso8601
     clip.duration = 3600
@@ -108,7 +108,7 @@ class ClipTest < ActiveSupport::TestCase
 
   test "should return a pretty formatted clip duration" do
     clip = kinney_clips(:tolson_roots)
-    assert_equal '0:44', clip.duration_pretty
+    assert_equal '0:13', clip.duration_pretty
     clip.duration = 62
     assert_equal "1:02", clip.duration_pretty
     # clip.duration = 3600
@@ -180,6 +180,12 @@ class ClipTest < ActiveSupport::TestCase
     clips = Kinney::Clip.top_picks
     assert clips.size > 1
     assert clips.first.top_pick
+  end
+
+  test "should have a transcript_text boolean" do
+    skip
+    clip = kinney_clips(:tolson_roots)
+    assert clip.transcript_text
   end
 
 end

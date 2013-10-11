@@ -28,7 +28,9 @@ module Kinney
     private
 
     def assign_webvtt
+      Rails.logger.info "assign webvtt"
       @webvtt = @clip.webvtt
+      Rails.logger.info "donw with assign webvtt"
     end
 
   end

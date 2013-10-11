@@ -102,25 +102,27 @@ class ActionDispatch::IntegrationTest
   end
 end
 
-# On failure/error, print stack trace and exit.
-module MiniTest
-  class Unit
-    def puke_with_immediate_feedback(klass, meth, e)
-      # Workaround for minitest weirdness: When puke gets called *again* after
-      # @exiting has been set to true down below, exit immediately so we don't
-      # get an extra SystemExit stack trace.  Exiting without exclamation mark
-      # doesn't get the non-zero exit code through, but all teardown handlers
-      # have been run at this point, so it's OK to use a hard exit here.
-      exit! 1 if @exiting_from_puke
-      result = puke_without_immediate_feedback(klass, meth, e)
-      unless e.is_a?(MiniTest::Skip)
-        # Failure or Error, so print the report we just wrote and exit.
-        puts "\n#{@report.pop}\n"
-        @exiting_from_puke = true
-        exit 1
+if ENV['FASTFAIL']
+  # On failure/error, print stack trace and exit.
+  module MiniTest
+    class Unit
+      def puke_with_immediate_feedback(klass, meth, e)
+        # Workaround for minitest weirdness: When puke gets called *again* after
+        # @exiting has been set to true down below, exit immediately so we don't
+        # get an extra SystemExit stack trace.  Exiting without exclamation mark
+        # doesn't get the non-zero exit code through, but all teardown handlers
+        # have been run at this point, so it's OK to use a hard exit here.
+        exit! 1 if @exiting_from_puke
+        result = puke_without_immediate_feedback(klass, meth, e)
+        unless e.is_a?(MiniTest::Skip)
+          # Failure or Error, so print the report we just wrote and exit.
+          puts "\n#{@report.pop}\n"
+          @exiting_from_puke = true
+          exit 1
+        end
+        result
       end
-      result
+      alias_method_chain :puke, :immediate_feedback
     end
-    alias_method_chain :puke, :immediate_feedback
   end
 end

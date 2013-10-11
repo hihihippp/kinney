@@ -5,16 +5,19 @@ tolson_roots:
   title: Growing Up in Edgecombe County
   quotes: <p>Quotes on Tolson's Roots.</p><p>Another quote on Tolson's Roots.</p>
   top_pick: true
-  duration: 44
+  duration: 13
   interview_date: 2011-06-04
   description: This is a description of the Roots clip.
   featured: false
   created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
   updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
   slug: growing-up-in-edgecombe-county
+  # transcript_text: true
+  # transcript_vtt: false
+  # media_type: video
 
 tolson_mentors_caldwell:
-  filename: tolson-mentors_caldwell
+  filename: tolson-mentors_chancellors
   title: Mentors
   quotes: MyText
   top_pick: false
@@ -39,10 +42,3 @@ atkins_roots:
   created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
   updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
 
-raiford:
-  filename: raiford-academics_balance
-  title: Academics Balance
-  top_pick: false
-  featured: false
-  created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
-  updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>

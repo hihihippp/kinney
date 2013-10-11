@@ -3,14 +3,19 @@ class Kinney::Clip < ActiveRecord::Base
 
   def siskel_path(opts={})
     path_filename = opts[:filename] || filename
-    url = 'http://siskel.lib.ncsu.edu/SLI'
-    name = path_filename.split('-').first
-    url = File.join(url, name, path_filename, path_filename)
+    path = File.join((Rails.configuration.action_controller.relative_url_root || ''), 'media', path_filename, path_filename)
     if !opts[:extension].blank?
       extension = '.' + opts[:extension] if !opts[:extension].include?('.')
-      url + extension
+      path + extension
     else
-      url
+      path
     end
   end
+
+  def webvtt
+    filepath = File.join(Rails.root, 'public', vtt)
+    file = File.read(filepath)
+    Webvtt::File.new(file)
+  end
+
 end

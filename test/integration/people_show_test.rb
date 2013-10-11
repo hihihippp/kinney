@@ -83,13 +83,13 @@ class PeopleShowTest < ActionDispatch::IntegrationTest
   test_with_cassette "should provide a link to other videos as text links", :people_show do
     visit(kinney.person_path(kinney_people(:tolson)))
     assert page.has_selector?('#person_videos a', :text => 'Growing Up in Edgecombe County')
-    assert page.has_selector?('#person_videos a', :text => '0:44')
+    assert page.has_selector?('#person_videos a', :text => '0:13')
     assert page.has_selector?('#person_videos a', :text => 'Mentors')
   end
 
   test_with_cassette "should display the information like description, interview date and time below video clip", :people_show do
     visit(kinney.clip_path(kinney_clips(:tolson_roots)))
-    assert page.has_content?('This is a description of the Roots clip. Interview on June 4, 2011. (0:44)')
+    assert page.has_content?('This is a description of the Roots clip. Interview on June 4, 2011. (0:13)')
   end
 
   test_with_cassette "should display a map if the location the person grew up is known", :people_show do
