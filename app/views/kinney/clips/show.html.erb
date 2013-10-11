@@ -3,10 +3,12 @@
 <%= render :partial => '/layouts/kinney/social_setup' %>
 
 <%= content_for :header do %>
-  <h1><span itemprop="name"><%= @clip.title %></span><br>
-    <% @clip.people.each do |person| %>
-      <%= link_to person.full_name, person %><br>
-    <% end -%>
+  <h1><span itemprop="name"><%= @clip.title %></span>
+    <div class="people_title">
+      <% @clip.people.each do |person| %>
+        <%= link_to person.full_name, person, class: :person_title %><br>
+      <% end -%>
+    </div>
   </h1>
 <% end -%>
 

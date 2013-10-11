@@ -1,14 +1,16 @@
 <% if @featured_clip %>
-  <h2><%= @featured_clip.title if @featured_clip %><br>
+  <h2><%= @featured_clip.title if @featured_clip %>
+    <div class="person_title">
     <%= link_to @person.full_name, @person %>
+    </div>
   </h2>
   <%= link_to(@featured_clip, :class => [:thumbnail_video], :id => :featured_video_link) do %>
     <div id="home_video_image">
       <div class="mejs-overlay-button"></div>
       <%= image_tag @featured_clip.png, :alt => @featured_clip.title %>
     </div>
-    
-  <% end -%>  
+
+  <% end -%>
 <% else -%>
   <p>You currently have no featured clip. Go to the admin interface and create or select a featured clip.</p>
 <% end -%>
