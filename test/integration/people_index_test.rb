@@ -23,7 +23,7 @@ class PeopleIndexTest < ActionDispatch::IntegrationTest
 
   test 'links to show view for person without video', :people_index do
     visit(kinney.people_path)
-    page.find('#people_no_clips').click_link('William Williams')
+    page.click_link('William Williams')
     assert current_path == kinney.person_path(kinney_people(:williams))
   end
 

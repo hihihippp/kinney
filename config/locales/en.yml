@@ -74,9 +74,6 @@ en:
         title: "Engagement for Clip: %{filename}"
         x: x is the length of the video in seconds.
         y: y is the number of pageviews which watched that second of video.
-    sort:
-      by: Sort by
-      last_name: Last Name
     more:
       video: Video
       people: People

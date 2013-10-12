@@ -5,58 +5,8 @@
   <h1><%= t '.title' %></h1>
 <% end -%>
 
-<div id="insert_controls" class="row"></div>
-
-<div class='row' id="people_with_images">
-  <% @people_with_images.each do |person| %>
-    <div class="col-sm-4 col-md-2 sortable_thumb thumbnail_image" itemscope itemtype="http://schema.org/Person">
-      <%= link_to(person, :class => :thumbnail, :itemprop => :url) do %>
-          <%= kinney_image_small(person.image, person) %>
-          <div class="caption">
-            <div class="clearfix">
-              <span itemprop="name"><%= person.nickname %> <span class="last_name"><%= person.last_name %></span><%= ', ' + person.name_suffix if !person.name_suffix.blank? %>
-              </span>
-              <% if person.clips.size > 0 %>
-                <div class="available_video">
-                  <span class="label"><%= pluralize(person.clips.size, 'Video') %></span>
-                </div>
-              <% end -%>
-            </div>
-          </div>
-      <% end -%>
-    </div>
+<ul class="nav nav-stacked">
+  <% @people.each do |person| %>
+    <li><%= link_to person.full_name, person %></li>
   <% end -%>
-</div>
-
-<% if !@people_without_images.blank? %>
-  <div class="row">
-    <div class="col-md-12">
-      <h2><%= t '.title_other_profiles' %></h2>
-    </div>
-    <div class="col-md-5" id="people_no_clips">
-      <%= render "image_solicitation_text" %>
-      <table class="tablesorter tablesorter-blue table">
-        <thead>
-          <tr>
-            <th><%= t '.table_name' %></th>
-            <th><%= t '.table_class_of' %></th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @people_without_images.each do |person| %>
-            <tr>
-              <td>
-                <%= link_to person do %>
-                  <%= person.first_name %> <%= person.middle_name %> <span class="last_name"><%= person.last_name %></span>
-                  <% if person.clips.length > 0 %>
-                    <span>(<%= pluralize(person.clips.size, 'Video') %>)</span>
-                  <% end -%>
-                <% end -%>
-              </td>
-            </tr>
-          <% end -%>
-        </tbody>
-      </table>
-    </div>
-  </div>
-<% end -%>
+</ul>

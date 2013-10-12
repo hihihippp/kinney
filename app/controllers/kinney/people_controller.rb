@@ -2,8 +2,7 @@ module Kinney
   class PeopleController < KinneyController
 
     def index
-      @people_with_images = Person.with_images
-      @people_without_images = Person.without_images
+      @people = Person.all
     end
 
     def show
