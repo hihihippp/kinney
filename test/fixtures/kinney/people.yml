@@ -10,7 +10,6 @@ tolson:
   activities: <p>These are Tolson's activities.</p>
   currently: <p>What Tolson is currently doing.</p>
   citations: <p>This is a citation.</p>
-  graduating_class: 1963
   term: <p>Student Body President 1962-1963</p>
   term_date_ranges: 1962-1963
   location: Edgecombe County, NC
@@ -27,14 +26,12 @@ williams:
 third_man:
   first_name: Third
   last_name: Man
-  graduating_class: 1973
   created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
   updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
 
 xavier:
   first_name: Andrew
   last_name: Xavier
-  graduating_class: 1956
   created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
   updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
 
@@ -43,7 +40,6 @@ atkins:
   middle_name: Leslie
   last_name: Atkins
   name_suffix: III
-  graduating_class: 1965
   biography: <p>Atkin's biography.</p>
   created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
   updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
@@ -56,7 +52,6 @@ raiford:
 
 friday:
   first_name: William
-  last_name: Friday 
-  graduating_class: 1941
+  last_name: Friday
   created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
   updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>

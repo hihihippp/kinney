@@ -3,8 +3,7 @@ en:
     labels:
       kinney/contact_message:
         name: Name
-        graduating_class: Graduating Class
-        email: Email 
+        email: Email
         comment: Comment
     actions:
       create: Submit
@@ -26,7 +25,7 @@ en:
         title: About
         meta_description: About this project.
       giving:
-        title: Giving 
+        title: Giving
         meta_description: Please give to help support this project.
       home:
         featured_story: Featured Story
@@ -45,8 +44,8 @@ en:
         class_of: "Class of %{year}"
         accomplishments: Accomplishments
         activities: Activities
-        currently: Currently 
-        citations: Citations 
+        currently: Currently
+        citations: Citations
       index:
         title: People
         profiles_title: Profiles
@@ -77,8 +76,7 @@ en:
         y: y is the number of pageviews which watched that second of video.
     sort:
       by: Sort by
-      last_name: Last Name 
-      graduating_class: Graduating Class
+      last_name: Last Name
     more:
       video: Video
       people: People

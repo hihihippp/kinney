@@ -29,7 +29,6 @@ module Kinney::Concerns::Models::Person
       indexes :activities,       :analyzer => 'snowball'
       indexes :biography,       :analyzer => 'snowball'
       indexes :citations,       :analyzer => 'snowball'
-      indexes :graduating_class,      :analyzer => 'date'
       indexes :last_name, :analyzer => 'snowball', :boost => 100
       indexes :first_name, :analyzer => 'snowball'
       indexes :middle_name, :analyzer => 'snowball'

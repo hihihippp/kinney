@@ -1,17 +1,9 @@
-<% if !@person.term.blank? or !@person.graduating_class.blank? %>
-  <section>
-    <h2><%= t 'kinney.people.profile.years_at_state' %></h2>
-    <%= raw @person.term %>
-    <p><%= t 'kinney.people.profile.class_of', :year => @person.graduating_class %></p>
-  </section>    
-<% end -%>
-
 <% if !@person.accomplishments.blank? %>
   <section>
     <h2><%= t 'kinney.people.profile.accomplishments' %></h2>
     <%= raw @person.accomplishments %>
   </section>
-<% end -%>       
+<% end -%>
 
 <% if !@person.activities.blank? %>
   <section>
@@ -36,5 +28,5 @@
     <%= raw @person.citations %>
   </section>
 <% end -%>
-  
-  
+
+

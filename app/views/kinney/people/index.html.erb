@@ -16,9 +16,6 @@
             <div class="clearfix">
               <span itemprop="name"><%= person.nickname %> <span class="last_name"><%= person.last_name %></span><%= ', ' + person.name_suffix if !person.name_suffix.blank? %>
               </span>
-              <div>
-                <span class="grad_class"><%= person.graduating_class %></span>
-              </div>
               <% if person.clips.size > 0 %>
                 <div class="available_video">
                   <span class="label"><%= pluralize(person.clips.size, 'Video') %></span>
@@ -56,7 +53,6 @@
                   <% end -%>
                 <% end -%>
               </td>
-              <td><%= person.graduating_class %></td>
             </tr>
           <% end -%>
         </tbody>

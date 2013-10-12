@@ -33,7 +33,6 @@ xml.urlset "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9", "xmlns:vide
         xml.video :duration, clip.duration
         xml.video :publication_date, clip.created_at.to_date
         xml.video :category, "Oral History"
-        xml.video :gallery_loc, person_url(clip.people.first)
       end
     end
   end

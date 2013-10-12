@@ -42,3 +42,10 @@ atkins_roots:
   created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
   updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
 
+gusler_players:
+  filename: gusler-beyond_players_retreat
+  title: Purchasing the Players' Retreat
+  top_pick: false
+  featured: false
+  created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+  updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>

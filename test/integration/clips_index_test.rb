@@ -18,11 +18,6 @@ class ClipsIndexTest < ActionDispatch::IntegrationTest
     assert page.has_content?('John Leslie Atkins, III')
   end
 
-  test "clip index page should list the graduating class of a person next to the name", :clips_index do
-    visit(kinney.clips_path)
-    assert page.has_content?('John Leslie Atkins, III (1965)')
-  end
-
   test "clicking on a video thumbnail should go to a video clip", :clips_index do
     visit(kinney.clips_path)
     page.first('.thumbnail_video').click

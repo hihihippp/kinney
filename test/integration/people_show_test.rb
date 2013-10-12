@@ -11,10 +11,6 @@ class PeopleShowTest < ActionDispatch::IntegrationTest
     visit(kinney.person_path(kinney_people(:tolson)))
     assert page.has_content?('Edward Norris Tolson')
 
-    assert page.has_selector?('h2', :text => 'Years at State')
-    assert page.has_content?('Class of 1963')
-    assert page.has_content?('Student Body President 1962-1963')
-
     # video titles
     assert page.has_selector?('a', :text => 'Growing Up in Edgecombe County')
     assert page.has_selector?('a', :text => 'Mentors')
