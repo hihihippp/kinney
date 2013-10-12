@@ -79,6 +79,9 @@ This file is not generated, but you will want to add your application name:
 def application_name
   'Kinney'
 end
+def navbar_application_name
+  application_name
+end
 ```
 
 ### config/initializers/active_admin.rb
