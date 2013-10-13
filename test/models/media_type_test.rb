@@ -7,4 +7,9 @@ class MediaTypeTest < ActiveSupport::TestCase
     assert Kinney::MediaType.find_by_name('audio')
     assert !Kinney::MediaType.find_by_name('alien morse code')
   end
+
+  test "should be associated with clips" do
+    video = kinney_media_types(:video)
+    assert !video.clips.blank?
+  end
 end

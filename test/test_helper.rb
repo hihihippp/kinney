@@ -36,10 +36,6 @@ end
 class ActiveSupport::TestCase
   fixtures :all
 
-  def setup
-    load "#{Rails.root}/db/seeds.rb"
-  end
-
   def admin_login
     visit new_admin_user_session_path
     if !page.has_content?("You are already signed in.")

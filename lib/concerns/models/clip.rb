@@ -10,6 +10,8 @@ module Kinney::Concerns::Models::Clip
     has_many :clip_topics
     has_many :topics, :through => :clip_topics
 
+    belongs_to :media_type
+
     validates :filename, :duration, :title, :description, :interview_date, :presence => true
     validates_uniqueness_of :filename
 

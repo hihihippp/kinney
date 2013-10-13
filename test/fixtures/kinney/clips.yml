@@ -12,9 +12,10 @@ tolson_roots:
   created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
   updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
   slug: growing-up-in-edgecombe-county
+  media_type: video
   # transcript_text: true
   # transcript_vtt: false
-  # media_type: video
+
 
 tolson_mentors_caldwell:
   filename: tolson-mentors_chancellors
@@ -24,6 +25,7 @@ tolson_mentors_caldwell:
   featured: false
   created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
   updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+  media_type: video
 
 atkins_fire:
   filename: atkins-campuslife_fire
@@ -33,6 +35,7 @@ atkins_fire:
   created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
   updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
   slug: pullen-fire-atkins
+  media_type: video
 
 atkins_roots:
   filename: atkins-roots_applying
@@ -41,6 +44,7 @@ atkins_roots:
   featured: true
   created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
   updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+  media_type: video
 
 gusler_players:
   filename: gusler-beyond_players_retreat
@@ -49,3 +53,4 @@ gusler_players:
   featured: false
   created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
   updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+  media_type: video

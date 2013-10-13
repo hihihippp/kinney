@@ -188,8 +188,9 @@ class ClipTest < ActiveSupport::TestCase
     assert clip.transcript_text?
   end
 
-  test "should have " do
-
+  test "should have a media type" do
+    clip = kinney_clips(:tolson_roots)
+    assert_equal Kinney::MediaType.find_by(name: 'video'), clip.media_type
   end
 
 end
