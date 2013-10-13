@@ -1,4 +1,13 @@
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: $screen-md) {
   // body{background-color: red !important;}
+
+  #all_clips {
+    .b2-1, .b3-1 {
+      clear: none;
+    }
+    .b4-1 {
+      clear: both;
+    }
+  }
 }

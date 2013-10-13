@@ -2,6 +2,15 @@
 @media (min-width: $screen-sm) {
   // body{background-color: red !important;}
 
+  #all_clips {
+    .b2-1 {
+      clear: none;
+    }
+    .b3-1 {
+      clear: both;
+    }
+  }
+
   #clip_profiles {
     .sortable_thumb.one {
       clear:both;

@@ -2,7 +2,7 @@ module Kinney
   class ClipsController < KinneyController
 
     def index
-      @people = Person.with_clips
+      # @people = Person.with_clips
     end
 
     def show

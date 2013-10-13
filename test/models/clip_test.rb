@@ -185,7 +185,11 @@ class ClipTest < ActiveSupport::TestCase
   test "should have a transcript_text boolean" do
     skip
     clip = kinney_clips(:tolson_roots)
-    assert clip.transcript_text
+    assert clip.transcript_text?
+  end
+
+  test "should have " do
+
   end
 
 end

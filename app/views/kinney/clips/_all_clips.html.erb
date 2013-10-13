@@ -1,0 +1,17 @@
+<div class="row" id="all_clips">
+  <% Kinney::Clip.all.each do |clip| %>
+    <%= content_tag :div, class: ['col-xs-6', 'col-sm-4', 'col-md-3',
+      cycle('b4-1', 'b4-2', 'b4-3', 'b4-4', name: :by_four),
+      cycle('b3-1', 'b3-2', 'b3-3', name: :by_three),
+      cycle('b2-1', 'b2-2', name: :by_two)] do %>
+
+        <%= link_to clip, class: [:thumbnail] do %>
+          <%= image_tag clip.png %>
+          <div class="caption">
+            <i class="icon-play"></i> <%= clip.title %>
+          </div>
+        <% end -%>
+
+    <% end -%>
+  <% end -%>
+</div>
