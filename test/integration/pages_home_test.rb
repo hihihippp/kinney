@@ -8,12 +8,6 @@ class PagesHomeTest < ActionDispatch::IntegrationTest
     assert page.has_no_selector?('#topics a', :text => 'Academics')
   end
 
-  test "home page should have link to More Video" do
-    visit(kinney.root_path)
-    assert page.has_selector?('a', :text => "Video")
-    assert page.has_selector?('#more_clips')
-  end
-
   test "home page should have a featured clip" do
     visit(kinney.root_path)
     assert page.has_selector?('#featured_clip', :text => 'Applying to NC State')

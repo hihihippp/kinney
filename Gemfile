@@ -20,6 +20,7 @@ group :development do
   gem 'single_test'
   gem 'deadweight'
   gem 'guard-minitest'
+  gem 'annotate', ">=2.5.0"
 end
 
 # once these are published as gems we can use them from there, until then we need to have them in our Gemfile
