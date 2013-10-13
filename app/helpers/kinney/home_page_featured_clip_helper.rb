@@ -1,10 +1,10 @@
 module Kinney
-  module HomePageHelper
+  module HomePageFeaturedClipHelper
     def home_page_featured_clip_title
       title = @featured_clip.title
       title += content_tag :div,
-      link_to(@person.full_name, @person),
-      class: :person_title
+        link_to(@person.full_name, @person),
+        class: :person_title
       title.html_safe
     end
   end
