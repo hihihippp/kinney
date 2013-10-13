@@ -6,7 +6,6 @@ class Kinney::ClipsControllerTest < ActionController::TestCase
   test "should get index" do
     get :index, :use_route => :kinney
     assert_response :success
-    assert assigns(:people)
   end
 
   test_with_cassette "should get show", 'clips_controller' do

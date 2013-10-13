@@ -156,6 +156,7 @@ bundle exec rails s
 - added gems should be generated in
 - more documentation
 - generate application_name helper
+- generate seeds loading into db/seeds.rb and run the rake db:seed task
 
 # Author
 

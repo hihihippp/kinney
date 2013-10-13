@@ -1,0 +1,1 @@
+Kinney::Engine.load_seed
