@@ -1,0 +1,13 @@
+<% if !@person.clips.first.blank? %>
+  <div id="person_clips">
+    <h2><%= @person.last_name %> <%= t 'kinney.clips.plural' %></h2>
+    <div>
+      <%= link_to(@person.clips.first, :class => :thumbnail_video, :id => 'person_clips_image' ) do %>
+        <div class="thumbnail_image">
+          <%= image_tag @person.clips.first.png, :alt => @person.clips.first.title %>
+        </div>
+      <% end -%>
+    </div>
+    <%= render :partial => '/kinney/people/person_clips', :locals => {:person => @person} %>
+  </div>
+<% end -%>

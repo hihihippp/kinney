@@ -5,8 +5,5 @@
       <span class="duration label"><%= clip.duration_pretty %></span>
     <% end -%>
   </div>
-  <div class="caption">
-    <div class="name"><%= clip.full_people_names %></div>
-    <span class="title"><%= clip.title %></span>
-  </div>
+  <%= render partial: '/kinney/clip_link_caption', locals: {clip: clip} %>
 <% end -%>

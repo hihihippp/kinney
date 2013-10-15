@@ -28,19 +28,7 @@
         </div>
       </div>
 
-      <div id="person_clips">
-        <% if !@person.clips.first.blank? %>
-          <h2><%= @person.last_name %> <%= t 'kinney.clips.plural' %></h2>
-          <div>
-            <%= link_to(@person.clips.first, :class => :thumbnail_video, :id => 'person_clips_image' ) do %>
-              <div class="thumbnail_image">
-                <%= image_tag @person.clips.first.png, :alt => @person.clips.first.title %>
-              </div>
-            <% end -%>
-          </div>
-          <%= render :partial => '/kinney/people/person_clips', :locals => {:person => @person} %>
-        <% end -%>
-      </div>
+      <%= render partial: 'person_show_view_clips' %>
 
       <%= render 'person_images' %>
 
@@ -52,18 +40,7 @@
   <div class="col-md-8 offset2" id="profile_info">
     <%= render 'profile' %>
     <%= render 'map' %>
-    <br>
-    <p id="bottom_actions">
-      <% if @person.clips.count > 0 %>
-        <%= link_to "#person_clips", class: [:btn] do %>
-          <%= @person.last_name %> <%= t 'kinney.clips.plural' %>
-        <% end -%>
-      <% end -%>
 
-      <%= link_to clips_path, class: [:btn] do %>
-        <%= t 'kinney.people.plural' %>
-      <% end -%>
-    </p>
 
   </div>
 </div>
