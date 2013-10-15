@@ -38,27 +38,8 @@
   </div>
 
 
-  <div class="col-md-4" id="related_people">
-
-    <% if !@people_clips.blank? %>
-      <div class="list-group" id="person_videos">
-        <% @people_clips.each do |clip| %>
-          <% if @clip != clip %>
-            <%= link_to(clip, clip.video_switcher_params.merge(class: 'list-group-item')) do %>
-              <i class="icon-play"></i> <span class="title"><%= clip.title %> <%= duration_pretty(clip) %></span>
-            <% end -%>
-          <% end -%>
-        <% end -%>
-      </div>
-    <% end -%>
-
-    <div class="thumbnails">
-      <% @clip.people.each do |person| %>
-        <div class="col-md-6 person">
-          <%= render :partial => '/kinney/people/person_read_more', :locals => {:person => person} %>
-        </div>
-      <% end -%>
-    </div>
+  <div class="col-md-4">
+    <%= render 'clip_show_view_right_sidebar' %>
   </div>
 </div>
 
