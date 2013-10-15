@@ -102,7 +102,7 @@ class ActionDispatch::IntegrationTest
   end
 end
 
-if ENV['FASTFAIL']
+# if ENV['FASTFAIL']
   # On failure/error, print stack trace and exit.
   module MiniTest
     class Unit
@@ -125,4 +125,4 @@ if ENV['FASTFAIL']
       alias_method_chain :puke, :immediate_feedback
     end
   end
-end
+# end
