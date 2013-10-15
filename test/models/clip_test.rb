@@ -153,7 +153,8 @@ class ClipTest < ActiveSupport::TestCase
 
   test "clip without an associated person is invalid" do
     clip = Kinney::Clip.new(:title => 'Title', :filename => 'filename',
-      :duration => 44, :interview_date => Date.new, :description => 'description')
+      :duration => 44, :interview_date => Date.new, :description => 'description',
+      :media_type => kinney_media_types(:video))
     clip.topics = [kinney_topics(:mentors)]
     assert !clip.valid?
     clip.people = [kinney_people(:tolson)]
@@ -162,7 +163,8 @@ class ClipTest < ActiveSupport::TestCase
 
   test "clip without an associated topic is invalid" do
     clip = Kinney::Clip.new(:title => 'Title', :filename => 'filename',
-      :duration => 44, :interview_date => Date.new, :description => 'description')
+      :duration => 44, :interview_date => Date.new, :description => 'description',
+      :media_type => kinney_media_types(:audio))
     clip.people = [kinney_people(:tolson)]
     assert !clip.valid?
     clip.topics = [kinney_topics(:mentors)]
@@ -191,6 +193,12 @@ class ClipTest < ActiveSupport::TestCase
   test "should have a media type" do
     clip = kinney_clips(:tolson_roots)
     assert_equal Kinney::MediaType.find_by(name: 'video'), clip.media_type
+  end
+
+  test "should have interviewers" do
+    clip = kinney_clips(:tolson_roots)
+    assert !clip.interviewers.blank?
+    assert clip.interviewers.first.is_a? Kinney::Person
   end
 
 end

@@ -7,6 +7,9 @@ module Kinney::Concerns::Models::Clip
     has_many :clip_people
     has_many :people, :through => :clip_people
 
+    has_many :interviewer_people
+    has_many :interviewers, through: :interviewer_people, source: :person
+
     has_many :clip_topics
     has_many :topics, :through => :clip_topics
 

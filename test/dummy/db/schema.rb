@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131013201207) do
+ActiveRecord::Schema.define(version: 20131015172508) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "resource_id",   null: false
@@ -103,6 +103,16 @@ ActiveRecord::Schema.define(version: 20131013201207) do
   end
 
   add_index "kinney_images", ["id"], name: "index_images_on_id"
+
+  create_table "kinney_interviewer_people", force: true do |t|
+    t.integer  "clip_id"
+    t.integer  "person_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "kinney_interviewer_people", ["clip_id"], name: "index_kinney_interviewer_people_on_clip_id"
+  add_index "kinney_interviewer_people", ["person_id"], name: "index_kinney_interviewer_people_on_person_id"
 
   create_table "kinney_media_types", force: true do |t|
     t.string   "name"
