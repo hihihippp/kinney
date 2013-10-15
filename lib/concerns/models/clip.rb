@@ -18,6 +18,8 @@ module Kinney::Concerns::Models::Clip
     validate :valid_number_of_people
     validate :valid_number_of_topics
 
+    validates :media_type_id, presence: true
+
     extend FriendlyId
     # FIXME: add back in use :history
     friendly_id :title_and_last_names, :use => [:slugged]

@@ -53,7 +53,7 @@ ActiveAdmin.register Kinney::Clip do
     end
     def permitted_params
       params.permit kinney_clip: [:filename, :quotes, :title, :top_pick, {:topic_ids => []}, {:person_ids => []},
-        :duration, :interview_date, :description, :featured, :interview_place, :slug]
+        :duration, :interview_date, :description, :featured, :interview_place, :slug, :media_type_id]
     end
   end
 

@@ -21,5 +21,6 @@ end
 #  description     :text
 #  featured        :boolean
 #  interview_place :string(255)
+#  media_type_id   :integer
 #
 
