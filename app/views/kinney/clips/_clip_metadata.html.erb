@@ -1,0 +1,13 @@
+<p itemprop="description"><%= @clip.description %> <%= duration_pretty(@clip) %></p>
+
+<% if !@clip.interviewers.blank? %>
+<p><%= t 'kinney.clips.show.interviewer' %>: <%= @clip.interviewers.map{|person| person.full_name}.join(', ') %></p>
+<% end %>
+
+<% if !@clip.interview_place.blank? %>
+  <p><%= t 'kinney.clips.show.interview_place' %>: <%= @clip.interview_place %></p>
+<% end %>
+
+<% if !@clip.interview_date.blank? %>
+  <p><%= t 'kinney.clips.show.interview_date' %>: <%= @clip.interview_date.to_formatted_s(:long) %></p>
+<% end %>

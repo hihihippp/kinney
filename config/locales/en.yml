@@ -15,7 +15,9 @@ en:
         title: Videos
         meta_description: Video clips associated with each person.
       show:
-        interview_on: "Interview on %{date}."
+        interview_date: Interview date
+        interview_place: Interview place
+        interviewer: Interviewer
         download_mp4: Download MP4
         more_video_with: "More video with %{name}"
         read_more_about: "Read more about %{name}"

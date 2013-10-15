@@ -19,10 +19,12 @@
   <div class="col-md-8">
     <%= render :partial => '/kinney/video', :locals => {:clip => @clip} %>
     <div class="row">
-      <div class="col-md-6"
-        <p itemprop="description"><%= @clip.description %> <%= t('.interview_on', :date => @clip.interview_date.to_formatted_s(:long)) if !@clip.interview_date.blank? %> <%= duration_pretty(@clip) %></p>
+      <div class="col-md-12">
+        <%= render partial: 'clip_metadata' %>
       </div>
-      <div class="col-md-6">
+    </div>
+    <div class="row">
+      <div class="col-md-12">
         <%= download_button(@clip) %>
       </div>
     </div>
@@ -31,9 +33,8 @@
         <%= render '/layouts/kinney/social_like' %>
       </div>
     </div>
-
     <%= render '/kinney/webvtt' %>
-
+    <%= render partial: 'last_under_video' %>
   </div>
 
 

@@ -13,6 +13,7 @@ tolson_roots:
   updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
   slug: growing-up-in-edgecombe-county
   media_type: video
+  interview_place: Raleigh, NC
   # transcript_text: true
   # transcript_vtt: false
 
