@@ -15,6 +15,7 @@ class AdminClipTest < ActionDispatch::IntegrationTest
   test "admin user can create new clip", :admin_clip do
     visit('/admin/kinney_clips')
     click_link('New Kinney Clip')
+    assert page.has_content?('New Kinney Clip')
   end
 
 #  test "adding duration to the form when filename entered" do

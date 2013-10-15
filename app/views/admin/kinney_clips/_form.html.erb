@@ -1,19 +1,19 @@
 <div>
-<div id="vtt" style="float:right">
-  <h2>VTT</h2>
-  <div id="vtt_result"></div>
-  <textarea rows="10" cols="70"></textarea>
-</div>
-<div style="width:40%">
-  <% if @kinney_clip and !@kinney_clip.filename.blank? %>
-      <%= render :partial => '/kinney/video', :locals => {:clip => @kinney_clip} %>
-  <% else -%>
-    <video width="480" height="272" style="width:100%;height:100%;" poster=""
-        controls="true" preload="true" id="video_preview">
-      <source src="" type="video/webm" />
-    </video>
-  <% end -%>
-</div>
+  <div id="vtt" style="float:right;width:40%">
+    <h2>VTT</h2>
+    <div id="vtt_result"></div>
+    <textarea rows="10" cols="30"></textarea>
+  </div>
+  <div style="width:40%">
+    <% if @kinney_clip and !@kinney_clip.filename.blank? %>
+        <%= render :partial => '/kinney/video', :locals => {:clip => @kinney_clip} %>
+    <% else -%>
+      <video width="480" height="272" style="width:100%;height:100%;" poster=""
+          controls="true" preload="true" id="video_preview">
+        <source src="" type="video/webm" />
+      </video>
+    <% end -%>
+  </div>
 </div>
 
 <div style="clear:both">

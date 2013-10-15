@@ -28,16 +28,13 @@ Gem::Specification.new do |s|
   s.add_dependency 'httpclient'
   s.add_dependency 'font-awesome-sass-rails'
   s.add_dependency 'strip_attributes'
-  s.add_dependency 'replicate'
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency 'test-unit'
   s.add_development_dependency 'capybara', "~> 2.1.0"
   s.add_development_dependency 'database_cleaner', '<1.1.0'
-  s.add_development_dependency 'sextant'
   s.add_development_dependency 'launchy'
   s.add_development_dependency 'djatoka'
   s.add_development_dependency 'mocha'
-  # s.add_development_dependency 'selenium-webdriver'
   s.add_development_dependency 'capybara-webkit'
 end

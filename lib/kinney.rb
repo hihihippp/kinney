@@ -10,8 +10,6 @@ require 'html_truncator'
 require 'httpclient'
 require 'kinney/mailer_logger'
 
-
-
 module Kinney
   module Concerns
     module Models
