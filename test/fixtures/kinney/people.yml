@@ -61,3 +61,10 @@ genya:
   last_name: O'Gara
   created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
   updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+
+gusler:
+  first_name: Richard
+  last_name: Gusler
+  created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+  updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+

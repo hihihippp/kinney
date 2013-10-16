@@ -22,6 +22,9 @@ en:
         more_video_with: "More video with %{name}"
         read_more_about: "Read more about %{name}"
         other_clips: Other clips
+        download_transcript: Download Transcript
+        download_transcript_text: Plain text transcript
+        download_transcript_pdf: PDF transcript
     pages:
       about:
         title: About

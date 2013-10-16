@@ -60,4 +60,12 @@ class ClipsShowTest < ActionDispatch::IntegrationTest
     assert page.has_no_content?('More videos on Roots')
   end
 
+  test "should see button to download transcript as text or pdf" do
+    visit(kinney.clip_path(kinney_clips(:tolson_roots)))
+    assert page.has_content?('Download Transcript')
+    page.find('#download_transcript_group').click
+    assert page.has_content?('PDF transcript')
+    assert page.has_content?('Plain text transcript')
+  end
+
 end

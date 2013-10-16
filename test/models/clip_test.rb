@@ -194,6 +194,16 @@ class ClipTest < ActiveSupport::TestCase
     assert clip.transcript_pdf?
   end
 
+  test "should provide the URL for the pdf_transcript" do
+    clip = kinney_clips(:tolson_roots)
+    assert_equal "/media/tolson-roots/tolson-roots-transcript.pdf", clip.pdf_transcript
+  end
+
+  test "should provide the URL for the text_transcript" do
+    clip = kinney_clips(:tolson_roots)
+    assert_equal "/media/tolson-roots/tolson-roots-transcript.txt", clip.text_transcript
+  end
+
   test "should have a media type" do
     clip = kinney_clips(:tolson_roots)
     assert_equal Kinney::MediaType.find_by(name: 'video'), clip.media_type

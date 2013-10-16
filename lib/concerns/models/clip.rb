@@ -142,6 +142,14 @@ module Kinney::Concerns::Models::Clip
   def chapters #vtt file
   end
 
+  def pdf_transcript
+    siskel_path({suffix: '-transcript', extension: 'pdf'})
+  end
+
+  def text_transcript
+    siskel_path({suffix: '-transcript', extension: 'txt'})
+  end
+
   def video_switcher_params
     video_switcher_params_hash = {:class => :clearfix}
     if !description.blank?

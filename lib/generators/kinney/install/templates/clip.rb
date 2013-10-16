@@ -10,6 +10,7 @@ class Kinney::Clip < ActiveRecord::Base
   def siskel_path(opts={})
     path_filename = opts[:filename] || filename
     path = File.join((Rails.configuration.action_controller.relative_url_root || ''), 'media', path_filename, path_filename)
+    path += opts[:suffix] if opts[:suffix]
     if !opts[:extension].blank?
       extension = '.' + opts[:extension] if !opts[:extension].include?('.')
       path + extension

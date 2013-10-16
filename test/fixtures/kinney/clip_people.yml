@@ -17,7 +17,7 @@ three:
   clip: atkins_fire
   created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
   updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
-  
+
 four:
   person: atkins
   clip: atkins_roots
@@ -27,5 +27,11 @@ four:
 five:
   person: raiford
   clip: raiford
+  created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+  updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+
+six:
+  person: gusler
+  clip: gusler_players
   created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
   updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
