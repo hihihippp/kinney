@@ -20,7 +20,7 @@
     <h2><%= t '.clips' %></h2>
 
     <% if @fallback_clips %>
-      <div class="alert">
+      <div class="alert alert-warning">
         <%= t '.no_clips_match_message' %>
       </div>
     <% end -%>
@@ -48,7 +48,7 @@
     <div class="well">
       <h2>People</h2>
       <% if @fallback_people %>
-        <div class="alert">
+        <div class="alert alert-warning">
           <%= t '.no_people_match_message' %>
         </div>
       <% end -%>
