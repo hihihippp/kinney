@@ -18,7 +18,7 @@ class MicrodataTest < ActionDispatch::IntegrationTest
     assert item.properties['image'].first.include?('scrc.lib.ncsu.edu')
     assert_equal(["272"], item.properties['height'])
     assert_equal(["480"], item.properties['width'])
-    assert_equal(["This is a description of the Roots clip. Interview on June  4, 2011. (0:13)"], item.properties['description'])
+    assert_equal(["This is a description of the Roots clip. (0:13)"], item.properties['description'])
   end
 
   test "person show view should have microdata", :microdata do
