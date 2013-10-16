@@ -36,6 +36,9 @@ ActiveAdmin.register Kinney::Clip do
       row :created_at
       row :updated_at
       row :slug
+      row :media_type
+      row :transcript_text
+      row :transcript_pdf
       row :video do
         div do
           render :partial => '/kinney/video', :locals => {:clip => clip}
@@ -60,7 +63,7 @@ ActiveAdmin.register Kinney::Clip do
     def permitted_params
       params.permit kinney_clip: [:filename, :quotes, :title, :top_pick, {:topic_ids => []}, {:person_ids => []},
         :duration, :interview_date, :description, :featured, :interview_place, :slug, :media_type_id,
-        {:interviewer_ids => []}]
+        {:interviewer_ids => []}, :transcript_text, :transcript_pdf]
     end
   end
 

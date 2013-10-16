@@ -31,6 +31,8 @@
       <%= f.input :people, :input_html => {:class => 'chzn-select'} %>
       <%= f.input :interviewers, :input_html => {:class => 'chzn-select'} %>
       <%= f.input :media_type %>
+      <%= f.input :transcript_text, label: 'Transcript plain text file?' %>
+      <%= f.input :transcript_pdf, label: 'Transcript PDF?' %>
       <%= f.input :quotes, :as => :html_editor %>
   <% end -%>
   <%= f.action(:submit) %>

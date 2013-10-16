@@ -185,9 +185,13 @@ class ClipTest < ActiveSupport::TestCase
   end
 
   test "should have a transcript_text boolean" do
-    skip
     clip = kinney_clips(:tolson_roots)
     assert clip.transcript_text?
+  end
+
+  test "should have a transcript_pdf boolean" do
+    clip = kinney_clips(:tolson_roots)
+    assert clip.transcript_pdf?
   end
 
   test "should have a media type" do

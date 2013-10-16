@@ -14,8 +14,8 @@ tolson_roots:
   slug: growing-up-in-edgecombe-county
   media_type: video
   interview_place: Raleigh, NC
-  # transcript_text: true
-  # transcript_vtt: false
+  transcript_text: true
+  transcript_pdf: true
 
 
 tolson_mentors_caldwell:
