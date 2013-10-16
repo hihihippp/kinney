@@ -16,7 +16,7 @@
 </div>
 
 <div class="row">
-  <div class="col-md-8" id="clips">
+  <div class="col-xs-12 col-md-8 col-sm-8" id="clips">
     <h2><%= t '.clips' %></h2>
 
     <% if @fallback_clips %>
@@ -30,19 +30,21 @@
       </div>
     <% end -%>
 
+    <div class="row">
     <% @clips.each_slice(2) do |sliced_clips| %>
       <div class="thumbnails">
         <% sliced_clips.each do |clip| %>
-          <div class="col-md-6 <%= cycle('odd', 'even') %>">
+          <div class="col-xs-6 col-sm-6 col-md-6 <%= cycle('odd', 'even') %>">
              <%= render :partial => '/kinney/clip_link', :locals => {:clip => clip} %>
           </div>
         <% end -%>
       </div>
     <% end -%>
+    </div>
 
   </div>
 
-  <div class="col-md-4" id="people">
+  <div class="col-xs-12 col-sm-4 col-md-4 " id="people">
     <div class="well">
       <h2>People</h2>
       <% if @fallback_people %>
