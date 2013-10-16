@@ -50,7 +50,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12" id="topic_clips">
-          <h2>More Video</h2>
+          <h2><%= t 'kinney.clips.show.more_video' %></h2>
           <% @topic_clips.each do |topic_clip| %>
             <% if topic_clip %>
               <div class="col-md-3 col-sm-3 col-xs-6 <%= cycle('odd', 'even', name: :odd_even) %> <%= cycle('first', 'second', 'third', 'fourth', name: :ordinal) %>">
