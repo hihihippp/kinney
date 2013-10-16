@@ -3,7 +3,7 @@ namespace :kinney do
   task :reindex => :environment do
     ['Clip', 'Person'].each do |klass|
       ENV['CLASS'] = 'Kinney::' + klass
-      Rake::Task['tire:import'].execute
+      Rake::Task['tire:import:model'].execute
     end
   end
 
