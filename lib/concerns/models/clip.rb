@@ -44,6 +44,18 @@ module Kinney::Concerns::Models::Clip
       indexes :topics,       :analyzer => 'snowball', :as => Proc.new{|clip| clip.topics.map{|topic| topic.name}}
       indexes :webvtt,       :analyzer => 'snowball', :as => Proc.new{|clip| clip.webvtt.cues.map{|cue| cue.text} if clip.webvtt}
       indexes :top_pick,     :type => 'boolean'
+      indexes :transcript,   :analyzer => 'snowball', :as => Proc.new { |clip|
+        if clip.transcript_text?
+          location = clip.text_transcript
+          if !location.include?('http://')
+            # FIXME: This only works if the local files are in the Rails.root!
+            # Maybe we ought to just provide a method on Clip for the transcript or
+            # other text that needs indexed?
+            location = File.join(Rails.root, 'public', location)
+          end
+          open(location).read
+        end
+      }
     end
     settings :index => {
       :analysis => {
@@ -65,16 +77,16 @@ module Kinney::Concerns::Models::Clip
 
 
   # for elasticsearch/tire
-  def to_indexed_json
-    hash = attributes
-    hash[:people] = people.map{|person| person.full_name}
-    hash[:topics] = topics.map{|topic| topic.name}
+  # def to_indexed_json
+  #   hash = attributes
+  #   hash[:people] = people.map{|person| person.full_name}
+  #   hash[:topics] = topics.map{|topic| topic.name}
 
-    web_vtt = webvtt
-    hash[:webvtt] = web_vtt.cues.map{|cue| cue.text} if web_vtt
+  #   web_vtt = webvtt
+  #   hash[:webvtt] = web_vtt.cues.map{|cue| cue.text} if web_vtt
 
-    hash.to_json
-  end
+  #   hash.to_json
+  # end
   # end elasticsearch end
 
   def title_and_filename
