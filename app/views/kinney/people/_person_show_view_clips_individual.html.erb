@@ -3,7 +3,7 @@
   <h2><%= @person.last_name %> <%= t 'kinney.clips.plural' %></h2>
     <div class="row">
       <% @person.clips.each do |clip| %>
-        <div class="col-md-4">
+        <div class="col-xs-6 col-sm-4 col-md-4">
         <%= render partial: '/kinney/clip_link', locals: {clip: clip} %>
         </div>
       <% end %>
