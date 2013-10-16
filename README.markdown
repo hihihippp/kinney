@@ -153,10 +153,12 @@ bundle exec rails s
 - Note that for production and staging environments the mailer must be set up
 - config/initializers/devise.rb updated to include config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
 - Note that app/assets/javascripts/kinney/admin/siskel_path.js should be overridden
-- added gems should be generated in
-- more documentation
-- generate application_name helper
-- generate seeds loading into db/seeds.rb and run the rake db:seed task
+- Added gems should be generated in
+- More documentation
+- Generate application_name helper
+- Generate seeds loading into db/seeds.rb and run the rake db:seed task
+- Make some notes about how we deliver HTML5 video using some conventions for organization and filenaming
+- Make note about how effort has been made to allow for translations. How to override headings using locales.
 
 # Author
 
