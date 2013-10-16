@@ -1,12 +1,9 @@
 <% @title = t('kinney.pages.giving.title') %>
 <% @meta_description = t('kinney.pages.giving.meta_description') %>
 
-<%= content_for :header do %>
-  <h1><%= t 'kinney.pages.giving.title' %></h1>
-<% end -%>
-
 <div class="row">
-  <div class="col-md-12">
+  <div class="col-md-8 col-md-offset-2">
+    <h1><%= t 'kinney.pages.giving.title' %></h1>
     <%= render '/kinney/pages/giving_text' %>
   </div>
 </div>
