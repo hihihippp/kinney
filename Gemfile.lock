@@ -149,6 +149,8 @@ GEM
     eventmachine (1.0.3)
     execjs (2.0.1)
     ffi (1.9.0)
+    font-awesome-rails (3.2.1.3)
+      railties (>= 3.2, < 5.0)
     font-awesome-sass-rails (3.0.2.2)
       railties (>= 3.1.1)
       sass-rails (>= 3.1.1)
@@ -334,7 +336,7 @@ DEPENDENCIES
   database_cleaner (< 1.1.0)
   deadweight
   djatoka
-  font-awesome-sass-rails
+  font-awesome-rails
   guard-livereload
   guard-minitest
   guard-test
