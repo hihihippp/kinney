@@ -1,21 +1,20 @@
 <%= content_for :header do %>
-  <div class="row">
-    <div class="col-md-8 offset2">
-      <h1 itemprop="name"><%= @person.full_name %></h1>
-    </div>
-  </div>
+
 <% end -%>
 
-<div class='row' itemscope itemtype="http://schema.org/Person" itemref="header currently">
+<div class='row' itemscope itemtype="http://schema.org/Person" itemref="currently">
 
-  <span itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
+  <!-- <span itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization"> -->
     <%# FIXME: make more abstract %>
-    <meta itemprop="name" content="North Carolina State University">
-  </span>
+    <!-- <meta itemprop="name" content="North Carolina State University">
+  </span> -->
 
-  <div>
+    <div class="col-md-8 col-md-offset-2">
 
-    <div class="col-md-8 offset2">
+
+      <h1 itemprop="name"><%= @person.full_name %></h1>
+
+
       <div class="clearfix">
         <% if !@top_image.blank? %>
           <%= link_to(@top_image.external_url, :class => [:thumbnail, :image_modal_trigger], :'data-target'=>"#modal_image_top_pick", :id => "image_top_pick") do %>
@@ -33,11 +32,11 @@
       <%= render 'person_images' %>
 
     </div>
-  </div><!-- description -->
+
 </div><!-- person -->
 
 <div class="row">
-  <div class="col-md-8 offset2" id="profile_info">
+  <div class="col-md-8 col-md-offset-2" id="profile_info">
     <%= render 'profile' %>
     <%= render 'map' %>
 
