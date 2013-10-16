@@ -32,9 +32,6 @@ class MicrodataTest < ActionDispatch::IntegrationTest
     assert item.properties['description'].include?("Norris Tolson grew up in Edgecombe County.")
     assert_equal(3, item.properties['image'].length)
     assert item.properties['image'].first.include?('scrc.lib.ncsu.edu')
-    assert item.properties['alumniOf']
-    assert_equal ['http://schema.org/EducationalOrganization'], item.properties['alumniOf'].first.type
-    assert_equal(['North Carolina State University'], item.properties['alumniOf'].first.properties['name'])
   end
 
 end
