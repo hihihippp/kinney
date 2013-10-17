@@ -1,11 +1,8 @@
 <% @title = t('.title') %>
 
-<%= content_for :header do %>
-  <h1><%= t '.title' %></h1>
-<% end -%>
-
 <div class="row">
   <div class="col-md-12">
+    <h1><%= t '.title' %></h1>
     <%- if params[:q].blank? -%>
 
     <%- else -%>
