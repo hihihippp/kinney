@@ -44,6 +44,7 @@ module Kinney::Concerns::Models::Clip
       indexes :topics,       :analyzer => 'snowball', :as => Proc.new{|clip| clip.topics.map{|topic| topic.name}}
       indexes :webvtt,       :analyzer => 'snowball', :as => Proc.new{|clip| clip.webvtt.cues.map{|cue| cue.text} if clip.webvtt}
       indexes :top_pick,     :type => 'boolean'
+      indexes :interviewers,  :analyzer => 'snowball', :as => Proc.new{|clip| clip.interviewers.map{|person| person.full_name}  }
       indexes :transcript,   :analyzer => 'snowball', :as => Proc.new { |clip|
         if clip.transcript_text?
           location = clip.text_transcript
