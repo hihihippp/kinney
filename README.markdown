@@ -159,6 +159,7 @@ bundle exec rails s
 - Generate seeds loading into db/seeds.rb and run the rake db:seed task
 - Make some notes about how we deliver HTML5 video using some conventions for organization and filenaming
 - Make note about how effort has been made to allow for translations. How to override headings using locales.
+- create documentation about how most controllers are now implemented as concerns which allow for easier overriding.
 
 # Author
 
