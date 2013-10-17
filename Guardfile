@@ -10,6 +10,7 @@ group :tests do
     # Rails example
     watch(%r{^app/models/kinney/(.+)\.rb$})             { |m| "test/models/#{m[1]}_test.rb" }
     watch(%r{^lib/concerns/models/(.+)\.rb$})           { |m| "test/models/#{m[1]}_test.rb" }
+    watch(%r{^lib/concerns/controllers/(.+)\.rb$})      { "test" }
     watch(%r{^app/controllers/kinney/(.+)\.rb$})        { |m| "test/controllers/#{m[1]}_test.rb" }
     watch(%r{^app/views/kinney/.+\.erb$})               { "test/integration" }
     watch(%r{^admin/.+\.rb$})                           {"test/integration"}

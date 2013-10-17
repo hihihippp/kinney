@@ -66,7 +66,7 @@ class PersonTest < ActiveSupport::TestCase
 
   test "should return people without images" do
     people = Kinney::Person.without_images
-    assert_equal 5, people.length
+    assert_equal 6, people.length
   end
 
 end

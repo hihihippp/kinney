@@ -13,9 +13,11 @@ require 'kinney/mailer_logger'
 module Kinney
   module Concerns
     module Models
-
+    end
+    module Controllers
     end
   end
 end
 
 Dir[File.dirname(__FILE__) + "/concerns/models/*.rb"].each {|file| require file }
+Dir[File.dirname(__FILE__) + "/concerns/controllers/*.rb"].each {|file| require file }
