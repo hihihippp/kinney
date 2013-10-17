@@ -45,23 +45,22 @@
   </div>
 
   <div class="col-xs-12 col-sm-4 col-md-4 " id="people">
-    <div class="well">
-      <h2>People</h2>
-      <% if @fallback_people %>
-        <div class="alert alert-warning">
-          <%= t '.no_people_match_message' %>
-        </div>
-      <% end -%>
-      <% if @query.blank? %>
-        <div class="alert alert-success">
-          <%= t '.no_current_search_people_message' %>
-        </div>
-      <% end -%>
-      <div class="list-group">
-        <% @people.each do |person| %>
-          <%= link_to person.full_name, person, class: 'list-group-item' %>
-        <% end -%>
+    <h2>People</h2>
+    <% if @fallback_people %>
+      <div class="alert alert-warning">
+        <%= t '.no_people_match_message' %>
       </div>
+    <% end -%>
+    <% if @query.blank? %>
+      <div class="alert alert-success">
+        <%= t '.no_current_search_people_message' %>
+      </div>
+    <% end -%>
+    <div class="list-group">
+      <% @people.each do |person| %>
+        <%= link_to person.full_name, person, class: 'list-group-item' %>
+      <% end -%>
     </div>
   </div>
+
 </div>
