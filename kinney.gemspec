@@ -34,7 +34,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'capybara', "~> 2.1.0"
   s.add_development_dependency 'database_cleaner', '<1.1.0'
   s.add_development_dependency 'launchy'
-  s.add_development_dependency 'djatoka'
   s.add_development_dependency 'mocha'
   s.add_development_dependency 'capybara-webkit'
 end

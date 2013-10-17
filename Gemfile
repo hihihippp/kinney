@@ -10,7 +10,6 @@ gem 'activeadmin', git: 'https://github.com/gregbell/active_admin.git', branch: 
 
 # jquery-rails is used by the dummy application
 gem "jquery-rails"
-gem 'djatoka'
 gem 'font-awesome-rails'
 gem 'compass-rails', '>= 2.0.alpha.0'  #github: 'milgner/compass-rails', branch: 'rails4'
 

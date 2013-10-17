@@ -135,12 +135,6 @@ GEM
       railties (>= 3.2.6, < 5)
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
-    djatoka (0.2.3)
-      addressable
-      hashie
-      json
-      mime-types
-      trollop
     ejs (1.1.1)
     em-websocket (0.5.0)
       eventmachine (>= 0.12.9)
@@ -178,7 +172,6 @@ GEM
     has_scope (0.6.0.rc)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
-    hashie (2.0.5)
     hashr (0.0.22)
     hike (1.2.3)
     html_truncator (0.3.1)
@@ -309,7 +302,6 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    trollop (2.0)
     tzinfo (0.3.38)
     uglifier (2.2.1)
       execjs (>= 0.3.0)
@@ -335,7 +327,6 @@ DEPENDENCIES
   compass-rails (>= 2.0.alpha.0)
   database_cleaner (< 1.1.0)
   deadweight
-  djatoka
   font-awesome-rails
   guard-livereload
   guard-minitest
