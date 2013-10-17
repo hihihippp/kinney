@@ -9,7 +9,6 @@ module Kinney
           search.query do |query|
              query.string @query
           end
-          search.sort {by :top_pick, 'desc'}
         end
         @people = Person.tire.search :load => true do |search|
           search.query do |query|
@@ -19,11 +18,11 @@ module Kinney
         end
 
         if @clips.blank?
-          clips_fallback 
+          clips_fallback
           @fallback_clips = true
         end
         if @people.blank?
-          people_fallback 
+          people_fallback
           @fallback_people = true
         end
 

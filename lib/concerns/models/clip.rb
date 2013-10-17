@@ -38,15 +38,13 @@ module Kinney::Concerns::Models::Clip
       indexes :id,           :index    => :not_analyzed
       indexes :filename,     :index => :not_analyzed
       indexes :quotes,       :analyzer => 'snowball'
-      indexes :title,        :analyzer => 'snowball'
-      indexes :description,  :analyzer => 'snowball'
-      indexes :people,       :analyzer => 'snowball', :boost => 10000, :as => Proc.new{|clip| clip.people.map{|person| person.full_name}}
-      indexes :people_kw,    :analyzer => 'keyword', :boost => 10000, :as => Proc.new{|clip| clip.people.map{|person| person.full_name}}
+      indexes :title,        :analyzer => 'snowball', :boost => 100
+      indexes :description,  :analyzer => 'snowball', :boost => 10
+      indexes :people,       :analyzer => 'keyword', :boost => 10000, :as => Proc.new{|clip| clip.people.map{|person| person.full_name}}
       indexes :topics,       :analyzer => 'snowball', :as => Proc.new{|clip| clip.topics.map{|topic| topic.name}}
       indexes :webvtt,       :analyzer => 'snowball', :as => Proc.new{|clip| clip.webvtt.cues.map{|cue| cue.text} if clip.webvtt}
       indexes :top_pick,     :type => 'boolean'
-      indexes :transcript,   :analyzer => 'snowball',
-        :as => Proc.new { |clip|
+      indexes :transcript,   :analyzer => 'snowball', :as => Proc.new { |clip|
         if clip.transcript_text?
           location = clip.text_transcript
           if !location.include?('http://')
