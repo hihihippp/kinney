@@ -13,7 +13,9 @@ before_install:
   - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 install: bundle install
 before_script:
-  - "RAILS_ENV=test bundle exec rake db:create db:schema:load"
   - "mkdir -p test/dummy/tmp/cache/"
+  - mysql -e 'create database kinney_test'
+  - psql -c 'create database kinney_test' -U postgres
+  - "RAILS_ENV=test bundle exec rake db:create db:schema:load"
 services:
   - elasticsearch

@@ -13,6 +13,10 @@ gem "jquery-rails"
 gem 'font-awesome-rails'
 gem 'compass-rails', '>= 2.0.alpha.0'  #github: 'milgner/compass-rails', branch: 'rails4'
 
+# for travisci testing under these two databases
+gem 'mysql2'
+gem 'pg'
+
 group :development do
   gem 'guard-livereload'
   gem 'pry-rails'
