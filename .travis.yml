@@ -16,6 +16,6 @@ before_script:
   - "mkdir -p test/dummy/tmp/cache/"
   - mysql -e 'create database kinney_test;'
   - psql -c 'create database kinney_test;' -U postgres
-  - "RAILS_ENV=test bundle exec rake db:create db:schema:load"
+  - "RAILS_ENV=test DB=mysql bundle exec rake db:create db:schema:load"
 services:
   - elasticsearch
