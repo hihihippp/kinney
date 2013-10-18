@@ -12,13 +12,13 @@ class AdminClipTest < ActionDispatch::IntegrationTest
   end
 
   test "admin user can create new clip" do
-    visit('/admin/kinney_clips')
+    visit(admin_kinney_clips_path)
     click_link('New Kinney Clip')
     assert page.has_content?('New Kinney Clip')
   end
 
   test "adding duration to the form when filename entered" do
-    # skip
+    skip
     visit(new_admin_kinney_clip_path)
     assert page.find_field('kinney_clip_duration')
     assert page.find_field('kinney_clip_duration').value.empty?

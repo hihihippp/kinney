@@ -44,7 +44,7 @@ class ActiveSupport::TestCase
       fill_in "admin_user_email", :with => 'admin@example.com'
       fill_in "Password", :with => 'password'
       click_button "Sign in"
-      sleep 0.2 # For some reason without this there are test failures
+      # sleep 0.2 # For some reason without this there are test failures
     end
   end
 
@@ -73,7 +73,7 @@ end
 # uses a separate server thread, which the transactions would be hidden
 # from. We hence use DatabaseCleaner to truncate our test database.
 require 'database_cleaner'
-DatabaseCleaner.strategy = :truncation
+DatabaseCleaner.strategy = :transaction
 
 class ActionDispatch::IntegrationTest
   # Make the Capybara DSL available in all integration tests
@@ -82,6 +82,10 @@ class ActionDispatch::IntegrationTest
   # if File.exist? "/opt/firefox17/firefox"
   #   Selenium::WebDriver::Firefox.path= "/opt/firefox17/firefox"
   # end
+
+  setup do
+    # puts Kinney::AdminUser.all.count
+  end
 
   teardown do
     DatabaseCleaner.clean       # Truncate the database
@@ -139,3 +143,18 @@ if ENV['FASTFAIL']
     end
   end
 end
+
+# Not sure why the following was necessary for tests to pass under mysql. For some reason fixtures
+# were not being reloaded with a database cleaner strategy of truncation.
+# http://blog.plataformatec.com.br/2011/12/three-tips-to-improve-the-performance-of-your-test-suite/
+class ActiveRecord::Base
+  mattr_accessor :shared_connection
+  @@shared_connection = nil
+
+  def self.connection
+    @@shared_connection || retrieve_connection
+  end
+end
+# Forces all threads to share the same connection. This works on
+# Capybara because it starts the web server in a thread.
+ActiveRecord::Base.shared_connection = ActiveRecord::Base.connection
