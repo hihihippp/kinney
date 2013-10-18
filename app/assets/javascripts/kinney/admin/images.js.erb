@@ -1,30 +1,30 @@
-<% if defined?(Djatoka) %>
-
 $(document).ready(function() {
   $('body.edit.admin_kinney_images #main_content, body.new.admin_kinney_images #main_content').prepend('<div id="preview_image"></div>');
-  
-  function insertDjimage(){
-    var base_url = "<%= Djatoka.resolver.url %>";
-    var params = jQuery.param({
-      'rft_id': $('#kinney_image_filename').val(),
-      'svc.level':2,
-      'svc_id':'info:lanl-repo/svc/getRegion',
-      'svc_val_fmt':'info:ofi/fmt:kev:mtx:jpeg2000',
-      'url_ver':'Z39.88-2004'
-    });
-    var full_url = base_url + '?' + params;
+
+  var delay_before_insert = (function(){
+    var timer = 0;
+    return function(callback, ms){
+      clearTimeout (timer);
+      timer = setTimeout(callback, ms);
+    };
+  })();
+
+  function insert_image(){
+    var base_url = "/photos/";
+    var full_url = base_url + $('#kinney_image_filename').val() + '.jpg';
     var image_tag = '<img src="' + full_url + '"/>'
     $('#preview_image').html(image_tag);
   }
-  
-  if ($('body.admin_kinney_images #kinney_image_filename').length > 0 && $('#kinney_image_filename').val().length > 0){
-    insertDjimage();
-  }
-  
-  $('input#kinney_image_filename').keyup(function(){
-    insertDjimage();
-  });
-  
-});
 
-<% end %>
+  if ($('body.admin_kinney_images #kinney_image_filename').length > 0 && $('#kinney_image_filename').val().length > 0){
+    insert_image();
+  }
+
+  $('input#kinney_image_filename').keyup(function(){
+    delay_before_insert(function(){
+      insert_image();
+    }, 1000 );
+
+  });
+
+});

@@ -160,6 +160,7 @@ bundle exec rails s
 - Make some notes about how we deliver HTML5 video using some conventions for organization and filenaming
 - Make note about how effort has been made to allow for translations. How to override headings using locales.
 - create documentation about how most controllers are now implemented as concerns which allow for easier overriding.
+- from documentation remove KinneyHelper and add ImageHelper
 
 # Author
 

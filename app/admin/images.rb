@@ -49,8 +49,6 @@ ActiveAdmin.register Kinney::Image do
   end
 
   controller do
-    helper ::KinneyHelper
-
     def permitted_params
       params.permit kinney_image: [:filename, :top_pick, {:person_ids => []}]
     end

@@ -6,5 +6,9 @@ module Kinney
       File.join('http://d.lib.ncsu.edu/collections/catalog/', filename)
     end
 
+    def method_name
+
+    end
+
   end
 end
