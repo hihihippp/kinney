@@ -4,9 +4,8 @@ rvm:
   - "1.9.3"
 env:
   - DB=sqlite
-  - DB=mysql
+  # - DB=mysql
   - DB=postgresql
-# uncomment this line if your project needs to run something other than `rake`:
 script: bundle exec rake test
 before_install:
   - "export DISPLAY=:99.0"
