@@ -15,7 +15,7 @@ gem 'compass-rails', '>= 2.0.alpha.0'  #github: 'milgner/compass-rails', branch:
 
 # for travisci testing under these two databases
 gem 'mysql2'
-gem 'pg'
+# gem 'pg'
 
 group :development do
   gem 'guard-livereload'
