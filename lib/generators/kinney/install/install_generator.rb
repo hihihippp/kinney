@@ -22,21 +22,29 @@ DESC
         gsub_file 'app/assets/javascripts/application.js', "//= require_tree .", ''
       end
 
-      def inject_css
-        application_css_scss = "app/assets/stylesheets/application.css.scss"
-        application_css = "app/assets/stylesheets/application.css"
-        css_file = File.exist?(application_css_scss) ? application_css_scss : application_css
-
-        inject_into_file css_file, :before => " *= require_self" do
-          " *= require kinney\n*= require font-awesome"
-        end
-        gsub_file css_file, "*= require_tree .\n", ''
+      def create_css
+        remove_file("app/assets/stylesheets/application.css")
+        create_file "app/assets/stylesheets/application.css.scss",
+          %Q|@import "kinney";\n@import "font-awesome";|
       end
 
-      # create KinneyHelper
-      def create_kinney_helpers
-        template 'kinney_helper.rb', 'app/helpers/kinney_helper.rb'
+      def remove_turbolinks
+        gsub_file('Gemfile', %Q|gem 'turbolinks'|, '')
+        gsbu_file('app/assets/javascripts/application.js', '//= require turbolinks', '')
       end
+
+      def insert_seeds
+        insert_into_file "db/seeds.rb", "\nKinney::Engine.load_seed\n"
+      end
+
+      def remove_coffeescript
+        gsub_file('Gemfile', /^gem 'coffee-rails.*$'/, '')
+      end
+
+      # # create KinneyHelper
+      # def create_kinney_helpers
+      #   template 'kinney_helper.rb', 'app/helpers/kinney_helper.rb'
+      # end
 
       def create_model_overrides
         empty_directory 'app/models/kinney'
@@ -62,6 +70,20 @@ EOF
         template 'devise.rb', 'config/initializers/devise.rb'
       end
 
+      def create_application_name
+        insert_into_file "app/helpers/application_helper.rb", after: "module ApplicationHelper\n" do
+          application_name = ask "What is the name of your application?"
+          text = <<EOF
+  def application_name
+    "#{application_name}"
+  end
+
+  def navbar_application_name
+    application_name
+  end
+EOF
+        end
+      end
 
       # ActiveAdmin setup
       def create_active_admin_css
@@ -88,11 +110,12 @@ EOF
 
 
 # added by Kinney
-gem 'bootstrap-sass'
 # once these are published as gems we can use them from there, until then we need to have them in our Gemfile
 gem 'mediaelement_rails', :git => 'https://github.com/tobsch/mediaelement_rails.git'
 gem 'webvtt', :git => 'https://github.com/jronallo/webvtt.git'
 
+gem 'compass-rails', '>= 2.0.alpha.0'
+gem 'bootstrap-sass', git: 'https://github.com/thomas-mcdonald/bootstrap-sass.git', branch: 'master'
 EOF
         inject_into_file 'Gemfile', :after => "source 'https://rubygems.org'" do
           gems
