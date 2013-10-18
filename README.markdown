@@ -15,8 +15,8 @@ This code was originally part of the [Student Leadership Initiative](http://d.li
 
 # Install
 
-1. Create a fresh Rails application `rails new olympia` and `cd olympia`
-2. Add the following to your Gemfile:
+- Create a fresh Rails application `rails new olympia` and `cd olympia`
+- Add the following to your Gemfile:
 
 ```
 gem 'kinney', git: 'https://github.com/jronallo/kinney.git', branch: 'master'
@@ -24,12 +24,12 @@ gem 'font-awesome-sass-rails'
 gem 'activeadmin', git: 'https://github.com/gregbell/active_admin.git', branch: 'master'
 ```
 
-3. `bundle install`
-4. `bundle exec rake kinney:install:migrations db:migrate`
-5. `bundle exec rails generate kinney:install` and `bundle install`. You may have to `bundle update compass-rails` for bundle install to complete.
-6. Seed the database: `bundle exec rake db:seed`
-6. Add an ExecJS runtime for your environment. In your Gemfile you can uncomment `gem 'therubyracer'`
-7. Add a devise secret key to config/initializers/devise.rb:
+- `bundle install`
+- `bundle exec rake kinney:install:migrations db:migrate`
+- `bundle exec rails generate kinney:install` and `bundle install`. You may have to `bundle update compass-rails` for bundle install to complete.
+- Seed the database: `bundle exec rake db:seed`
+- Add an ExecJS runtime for your environment. In your Gemfile you can uncomment `gem 'therubyracer'`
+- Add a devise secret key to config/initializers/devise.rb:
 
 ```
 config.secret_key = 'a better secret key than this'
@@ -37,11 +37,11 @@ config.secret_key = 'a better secret key than this'
 
 You can create a new secret with `rake secret`.
 
-9. `bundle exec rails c` to enter the Rails console and then `Kinney::AdminUser.create!(:email => 'admin@example.com', :password => 'password', :password_confirmation => 'password')` and `exit` to return to your shell.
-9. Start the Rails server (`bundle exec rails s`) and go to <http://localhost:3000/admin>. Login with the credentials above.
-10. Add a Topic.
-11. Add a Person.
-12. Now we need to put some video and related files where kinney can find them. By default video and related assets are served up from your app under /public/media/ directory and images from /public/photos/. (Later we'll see how to override these defaults to use a different asset host.) For now we can just add some dummy data from the kinney gem.
+- `bundle exec rails c` to enter the Rails console and then `Kinney::AdminUser.create!(:email => 'admin@example.com', :password => 'password', :password_confirmation => 'password')` and `exit` to return to your shell.
+- Start the Rails server (`bundle exec rails s`) and go to <http://localhost:3000/admin>. Login with the credentials above.
+- Add a Topic.
+- Add a Person.
+- Now we need to put some video and related files where kinney can find them. By default video and related assets are served up from your app under /public/media/ directory and images from /public/photos/. (Later we'll see how to override these defaults to use a different asset host.) For now we can just add some dummy data from the kinney gem.
 
 Either check out the kinney code with `git clone https://github.com/jronallo/kinney.git` or find where your installed gem is with `bundle show kinney`. From the root of either copy over the directories public/media and public/photos into your own application's public directory.
 
