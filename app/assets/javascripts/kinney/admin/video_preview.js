@@ -29,9 +29,12 @@ $(document).ready(function() {
     // FIXME: This may not be wanted in all circumstances so make it configurable whether this is on or not
     // $('body.admin_kinney_clips #kinney_clip_submit_action input').attr('disabled', 'disabled');
     $('#vtt_result').html('<div class="alert">Give focus to the filename. You will not be able to save until there is a WEBVTT file.</div>');
-    checkForWebvtt();
+    // checkForWebvtt();
     $('body.admin_kinney_clips input#kinney_clip_filename').bind('keyup change paste focus', function(){
-      checkForWebvtt();
+      setTimeout(function(){
+        checkForWebvtt();
+      }, 100);
+
     });
   }
 

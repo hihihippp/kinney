@@ -17,17 +17,17 @@ class AdminClipTest < ActionDispatch::IntegrationTest
     assert page.has_content?('New Kinney Clip')
   end
 
-#  test "adding duration to the form when filename entered" do
-#    visit(new_admin_kinney_clip_path)
-#    assert page.find_field('kinney_clip_duration')
-#    assert page.find_field('kinney_clip_duration').value.empty?
-#    fill_in 'Filename', :with => 'tolson-roots'
-#    # This was having random failures without the wait_until and appears to even after adding it
-#    # the wait_until may be slowing down tests too much
-#    # page.find_field('clip_filename').trigger('focus')
-#    # wait_until {!page.find_field('clip_duration').value.blank?}
-#    # assert_equal '44', page.find_field('clip_duration').value
-#  end
+  test "adding duration to the form when filename entered" do
+    # skip
+    visit(new_admin_kinney_clip_path)
+    assert page.find_field('kinney_clip_duration')
+    assert page.find_field('kinney_clip_duration').value.empty?
+    fill_in 'Filename', :with => 'tolson-roots'
+    page.find_field('kinney_clip_filename').trigger('focus')
+    wait_for_ajax
+    sleep 2 # FIXME: instead loop until the value is present using a timeout
+    assert_equal '13', page.find_field('kinney_clip_duration').value
+  end
 
   test "add a description for a clip" do
     visit(new_admin_kinney_clip_path)

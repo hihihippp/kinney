@@ -9,6 +9,8 @@ require 'mocha/setup'
 # require 'selenium-webdriver'
 require 'pry'
 require 'microdata'
+require 'capybara-screenshot'
+require 'capybara-screenshot/minitest'
 
 require 'vcr'
 VCR.configure do |c|
@@ -100,9 +102,20 @@ class ActionDispatch::IntegrationTest
       sleep(0.1) until !page.driver.console_messages.blank?
     end
   end
+
+  def wait_for_ajax
+    Timeout.timeout(Capybara.default_wait_time) do
+      loop do
+        active = page.evaluate_script('jQuery.active')
+        break if active == 0
+      end
+    end
+  end
+
+
 end
 
-# if ENV['FASTFAIL']
+if ENV['FASTFAIL']
   # On failure/error, print stack trace and exit.
   module MiniTest
     class Unit
@@ -125,4 +138,4 @@ end
       alias_method_chain :puke, :immediate_feedback
     end
   end
-# end
+end

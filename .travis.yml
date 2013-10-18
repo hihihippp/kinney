@@ -14,8 +14,8 @@ before_install:
 install: bundle install
 before_script:
   - "mkdir -p test/dummy/tmp/cache/"
-  - mysql -e 'create database kinney_test'
-  - psql -c 'create database kinney_test' -U postgres
+  - mysql -e 'create database kinney_test;'
+  - psql -c 'create database kinney_test;' -U postgres
   - "RAILS_ENV=test bundle exec rake db:create db:schema:load"
 services:
   - elasticsearch

@@ -4,7 +4,8 @@ sqlite: &sqlite
 
 mysql: &mysql
   adapter: mysql2
-  username: root
+  encoding: utf8
+  username: travis
   password:
   database: kinney_<%= Rails.env %>
 

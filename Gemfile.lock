@@ -97,6 +97,9 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    capybara-screenshot (0.3.14)
+      capybara (>= 1.0, < 3)
+      launchy
     capybara-webkit (1.0.0)
       capybara (~> 2.0, >= 2.0.2)
       json
@@ -326,6 +329,7 @@ DEPENDENCIES
   annotate (>= 2.5.0)
   bootstrap-sass!
   capybara (~> 2.1.0)
+  capybara-screenshot
   capybara-webkit
   compass-rails (>= 2.0.alpha.0)
   database_cleaner (< 1.1.0)

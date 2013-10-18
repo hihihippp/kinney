@@ -50,6 +50,7 @@ group :test do
   gem 'vcr'
   gem 'webmock' #, ['>= 1.8.0','< 1.9.0']
   gem 'microdata'
+  gem 'capybara-screenshot'
 end
 
 # Declare any dependencies that are still in development here instead of in
