@@ -17,7 +17,7 @@ ActiveAdmin.register Kinney::Image do
     column "Thumbnail" do |image|
       # FIXME: Have a better fallback than a placeholder image.
 
-        image_tag "http://placehold.it/100x100"
+      image_tag image_path(image), style: 'height: 150px;'
 
     end
     column "Filename", :sortable => :filename do |image|
