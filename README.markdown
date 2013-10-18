@@ -29,13 +29,11 @@ gem 'activeadmin', git: 'https://github.com/gregbell/active_admin.git', branch: 
 - `bundle exec rails generate kinney:install` and `bundle install`. You may have to `bundle update compass-rails` for bundle install to complete.
 - Seed the database: `bundle exec rake db:seed`
 - Add an ExecJS runtime for your environment. In your Gemfile you can uncomment `gem 'therubyracer'`
-- Add a devise secret key to config/initializers/devise.rb:
+- Add a devise secret key to config/initializers/devise.rb. You can create a good new secret to use with `rake secret`.
 
 ```
 config.secret_key = 'a better secret key than this'
 ```
-
-You can create a new secret with `rake secret`.
 
 - `bundle exec rails c` to enter the Rails console and then `Kinney::AdminUser.create!(:email => 'admin@example.com', :password => 'password', :password_confirmation => 'password')` and `exit` to return to your shell.
 - Start the Rails server (`bundle exec rails s`) and go to <http://localhost:3000/admin>. Login with the credentials above.
@@ -43,11 +41,11 @@ You can create a new secret with `rake secret`.
 - Add a Person.
 - Now we need to put some video and related files where kinney can find them. By default video and related assets are served up from your app under /public/media/ directory and images from /public/photos/. (Later we'll see how to override these defaults to use a different asset host.) For now we can just add some dummy data from the kinney gem.
 
-Either check out the kinney code with `git clone https://github.com/jronallo/kinney.git` or find where your installed gem is with `bundle show kinney`. From the root of either copy over the directories public/media and public/photos into your own application's public directory.
+ Either check out the kinney code with `git clone https://github.com/jronallo/kinney.git` or find where your installed gem is with `bundle show kinney`. From the root of either copy over the directories public/media and public/photos into your own application's public directory.
 
-13. Add a Clip (currently video only). If you have the dummy data you can add "tolson-roots" as the Filename for a clip. Make this clip a "top pick".
-14. Visit the home page at <http://localhost:3000> and you should see the poster for your video. Click on it to go to the video play page. Ensure that the video plays.
-15. Read the following to learn how to configure your new oral history site.
+- Add a Clip (currently video only). If you have the dummy data you can add "tolson-roots" as the Filename for a clip. Make this clip a "top pick".
+- Visit the home page at <http://localhost:3000> and you should see the poster for your video. Click on it to go to the video play page. Ensure that the video plays.
+- Read the following to learn how to configure your new oral history site.
 
 # Configuration
 
