@@ -13,6 +13,11 @@ This code was originally part of the [Student Leadership Initiative](http://d.li
 - Rails 4
 - ElasticSearch
 
+Tested under:
+
+- Ruby 2.0.0 and 1.9.3
+- MySQL, Postgresql, and sqlite3
+
 # Install
 
 - Create a fresh Rails application `rails new olympia` and `cd olympia`
