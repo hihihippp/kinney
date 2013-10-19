@@ -132,12 +132,11 @@ In config/initializers/devise.rb add
 
 Every view template within the public portion of the site can be overridden. You'll want to override all of the following views. Most of these are noted within the interface so should be obvious where they effect the display. In some cases you may just want to include a blank template.
 
-### app/views/layouts/kinney/_brand_above_navbar.html.erb
-### app/views/layouts/kinney/_brand_below_navbar.html.erb
+### app/views/layouts/kinney/\_brand\_above\_navbar.html.erb<br>app/views/layouts/kinney/\_brand\_below\_navbar.html.erb
 
 These will need to be overridden to change the Sleater-Kinney orange that shows up above the main navbar. These partials allow for customing the brand of the site.
 
-### app/views/kinney/pages/_home_header.html.erb
+### app/views/kinney/pages/\_home_header.html.erb
 
 If you need to have some kind of other large header on your home page, this is the file to update.
 
@@ -145,10 +144,9 @@ If you need to have some kind of other large header on your home page, this is t
 
 You probably want more in your footer than just about and contact links.
 
-### app/views/kinney/pages/_about_text.html.erb
-### app/views/kinney/_contact.html.erb
+### app/views/kinney/pages/\_about\_text.html.erb<br>app/views/kinney/_contact.html.erb
 
-Both the _about_text and _contact partials show up on the about page and will need to be overridden in your own application.
+Both the \_about_text and _contact partials show up on the about page and will need to be overridden in your own application.
 
 ### Many other views
 
@@ -188,7 +186,7 @@ If you have a good translation that could be used as the default for a language 
 You may need to drop the ElasticSearch index at time:
 
 ```
-bundle exec rake environment app:tire:index:drop INDEX=kinney_dummy_development
+bundle exec rake environment app:tire:index:drop INDEX=kinney\_dummy_development
 ```
 
 Then you need to go into the dummy directory to start the app:
