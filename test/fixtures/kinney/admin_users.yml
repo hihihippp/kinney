@@ -7,9 +7,9 @@
 first:
   email: admin@example.com
   encrypted_password: $2a$10$QmChtnqHqfMVlVao07wCmOxoNYp.V7UcyN5ottVfdQFIMMy81Z3Qq
-  created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
-  updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
-  
+  created_at: <%= DateTime.now.to_s(:db) %>
+  updated_at: <%= DateTime.now.to_s(:db) %>
+
 #
 #two: {}
 #  column: value

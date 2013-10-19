@@ -3,35 +3,35 @@
 one:
   person: tolson
   clip: tolson_roots
-  created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
-  updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+  created_at: <%= DateTime.now.to_s(:db) %>
+  updated_at: <%= DateTime.now.to_s(:db) %>
 
 two:
   person: tolson
   clip: tolson_mentors_caldwell
-  created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
-  updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+  created_at: <%= DateTime.now.to_s(:db) %>
+  updated_at: <%= DateTime.now.to_s(:db) %>
 
 three:
   person: atkins
   clip: atkins_fire
-  created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
-  updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+  created_at: <%= DateTime.now.to_s(:db) %>
+  updated_at: <%= DateTime.now.to_s(:db) %>
 
 four:
   person: atkins
   clip: atkins_roots
-  created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
-  updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+  created_at: <%= DateTime.now.to_s(:db) %>
+  updated_at: <%= DateTime.now.to_s(:db) %>
 
 five:
   person: raiford
   clip: raiford
-  created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
-  updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+  created_at: <%= DateTime.now.to_s(:db) %>
+  updated_at: <%= DateTime.now.to_s(:db) %>
 
 six:
   person: gusler
   clip: gusler_players
-  created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
-  updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+  created_at: <%= DateTime.now.to_s(:db) %>
+  updated_at: <%= DateTime.now.to_s(:db) %>

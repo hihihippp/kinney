@@ -9,8 +9,8 @@ tolson_roots:
   interview_date: 2011-06-04
   description: This is a description of the Roots clip.
   featured: false
-  created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
-  updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+  created_at: <%= DateTime.now.to_s(:db) %>
+  updated_at: <%= DateTime.now.to_s(:db) %>
   slug: growing-up-in-edgecombe-county
   media_type: video
   interview_place: Raleigh, NC
@@ -24,8 +24,8 @@ tolson_mentors_caldwell:
   quotes: MyText
   top_pick: false
   featured: false
-  created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
-  updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+  created_at: <%= DateTime.now.to_s(:db) %>
+  updated_at: <%= DateTime.now.to_s(:db) %>
   media_type: video
 
 atkins_fire:
@@ -33,8 +33,8 @@ atkins_fire:
   title: Pullen Fire
   top_pick: true
   featured: false
-  created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
-  updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+  created_at: <%= DateTime.now.to_s(:db) %>
+  updated_at: <%= DateTime.now.to_s(:db) %>
   slug: pullen-fire-atkins
   media_type: video
 
@@ -43,8 +43,8 @@ atkins_roots:
   title: Applying to NC State
   top_pick: false
   featured: true
-  created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
-  updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+  created_at: <%= DateTime.now.to_s(:db) %>
+  updated_at: <%= DateTime.now.to_s(:db) %>
   media_type: video
 
 gusler_players:
@@ -52,8 +52,8 @@ gusler_players:
   title: Purchasing the Players' Retreat
   top_pick: false
   featured: false
-  created_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
-  updated_at: <%= DateTime.now.strftime('%y-%m-%d %H:%M:%S') %>
+  created_at: <%= DateTime.now.to_s(:db) %>
+  updated_at: <%= DateTime.now.to_s(:db) %>
   media_type: video
   transcript_text: true
   transcript_pdf: false
