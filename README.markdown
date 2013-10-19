@@ -41,7 +41,7 @@ config.secret_key = 'a better secret key than this'
 - Add a Person.
 - Now we need to put some video and related files where kinney can find them. By default video and related assets are served up from your app under /public/media/ directory and images from /public/photos/. (Later we'll see how to override these defaults to use a different asset host.) For now we can just add some dummy data from the kinney gem.
 
- Either check out the kinney code with `git clone https://github.com/jronallo/kinney.git` or find where your installed gem is with `bundle show kinney`. From the root of either copy over the directories public/media and public/photos into your own application's public directory.
+  Either check out the kinney code with `git clone https://github.com/jronallo/kinney.git` or find where your installed gem is with `bundle show kinney`. From the root of either copy over the directories public/media and public/photos into your own application's public directory.
 
 - Add a Clip (currently video only). If you have the dummy data you can add "tolson-roots" as the Filename for a clip. Make this clip a "top pick".
 - Visit the home page at <http://localhost:3000> and you should see the poster for your video. Click on it to go to the video play page. Ensure that the video plays.
@@ -84,7 +84,9 @@ If your videos do not follow this convention, then you may have to override othe
 - Kinney::Clip#mp4 and Kinney::Clip#webm are used for the video URLs. Currently to cover the most modern browsers you'll want to create both MP4 and WebM access copies of your video.
 - Kinney::Clip#vtt is for WebVTT captioning if available.
 
-Instead of adding these files to you application and placing them under version control, you may consider keeping this simple structure and the defaults in place and using symlinks for this directory.
+When overriding these methods you have the flexibility to use whatever you enter into the filename field to determine the final URL however you would like. You might follow a similar convention with filenaming and placement, but have them on another host. Or you could just use the information to connect to a database to retrieve the URL.
+
+Instead of adding these media files to your application and placing them under version control, an initial simple step you may consider is to keep this simple structure and the defaults in place and using symlinks for these directories. 
 
 ### app/models/kinney/image.rb
 This file is generated so that the image model can have an #external_url method. This allows you to link out from an image modal to the original image where you might have more information about the resource.
@@ -166,6 +168,10 @@ The index view for clips (<http://localhost:3002/kinney/videos>) has two differe
 ## JavaScript
 
 If you change where media is served up from (if you move it out of public/media/) then you will also want to override app/assets/javascripts/kinney/admin/siskel_path.js which is used in the admin interface to load the video and check for the presence of a WebVTT file. Loading the video in this way allows for the duration field to be automatically updated based on the loaded video. Loading the video dynamically also ensures that the name of the video is entered correctly before saving.
+
+## CSS
+
+The public interface uses [Bootstrap 3](http://getbootstrap.com/) converted into Sass. You can use Sass variables to customize the appearance of the site. Consult the [Bootstrap customication documentation](http://getbootstrap.com/customize/) for which variables are available.
 
 ## Translations
 

@@ -6,7 +6,7 @@
     <%- if params[:q].blank? -%>
 
     <%- else -%>
-      You searched for <b><%= params[:q] %></b>.
+      <%= t 'kinney.search.searched_for' %> <b><%= params[:q] %></b>.
       <%= link_to t('kinney.search.clear'), search_path , :class => [:btn, 'btn-default' ] if defined?(@clips) %>
     <% end -%>
   </div>
@@ -42,7 +42,7 @@
   </div>
 
   <div class="col-xs-12 col-sm-4 col-md-4 " id="people">
-    <h2>People</h2>
+    <h2><%= t 'kinney.people.plural' %></h2>
     <% if @fallback_people %>
       <div class="alert alert-warning">
         <%= t '.no_people_match_message' %>

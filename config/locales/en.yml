@@ -60,6 +60,7 @@ en:
         table_class_of: Class of
         meta_description: People in this project.
     search:
+      searched_for: You searched for
       index:
         title: Search
         clips: Video
