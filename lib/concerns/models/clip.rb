@@ -25,7 +25,7 @@ module Kinney::Concerns::Models::Clip
 
     extend FriendlyId
     # FIXME: add back in use :history
-    friendly_id :title_and_last_names, :use => [:slugged]
+    friendly_id :title_and_last_names, :use => [:slugged, :history]
 
     default_scope {order('top_pick desc, title asc')}
 
@@ -195,6 +195,11 @@ module Kinney::Concerns::Models::Clip
     topics.map{|topic| topic.clips}.flatten.uniq - [self]
   end
 
+  def should_generate_new_friendly_id?
+    binding.pry
+    slug.blank? || title_changed?
+  end
+
 private
 
   def valid_number_of(association)
@@ -206,4 +211,5 @@ private
   def valid_number_of_topics
     valid_number_of(:topics)
   end
+
 end

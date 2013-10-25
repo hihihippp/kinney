@@ -10,6 +10,7 @@ ActiveAdmin.register Kinney::Topic do
   end
 
   controller do
+    before_filter :slugger, only: :update
     def resource
       if FriendlyId === self.class.resource_class
         get_resource_ivar || set_resource_ivar(end_of_association_chain.friendly.find(params[:id]))
@@ -19,6 +20,9 @@ ActiveAdmin.register Kinney::Topic do
     end
     def permitted_params
       params.permit kinney_topic: [:name, :description]
+    end
+    def slugger
+      resource.slug = nil
     end
   end
 

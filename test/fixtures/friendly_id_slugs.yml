@@ -1,0 +1,19 @@
+one:
+  slug: roots
+  sluggable_id: <%= ActiveRecord::FixtureSet.identify :roots %>
+  sluggable_type: Kinney::Topic
+
+two:
+  slug: edward-norris-tolson
+  sluggable_id: <%= ActiveRecord::FixtureSet.identify :tolson %>
+  sluggable_type: Kinney::Person
+
+three:
+  slug: growing-up-in-edgecombe-county
+  sluggable_id: <%= ActiveRecord::FixtureSet.identify :tolson_roots %>
+  sluggable_type: Kinney::Clip
+
+four:
+  slug: pullen-fire-atkins
+  sluggable_id: <%= ActiveRecord::FixtureSet.identify :atkins_fire %>
+  sluggable_type: Kinney::Clip

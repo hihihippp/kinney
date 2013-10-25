@@ -25,6 +25,7 @@ ActiveAdmin.register Kinney::Person do
   end
 
   controller do
+    before_filter :slugger, only: :update
     def permitted_params
       params.permit kinney_person: [:accomplishments, :activities, :biography, :citations,
       :currently, :first_name, :last_name, :middle_name,
@@ -37,6 +38,9 @@ ActiveAdmin.register Kinney::Person do
       else
         super
       end
+    end
+    def slugger
+      resource.slug = nil
     end
   end
 

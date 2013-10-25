@@ -53,6 +53,7 @@ ActiveAdmin.register Kinney::Clip do
   end
 
   controller do
+    before_filter :slugger, only: :update
     def resource
       if FriendlyId === self.class.resource_class
         get_resource_ivar || set_resource_ivar(end_of_association_chain.friendly.find(params[:id]))
@@ -64,6 +65,9 @@ ActiveAdmin.register Kinney::Clip do
       params.permit kinney_clip: [:filename, :quotes, :title, :top_pick, {:topic_ids => []}, {:person_ids => []},
         :duration, :interview_date, :description, :featured, :interview_place, :slug, :media_type_id,
         {:interviewer_ids => []}, :transcript_text, :transcript_pdf]
+    end
+    def slugger
+      resource.slug = nil
     end
   end
 

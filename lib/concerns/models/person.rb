@@ -12,7 +12,7 @@ module Kinney::Concerns::Models::Person
 
     extend FriendlyId
     # FIXME: add back in use :history
-    friendly_id :full_name, :use => [:slugged]
+    friendly_id :full_name, :use => [:slugged, :history]
 
     default_scope {order('last_name asc')}
 
