@@ -2,7 +2,6 @@ module Kinney
   class TrackerController < KinneyController
 
     def track
-      require 'pry-rails'
       if request.xhr?
         data = params["tracker"].dup
         data["session"] = session[:session_id]
