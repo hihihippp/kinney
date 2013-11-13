@@ -4,7 +4,7 @@
 
 one:
   uuid: 517049cb-b261-4821-b3d0-92bdfe8e7988
-  seconds: <%= [0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5].to_yaml.inspect %>
+  seconds: <%= [{"start"=>0, "end"=>8}, {"start"=>28, "end"=>32}, {"start"=>38, "end"=>40}, {"start"=>43, "end"=>48}].to_yaml.inspect %>
   video: tolson-roots
   site: MyString
   time: 2012-07-18
@@ -13,7 +13,7 @@ one:
 
 two:
   uuid: 517049cb-b261-4821-b3d0-92bdfe8e7988
-  seconds: <%= [6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 8, 9, 9, 9, 9, 10, 10, 10, 10, 11, 11, 11, 11].to_yaml.inspect %>
+  seconds: <%= [{"start"=>0, "end"=>8}, {"start"=>28, "end"=>32}, {"start"=>38, "end"=>40}, {"start"=>43, "end"=>48}].to_yaml.inspect %>
   video: tolson-roots
   site: MyString
   time: 2012-07-18
@@ -22,7 +22,7 @@ two:
 
 three:
   uuid: b6c6410b-d2e6-4317-90cb-599b71920030
-  seconds: <%= [0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5].to_yaml.inspect %>
+  seconds: <%= [{"start"=>0, "end"=>8}, {"start"=>28, "end"=>32}, {"start"=>38, "end"=>40}, {"start"=>43, "end"=>48}].to_yaml.inspect %>
   video: tolson-roots
   site: MyString
   time: 2012-07-18
