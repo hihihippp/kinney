@@ -82,7 +82,9 @@ ActiveAdmin.register Kinney::Clip do
     @uuids = Kinney::Tracker.where(:video => params[:id]).pluck(:uuid).uniq
     @all_seconds = []
     @uuids.each do |uuid|
-      @all_seconds << Kinney::Tracker.where(:video => params[:id], :uuid => uuid).pluck(:seconds).flatten.uniq
+      last_tracker = Kinney::Tracker.where(:video => params[:id], :uuid => @uuids.last).order(:created_at).last
+      seconds = last_tracker.seconds.map{|duration| (duration['start']...duration['end']).to_a}
+      @all_seconds << seconds.flatten
     end
     @all_seconds.flatten!
     @all_seconds = @all_seconds.map{|second| second.to_i}
