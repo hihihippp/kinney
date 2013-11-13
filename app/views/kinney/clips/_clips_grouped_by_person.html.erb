@@ -1,5 +1,5 @@
 <div class="row" id="clip_profiles">
-  <% Kinney::Person.with_clips.each do |person| %>
+  <% @people.each do |person| %>
     <div class="col-xs-6 col-sm-4 col-md-4 sortable_thumb <%= cycle('one', 'two', 'three', name: '3-col') %> <%= cycle('first', 'second', name: '2-col') %>">
      <h2><%= person.first_name %> <%= person.middle_name %> <span class="last_name"><%= person.last_name %></span><%= ', ' + person.name_suffix if !person.name_suffix.blank? %></h2>
 

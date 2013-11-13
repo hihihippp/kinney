@@ -1,5 +1,5 @@
 <div class="row" id="all_clips">
-  <% Kinney::Clip.all.each do |clip| %>
+  <% @clips.each do |clip| %>
     <%= content_tag :div, class: ['col-xs-6', 'col-sm-4', 'col-md-3',
       cycle('b4-1', 'b4-2', 'b4-3', 'b4-4', name: :by_four),
       cycle('b3-1', 'b3-2', 'b3-3', name: :by_three),

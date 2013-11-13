@@ -5,7 +5,8 @@ module Kinney::Concerns::Controllers::ClipsController
   end
 
   def index
-    # @people = Person.with_clips
+    @people = Kinney::Person.with_clips
+    @clips = Kinney::Clip.all
   end
 
   def show
