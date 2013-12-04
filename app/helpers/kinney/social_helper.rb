@@ -18,7 +18,7 @@ module Kinney
     end
 
     def twitter_url_for_resource
-      url_params = {text: @clip.people_with_title , url: current_url, via: 'ncsulibraries'}
+      url_params = {text: @clip.people_with_title , url: current_url, via: t('kinney.clips.show.twitter_via')}
       "http://twitter.com/share?#{url_params.to_query}"
     end
 

@@ -180,7 +180,7 @@ The public interface uses [Bootstrap 3](http://getbootstrap.com/) converted into
 
 ## Translations
 
-The gem uses the [Rails Internationalization API](http://guides.rubyonrails.org/i18n.html) to allow for translations. This also makes it easy to use config/locales/en.yml to override some of the headings and other test that shows on the page.
+The gem uses the [Rails Internationalization API](http://guides.rubyonrails.org/i18n.html) to allow for translations. This also makes it easy to use config/locales/en.yml to override some of the headings and other test that shows on the page. You'll definitely want to change the key `kinney.clips.show.twitter_via`.
 
 If you have a good translation that could be used as the default for a language other than English, please let me know.
 
