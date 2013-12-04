@@ -26,6 +26,7 @@ en:
         download_transcript_text: Plain text transcript
         download_transcript_pdf: PDF transcript
         more_video: More Video
+        mailto_subject: Check out this video
     pages:
       about:
         title: About

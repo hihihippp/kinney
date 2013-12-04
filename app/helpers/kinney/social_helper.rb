@@ -3,8 +3,8 @@ module Kinney
 
     def email_to_resource
       body = url_encode "#{@clip.people_with_title} #{current_url}"
-      subject = 'Check out this video from NCSU Libraries'
-      "mailto:?subject=#{subject}&body=#{body}" 
+      subject = t('kinney.clips.show.mailto_subject')
+      "mailto:?subject=#{subject}&body=#{body}"
     end
 
     def googleplus_url_for_resource
