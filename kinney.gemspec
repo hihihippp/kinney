@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.license     = "MIT-LICENSE"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.markdown"]
-  s.test_files = Dir["test/**/*"]
+  s.test_files = `git ls-files -- test/*`.split("\n")
 
   s.add_dependency "rails", "~> 4.0.0"
   s.add_dependency 'active_admin_editor'
