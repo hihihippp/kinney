@@ -8,7 +8,7 @@
         <%= link_to clip, class: [:thumbnail] do %>
           <%= image_tag clip.png %>
           <div class="caption">
-            <i class="icon-play"></i> <%= clip.title %>
+            <i class="icon-play"></i> <span class="clip_title"><%= clip.title %></span>
           </div>
         <% end -%>
 
