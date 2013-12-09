@@ -114,7 +114,7 @@ EOF
 gem 'mediaelement_rails', :git => 'https://github.com/tobsch/mediaelement_rails.git'
 gem 'webvtt', :git => 'https://github.com/jronallo/webvtt.git'
 
-gem 'compass-rails', '>= 2.0.alpha.0'
+gem 'compass-rails', '~> 1.1.2'
 gem 'bootstrap-sass', git: 'https://github.com/thomas-mcdonald/bootstrap-sass.git', branch: 'master'
 EOF
         inject_into_file 'Gemfile', :after => "source 'https://rubygems.org'" do
