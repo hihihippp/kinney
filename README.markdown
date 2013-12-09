@@ -21,24 +21,36 @@ Tested under:
 # Install
 
 - Create a fresh Rails application `rails new olympia` and `cd olympia`
-- Add the following to your Gemfile:
+- Add kinney to your Gemfile:
+
+```
+gem "kinney", "~> 0.1.1"
+```
+
+Or you can use the current master:
 
 ```
 gem 'kinney', git: 'https://github.com/jronallo/kinney.git', branch: 'master'
+```
+
+- Add the following other dependencies to your Gemfile:
+
+```
 gem 'font-awesome-sass-rails'
 gem 'activeadmin', git: 'https://github.com/gregbell/active_admin.git', branch: 'master'
 ```
 
 - `bundle install`
 - `bundle exec rake kinney:install:migrations db:migrate`
-- `bundle exec rails generate kinney:install` and `bundle install`. You may have to `bundle update compass-rails` for bundle install to complete.
-- Seed the database: `bundle exec rake db:seed`
-- Add an ExecJS runtime for your environment. In your Gemfile you can uncomment `gem 'therubyracer'`
+- `bundle exec rails generate kinney:install` and `bundle install`. 
 - Add a devise secret key to config/initializers/devise.rb. You can create a good new secret to use with `rake secret`.
 
 ```
 config.secret_key = 'a better secret key than this'
 ```
+- Seed the database: `bundle exec rake db:seed`
+- Add an ExecJS runtime for your environment. In your Gemfile you can uncomment `gem 'therubyracer'` and `bundle install`
+
 
 - `bundle exec rails c` to enter the Rails console and then `Kinney::AdminUser.create!(:email => 'admin@example.com', :password => 'password', :password_confirmation => 'password')` and `exit` to return to your shell.
 - Start the Rails server (`bundle exec rails s`) and go to <http://localhost:3000/admin>. Login with the credentials above.

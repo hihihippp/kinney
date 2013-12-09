@@ -11,7 +11,6 @@ gem 'activeadmin', git: 'https://github.com/gregbell/active_admin.git', branch: 
 # jquery-rails is used by the dummy application
 gem "jquery-rails"
 gem 'font-awesome-rails'
-gem 'compass-rails', '~> 1.1.2'  #github: 'milgner/compass-rails', branch: 'rails4'
 
 # for travisci testing under these two databases
 gem 'mysql2'
