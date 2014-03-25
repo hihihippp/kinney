@@ -8,6 +8,8 @@ An oral history video site and administrative interface packaged as a Rails gem.
 
 This code was originally part of the [Student Leadership Initiative](http://d.lib.ncsu.edu/student-leaders/). It has since been extracted and significantly updated and refactored. The codename for the internal project is Sleader, so this project was named Kinney. Sleader-Kinney.
 
+Also now used on the [Computer Simulation Archive](http://d.lib.ncsu.edu/computer-simulation) site.
+
 # Requirements
 
 - Rails 4
